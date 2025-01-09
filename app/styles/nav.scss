@@ -1,0 +1,9 @@
+ul li a {
+    border-right:1px solid var(--accent-primary);
+    padding:0 10px;
+    color:gray;
+    font-weight:bold;
+}
+ul li:nth-child(2) a {
+    border-right:none;
+}

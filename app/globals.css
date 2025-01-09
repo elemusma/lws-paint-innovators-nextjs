@@ -5,9 +5,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent-primary:#e41836;
+  --neutral-dark:#252525;
+  --neutral-green:#2b322a;
 }
 
-@media (prefers-color-scheme: dark) {
+.bg-accent {
+  background:var(--accent-primary);
+}
+
+.bg-neutral-dark {
+  background:var(--neutral-dark);
+}
+.bg-neutral-green {
+  background:var(--neutral-green);
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -18,4 +34,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */

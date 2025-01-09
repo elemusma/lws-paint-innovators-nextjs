@@ -12,7 +12,7 @@ export default function ContentBlock() {
               data-aos-delay="100"
             >
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Expert Witness Consulting for Complex Technical Legal Cases
+                Expert Witnesss Consulting for Complex Technical Legal Cases
               </h1>
 
               <p className="text-lg md:text-xl mb-6">
