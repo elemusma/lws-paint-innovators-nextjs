@@ -1,0 +1,16 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#6d6e72;
+    border-radius:50%;
+    height:50px;
+    width:50px;
+    padding:15px;
+    margin: 0px 10px;
+}
+
+.social-icons svg {
+    height: 25px;
+    fill:white;
+}
