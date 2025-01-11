@@ -57,7 +57,7 @@ export default function Navigation() {
         style={{ top: 0, zIndex: 1 }}
       >
         <nav className="relative">
-          <div className="max-w-screen-lg mx-auto">
+          <div className="hidden lg:block max-w-screen-lg mx-auto">
             <NavItems />
           </div>
           <ButtonSquare

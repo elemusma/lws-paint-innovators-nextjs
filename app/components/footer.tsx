@@ -1,29 +1,114 @@
+import "../styles/footer.scss";
 import "../styles/social-icons.scss";
-import { Company, Email, Phone } from "./globals.js";
-import Logo from "./logo";
+import {
+  ArkansasAddress,
+  ArkansasPhone,
+  ColoradoAddress,
+  ColoradoPhone,
+  Company,
+  Email,
+  OklahomaAddress,
+  OklahomaPhone,
+  Phone,
+} from "./globals.js";
+import NavItems from "./nav-items";
 
 export default function Footer() {
   return (
     <>
       <footer>
-        <div className="w-full">
-          <div className="flex flex-wrap items-center justify-center">
-            <div className="w-full lg:w-1/3 text-right">
-              <img src="photos/Placeholder.jpg" alt="" />
-              <p>Arkansas</p>
+        <div className="w-full relative" style={{ marginBottom: "-50px" }}>
+          <div className="flex flex-wrap">
+            <div className="w-full lg:w-1/3">
+              <div
+                className="location h-full pt-10 relative lg:mr-2 overflow-hidden px-10"
+                style={{ paddingBottom: "75px" }}
+              >
+                <img
+                  src="photos/Arkansas.jpg"
+                  className="w-full absolute h-full"
+                  style={{ objectFit: "cover", top: 0, left: 0 }}
+                  alt=""
+                />
+                <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
+                <div
+                  className="relative text-center text-white text-shadow"
+                  style={{}}
+                >
+                  <p className="h2">Arkansas</p>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: ArkansasAddress }}
+                    className="text-sm"
+                  ></p>
+                  {/* dangerouslySetInnerHTML={{ __html: ArkansasAddress }} */}
+                  {/* <p className="text:sm">{ArkansasAddress}</p> */}
+                  <a href={`tel:+${ArkansasPhone}`} className="h4">
+                    {ArkansasPhone}
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="w-full lg:w-1/3 text-right">
-              <img src="photos/Placeholder.jpg" alt="" />
-              <p>Oklahoma</p>
+              <div
+                className="location h-full pt-10 relative lg:mr-2 overflow-hidden px-10"
+                style={{ paddingBottom: "75px" }}
+              >
+                <img
+                  src="photos/Oklahoma.jpg"
+                  className="w-full absolute h-full"
+                  style={{ objectFit: "cover", top: 0, left: 0 }}
+                  alt=""
+                />
+                <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
+                <div
+                  className="relative text-center text-white text-shadow"
+                  style={{}}
+                >
+                  <p className="h2">Oklahoma</p>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: OklahomaAddress }}
+                    className="text:sm"
+                  ></p>
+                  <a href={`tel:+${OklahomaPhone}`} className="h4">
+                    {OklahomaPhone}
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="w-full lg:w-1/3 text-right">
-              <img src="photos/Placeholder.jpg" alt="" />
-              <p>Colorado</p>
+              <div
+                className="location h-full pt-10 relative lg:mr-2 overflow-hidden px-10"
+                style={{ paddingBottom: "75px" }}
+              >
+                <img
+                  src="photos/Colorado.jpg"
+                  className="w-full absolute h-full"
+                  style={{ objectFit: "cover", top: 0, left: 0 }}
+                  alt=""
+                />
+                <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
+                <div
+                  className="relative text-center text-white text-shadow"
+                  style={{}}
+                >
+                  <p className="h2">Colorado</p>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: ColoradoAddress }}
+                    className="text:sm"
+                  ></p>
+                  <a href={`tel:+${ColoradoPhone}`} className="h4">
+                    {ColoradoPhone}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         {/* navigation */}
-        <div className="max-w-screen-lg mx-auto">
+        <div className="max-w-screen-lg mx-auto relative">
+          <NavItems logoContainerClassName="lg:w-1/3" />
+        </div>
+        {/* <div className="max-w-screen-lg mx-auto">
           <div className="flex flex-wrap items-center justify-center">
             <div className="w-full lg:w-1/3 text-right">
               <ul className="flex justify-end">
@@ -49,11 +134,11 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* icons */}
         <div className="max-w-screen-lg mx-auto pt-10 pb-10">
           <div className="flex flex-wrap items-center justify-center">
-            <div className="w-full lg:w-1/3 text-right flex lg:justify-end">
+            <div className="w-full lg:w-1/3 text-right flex lg:justify-end justify-center lg:pb-0 pb-10">
               <a href="#" className="block">
                 <div style={{}} className="social-icons">
                   <svg
@@ -106,7 +191,7 @@ export default function Footer() {
                 </strong>
               </a>
             </div>
-            <div className="w-full lg:w-1/3 text-right text-sm">
+            <div className="w-full lg:w-1/3 lg:text-right text-center text-sm">
               <p>
                 &copy;{new Date().getFullYear()} {Company}
                 <br></br>
@@ -122,7 +207,7 @@ export default function Footer() {
           </div>
         </div>
         <div
-          className="text-center bg-neutral-green"
+          className="text-center bg-neutral-green px-10"
           style={{ paddingTop: "10px", paddingBottom: "10px", color: "gray" }}
         >
           <div className="d-flex justify-content-center align-items-center">

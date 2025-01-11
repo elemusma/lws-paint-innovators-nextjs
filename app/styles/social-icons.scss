@@ -8,6 +8,10 @@
     width:50px;
     padding:15px;
     margin: 0px 10px;
+    transition: all .25s ease-in-out;
+}
+.social-icons:hover {
+    background:var(--accent-primary);
 }
 
 .social-icons svg {

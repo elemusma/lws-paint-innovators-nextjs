@@ -1,0 +1,6 @@
+.location img {
+    transition:all .25s ease-in-out;
+}
+.location:hover img {
+    transform:scale(1.1);
+}
