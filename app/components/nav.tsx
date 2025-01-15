@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react"; // Import the necessary hooks
+import "../styles/nav-mobile.scss";
 import ButtonSquare from "./buttons/btn-square";
-// import "./styles/nav.scss";
+import MobileMenuToggle from "./mobileMenuToggle";
 import NavItems from "./nav-items";
 
 export default function Navigation() {
@@ -46,6 +47,8 @@ export default function Navigation() {
     };
   }, []);
 
+  console.log("hello there again");
+
   return (
     <>
       <div ref={blankSpaceRef} className="blank-space">
@@ -60,6 +63,7 @@ export default function Navigation() {
           <div className="hidden lg:block max-w-screen-lg mx-auto">
             <NavItems />
           </div>
+          <MobileMenuToggle />
           <ButtonSquare
             className="absolute hidden lg:block" // Adding additional class
             style={{ top: "50%", right: 0, transform: "translate(0, -50%)" }} // Adding inline style
