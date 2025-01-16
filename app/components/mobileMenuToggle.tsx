@@ -33,7 +33,10 @@ const MobileMenuToggle = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div id="mobileMenu" className="modal mobile-menu">
+        <div
+          id="mobileMenu"
+          className={`modal mobile-menu ${isModalOpen ? "active" : ""}`}
+        >
           {/* Modal Content */}
           <div
             className="modal-content-menu modal-content"
