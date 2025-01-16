@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import Footer from "./components/footer";
 import Navigation from "./components/nav";
+import OwlCarouselHeader from "./components/owlCarouselHeader";
 import "./globals.css";
 import "./styles/fonts.scss";
+import "./styles/popup.scss";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +40,14 @@ export default function RootLayout({
         <meta property="og:image" content="assets/Latino-Web-Studio.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -44,8 +55,18 @@ export default function RootLayout({
         <header>
           <Navigation />
         </header>
+        <OwlCarouselHeader />
+        <p>hello</p>
         {children}
         <Footer />
+        <Script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

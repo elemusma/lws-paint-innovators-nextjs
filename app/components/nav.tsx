@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useRef } from "react"; // Import the necessary hooks
 import "../styles/nav-mobile.scss";
+
 import ButtonSquare from "./buttons/btn-square";
+import Logo from "./logo";
 import MobileMenuToggle from "./mobileMenuToggle";
 import NavItems from "./nav-items";
 
@@ -47,7 +49,7 @@ export default function Navigation() {
     };
   }, []);
 
-  console.log("hello there again");
+  // console.log("hello there again");
 
   return (
     <>
@@ -63,12 +65,35 @@ export default function Navigation() {
           <div className="hidden lg:block max-w-screen-lg mx-auto">
             <NavItems />
           </div>
-          <MobileMenuToggle />
+          <div className="block lg:hidden max-w-screen-lg mx-auto pl-4">
+            <div className="flex justify-between items-center">
+              <div className="lg:w-1/4 w-1/3">
+                <Logo />
+              </div>
+              <div className="md:w-6/12 w-1/4">
+                <MobileMenuToggle />
+              </div>
+              <div className="lg:w-1/4 w-1/3">
+                <ButtonSquare
+                  className="block md:hidden text-sm" // Adding additional class
+                  style={{
+                    padding: "10px 10px",
+                    top: "50%",
+                    right: 0,
+                  }} // Adding inline style
+                  id="" // Adding an ID
+                  href="/contact" // Dynamic href
+                >
+                  Free Estimate!
+                </ButtonSquare>
+              </div>
+            </div>
+          </div>
           <ButtonSquare
-            className="absolute hidden lg:block" // Adding additional class
+            className="absolute hidden md:block" // Adding additional class
             style={{ top: "50%", right: 0, transform: "translate(0, -50%)" }} // Adding inline style
             id="" // Adding an ID
-            href="/free-estimate" // Dynamic href
+            href="/contact" // Dynamic href
           >
             Free Estimate!
           </ButtonSquare>

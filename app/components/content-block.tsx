@@ -7,7 +7,7 @@ export default function ContentBlock() {
         <div className="mx-auto px-4 max-w-7xl pt-5">
           <div className="flex justify-center">
             <div
-              className="lg:w-10/12 text-center relative text-white"
+              className="lg:w-10/12 text-center relative"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -23,7 +23,7 @@ export default function ContentBlock() {
 
               <a
                 href="/get-started/"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded shadow-md mt-4"
+                className="inline-block bg-blue-600 hover:bg-blue-700 font-semibold py-3 px-6 rounded shadow-md mt-4"
               >
                 Speak with an Expert
               </a>

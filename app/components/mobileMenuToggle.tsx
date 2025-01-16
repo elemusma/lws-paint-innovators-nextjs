@@ -1,5 +1,7 @@
 import { useState } from "react";
+import ButtonSquare from "./buttons/btn-square";
 import { Company } from "./globals";
+import Logo from "./logo";
 
 const MobileMenuToggle = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,12 +38,13 @@ const MobileMenuToggle = () => {
         <div
           id="mobileMenu"
           className={`modal mobile-menu ${isModalOpen ? "active" : ""}`}
+          style={{ display: "block" }}
         >
           {/* Modal Content */}
           <div
-            className="modal-content-menu modal-content"
+            className="bg-white modal-content-menu modal-content"
             style={{
-              background: "var(--accent-secondary)",
+              background: "",
               paddingTop: "50px",
             }}
           >
@@ -54,24 +57,23 @@ const MobileMenuToggle = () => {
             <div style={{ width: "100%", maxWidth: "205px" }} id="logoMain">
               <a href="/" title={`Homepage link for ${Company}`}>
                 {/** Replace `logoSVG()` with your logo component or JSX */}
-                <img
-                  src="/path-to-your-logo.svg"
-                  alt={`${Company} Logo`}
-                  style={{ maxWidth: "100%" }}
-                />
+                <Logo />
               </a>
             </div>
 
             {/* Navigation Menu */}
             <ul className="menu list-unstyled mb-0">
               <li>
-                <a href="/link1">Menu Item 1</a>
+                <a href="/team">Our Team</a>
               </li>
               <li>
-                <a href="/link2">Menu Item 2</a>
+                <a href="/services">Services</a>
               </li>
               <li>
-                <a href="/link3">Menu Item 3</a>
+                <a href="/work">Our Work</a>
+              </li>
+              <li>
+                <a href="/contact">Contact Us</a>
               </li>
             </ul>
 
@@ -79,20 +81,14 @@ const MobileMenuToggle = () => {
             <div style={{ height: "25px" }}></div>
 
             {/* CTA Button */}
-            <a
-              href="/speak-with-an-expert"
-              style={{
-                marginLeft: "0",
-                textDecoration: "none",
-                padding: "10px",
-                background: "var(--accent-primary)",
-                color: "#fff",
-                borderRadius: "5px",
-              }}
-              title={`Phone number link for ${Company}`}
+            <ButtonSquare
+              className="" // Adding additional class
+              style={{ top: "50%", right: 0, transform: "translate(0, -50%)" }} // Adding inline style
+              id="" // Adding an ID
+              href="/contact" // Dynamic href
             >
-              Speak with an Expert
-            </a>
+              Free Estimate!
+            </ButtonSquare>
           </div>
         </div>
       )}
