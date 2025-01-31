@@ -9,7 +9,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
       const menuItems = document.querySelectorAll(".menu-item-has-children");
 
       menuItems.forEach((item) => {
-        const subMenu = item.querySelector(".sub-menu");
+        const subMenu = item.querySelector(".sub-menu") as HTMLElement;
 
         if (window.matchMedia("(min-width: 1200px)").matches) {
           item.addEventListener("mouseover", () => {
@@ -17,7 +17,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
               subMenu.classList.add("active-sub-menu");
               const children = subMenu.children;
               subMenu.style.height = `${
-                children[0].offsetHeight * children.length
+                (children[0] as HTMLElement).offsetHeight * children.length
               }px`;
             }
           });
