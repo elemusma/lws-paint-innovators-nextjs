@@ -12,13 +12,11 @@ export default function ContentBlock() {
               data-aos-delay="100"
             >
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Expert Witnesss Consulting for Complex Technical Legal Cases
+                Paint Innovators
               </h1>
 
               <p className="text-lg md:text-xl mb-6">
-                Discovery Engineering explains complex technical evidence in
-                clear and meaningful language for civil and criminal cases
-                nationwide.
+                This is paint innovators page.
               </p>
 
               <a
