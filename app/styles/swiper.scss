@@ -1,0 +1,40 @@
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  color: white; /* or any desired color */
+}.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 200px;
+    border-radius: 0;
+    background: white;
+}
+.swiper-pagination-bullet-active {
+    background: var(--accent-primary) !important;
+}
+
+span.swiper-pagination-bullet:first-child {
+    position: relative;
+}
+
+span.swiper-pagination-bullet:after {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    font-weight:bold;
+    font-size:1.5rem;
+    text-shadow:var(--text-shadow);
+}
+span.swiper-pagination-bullet:first-child:after {
+    content: "RESIDENTIAL";
+}
+span.swiper-pagination-bullet:nth-child(2):after {
+    content: "COMMERCIAL";
+}
+span.swiper-pagination-bullet:last-child:after {
+    content: "INDUSTRIAL";
+}
+span.swiper-pagination-bullet {
+    opacity: 1;
+}
+
+@media only screen and (min-width:641px) {
+.swiper-pagination {bottom: 15% !important;}
+}

@@ -1,11 +1,23 @@
 import ContentBlock from "@/app/components/content-block";
 import Logo from "@/app/components/logo";
 import Image from "next/image";
+import SwiperCarousel from "./components/swiperCarousel";
 
 export default function Home() {
   return (
     <>
-      <ContentBlock />
+      {/* <p>hey theres</p> */}
+      <SwiperCarousel />
+      <ContentBlock
+        sectionClassName="bg-accent text-white"
+        containerClassName="container mx-auto py-3"
+        rowClassName="flex flex-col items-center"
+        columnClassName="w-full md:w-8/12 text-center"
+      >
+        <h2 className="text-3xl font-bold">
+          SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
+        </h2>
+      </ContentBlock>
       <Logo />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">

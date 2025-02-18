@@ -9,8 +9,8 @@ import Navigation from "./components/nav";
 //   ssr: false, // Disable server-side rendering
 // });
 
-import SwiperCarousel from "./components/swiperCarousel";
 import "./globals.css";
+import "./styles/button.scss";
 import "./styles/fonts.scss";
 import "./styles/popup.scss";
 
@@ -62,14 +62,11 @@ export default function RootLayout({
         <header>
           <Navigation />
         </header>
-        <p>hello</p>
+        {/* <p>hello app/layout.tsx/64</p> */}
         {/* <div>
           <OwlCarouselHeader />
         </div> */}
-        <div>
-          <SwiperCarousel />
-          {/* <OwlCarouselComponent /> */}
-        </div>
+        <div>{/* <OwlCarouselComponent /> */}</div>
         <div>{/* <Carousel /> */}</div>
         {children}
         <Footer />
