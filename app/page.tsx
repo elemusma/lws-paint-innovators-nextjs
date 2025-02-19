@@ -18,6 +18,39 @@ export default function Home() {
           SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
         </h2>
       </ContentBlock>
+      <ContentBlock
+        sectionClassName="relative py-[100px]"
+        containerClassName="container mx-auto py-3"
+        rowClassName=""
+        columnClassName="flex flex-col md:flex-row items-center relative"
+        background={
+          // Optional background element; can be omitted if not needed.
+          <>
+            <Image
+              src={"/assets/Home/Our-Team-Bg.jpg"}
+              alt="Paint Innovators Industrial"
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              style={{ objectFit: "contain", objectPosition: "right" }}
+              width={100}
+              height={100}
+            />
+          </>
+        }
+      >
+        {/* <div className="flex flex-col lg:flex-row items-center relative"> */}
+        <div className="w-full md:w-1/2 text-center">
+          <h2 className="text-3xl font-bold">
+            SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
+          </h2>
+        </div>
+        <div className="w-full md:w-1/2 text-center">
+          <h2 className="text-3xl font-bold">
+            SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
+          </h2>
+        </div>
+        {/* </div> */}
+      </ContentBlock>
+
       <Logo />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">

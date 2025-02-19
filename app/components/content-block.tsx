@@ -5,15 +5,18 @@ export default function ContentBlock({
   rowClassName = "flex justify-center",
   columnClassName = "lg:w-10/12 text-center relative",
   children,
+  background,
 }: {
   sectionClassName?: string;
   containerClassName?: string;
   rowClassName?: string;
   columnClassName?: string;
   children: React.ReactNode;
+  background?: React.ReactNode;
 }) {
   return (
     <section className={sectionClassName}>
+      {background}
       <div className={containerClassName}>
         <div className={rowClassName}>
           <div
