@@ -1,7 +1,15 @@
 .btn-main {
     background-color: var(--accent-primary);
+    border:1px solid var(--accent-primary);
     padding: 5px 15px;
     display: inline-block;
     border-radius: 25px;
     font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-style: italic;
+    box-shadow:1px 1px 3px rgba(0,0,0,0.5);
+    &:hover {
+        background-color: white;
+    }
 }

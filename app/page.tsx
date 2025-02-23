@@ -1,26 +1,55 @@
 import ContentBlock from "@/app/components/content-block";
 import Logo from "@/app/components/logo";
 import Image from "next/image";
+import Link from "next/link";
 import SwiperCarousel from "./components/swiperCarousel";
+import Tabs from "./components/tabs";
 
 export default function Home() {
+  const tabsData = [
+    {
+      title: "Tab 1",
+      content: (
+        <div>
+          <p>This is the content for Tab 1.</p>
+        </div>
+      ),
+    },
+    {
+      title: "Tab 2",
+      content: (
+        <div>
+          <p>This is the content for Tab 2.</p>
+        </div>
+      ),
+    },
+    {
+      title: "Tab 3",
+      content: (
+        <div>
+          <p>This is the content for Tab 3.</p>
+        </div>
+      ),
+    },
+  ];
   return (
     <>
       {/* <p>hey theres</p> */}
       <SwiperCarousel />
       <ContentBlock
         sectionClassName="bg-accent text-white"
-        containerClassName="container mx-auto py-3"
+        containerClassName="max-w-screen-lg mx-auto py-3"
         rowClassName="flex flex-col items-center"
-        columnClassName="w-full md:w-8/12 text-center"
+        columnClassName="w-full text-center"
       >
         <h2 className="text-3xl font-bold">
           SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
         </h2>
       </ContentBlock>
+      <div className="spacer"></div>
       <ContentBlock
         sectionClassName="relative py-[100px]"
-        containerClassName="container mx-auto py-3"
+        containerClassName="max-w-screen-lg mx-auto py-3"
         rowClassName=""
         columnClassName="flex flex-col md:flex-row items-center relative"
         background={
@@ -38,19 +67,73 @@ export default function Home() {
         }
       >
         {/* <div className="flex flex-col lg:flex-row items-center relative"> */}
-        <div className="w-full md:w-1/2 text-center">
-          <h2 className="text-3xl font-bold">
-            SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
-          </h2>
+        <div className="w-full md:w-1/2 lg:pr-10">
+          <div className="divider"></div>
+          <h2 className="text-5xl font-aspira-light my-4">OUR TEAM</h2>
+          <h3 className="text-1xl font-poppins-black my-4">
+            BUILT ON VALUES &amp; TRUST
+          </h3>
+          <p>
+            Founded in 2014 by Rodney Barnes, Paint Innovators was born out of
+            the idea that quality should be at the forefront of every project
+            regardless of being residential or commercial. For six years, we
+            have been committed to delivering excellent customer service that is
+            unmatched. Each day we are faced with difficult decisions in the
+            course of our work, however we are assiduous when it comes to our
+            values. Integrity is our highest priority.
+          </p>{" "}
+          {/* <p>
+             Our team aspires to represent
+            each of our core values regardless of the circumstance. At Paint
+            Innovators, we diligently take responsibility, conduct ourselves
+            with ethics and morals in order to achieve success, gain new
+            customers, and expand relationships with existing customers.
+          </p> */}
+          <Link href="/contact" className="btn-main mt-[20px]">
+            Learn More
+          </Link>
         </div>
-        <div className="w-full md:w-1/2 text-center">
-          <h2 className="text-3xl font-bold">
-            SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
-          </h2>
+        <div className="w-full md:w-1/2 lg:text-right">
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FPaintInnovators%2Fvideos%2F979154837397440%2F&show_text=false&width=267&t=0"
+            width="50%"
+            height="476"
+            style={{
+              border: "none",
+              overflow: "hidden",
+              display: "inline-block",
+            }}
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FPaintInnovators%2Fvideos%2F1098726621971511%2F&show_text=false&width=267&t=0"
+            width="50%"
+            height="476"
+            style={{
+              border: "none",
+              overflow: "hidden",
+              display: "inline-block",
+            }}
+            scrolling="no"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
         {/* </div> */}
       </ContentBlock>
-
+      <div className="spacer"></div>
+      <Tabs
+        tabs={tabsData}
+        containerClassName="my-custom-container"
+        headerClassName="flex justify-center mb-4"
+        tabButtonClassName="px-4 py-2 border mr-2"
+        activeTabButtonClassName="bg-blue-600 text-white"
+        contentClassName="p-4"
+      />
       <Logo />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">

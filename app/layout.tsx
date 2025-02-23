@@ -9,9 +9,12 @@ import Navigation from "./components/nav";
 //   ssr: false, // Disable server-side rendering
 // });
 
+import "./fonts/font-aspira/font-aspira.css";
+import "./fonts/font-poppins/font-poppins.css";
 import "./globals.css";
 import "./styles/button.scss";
 import "./styles/fonts.scss";
+import "./styles/global.scss";
 import "./styles/popup.scss";
 
 const geistSans = Geist({
