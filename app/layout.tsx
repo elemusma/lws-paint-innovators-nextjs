@@ -11,6 +11,7 @@ import Navigation from "./components/nav";
 
 import "./fonts/font-aspira/font-aspira.css";
 import "./fonts/font-poppins/font-poppins.css";
+import "./fonts/font-proxima-nova/font-proxima-nova.css";
 import "./globals.css";
 import "./styles/button.scss";
 import "./styles/fonts.scss";

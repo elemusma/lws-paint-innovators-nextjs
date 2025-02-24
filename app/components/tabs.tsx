@@ -2,10 +2,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/tabs.scss";
 
-interface Tab {
+export interface Tab {
   title: string;
   content: React.ReactNode;
-  // Optionally, you can add more fields (e.g. code_block, img, alt, etc.)
+  // Optional custom classes and styles for the tab button and content panel
+  customTabButtonClassName?: string;
+  customTabButtonStyle?: React.CSSProperties;
+  customContentClassName?: string;
+  customContentStyle?: React.CSSProperties;
 }
 
 interface TabsProps {
@@ -20,7 +24,7 @@ interface TabsProps {
 const Tabs: React.FC<TabsProps> = ({
   tabs,
   containerClassName = "",
-  headerClassName = "flex justify-center flex-wrap",
+  headerClassName = "",
   tabButtonClassName = "btn tab-title",
   activeTabButtonClassName = "active",
   contentClassName = "content-area transition-opacity duration-300",
@@ -51,10 +55,15 @@ const Tabs: React.FC<TabsProps> = ({
           <button
             key={index}
             id={`tab-${index}`}
-            className={`${tabButtonClassName} ${
+            className={`tab-title ${tabButtonClassName} ${
               activeIndex === index ? activeTabButtonClassName : ""
-            }`}
-            style={{ cursor: "pointer", padding: "0.5rem 1rem" }}
+            } ${tab.customTabButtonClassName || ""}`}
+            style={{
+              cursor: "pointer",
+              padding: "1.5rem 1rem",
+              ...tab.customTabButtonStyle,
+            }}
+            title={tab.title}
             onClick={() => setActiveIndex(index)}
           >
             {tab.title}
@@ -63,18 +72,19 @@ const Tabs: React.FC<TabsProps> = ({
       </div>
 
       {/* Tab Content Panels */}
-      <div className="tabs-content relative">
+      <div className="tabs-content relative font-proxima-light flex justify-center text-center">
         {tabs.map((tab, index) => (
           <div
             key={index}
             ref={(el) => {
               contentRefs.current[index] = el;
             }}
-            className={`${contentClassName} ${
+            className={`w-3/4 ${contentClassName} ${
               activeIndex === index
-                ? "content-area activate position-relative opacity-100"
-                : "content-area position-absolute opacity-0"
-            }`}
+                ? "activate relative opacity-100"
+                : "absolute opacity-0"
+            } ${tab.customContentClassName || ""}`}
+            style={tab.customContentStyle}
           >
             {tab.content}
           </div>

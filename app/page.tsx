@@ -1,48 +1,109 @@
 import ContentBlock from "@/app/components/content-block";
-import Logo from "@/app/components/logo";
 import Image from "next/image";
 import Link from "next/link";
 import SwiperCarousel from "./components/swiperCarousel";
-import Tabs from "./components/tabs";
+import SwiperCarouselNewService from "./components/swiperCarouselNewService";
+import SwiperCarouselProjects, {
+  Slide,
+} from "./components/swiperCarouselProjects";
+import Tabs, { Tab } from "./components/tabs";
 
 export default function Home() {
-  const tabsData = [
+  const tabsData: Tab[] = [
     {
-      title: "Tab 1",
+      title: "Residential",
       content: (
         <div>
-          <p>This is the content for Tab 1.</p>
+          <p>
+            Residential Lorem ipsum is placeholder text commonly used in the
+            graphic, print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
         </div>
       ),
+      customTabButtonClassName: "lg:w-1/4 w-1/2", // Custom class for first tab button
+      customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
     },
     {
-      title: "Tab 2",
+      title: "Commercial",
       content: (
         <div>
-          <p>This is the content for Tab 2.</p>
+          <p>
+            Commercial Lorem ipsum is placeholder text commonly used in the
+            graphic, print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
         </div>
       ),
+      // No custom classes/styles; will use defaults.
+      customTabButtonClassName: "lg:w-1/4 w-1/2", // Custom class for first tab button
+      customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
     },
     {
-      title: "Tab 3",
+      title: "Government",
       content: (
         <div>
-          <p>This is the content for Tab 3.</p>
+          <p>
+            Government Lorem ipsum is placeholder text commonly used in the
+            graphic, print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
         </div>
       ),
+      customTabButtonClassName: "lg:w-1/4 w-full", // Custom class for first tab button
+      customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
     },
   ];
+
+  const slidesData: Slide[] = [
+    {
+      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageAlt: "Image 1 Description",
+    },
+    {
+      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageAlt: "Image 2 Description",
+    },
+    {
+      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageAlt: "Image 3 Description",
+    },
+    {
+      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageAlt: "Image 1 Description",
+    },
+    {
+      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageAlt: "Image 2 Description",
+    },
+    {
+      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageAlt: "Image 3 Description",
+    },
+    // Add more images as needed
+  ]; // Then use your component:
+  // <Tabs
+  //   tabs={tabsData}
+  //   containerClassName="my-custom-container max-w-screen-lg mx-auto"
+  //   headerClassName="flex justify-center mb-4 headerClassName"
+  //   tabButtonClassName="px-4 py-2 border mr-2 w-1/4"
+  //   activeTabButtonClassName="bg-blue-600 text-white activeTabButtonClassName"
+  //   contentClassName="p-4"
+  // />;
+
   return (
     <>
       {/* <p>hey theres</p> */}
-      <SwiperCarousel />
+      <div className="hero">
+        <SwiperCarousel />
+      </div>
       <ContentBlock
         sectionClassName="bg-accent text-white"
         containerClassName="max-w-screen-lg mx-auto py-3"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
       >
-        <h2 className="text-3xl font-bold">
+        <h2 className="text-3xl font-proxima-bold">
           SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
         </h2>
       </ContentBlock>
@@ -82,13 +143,6 @@ export default function Home() {
             course of our work, however we are assiduous when it comes to our
             values. Integrity is our highest priority.
           </p>{" "}
-          {/* <p>
-             Our team aspires to represent
-            each of our core values regardless of the circumstance. At Paint
-            Innovators, we diligently take responsibility, conduct ourselves
-            with ethics and morals in order to achieve success, gain new
-            customers, and expand relationships with existing customers.
-          </p> */}
           <Link href="/contact" className="btn-main mt-[20px]">
             Learn More
           </Link>
@@ -126,16 +180,66 @@ export default function Home() {
         {/* </div> */}
       </ContentBlock>
       <div className="spacer"></div>
+      <ContentBlock
+        sectionClassName=""
+        containerClassName="max-w-screen-lg mx-auto py-3"
+        rowClassName="flex flex-col items-center"
+        columnClassName="w-full text-center"
+      >
+        <h2 className="text-5xl font-aspira-thin">INDUSTRIES SERVED</h2>
+      </ContentBlock>
       <Tabs
         tabs={tabsData}
-        containerClassName="my-custom-container"
-        headerClassName="flex justify-center mb-4"
-        tabButtonClassName="px-4 py-2 border mr-2"
-        activeTabButtonClassName="bg-blue-600 text-white"
+        containerClassName="my-custom-container max-w-screen-lg mx-auto"
+        headerClassName="flex flex-wrap justify-center mb-4 px-4 headerClassName"
+        tabButtonClassName="px-4 py-2 border mr-2 w-1/4"
+        activeTabButtonClassName="bg-blue-600 text-white activeTabButtonClassName"
         contentClassName="p-4"
       />
-      <Logo />
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <div className="spacer"></div>
+      <SwiperCarouselNewService />
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+
+      <ContentBlock
+        sectionClassName="bg-black text-white"
+        containerClassName="max-w-screen-lg mx-auto py-8"
+        rowClassName="flex flex-col items-center"
+        columnClassName="w-full text-center"
+      >
+        <h2 className="text-4xl font-aspira-thin">COMPLETED PROJECTS</h2>
+        {/* <Link href="/contact" className="btn-main white mt-[20px]">
+          Learn More
+        </Link> */}
+      </ContentBlock>
+      <SwiperCarouselProjects slides={slidesData} />
+
+      <ContentBlock
+        sectionClassName="bg-accent text-white"
+        containerClassName="max-w-screen-lg mx-auto py-8"
+        rowClassName="flex flex-col items-center"
+        columnClassName="w-full text-center"
+      >
+        <h2 className="text-4xl font-bold italic">FREE ESTIMATE!</h2>
+        <Link href="/contact" className="btn-main white mt-[20px]">
+          Learn More
+        </Link>
+      </ContentBlock>
+
+      <ContentBlock
+        sectionClassName="bg-[var(--neutral-dark)] text-white"
+        containerClassName="max-w-screen-lg mx-auto py-8"
+        rowClassName="flex flex-col items-center"
+        columnClassName="w-full text-center"
+      >
+        <h2 className="text-4xl font-bold uppercase">Call Us Today</h2>
+        <Link href="/contact" className="btn-main mt-[20px]">
+          Learn More
+        </Link>
+      </ContentBlock>
+
+      {/* <Logo /> */}
+      {/* <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <Image
             className="dark:invert"
@@ -229,7 +333,7 @@ export default function Home() {
             Go to nextjs.org →
           </a>
         </footer>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -12,4 +12,14 @@
     &:hover {
         background-color: white;
     }
+    &.white {
+        background-color: white;
+        border-color: white;
+        color:var(--accent-primary);
+        &:hover {
+            background-color: var(--neutral-dark)!important;
+            border-color:white;
+            color:white;
+        }
+    }
 }
