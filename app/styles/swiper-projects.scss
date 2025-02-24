@@ -1,0 +1,19 @@
+// .completed-projects {
+//     .swiper-wrapper {
+//         padding: 0px 50px;
+//     }
+// }
+
+.swiper-carousel-container {
+    h2 {
+        opacity: .5;
+        transition:all .25s ease-in-out;
+    }
+    :hover h2 {
+        opacity: 1;
+    }
+}
+
+// .swiper-carousel-container:hover h2 {
+//     opacity: 1;
+// }

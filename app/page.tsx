@@ -57,31 +57,86 @@ export default function Home() {
 
   const slidesData: Slide[] = [
     {
-      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageSrc: "/photos/Project-Completed-Residential-01.jpg",
       imageAlt: "Image 1 Description",
     },
     {
-      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageSrc: "/photos/Project-Completed-Residential-02.jpg",
       imageAlt: "Image 2 Description",
     },
     {
-      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageSrc: "/photos/Project-Completed-Residential-03.jpg",
       imageAlt: "Image 3 Description",
     },
     {
-      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageSrc: "/photos/Project-Completed-Residential-04.jpg",
       imageAlt: "Image 1 Description",
     },
     {
-      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageSrc: "/photos/Project-Completed-Residential-01.jpg",
       imageAlt: "Image 2 Description",
     },
     {
-      imageSrc: "/photos/Introducing-Our-Newest-Service-01.jpg",
+      imageSrc: "/photos/Project-Completed-Residential-02.jpg",
       imageAlt: "Image 3 Description",
     },
     // Add more images as needed
   ]; // Then use your component:
+  const slidesDataCommercial: Slide[] = [
+    {
+      imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
+      imageAlt: "Image 1 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
+      imageAlt: "Image 2 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Commercial-03.jpg",
+      imageAlt: "Image 3 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Commercial-04.jpg",
+      imageAlt: "Image 1 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
+      imageAlt: "Image 2 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
+      imageAlt: "Image 3 Description",
+    },
+    // Add more images as needed
+  ]; // Then use your component:
+  const slidesDataIndustrial: Slide[] = [
+    {
+      imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
+      imageAlt: "Image 1 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
+      imageAlt: "Image 2 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Industrial-03.jpg",
+      imageAlt: "Image 3 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Industrial-04.jpg",
+      imageAlt: "Image 1 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
+      imageAlt: "Image 2 Description",
+    },
+    {
+      imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
+      imageAlt: "Image 3 Description",
+    },
+    // Add more images as needed
+  ]; // Then use your component:
+
   // <Tabs
   //   tabs={tabsData}
   //   containerClassName="my-custom-container max-w-screen-lg mx-auto"
@@ -93,7 +148,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <p>hey theres</p> */}
       <div className="hero">
         <SwiperCarousel />
       </div>
@@ -199,21 +253,58 @@ export default function Home() {
       <div className="spacer"></div>
       <SwiperCarouselNewService />
       <div className="spacer"></div>
-      <div className="spacer"></div>
 
       <ContentBlock
-        sectionClassName="bg-black text-white"
+        sectionClassName="bg-black text-white completed-projects py-[30px]"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
       >
-        <h2 className="text-4xl font-aspira-thin">COMPLETED PROJECTS</h2>
+        <h2 className="text-4xl font-aspira-thin mb-4">COMPLETED PROJECTS</h2>
+        {/* <Link href="/contact" className="btn-main white mt-[20px]">
+          Learn More
+        </Link> */}
+        <div className="relative swiper-carousel-container">
+          <SwiperCarouselProjects
+            slides={slidesData}
+            sliderId="completed-projects-residential"
+          />
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
+            RESIDENTIAL
+          </h2>
+        </div>
+        <div className="relative pt-[30px] swiper-carousel-container">
+          <SwiperCarouselProjects
+            slides={slidesDataCommercial}
+            sliderId="completed-projects-commercial"
+          />
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
+            COMMERCIAL
+          </h2>
+        </div>
+        <div className="relative pt-[30px] swiper-carousel-container">
+          <SwiperCarouselProjects
+            slides={slidesDataIndustrial}
+            sliderId="completed-projects-industrial"
+          />
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
+            INDUSTRIAL
+          </h2>
+        </div>
+      </ContentBlock>
+      <div className="spacer"></div>
+
+      <ContentBlock
+        sectionClassName=""
+        containerClassName="max-w-screen-lg mx-auto py-8"
+        rowClassName="flex flex-col items-center"
+        columnClassName="w-full text-center"
+      >
+        <h2 className="text-4xl font-aspira-thin uppercase">Testimonials</h2>
         {/* <Link href="/contact" className="btn-main white mt-[20px]">
           Learn More
         </Link> */}
       </ContentBlock>
-      <SwiperCarouselProjects slides={slidesData} />
-
       <ContentBlock
         sectionClassName="bg-accent text-white"
         containerClassName="max-w-screen-lg mx-auto py-8"
@@ -237,7 +328,7 @@ export default function Home() {
           Learn More
         </Link>
       </ContentBlock>
-
+      <div className="spacer"></div>
       {/* <Logo /> */}
       {/* <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
