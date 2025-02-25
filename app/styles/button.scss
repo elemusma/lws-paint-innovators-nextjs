@@ -1,21 +1,25 @@
-.btn-main {
+.btn-main, button.btn-main {
     background-color: var(--accent-primary);
     border:1px solid var(--accent-primary);
     padding: 5px 15px;
     display: inline-block;
     border-radius: 25px;
-    font-weight: bold;
+    // font-weight: bold;
+    font-family: 'proxima_novabold';
+    font-family: 'proxima_novablack';
     text-transform: uppercase;
     color: white;
     font-style: italic;
     box-shadow:1px 1px 3px rgba(0,0,0,0.5);
+    transition:all .25s ease-in-out;
     &:hover {
         background-color: white;
+        color:var(--accent-primary);
     }
     &.white {
         background-color: white;
-        border-color: white;
-        color:var(--accent-primary);
+        border-color: var(--neutral-dark);
+        color:var(--neutral-dark);
         &:hover {
             background-color: var(--neutral-dark)!important;
             border-color:white;

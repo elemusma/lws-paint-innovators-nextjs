@@ -59,7 +59,7 @@ export default function Navigation() {
       <header
         ref={headerRef}
         className="bg-white relative w-full shadow-md"
-        style={{ top: 0, zIndex: 10 }}
+        style={{ top: 0, zIndex: 11 }}
       >
         <nav className="relative">
           <div className="hidden lg:block max-w-screen-lg mx-auto">

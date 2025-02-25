@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "../styles/footer.scss";
 import "../styles/social-icons.scss";
 import {
@@ -17,12 +18,15 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="w-full relative" style={{ marginBottom: "-50px" }}>
+        <div
+          className="w-full relative font-aspira-black italic"
+          style={{ marginBottom: "-50px" }}
+        >
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3">
               <div
-                className="location h-full pt-10 relative lg:mr-2 overflow-hidden px-10"
-                style={{ paddingBottom: "75px" }}
+                className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10 flex justify-center items-center"
+                style={{}}
               >
                 <img
                   src="photos/Arkansas.jpg"
@@ -35,14 +39,14 @@ export default function Footer() {
                   className="relative text-center text-white text-shadow"
                   style={{}}
                 >
-                  <p className="h2">Arkansas</p>
+                  <h2 className="text-3xl uppercase">Arkansas</h2>
                   <p
                     dangerouslySetInnerHTML={{ __html: ArkansasAddress }}
                     className="text-sm"
                   ></p>
                   {/* dangerouslySetInnerHTML={{ __html: ArkansasAddress }} */}
                   {/* <p className="text:sm">{ArkansasAddress}</p> */}
-                  <a href={`tel:+${ArkansasPhone}`} className="h4">
+                  <a href={`tel:+${ArkansasPhone}`} className="text-3xl">
                     {ArkansasPhone}
                   </a>
                 </div>
@@ -50,8 +54,8 @@ export default function Footer() {
             </div>
             <div className="w-full lg:w-1/3 text-right">
               <div
-                className="location h-full pt-10 relative lg:mr-2 overflow-hidden px-10"
-                style={{ paddingBottom: "75px" }}
+                className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10 flex justify-center items-center"
+                style={{}}
               >
                 <img
                   src="photos/Oklahoma.jpg"
@@ -64,12 +68,12 @@ export default function Footer() {
                   className="relative text-center text-white text-shadow"
                   style={{}}
                 >
-                  <p className="h2">Oklahoma</p>
+                  <h2 className="text-3xl uppercase">Oklahoma</h2>
                   <p
                     dangerouslySetInnerHTML={{ __html: OklahomaAddress }}
                     className="text:sm"
                   ></p>
-                  <a href={`tel:+${OklahomaPhone}`} className="h4">
+                  <a href={`tel:+${OklahomaPhone}`} className="text-3xl">
                     {OklahomaPhone}
                   </a>
                 </div>
@@ -77,8 +81,8 @@ export default function Footer() {
             </div>
             <div className="w-full lg:w-1/3 text-right">
               <div
-                className="location h-full pt-10 relative lg:mr-2 overflow-hidden px-10"
-                style={{ paddingBottom: "75px" }}
+                className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10"
+                style={{}}
               >
                 <img
                   src="photos/Colorado.jpg"
@@ -86,17 +90,18 @@ export default function Footer() {
                   style={{ objectFit: "cover", top: 0, left: 0 }}
                   alt=""
                 />
+
                 <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
                 <div
                   className="relative text-center text-white text-shadow"
                   style={{}}
                 >
-                  <p className="h2">Colorado</p>
+                  <h2 className="uppercase text-3xl">Colorado</h2>
                   <p
                     dangerouslySetInnerHTML={{ __html: ColoradoAddress }}
                     className="text:sm"
                   ></p>
-                  <a href={`tel:+${ColoradoPhone}`} className="h4">
+                  <a href={`tel:+${ColoradoPhone}`} className="text-3xl">
                     {ColoradoPhone}
                   </a>
                 </div>
@@ -108,37 +113,10 @@ export default function Footer() {
         <div className="max-w-screen-lg mx-auto relative">
           <NavItems logoContainerClassName="lg:w-1/3" />
         </div>
-        {/* <div className="max-w-screen-lg mx-auto">
-          <div className="flex flex-wrap items-center justify-center">
-            <div className="w-full lg:w-1/3 text-right">
-              <ul className="flex justify-end">
-                <li>
-                  <a href="/our-team">Our Team</a>
-                </li>
-                <li>
-                  <a href="/our-team"> Services </a>
-                </li>
-              </ul>
-            </div>
-            <div className="w-full lg:w-1/3">
-              <Logo />
-            </div>
-            <div className="w-full lg:w-1/3">
-              <ul className="flex justify-start">
-                <li>
-                  <a href="/our-team">Our Work</a>
-                </li>
-                <li>
-                  <a href="/our-team">Contact Us </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> */}
         {/* icons */}
         <div className="max-w-screen-lg mx-auto pt-10 pb-10">
           <div className="flex flex-wrap items-center justify-center">
-            <div className="w-full lg:w-1/3 text-right flex lg:justify-end justify-center lg:pb-0 pb-10">
+            <div className="w-full lg:w-1/3 text-right flex lg:justify-start justify-center lg:pb-0 pb-10">
               <a href="#" className="block">
                 <div style={{}} className="social-icons">
                   <svg
@@ -180,11 +158,18 @@ export default function Footer() {
             </div>
             <div className="w-full lg:w-1/3 text-center">
               <a href={`tel:+${Phone}`}>
-                <img
+                {/* <img
                   src="/assets/Headphones-Black.png"
                   style={{ width: "65px" }}
                   className="m-auto"
                   alt=""
+                /> */}
+                <Image
+                  src="/assets/Headphones-Black.png"
+                  className="m-auto"
+                  width={65}
+                  height={65}
+                  alt="Customer Support"
                 />
                 <strong>
                   <em>{Phone}</em>

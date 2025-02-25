@@ -4,12 +4,15 @@
 //     }
 // }
 
+// html {
+//     background:red;
+// }
 .swiper-carousel-container {
     h2 {
         opacity: .5;
         transition:all .25s ease-in-out;
     }
-    :hover h2 {
+    &:hover h2 {
         opacity: 1;
     }
 }
