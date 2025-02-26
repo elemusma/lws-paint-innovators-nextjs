@@ -14,7 +14,8 @@
     transition:all .25s ease-in-out;
     &:hover {
         background-color: white;
-        color:var(--accent-primary);
+        border-color:var(--accent-primary);
+        // color:var(--neutral-dark);
     }
     &.white {
         background-color: white;

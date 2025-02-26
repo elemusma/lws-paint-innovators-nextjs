@@ -90,7 +90,7 @@ export default function Navigation() {
             </div>
           </div>
           <ButtonSquare
-            className="absolute hidden md:block" // Adding additional class
+            className="absolute hidden md:block hover:bg-[var(--neutral-dark)]" // Adding additional class
             style={{ top: "50%", right: 0, transform: "translate(0, -50%)" }} // Adding inline style
             id="" // Adding an ID
             href="/contact" // Dynamic href

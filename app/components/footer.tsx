@@ -28,12 +28,19 @@ export default function Footer() {
                 className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10 flex justify-center items-center"
                 style={{}}
               >
-                <img
+                <Image
+                  src="/photos/Arkansas.jpg"
+                  className="w-full absolute h-full"
+                  style={{ objectFit: "cover", top: 0, left: 0 }}
+                  alt="Arkansas Professional Painters. Get Free Estimate"
+                  fill
+                />
+                {/* <img
                   src="photos/Arkansas.jpg"
                   className="w-full absolute h-full"
                   style={{ objectFit: "cover", top: 0, left: 0 }}
                   alt=""
-                />
+                /> */}
                 <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
                 <div
                   className="relative text-center text-white text-shadow"
@@ -57,11 +64,12 @@ export default function Footer() {
                 className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10 flex justify-center items-center"
                 style={{}}
               >
-                <img
-                  src="photos/Oklahoma.jpg"
+                <Image
+                  src="/photos/Oklahoma.jpg"
                   className="w-full absolute h-full"
                   style={{ objectFit: "cover", top: 0, left: 0 }}
-                  alt=""
+                  alt="Oklahoma Professional Painters. Get Free Estimate"
+                  fill
                 />
                 <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
                 <div
@@ -84,11 +92,12 @@ export default function Footer() {
                 className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10"
                 style={{}}
               >
-                <img
-                  src="photos/Colorado.jpg"
+                <Image
+                  src="/photos/Colorado.jpg"
                   className="w-full absolute h-full"
                   style={{ objectFit: "cover", top: 0, left: 0 }}
-                  alt=""
+                  alt="Colorado Professional Painters. Get Free Estimate"
+                  fill
                 />
 
                 <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>

@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import { useEffect } from "react";
+import "../styles/nav-items.scss";
 import "../styles/nav.scss";
 import Logo from "./logo";
 
@@ -15,10 +17,15 @@ export default function NavItems({ logoContainerClassName = "" }) {
           item.addEventListener("mouseover", () => {
             if (subMenu && !subMenu.classList.contains("active-sub-menu")) {
               subMenu.classList.add("active-sub-menu");
-              const children = subMenu.children;
-              subMenu.style.height = `${
-                (children[0] as HTMLElement).offsetHeight * children.length
-              }px`;
+
+              // Calculate dynamic height based on children
+              let totalHeight = 0;
+              const children = subMenu.querySelectorAll("li");
+              children.forEach((child) => {
+                totalHeight += (child as HTMLElement).offsetHeight;
+              });
+
+              subMenu.style.height = `${totalHeight}px`;
             }
           });
 
@@ -41,17 +48,15 @@ export default function NavItems({ logoContainerClassName = "" }) {
         <div className="lg:w-1/3 w-7/12 lg:text-right lg:order-1 order-2">
           <ul className="flex lg:justify-end items-center justify-center">
             <li className="relative">
-              <a href="/our-team" style={{}}>
-                Our Team
-              </a>
+              <Link href="/our-team">Our Team</Link>
               <div
                 className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
                 style={{ backgroundColor: "var(--accent-primary)" }}
               ></div>
             </li>
             <li className="menu-item-has-children relative text-left">
-              <a
-                href="#"
+              <Link
+                href="/services"
                 className="flex items-center gap-1"
                 style={{ padding: "40px 10px" }}
               >
@@ -69,38 +74,84 @@ export default function NavItems({ logoContainerClassName = "" }) {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              </a>
+              </Link>
               <ul
                 className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
                 style={{
                   height: "0px",
-                  // backgroundColor: "#231f20",
                   backgroundColor: "var(--neutral-dark)",
+                  width: "300px",
                 }}
               >
-                <li className="hover:border-[var(--neutral-dark)] hover:border hover:bg-gray-50 transition-all duration-500 border border-transparent">
-                  <a
-                    href="/services/painting"
-                    className="block px-4 py-2 text-white"
-                  >
-                    Painting
-                  </a>
+                <li>
+                  <Link href="/services/residential-painting">
+                    Residential Painting
+                  </Link>
                 </li>
-                <li className="hover:border-[var(--neutral-dark)] hover:border hover:bg-gray-50 transition-all duration-500 border border-transparent">
-                  <a
-                    href="/services/coating"
-                    className="block px-4 py-2 text-white"
-                  >
-                    Coating
-                  </a>
+                <li>
+                  <Link href="/services/commercial-painting">
+                    Commercial Painting
+                  </Link>
                 </li>
-                <li className="hover:border-[var(--neutral-dark)] hover:border hover:bg-gray-50 transition-all duration-500 border border-transparent">
-                  <a
-                    href="/services/maintenance"
-                    className="block px-4 py-2 text-white"
-                  >
-                    Maintenance
-                  </a>
+                <li>
+                  <Link href="/services/color-consultation-custom-painting">
+                    Color Consultation &amp; Custom Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/exterior-painting">
+                    Exterior Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/interior-painting">
+                    Interior Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    New Construction Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Popcorn Ceiling Removal
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Wallpaper Removal
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Drywall Repair
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Deck Coating
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Industrial Coating
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Epoxy Floors
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Pressure Washing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    COVID-19 Sanitation
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -118,14 +169,14 @@ export default function NavItems({ logoContainerClassName = "" }) {
         <div className="lg:w-1/3 w-7/12 lg:order-3 order-3">
           <ul className="flex lg:justify-start items-center justify-center">
             <li className="relative">
-              <a href="/our-team">Our Work</a>
+              <Link href="/our-team">Our Work</Link>
               <div
                 className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
                 style={{ backgroundColor: "var(--accent-primary)" }}
               ></div>
             </li>
             <li>
-              <a href="/our-team">Contact Us </a>
+              <Link href="/our-team">Contact Us</Link>
             </li>
           </ul>
         </div>
