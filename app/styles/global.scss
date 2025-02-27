@@ -1,10 +1,13 @@
+.box-shadow{
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+}
 .divider {
     background-color: var(--accent-primary);
     height: 5px;
     width: 100%;
-    max-width: 250px;
-    margin: 5px 0;
+    max-width: 700px;
+    margin: 5px auto;
 }
 .spacer {
-    height:100px;
+    height:75px;
 }

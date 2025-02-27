@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import "../styles/footer.scss";
 import "../styles/social-icons.scss";
 import {
@@ -121,6 +122,299 @@ export default function Footer() {
         {/* navigation */}
         <div className="max-w-screen-lg mx-auto relative">
           <NavItems logoContainerClassName="lg:w-1/3" />
+        </div>
+        {/* columns */}
+        <div className="max-w-screen-lg mx-auto pt-10 pb-10">
+          <div className="flex flex-wrap justify-center">
+            <div className="w-full lg:w-5/12 pb-10 relative">
+              <p className="text-xl font-proxima-bold">Services</p>
+              <div className="flex flex-wrap pr-10">
+                <div className="w-7/12">
+                  <ul className="list-none text-sm">
+                    <li>
+                      <Link href="/services/residential-painting">
+                        Residential Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/commercial-painting">
+                        Commercial Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/color-consultation-custom-painting">
+                        Color Consultation &amp; Custom Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/exterior-painting">
+                        Exterior Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/interior-painting">
+                        Interior Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        New Construction Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Popcorn Ceiling Removal
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-4/12">
+                  <ul className="list-none text-sm">
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Wallpaper Removal
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Drywall Repair
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Deck Coating
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Industrial Coating
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Epoxy Floors
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Pressure Washing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        COVID-19 Sanitation
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* <div
+                className="bg-[var(--neutral-dark)] absolute h-full"
+                style={{ width: "2px", top: 0, right: "15px" }}
+              ></div> */}
+            </div>
+            <div className="relative w-full lg:w-1/6 lg:pb-0 pb-10">
+              <div
+                className="bg-[var(--neutral-dark)] absolute h-full"
+                style={{
+                  width: "2px",
+                  top: "0",
+                  left: "50%",
+                  transform: "translate(-50%, 0)",
+                }}
+              ></div>
+            </div>
+            <div className="relative w-full lg:w-5/12 pb-10">
+              {/* <div
+                className="bg-[var(--neutral-dark)] absolute h-full"
+                style={{ width: "2px", top: 0, right: "15px" }}
+              ></div> */}
+              <p className="text-xl font-proxima-bold">About</p>
+              <div className="flex flex-wrap pr-10">
+                <div className="w-1/2">
+                  <ul className="list-none text-sm">
+                    <li>
+                      <Link href="/services/residential-painting">
+                        Our Story
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/commercial-painting">Our Team</Link>
+                    </li>
+                    <li>
+                      <Link href="/services/color-consultation-custom-painting">
+                        Arkansas Location
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/exterior-painting">
+                        Oklahoma Location
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/interior-painting">
+                        Colorado Location
+                      </Link>
+                    </li>
+                    {/* <li>
+                      <Link href="/services/new-construction-painting">
+                        Brand Resources
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Website Feedback
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Service Feedback
+                      </Link>
+                    </li> */}
+                  </ul>
+                </div>
+                <div className="w-1/2">
+                  <ul className="list-none text-sm">
+                    <li>
+                      <Link href="/services/interior-painting">
+                        Colorado Location
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Brand Resources
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Website Feedback
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/new-construction-painting">
+                        Service Feedback
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="relative w-full lg:pb-0 pb-10 bg-[var(--neutral-dark)]"
+              style={{ height: "2px" }}
+            ></div>
+            <div className="relative w-full lg:w-1/3 pt-10 pb-10">
+              <div
+                className="bg-[var(--neutral-dark)] absolute h-full"
+                style={{ width: "2px", top: 0, right: "15px" }}
+              ></div>
+              <p className="text-xl font-proxima-bold">Projects</p>
+              <div className="flex flex-wrap pr-10">
+                <div className="w-full">
+                  <ul className="list-none text-sm">
+                    <li>
+                      <Link href="/services/residential-painting">
+                        Residential Painting Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/commercial-painting">
+                        Commercial Painting Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/color-consultation-custom-painting">
+                        Interior Painting and Exterior Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/exterior-painting">
+                        Other Contractor Services
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full lg:w-1/3 pt-10 pb-10">
+              <div
+                className="bg-[var(--neutral-dark)] absolute h-full"
+                style={{ width: "2px", top: 0, right: "15px" }}
+              ></div>
+              <p className="text-xl font-proxima-bold">Careers</p>
+              <div className="flex flex-wrap pr-10">
+                <div className="w-full">
+                  <ul className="list-none text-sm">
+                    <li>
+                      <Link href="/services/residential-painting">
+                        Painter / Drywall Finisher
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/commercial-painting">
+                        El Pintor / Masero
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/color-consultation-custom-painting">
+                        Office Associate
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/exterior-painting">
+                        Project Estimator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/exterior-painting">
+                        Project Manager
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full lg:w-1/3 pt-10 pb-10">
+              {/* <div
+                className="bg-[var(--neutral-dark)] absolute h-full"
+                style={{ width: "2px", top: 0, right: "15px" }}
+              ></div> */}
+              <p className="text-xl font-proxima-bold">Helpful Links</p>
+              <div className="flex flex-wrap pr-10">
+                <div className="w-full">
+                  <ul className="list-none text-sm">
+                    <li>
+                      <Link href="/services/residential-painting">Contact</Link>
+                    </li>
+                    <li>
+                      <Link href="/services/commercial-painting">FAQs</Link>
+                    </li>
+                    <li>
+                      <Link href="/services/color-consultation-custom-painting">
+                        Reviews
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/services/exterior-painting">
+                        Get Free Estimate
+                      </Link>
+                    </li>
+                    {/* <li>
+                      <Link href="/services/exterior-painting">
+                        Project Manager
+                      </Link>
+                    </li> */}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {/* <div className="w-full lg:w-1/3 text-right flex lg:justify-start justify-center lg:pb-0 pb-10">
+              <p className="font-proxima-bold">Services</p>
+            </div> */}
+            {/* <div className="w-full lg:w-1/4 text-right flex lg:justify-start justify-center lg:pb-0 pb-10">
+              <p className="font-proxima-bold">Services</p>
+            </div> */}
+          </div>
         </div>
         {/* icons */}
         <div className="max-w-screen-lg mx-auto pt-10 pb-10">

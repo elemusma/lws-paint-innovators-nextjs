@@ -46,7 +46,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
     <>
       <div className="flex flex-wrap items-center justify-center">
         <div className="lg:w-1/3 w-7/12 lg:text-right lg:order-1 order-2">
-          <ul className="flex lg:justify-end items-center justify-center">
+          <ul className="flex lg:justify-end items-center justify-center main-menu">
             <li className="relative">
               <Link href="/our-team">Our Team</Link>
               <div
@@ -119,7 +119,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
+                  <Link href="/services/wall-paper-removal">
                     Wallpaper Removal
                   </Link>
                 </li>
@@ -167,7 +167,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
         </div>
 
         <div className="lg:w-1/3 w-7/12 lg:order-3 order-3">
-          <ul className="flex lg:justify-start items-center justify-center">
+          <ul className="flex lg:justify-start items-center justify-center main-menu">
             <li className="relative">
               <Link href="/our-team">Our Work</Link>
               <div

@@ -1,4 +1,14 @@
-// components/ContentBlock.js
+import classNames from "classnames";
+
+interface ContentBlockProps {
+  sectionClassName?: string;
+  containerClassName?: string;
+  rowClassName?: string;
+  columnClassName?: string;
+  children: React.ReactNode;
+  background?: React.ReactNode;
+}
+
 export default function ContentBlock({
   sectionClassName = "",
   containerClassName = "mx-auto px-4 max-w-7xl pt-5",
@@ -6,21 +16,14 @@ export default function ContentBlock({
   columnClassName = "lg:w-10/12 text-center relative",
   children,
   background,
-}: {
-  sectionClassName?: string;
-  containerClassName?: string;
-  rowClassName?: string;
-  columnClassName?: string;
-  children: React.ReactNode;
-  background?: React.ReactNode;
-}) {
+}: ContentBlockProps) {
   return (
-    <section className={sectionClassName}>
+    <section className={classNames(sectionClassName)}>
       {background}
-      <div className={containerClassName}>
-        <div className={rowClassName}>
+      <div className={classNames(containerClassName)}>
+        <div className={classNames(rowClassName)}>
           <div
-            className={columnClassName}
+            className={classNames(columnClassName)}
             data-aos="fade-up"
             data-aos-delay="100"
           >

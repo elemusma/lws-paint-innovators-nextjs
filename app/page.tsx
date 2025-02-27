@@ -184,7 +184,10 @@ export default function Home() {
       >
         {/* <div className="flex flex-col lg:flex-row items-center relative"> */}
         <div className="w-full md:w-1/2 lg:pr-10 pb-10 sm:pb-0">
-          <div className="divider"></div>
+          <div
+            className="divider"
+            style={{ width: "250px", marginLeft: "0px" }}
+          ></div>
           <h2 className="text-5xl font-aspira-light my-4">OUR TEAM</h2>
           <h3 className="text-1xl font-poppins-black my-4">
             BUILT ON VALUES &amp; TRUST

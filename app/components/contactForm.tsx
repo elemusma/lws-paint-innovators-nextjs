@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
   return (
     <div
       className="relative flex items-center justify-center min-h-[60vh] bg-cover bg-center"
-      style={{ backgroundImage: "url('/your-background-image.jpg')" }}
+      style={{}}
     >
       {/* Dark Overlay */}
       {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
