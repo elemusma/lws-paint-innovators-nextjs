@@ -2,12 +2,30 @@ import ContentBlock from "@/app/components/content-block";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./components/contactForm";
+import {
+  CommercialProjectsImages,
+  IndustrialProjectsImages,
+  ResidentialProjectsImages,
+} from "./components/globals.js"; // Adjust path as needed
 import SwiperCarousel from "./components/swiperCarousel";
 import SwiperCarouselNewService from "./components/swiperCarouselNewService";
 import SwiperCarouselProjects, {
   Slide,
 } from "./components/swiperCarouselProjects";
 import Tabs, { Tab } from "./components/tabs";
+
+export interface SwiperCarouselPropsResidentialProjects {
+  ResidentialProjectsImages: Slide[];
+  sliderId?: string;
+}
+export interface SwiperCarouselPropsCommercialProjects {
+  CommercialProjectsImages: Slide[];
+  sliderId?: string;
+}
+export interface SwiperCarouselPropsIndustrialProjects {
+  IndustrialProjectsImages: Slide[];
+  sliderId?: string;
+}
 
 export default function Home() {
   const tabsData: Tab[] = [
@@ -56,87 +74,102 @@ export default function Home() {
     },
   ];
 
-  const slidesData: Slide[] = [
-    {
-      imageSrc: "/photos/Project-Completed-Residential-01.jpg",
-      imageAlt: "Image 1 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Residential-02.jpg",
-      imageAlt: "Image 2 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Residential-03.jpg",
-      imageAlt: "Image 3 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Residential-04.jpg",
-      imageAlt: "Image 1 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Residential-01.jpg",
-      imageAlt: "Image 2 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Residential-02.jpg",
-      imageAlt: "Image 3 Description",
-    },
-    // Add more images as needed
-  ]; // Then use your component:
-  const slidesDataCommercial: Slide[] = [
-    {
-      imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
-      imageAlt: "Image 1 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
-      imageAlt: "Image 2 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Commercial-03.jpg",
-      imageAlt: "Image 3 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Commercial-04.jpg",
-      imageAlt: "Image 1 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
-      imageAlt: "Image 2 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
-      imageAlt: "Image 3 Description",
-    },
-    // Add more images as needed
-  ]; // Then use your component:
-  const slidesDataIndustrial: Slide[] = [
-    {
-      imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
-      imageAlt: "Image 1 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
-      imageAlt: "Image 2 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Industrial-03.jpg",
-      imageAlt: "Image 3 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Industrial-04.jpg",
-      imageAlt: "Image 1 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
-      imageAlt: "Image 2 Description",
-    },
-    {
-      imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
-      imageAlt: "Image 3 Description",
-    },
-    // Add more images as needed
-  ]; // Then use your component:
+  // const slidesData: Slide[] = [
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Residential-01.jpg",
+  //     imageAlt: "Image 1 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Residential-02.jpg",
+  //     imageAlt: "Image 2 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Residential-03.jpg",
+  //     imageAlt: "Image 3 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Residential-04.jpg",
+  //     imageAlt: "Image 1 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Residential-01.jpg",
+  //     imageAlt: "Image 2 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Residential-02.jpg",
+  //     imageAlt: "Image 3 Description",
+  //   },
+  //   // Add more images as needed
+  // ]; // Then use your component:
+
+  const lightboxSlides = ResidentialProjectsImages.map((slide) => ({
+    src: slide.imageSrc,
+    alt: slide.imageAlt || "Slide Image",
+  }));
+
+  const lightboxSlidesCommercial = CommercialProjectsImages.map((slide) => ({
+    src: slide.imageSrc,
+    alt: slide.imageAlt || "Slide Image",
+  }));
+  const lightboxSlidesIndustrial = IndustrialProjectsImages.map((slide) => ({
+    src: slide.imageSrc,
+    alt: slide.imageAlt || "Slide Image",
+  }));
+
+  // const slidesDataCommercial: Slide[] = [
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
+  //     imageAlt: "Image 1 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
+  //     imageAlt: "Image 2 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Commercial-03.jpg",
+  //     imageAlt: "Image 3 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Commercial-04.jpg",
+  //     imageAlt: "Image 1 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
+  //     imageAlt: "Image 2 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
+  //     imageAlt: "Image 3 Description",
+  //   },
+  //   // Add more images as needed
+  // ]; // Then use your component:
+  // const slidesDataIndustrial: Slide[] = [
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
+  //     imageAlt: "Image 1 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
+  //     imageAlt: "Image 2 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Industrial-03.jpg",
+  //     imageAlt: "Image 3 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Industrial-04.jpg",
+  //     imageAlt: "Image 1 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
+  //     imageAlt: "Image 2 Description",
+  //   },
+  //   {
+  //     imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
+  //     imageAlt: "Image 3 Description",
+  //   },
+  //   // Add more images as needed
+  // ]; // Then use your component:
 
   // <Tabs
   //   tabs={tabsData}
@@ -270,7 +303,7 @@ export default function Home() {
         </Link> */}
         <div className="relative swiper-carousel-container">
           <SwiperCarouselProjects
-            slides={slidesData}
+            slides={ResidentialProjectsImages}
             sliderId="completed-projects-residential"
           />
           <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
@@ -279,7 +312,7 @@ export default function Home() {
         </div>
         <div className="relative pt-[30px] swiper-carousel-container">
           <SwiperCarouselProjects
-            slides={slidesDataCommercial}
+            slides={CommercialProjectsImages}
             sliderId="completed-projects-commercial"
           />
           <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
@@ -288,7 +321,7 @@ export default function Home() {
         </div>
         <div className="relative pt-[30px] swiper-carousel-container">
           <SwiperCarouselProjects
-            slides={slidesDataIndustrial}
+            slides={IndustrialProjectsImages}
             sliderId="completed-projects-industrial"
           />
           <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">

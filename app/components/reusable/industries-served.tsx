@@ -60,7 +60,7 @@ export default function IndustriesServed() {
       <Tabs
         tabs={tabsData}
         containerClassName="my-custom-container max-w-screen-lg mx-auto"
-        headerClassName="flex flex-wrap justify-center mb-4 px-4 headerClassName"
+        headerClassName="flex flex-wrap overflow-hidden justify-center mb-4 px-4 headerClassName"
         tabButtonClassName="px-4 py-2 border mr-2"
         activeTabButtonClassName="bg-blue-600 text-white activeTabButtonClassName"
         contentClassName="p-4"

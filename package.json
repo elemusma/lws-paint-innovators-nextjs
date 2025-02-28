@@ -15,6 +15,7 @@
     "emailjs": "^4.0.3",
     "jquery": "^3.7.1",
     "lightbox.js-react": "^1.4.8",
+    "lightgallery": "^2.8.2",
     "next": "15.1.4",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",

@@ -1,12 +1,13 @@
 import ContentBlock from "@/app/components/content-block";
 import CTA from "@/app/components/reusable/cta";
+import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import IndustriesServed from "@/app/components/reusable/industries-served";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Company, Email, Phone, Website } from "../../components/globals";
+import { Company, Website } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 export const metadata: Metadata = {
@@ -59,7 +60,7 @@ export default function WallPaperRemoval() {
           <h1 className="text-6xl uppercase font-aspira-light">
             Wall Paper Removal
           </h1>
-          <h2 className="font-aspira-bold">Get the Job Done Right!</h2>
+          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
           <Link href="/contact" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
@@ -88,42 +89,23 @@ export default function WallPaperRemoval() {
 
       <ProjectsWorkedOn />
 
+      <ImageContentBlock
+        imageSrc="/photos/Colorado.jpg"
+        imageAlt="Wallpaper"
+        overlayText="TRANSFORM A ROOM"
+        heading="Transform a Room"
+        contentCol={
+          <>
+            <p>heloo there</p>
+          </>
+        }
+        content="New wall covering can transform a room, going from boring to spectacular. But before you embark on the change, it's essential to know the type of wallpaper and the surface underneath."
+        buttonLabel="Learn More"
+        buttonLink="/wallpaper/transform-room"
+      />
+
       <CTA />
-
-      <div className="wallpaper-removal-container max-w-7xl mx-auto px-4 py-12">
-        <div className="content-wrapper grid md:grid-cols-2 gap-8">
-          <div className="info-section">
-            <h2 className="text-2xl font-semibold mb-4">
-              Expert Wallpaper Removal Services
-            </h2>
-            <p className="text-gray-700 mb-4">
-              At {Company}, we specialize in professional wallpaper removal
-              using industry-leading techniques and equipment. Our experienced
-              team ensures a clean, damage-free surface ready for your next wall
-              treatment.
-            </p>
-
-            <ul className="list-disc pl-5 mb-6">
-              <li>Safe and efficient removal process</li>
-              <li>Surface preparation for new finishes</li>
-              <li>Commercial and industrial expertise</li>
-              <li>Minimal disruption to your space</li>
-            </ul>
-          </div>
-
-          <div className="contact-section bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-3">Request a Quote</h3>
-            <p className="mb-4">
-              Contact us for professional wallpaper removal services in
-              Arkansas, Oklahoma, and Colorado.
-            </p>
-            <div className="contact-info">
-              <p className="font-bold">Call us: {Phone}</p>
-              <p className="font-bold">Email: {Email}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="spacer"></div>
     </>
   );
 }
