@@ -1,0 +1,25 @@
+.image-content-block {
+    .flex.even {
+        // @include lg:flex-row-reverse;
+        @media (min-width: 1024px) { // lg breakpoint
+            flex-direction: row-reverse;
+          }
+        // flex-direction: row-reverse;
+        h2.overlay-image-text {
+            text-align: left;
+        }
+        .image-content-block-col {
+            > div:first-child {
+                border-left:none!important;
+                padding-left:0px;
+                padding-right:1rem;
+                border-right-width:4px;
+                text-align:right;
+            }
+            > div:nth-child(2) {
+                padding-left:0px;
+                padding-right:1rem;
+                text-align:right;
+            }
+        }
+    }}

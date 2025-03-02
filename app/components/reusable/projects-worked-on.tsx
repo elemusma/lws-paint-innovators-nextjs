@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -35,6 +35,32 @@ export interface SwiperCarouselPropsIndustrialProjects {
 }
 
 export default function ProjectsWorkedOn() {
+  // Create refs for each Swiper instance
+  const resSwiperRef = useRef<any>(null);
+  const commSwiperRef = useRef<any>(null);
+  const indSwiperRef = useRef<any>(null);
+
+  useEffect(() => {
+    // base delay for the first slider (3000ms)
+    // then, add an offset for the second (200ms) and third (400ms) sliders.
+    const baseDelay = 3000;
+    const interval = setInterval(() => {
+      // trigger the first slider immediately at each cycle
+      resSwiperRef.current?.slideNext();
+
+      // trigger the second slider after 200ms
+      setTimeout(() => {
+        commSwiperRef.current?.slideNext();
+      }, 500);
+
+      setTimeout(() => {
+        indSwiperRef.current?.slideNext();
+      }, 1000);
+    }, baseDelay);
+
+    return () => clearInterval(interval);
+  });
+
   // Separate lightbox states for each swiper
   const [residentialLightbox, setResidentialLightbox] = useState(false);
   const [commercialLightbox, setCommercialLightbox] = useState(false);
@@ -98,30 +124,33 @@ export default function ProjectsWorkedOn() {
                 loop={true}
                 slidesPerView={1}
                 spaceBetween={0}
-                autoplay={{ delay: 6000 }}
+                autoplay={false}
                 // navigation
                 // pagination={{ clickable: true }}
-                modules={[Navigation, Pagination, Autoplay]}
+                modules={[Navigation, Pagination]}
+                onSwiper={(swiper) => (resSwiperRef.current = swiper)}
                 className="mySwiper w-full overflow-hidden"
               >
-                {ResidentialProjectsImages.map((slide, index) => (
-                  <SwiperSlide key={index} className="w-full">
-                    <div
-                      className="relative cursor-pointer"
-                      onClick={() => openResidentialLightbox(index)}
-                      style={{ minWidth: "100%" }}
-                    >
-                      <Image
-                        src={slide.imageSrc}
-                        alt={slide.imageAlt || "Slide Image"}
-                        style={{ objectFit: "cover", height: "200px" }}
-                        className="w-full h-full"
-                        width={1000}
-                        height={1000}
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
+                {ResidentialProjectsImages.map(
+                  (slide: Slide, index: number) => (
+                    <SwiperSlide key={index} className="w-full">
+                      <div
+                        className="relative cursor-pointer"
+                        onClick={() => openResidentialLightbox(index)}
+                        style={{ minWidth: "100%" }}
+                      >
+                        <Image
+                          src={slide.imageSrc}
+                          alt={slide.imageAlt || "Slide Image"}
+                          style={{ objectFit: "cover", height: "200px" }}
+                          className="w-full h-full"
+                          width={1000}
+                          height={1000}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  )
+                )}
               </Swiper>
             </div>
             {/* Residential Lightbox */}
@@ -155,10 +184,11 @@ export default function ProjectsWorkedOn() {
                 loop={true}
                 slidesPerView={1}
                 spaceBetween={0}
-                autoplay={{ delay: 7000 }}
+                autoplay={false}
                 // navigation
                 // pagination={{ clickable: true }}
-                modules={[Navigation, Pagination, Autoplay]}
+                modules={[Navigation, Pagination]}
+                onSwiper={(swiper) => (commSwiperRef.current = swiper)}
                 className="mySwiper w-full overflow-hidden"
               >
                 {CommercialProjectsImages.map((slide, index) => (
@@ -212,10 +242,11 @@ export default function ProjectsWorkedOn() {
                 loop={true}
                 slidesPerView={1}
                 spaceBetween={0}
-                autoplay={{ delay: 8000 }}
+                autoplay={false}
                 // navigation
                 // pagination={{ clickable: true }}
-                modules={[Navigation, Pagination, Autoplay]}
+                modules={[Navigation, Pagination]}
+                onSwiper={(swiper) => (indSwiperRef.current = swiper)}
                 className="mySwiper w-full overflow-hidden"
               >
                 {IndustrialProjectsImages.map((slide, index) => (

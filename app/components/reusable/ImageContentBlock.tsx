@@ -1,10 +1,20 @@
 "use client";
+import * as motion from "motion/react-client";
 import Image from "next/image";
-
+import "../../styles/ImageContentBlock.scss";
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
 /**
  * Props for the ImageContentBlock component
  */
 interface ImageContentBlockProps {
+  sectionClassName?: string;
   /** The URL of the image (e.g., "/photos/wallpaper.jpg") */
   imageSrc: string;
   /** The alt text for the image */
@@ -28,6 +38,7 @@ interface ImageContentBlockProps {
  *  - Right column: Heading, content, and a button
  */
 export default function ImageContentBlock({
+  sectionClassName,
   imageSrc,
   imageAlt = "",
   overlayText,
@@ -38,34 +49,51 @@ export default function ImageContentBlock({
   buttonLink,
 }: ImageContentBlockProps) {
   return (
-    <div className="flex flex-col md:flex-row md:items-stretch my-8">
-      {/* Left Column: Image with overlay text */}
-      <div className="relative md:w-1/2 w-full overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          className="object-cover"
-          // If you prefer to manually size, remove fill and use width/height
-        />
-        {/* Overlay Text */}
-        <div className="absolute inset-0 flex items-end p-4 bg-black/40 text-white">
-          <h2 className="text-lg font-bold drop-shadow">{overlayText}</h2>
-        </div>
-      </div>
+    <>
+      <motion.div
+        variants={fadeUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="image-content-block mb-2">
+          <div
+            className={`flex flex-col md:flex-row ${sectionClassName || "odd"}`}
+          >
+            {/* Left Column: Image with overlay text */}
+            <div className="relative md:w-1/2 w-full overflow-hidden">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                className="object-cover"
+                // If you prefer to manually size, remove fill and use width/height
+              />
+              {/* Overlay Text */}
+              <div className="h-full flex items-center justify-center">
+                <div className="bg-white/80 w-full relative my-20 py-5">
+                  <h2 className="text-4xl font-aspira-light w-1/2 mx-auto overlay-image-text md:text-right text-center uppercase">
+                    {overlayText}
+                  </h2>
+                </div>
+              </div>
+            </div>
 
-      {/* Right Column: Heading, Content, and Button */}
-      <div className="md:w-1/2 w-full bg-white p-6 flex flex-col justify-center">
-        {contentCol}
-        <h3 className="text-xl font-semibold mb-2">{heading}</h3>
-        <p className="mb-4">{content}</p>
-        <a
-          href={buttonLink}
-          className="inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition-colors"
-        >
-          {buttonLabel}
-        </a>
-      </div>
-    </div>
+            {/* Right Column: Heading, Content, and Button */}
+            <div className="image-content-block-col md:w-1/2 w-full p-6 flex flex-col justify-center bg-[var(--gray)] lg:px-[100px] md:px-[50px] sm:px-[25px] py-[150px]">
+              {/* {contentCol} */}
+              <div className="border-l-4 border-[var(--accent-primary)] pl-4">
+                <p className="">{content}</p>
+              </div>
+              <div className="pl-4 pt-8">
+                <a href={buttonLink} className="btn-main">
+                  {buttonLabel}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </>
   );
 }

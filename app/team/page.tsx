@@ -9,7 +9,7 @@ import ServingTagline from "@/app/components/reusable/serving-tagline";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Company, Website } from "../../components/globals";
+import { Company, Website } from "./../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
@@ -23,11 +23,15 @@ const fadeUpVariants = {
   },
 };
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Paint Innovators Team - Professional Painters in Oklahoma, Arkansas and Colorado",
+  description:
+    "Founded by Rodney Barnes in 2014. Victor Caldera and Allen Wootten are our Project Managers.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
+    title:
+      "Paint Innovators Team - Professional Painters in Oklahoma, Arkansas and Colorado",
+    description:
+      "Founded by Rodney Barnes in 2014. Victor Caldera and Allen Wootten are our Project Managers.",
     url: `https://${Website}/wallpaper-removal`, // Replace with actual URL
     type: "website",
     images: [
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
     ],
   },
 };
-export default function WallPaperRemoval() {
+export default function OurTeam() {
   return (
     <>
       <ContentBlock
@@ -70,9 +74,13 @@ export default function WallPaperRemoval() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            Wall Paper Removal
+            Our Team
           </h1>
-          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
+          <h2 className="font-aspira-bold text-2xl">
+            People <span className="text-accent">&bull;</span> Family{" "}
+            <span className="text-accent">&bull;</span>
+            Community
+          </h2>
           <Link href="/contact" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
