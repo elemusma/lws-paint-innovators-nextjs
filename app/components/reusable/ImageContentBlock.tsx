@@ -18,10 +18,13 @@ interface ImageContentBlockProps {
   /** The URL of the image (e.g., "/photos/wallpaper.jpg") */
   imageSrc: string;
   /** The alt text for the image */
+  borderSubtitle?: boolean;
+  overlayTextSubtitle?: string;
   imageAlt?: string;
   /** Text that appears as an overlay on the image */
   overlayText: string;
   contentCol?: React.ReactNode;
+  contentBorderOff?: boolean;
   /** Heading text to display in the right column */
   heading: string;
   /** Main paragraph/content text in the right column */
@@ -44,6 +47,9 @@ export default function ImageContentBlock({
   overlayText,
   contentCol,
   heading,
+  borderSubtitle,
+  overlayTextSubtitle,
+  contentBorderOff,
   content,
   buttonLabel,
   buttonLink,
@@ -72,9 +78,22 @@ export default function ImageContentBlock({
               {/* Overlay Text */}
               <div className="h-full flex items-center justify-center">
                 <div className="bg-white/80 w-full relative my-20 py-5">
-                  <h2 className="text-4xl font-aspira-light w-1/2 mx-auto overlay-image-text md:text-right text-center uppercase">
-                    {overlayText}
-                  </h2>
+                  <div
+                    className={`w-7/12 mx-auto overlay-image-text md:text-right text-center ${
+                      borderSubtitle
+                        ? "border-subtitle border-r-4 pr-4 border-[var(--accent-primary)]"
+                        : ""
+                    }`}
+                  >
+                    <h2 className={`text-4xl font-aspira-light uppercase`}>
+                      {overlayText}
+                    </h2>
+                    {borderSubtitle && overlayTextSubtitle && (
+                      <span className="font-aspira-bold italic">
+                        {overlayTextSubtitle}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -82,10 +101,20 @@ export default function ImageContentBlock({
             {/* Right Column: Heading, Content, and Button */}
             <div className="image-content-block-col md:w-1/2 w-full p-6 flex flex-col justify-center bg-[var(--gray)] lg:px-[100px] md:px-[50px] sm:px-[25px] py-[150px]">
               {/* {contentCol} */}
-              <div className="border-l-4 border-[var(--accent-primary)] pl-4">
+              <div
+                className={`${
+                  contentBorderOff
+                    ? "border-off"
+                    : "border-on border-l-4 border-[var(--accent-primary)] pl-4"
+                }`}
+              >
                 <p className="">{content}</p>
               </div>
-              <div className="pl-4 pt-8">
+              <div
+                className={`pt-8 ${
+                  contentBorderOff ? "border-off" : "border-off pl-4"
+                }`}
+              >
                 <a href={buttonLink} className="btn-main">
                   {buttonLabel}
                 </a>

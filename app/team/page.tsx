@@ -1,14 +1,13 @@
 import ContentBlock from "@/app/components/content-block";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
-import IndustriesServed from "@/app/components/reusable/industries-served";
-import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import IndustriesServed from "../components/reusable/industries-served";
 import { Company, Website } from "./../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
@@ -88,64 +87,43 @@ export default function OurTeam() {
       </ContentBlock>
       <ServingTagline />
 
-      {/* <div className="spacer"></div> */}
-      <IndustriesServed />
-
-      <ContentBlock
-        sectionClassName="bg-white text-black"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="lg:w-11/12 w-full text-center px-4"
-      >
-        <div className="divider"></div>
-        <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
-        </p>
-      </ContentBlock>
-
-      <ProjectsWorkedOn />
-
       <ContentBlock
         sectionClassName="bg-white text-black pb-8"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName="flex flex-col items-center"
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
-        <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">DID YOU KNOW?</h2>
+        <h2 className="text-4xl font-aspira-light pt-4">OUR VISION</h2>
       </ContentBlock>
 
-      {/* <motion.div
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      > */}
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/01-Transform-a-Room.jpg"
+        imageSrc="/team/Ensuring-Quality.jpg"
         imageAlt="Wallpaper"
-        overlayText="TRANSFORM A ROOM"
+        overlayText="Ensuring Quality & Safety"
+        borderSubtitle={true}
+        overlayTextSubtitle="Craftmanship and Inspection of Every Job"
+        contentBorderOff={true}
         heading="Transform a Room"
         content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
       />
-      {/* </motion.div> */}
+
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/02-The-History-of-Wall-Paper.jpg"
+        imageSrc="/team/Our-Successful-Team.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="The History of Wall Paper"
+        overlayText="It's Our Team That Makes Us Successful"
+        borderSubtitle={true}
         heading="Transform a Room"
+        contentBorderOff={true}
+        overlayTextSubtitle="We Enjoy Where We Work"
         content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
       />
-      <ImageContentBlock
+      {/* <ImageContentBlock
         sectionClassName=""
         imageSrc="/services/wall-paper-removal/03-Smooth-Clean.jpg"
         imageAlt="Smooth &amp; Clean"
@@ -154,8 +132,8 @@ export default function OurTeam() {
         content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
-      />
-      <ImageContentBlock
+      /> */}
+      {/* <ImageContentBlock
         sectionClassName="even"
         imageSrc="/services/wall-paper-removal/04-We-Make-It-Easy.jpg"
         imageAlt="We Make It Easy"
@@ -164,17 +142,34 @@ export default function OurTeam() {
         content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts. Request your free estimate."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
-      />
+      /> */}
 
+      <IndustriesServed />
       <ContentBlock
         sectionClassName="bg-white text-black pt-7 pb-8"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName="flex flex-col items-center"
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
+        <h2 className="uppercase font-aspira-bold text-accent text-5xl">
+          Our Team
+        </h2>
+        <p className="text-gray-700 text-2xl pt-8 mb-20 font-aspira-bold">
+          {Company}, is dedicated to quality painting. We have experienced and
+          professional painters that specialize in residential and commercial
+          painting - including interior painting and exterior painting for homes
+          and offices.
+        </p>
         <div className="divider"></div>
       </ContentBlock>
 
+      <Image
+        src="/assets/five-star-reviews.png"
+        alt="Five Stars"
+        className="mx-auto my-8"
+        width={150}
+        height={150}
+      />
       <CTA />
       <div className="spacer"></div>
     </>
