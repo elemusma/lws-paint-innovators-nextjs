@@ -4,23 +4,25 @@ import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+// import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import IndustriesServed from "../components/reusable/industries-served";
+import TeamCol from "../components/reusable/team-col";
 import { Company, Website } from "./../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
 // Define your fade-up variant:
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
+// const fadeUpVariants = {
+//   hidden: { opacity: 0, y: 50 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { duration: 0.8, ease: "easeOut" },
+//   },
+// };
 export const metadata: Metadata = {
   title:
     "Paint Innovators Team - Professional Painters in Oklahoma, Arkansas and Colorado",
@@ -146,8 +148,8 @@ export default function OurTeam() {
 
       <IndustriesServed />
       <ContentBlock
-        sectionClassName="bg-white text-black pt-7 pb-8"
-        containerClassName="max-w-screen-lg mx-auto py-8"
+        sectionClassName="bg-white text-black pt-7"
+        containerClassName="max-w-screen-lg mx-auto pt-8"
         rowClassName="flex flex-col items-center"
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
@@ -161,6 +163,152 @@ export default function OurTeam() {
           and offices.
         </p>
         <div className="divider"></div>
+      </ContentBlock>
+      <ContentBlock
+        sectionClassName="bg-white text-black pb-8"
+        containerClassName="max-w-screen-lg mx-auto py-8"
+        rowClassName="flex flex-col items-center"
+        columnClassName="w-full relative px-4"
+      >
+        <div className="absolute bg-light w-full h-[90%] top-[10%] left-0"></div>
+        <div className="relative flex flex-wrap justify-center">
+          <TeamCol
+            img="/team/Rodney-Family.jpg"
+            name="Rodney Barnes"
+            role="Owner"
+            delay={0.1}
+            description={
+              <>
+                <p className="">
+                  Originally from West Fork, Arkansas, Rodney began working in
+                  the paint industry immediately out of high school. He started
+                  working at Spectrum Paint Company in 2006 and followed the
+                  company to the east coast as a paint salesman in Myrtle Beach,
+                  SC in 2012. During his years working in the store and as a
+                  salesman, he acquired a vast knowledge of paint including
+                  ingredients, colors, palettes, tools, enhancements, and
+                  finishes.
+                </p>
+                <p>
+                  In 2014, Rodney and his family moved back to Northwest
+                  Arkansas where they started Paint Innovators, Inc. They began
+                  with a small crew and made sure that the focus was on quality
+                  painting with professional painters. The company grew quickly
+                  and expanded from residential into commercial - Paint
+                  Innovators received a commercial license in 2016 and expanded
+                  into Oklahoma in 2019. Rodney credits his team for the
+                  continued growth over the years - they make the difference!
+                </p>
+              </>
+            }
+          />
+          <TeamCol
+            img="/team/Victor-Caldera.jpg"
+            name="Victor Caldera"
+            role="Project Manager"
+            delay={0.2}
+            description={
+              <>
+                <p className="">
+                  Victor started out as a project estimator at Paint Innovators
+                  and then transitioned to Project Manager. Victor has been with
+                  us for 3 years and has 6+ years of painting and contractor
+                  experience. At Paint Innovators, Victor ensures painting and
+                  contractor projects run smoothly and efficiently in order to
+                  exceed client expectations and meet project deadlines.
+                </p>
+                <p>
+                  He ensures customer satisfaction, organizes and motivates his
+                  team, and oversees the painting or construction project from
+                  beginning to end. What does Victor like about working at Paint
+                  Innovators? “The culture.” Victor's Hobbies: Fishing, playing
+                  basketball, camping, reading, podcasting, golf, family time,
+                  UFC, and boxing. Victor's Favorite quote: “Sometimes you will
+                  never know the value of a moment, until it becomes a memory.”
+                  - Dr Seuss
+                </p>
+              </>
+            }
+          />
+          <TeamCol
+            img="/team/Allen-Wootten.jpg"
+            name="Allen Wootten"
+            role="Project Manager"
+            delay={0.3}
+            description={
+              <>
+                <p className="">
+                  Allen has been with Paint Innovators for 2 years. As a Project
+                  Manager, Allen plans and oversees painting and epoxy projects
+                  to make sure they are completed according to schedule and
+                  within budget.
+                </p>
+                <p>
+                  He also monitors project progress and communicates with his
+                  team to establish scope of work. Allen is dedicated to
+                  exceeding customer expectations and ensuring clients' receive
+                  quality workmanship.
+                </p>
+              </>
+            }
+          />
+          {/* <div className="py-10 relative"> */}
+          <div className="divider !mt-20 !mb-10"></div>
+          {/* </div> */}
+          <TeamCol
+            img="/team/Hope-Smith.jpg"
+            name="Hope Smith"
+            role="Office Manager"
+            delay={0.1}
+            description={
+              <>
+                <p className="">
+                  Hope is the Office Manager. She has been with Paint Innovators
+                  for over 4 years. Hope provides support to the the owner and
+                  other staff members and also takes care of Accounts Payable,
+                  Accounts Receivable, Payroll, Human Resources, and any other
+                  things that arise. Hope has over 20 years of office
+                  experience.
+                </p>
+                <p>
+                  What do you like about working at PI? “I enjoy the challenge
+                  that comes with working in an office of a small business with
+                  a variety of daily tasks.” Hope's Hobbies: Spending time with
+                  family, listening to audio books, hanging out and playing
+                  games with friends. Hope's Favorite quote: “You never fail
+                  until you stop trying.” - Albert Einstein
+                </p>
+              </>
+            }
+          />
+          <TeamCol
+            img="/team/Jeff-Berger.jpg"
+            name="Jeff Berger"
+            role="Project Estimator"
+            delay={0.2}
+            description={
+              <>
+                <p className="">
+                  Jeff has been a Project Estimator at Paint Innovators for over
+                  5 years and has over 16 years of experience in the paint
+                  industry. He estimates painting and contractor services for
+                  commercial customers. Jeff is responsible for overseeing cost
+                  to complete a project and provides an array of services to
+                  clients.
+                </p>
+                <p>
+                  What do you like about working at PI? “I really like
+                  collaborating with people who have the same vision and
+                  dedication.” Jeff's Hobbies: Leisure time with my friends,
+                  golfing and hunting. Jeff's Favorite quote: “We are what we
+                  repeatedly do. Excellence, therefore, is not an act but a
+                  habit.” - Aristotle
+                </p>
+              </>
+            }
+          />
+          <div className="divider !mt-20 !mb-10"></div>
+        </div>
       </ContentBlock>
 
       <Image
