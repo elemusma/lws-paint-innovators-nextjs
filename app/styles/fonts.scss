@@ -24,6 +24,9 @@ h1,.h1 {
 .text-accent {
     color:var(--accent-primary);
 }
+.text-accent-secondary {
+    color:var(--accent-secondary);
+}
 
 .font-aspira-black {
     font-family: 'aspirablack';
@@ -48,4 +51,10 @@ h1,.h1 {
 }
 .font-proxima-bold {
     font-family: 'proxima_novabold';
+}
+.font-pontiac-black {
+    font-family: 'pontiacblack';
+}
+.font-pontiac-bold {
+    font-family: 'pontiacbold';
 }

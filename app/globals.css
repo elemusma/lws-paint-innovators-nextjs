@@ -6,22 +6,13 @@
   --background: #ffffff;
   --foreground: #171717;
   --accent-primary:#e41836;
+  --accent-secondary:#e7c075;
   --neutral-dark:#252525;
   --neutral-green:#2b322a;
   --gray:#999999;
+  --gray-dark:#404040;
   --gray-light:#cdcdcd;
   --text-shadow: 1px 1px 3px rgba(0,0,0,.5);
-}
-
-.bg-accent {
-  background:var(--accent-primary);
-}
-
-.bg-neutral-dark {
-  background:var(--neutral-dark);
-}
-.bg-neutral-green {
-  background:var(--neutral-green);
 }
 
 

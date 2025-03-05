@@ -6,7 +6,7 @@
     // }
     .flex.even {
         // @include lg:flex-row-reverse;
-        @media (min-width: 1024px) { // lg breakpoint
+        @media (min-width: 768px) { // lg breakpoint
             flex-direction: row-reverse;
           }
         // flex-direction: row-reverse;

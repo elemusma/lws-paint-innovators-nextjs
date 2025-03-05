@@ -1,6 +1,7 @@
 "use client";
 import * as motion from "motion/react-client";
 import Image from "next/image";
+import Link from "next/link";
 import "../../styles/ImageContentBlock.scss";
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -63,9 +64,7 @@ export default function ImageContentBlock({
         viewport={{ once: true }}
       >
         <div className="image-content-block mb-2">
-          <div
-            className={`flex flex-col md:flex-row ${sectionClassName || "odd"}`}
-          >
+          <div className={`flex flex-wrap ${sectionClassName || "odd"}`}>
             {/* Left Column: Image with overlay text */}
             <div className="relative md:w-1/2 w-full overflow-hidden">
               <Image
@@ -115,9 +114,9 @@ export default function ImageContentBlock({
                   contentBorderOff ? "border-off" : "border-off pl-4"
                 }`}
               >
-                <a href={buttonLink} className="btn-main">
+                <Link href={buttonLink} className="btn-main">
                   {buttonLabel}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
