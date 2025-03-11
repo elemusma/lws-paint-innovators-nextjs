@@ -10,9 +10,9 @@ import Navigation from "./components/nav";
 // });
 
 import "./fonts/font-aspira/font-aspira.css";
+import "./fonts/font-pontiac/font-pontiac.css";
 import "./fonts/font-poppins/font-poppins.css";
 import "./fonts/font-proxima-nova/font-proxima-nova.css";
-import "./fonts/font-pontiac/font-pontiac.css";
 import "./globals.css";
 import "./styles/button.scss";
 import "./styles/fonts.scss";
@@ -49,7 +49,7 @@ export default function RootLayout({
           name="description"
           content="Professional web and software engineering services for iOS, Android, and web applications. Tailored solutions for businesses seeking high-quality, efficient app development from Latino Web Studio."
         />
-        <meta property="og:image" content="assets/Latino-Web-Studio.jpg" />
+        <meta property="og:image" content="/assets/Latino-Web-Studio.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         {/* <link

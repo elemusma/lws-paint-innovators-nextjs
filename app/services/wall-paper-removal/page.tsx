@@ -124,7 +124,7 @@ export default function WallPaperRemoval() {
         heading="Transform a Room"
         content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/contact"
       />
       {/* </motion.div> */}
       <ImageContentBlock

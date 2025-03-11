@@ -169,14 +169,14 @@ export default function NavItems({ logoContainerClassName = "" }) {
         <div className="lg:w-1/3 w-7/12 lg:order-3 order-3">
           <ul className="flex lg:justify-start items-center justify-center main-menu">
             <li className="relative">
-              <Link href="/our-team">Our Work</Link>
+              <Link href="/work">Our Work</Link>
               <div
                 className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
                 style={{ backgroundColor: "var(--accent-primary)" }}
               ></div>
             </li>
             <li>
-              <Link href="/our-team">Contact Us</Link>
+              <Link href="/contact">Contact Us</Link>
             </li>
           </ul>
         </div>

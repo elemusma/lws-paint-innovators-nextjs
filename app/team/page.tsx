@@ -109,7 +109,7 @@ export default function OurTeam() {
         heading="Transform a Room"
         content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/contact"
       />
 
       <ImageContentBlock
@@ -123,7 +123,7 @@ export default function OurTeam() {
         overlayTextSubtitle="We Enjoy Where We Work"
         content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/contact"
       />
 
       <IndustriesServed />

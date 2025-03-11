@@ -74,34 +74,6 @@ export default function Home() {
     },
   ];
 
-  // const slidesData: Slide[] = [
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Residential-01.jpg",
-  //     imageAlt: "Image 1 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Residential-02.jpg",
-  //     imageAlt: "Image 2 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Residential-03.jpg",
-  //     imageAlt: "Image 3 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Residential-04.jpg",
-  //     imageAlt: "Image 1 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Residential-01.jpg",
-  //     imageAlt: "Image 2 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Residential-02.jpg",
-  //     imageAlt: "Image 3 Description",
-  //   },
-  //   // Add more images as needed
-  // ]; // Then use your component:
-
   const lightboxSlides = ResidentialProjectsImages.map((slide) => ({
     src: slide.imageSrc,
     alt: slide.imageAlt || "Slide Image",
@@ -115,70 +87,6 @@ export default function Home() {
     src: slide.imageSrc,
     alt: slide.imageAlt || "Slide Image",
   }));
-
-  // const slidesDataCommercial: Slide[] = [
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
-  //     imageAlt: "Image 1 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
-  //     imageAlt: "Image 2 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Commercial-03.jpg",
-  //     imageAlt: "Image 3 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Commercial-04.jpg",
-  //     imageAlt: "Image 1 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
-  //     imageAlt: "Image 2 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
-  //     imageAlt: "Image 3 Description",
-  //   },
-  //   // Add more images as needed
-  // ]; // Then use your component:
-  // const slidesDataIndustrial: Slide[] = [
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
-  //     imageAlt: "Image 1 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
-  //     imageAlt: "Image 2 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Industrial-03.jpg",
-  //     imageAlt: "Image 3 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Industrial-04.jpg",
-  //     imageAlt: "Image 1 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
-  //     imageAlt: "Image 2 Description",
-  //   },
-  //   {
-  //     imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
-  //     imageAlt: "Image 3 Description",
-  //   },
-  //   // Add more images as needed
-  // ]; // Then use your component:
-
-  // <Tabs
-  //   tabs={tabsData}
-  //   containerClassName="my-custom-container max-w-screen-lg mx-auto"
-  //   headerClassName="flex justify-center mb-4 headerClassName"
-  //   tabButtonClassName="px-4 py-2 border mr-2 w-1/4"
-  //   activeTabButtonClassName="bg-blue-600 text-white activeTabButtonClassName"
-  //   contentClassName="p-4"
-  // />;
 
   return (
     <>
@@ -298,9 +206,6 @@ export default function Home() {
         columnClassName="w-full text-center"
       >
         <h2 className="text-4xl font-aspira-thin mb-4">COMPLETED PROJECTS</h2>
-        {/* <Link href="/contact" className="btn-main white mt-[20px]">
-          Learn More
-        </Link> */}
         <div className="relative swiper-carousel-container">
           <SwiperCarouselProjects
             slides={ResidentialProjectsImages}
@@ -378,7 +283,6 @@ export default function Home() {
               style={{ objectFit: "cover", objectPosition: "right" }}
               fill
             />
-            {/* <div className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"></div> */}
           </>
         }
       >
