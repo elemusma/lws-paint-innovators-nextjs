@@ -125,95 +125,125 @@ export default function Footer() {
         </div>
         {/* columns */}
         <div className="max-w-screen-lg mx-auto pt-10 pb-10">
-          <div className="flex flex-wrap justify-center">
-            <div className="w-full lg:w-5/12 pb-10 relative">
+          <div className="flex flex-wrap justify-start">
+            {/* <div className="w-full lg:w-1/2 pb-10 relative"> */}
+            {/* <div className="flex flex-wrap pr-10"> */}
+            <div className="w-full lg:w-1/4 pb-10 relative">
               <p className="text-xl font-proxima-bold">Services</p>
-              <div className="flex flex-wrap pr-10">
-                <div className="w-7/12">
-                  <ul className="list-none text-sm">
-                    <li>
-                      <Link href="/services/residential-painting">
-                        Residential Painting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/commercial-painting">
-                        Commercial Painting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/color-consultation-custom-painting">
-                        Color Consultation &amp; Custom Painting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/exterior-painting">
-                        Exterior Painting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/interior-painting">
-                        Interior Painting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        New Construction Painting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Popcorn Ceiling Removal
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="w-4/12">
-                  <ul className="list-none text-sm">
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Wallpaper Removal
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Drywall Repair
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Deck Coating
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Industrial Coating
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Epoxy Floors
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Pressure Washing
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        COVID-19 Sanitation
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              {/* <div
+              <ul className="list-none text-sm">
+                <li>
+                  <Link href="/services/residential-painting">
+                    Residential Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/commercial-painting">
+                    Commercial Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/color-consultation-custom-painting">
+                    Color Consultation &amp; Custom Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/exterior-painting">
+                    Exterior Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/interior-painting">
+                    Interior Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    New Construction Painting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/popcorn-ceiling-removal">
+                    Popcorn Ceiling Removal
+                  </Link>
+                </li>
+                {/* <li>
+                  <Link href="/services/new-construction-painting">
+                    Wallpaper Removal
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Drywall Repair
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Deck Coating
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Industrial Coating
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Epoxy Floors
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Pressure Washing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    COVID-19 Sanitation
+                  </Link>
+                </li> */}
+              </ul>
+            </div>
+            <div className="w-full lg:w-1/4 pb-10 relative">
+              <div style={{ height: 28 }}></div>
+              <ul className="list-none text-sm">
+                <li>
+                  <Link href="/services/wallpaper-removal">
+                    Wallpaper Removal
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/drywall-repair">Drywall Repair</Link>
+                </li>
+                <li>
+                  <Link href="/services/deck-coating">Deck Coating</Link>
+                </li>
+                <li>
+                  <Link href="/services/industrial-coating">
+                    Industrial Coating
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/epoxy-floors">Epoxy Floors</Link>
+                </li>
+                <li>
+                  <Link href="/services/pressure-washing">
+                    Pressure Washing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/covid-19-sanitation">
+                    COVID-19 Sanitation
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            {/* </div> */}
+            {/* <div
                 className="bg-[var(--neutral-dark)] absolute h-full"
                 style={{ width: "2px", top: 0, right: "15px" }}
               ></div> */}
-            </div>
-            <div className="relative w-full lg:w-1/6 lg:pb-0 pb-10">
+            {/* </div> */}
+            {/* <div className="relative w-full lg:w-1/6 lg:pb-0 pb-10">
               <div
                 className="bg-[var(--neutral-dark)] absolute h-full"
                 style={{
@@ -223,40 +253,55 @@ export default function Footer() {
                   transform: "translate(-50%, 0)",
                 }}
               ></div>
-            </div>
-            <div className="relative w-full lg:w-5/12 pb-10">
-              {/* <div
+            </div> */}
+            {/* <div className="relative w-full lg:w-1/4 pb-10"> */}
+            {/* <div
                 className="bg-[var(--neutral-dark)] absolute h-full"
                 style={{ width: "2px", top: 0, right: "15px" }}
               ></div> */}
+            {/* <div className="flex flex-wrap pr-10"> */}
+            <div className="w-full lg:w-1/4 pb-10">
               <p className="text-xl font-proxima-bold">About</p>
-              <div className="flex flex-wrap pr-10">
-                <div className="w-1/2">
-                  <ul className="list-none text-sm">
-                    <li>
-                      <Link href="/services/residential-painting">
-                        Our Story
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/commercial-painting">Our Team</Link>
-                    </li>
-                    <li>
-                      <Link href="/services/color-consultation-custom-painting">
-                        Arkansas Location
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/exterior-painting">
-                        Oklahoma Location
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/interior-painting">
-                        Colorado Location
-                      </Link>
-                    </li>
-                    {/* <li>
+              <ul className="list-none text-sm">
+                <li>
+                  <Link href="/about">Our Story</Link>
+                </li>
+                <li>
+                  <Link href="/about/team">Our Team</Link>
+                </li>
+                <li>
+                  <Link href="/about/work">Our Work</Link>
+                </li>
+                <li>
+                  <Link href="/about/arkansas-location">Arkansas Location</Link>
+                </li>
+                <li>
+                  <Link href="/about/oklahoma-location">Oklahoma Location</Link>
+                </li>
+                {/* <li>
+                  <Link href="/colorado-location">Colorado Location</Link>
+                </li> */}
+                {/* <li>
+                  <Link href="/services/interior-painting">
+                    Colorado Location
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Brand Resources
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Website Feedback
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/new-construction-painting">
+                    Service Feedback
+                  </Link>
+                </li> */}
+                {/* <li>
                       <Link href="/services/new-construction-painting">
                         Brand Resources
                       </Link>
@@ -271,64 +316,57 @@ export default function Footer() {
                         Service Feedback
                       </Link>
                     </li> */}
-                  </ul>
-                </div>
-                <div className="w-1/2">
-                  <ul className="list-none text-sm">
-                    <li>
-                      <Link href="/services/interior-painting">
-                        Colorado Location
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Brand Resources
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Website Feedback
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Service Feedback
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              </ul>
             </div>
-            <div
+            <div className="w-full lg:w-1/4 pb-10">
+              <div style={{ height: 28 }}></div>
+              <ul className="list-none text-sm">
+                <li>
+                  <Link href="/about/colorado-location">Colorado Location</Link>
+                </li>
+                <li>
+                  <Link href="/about/brand-resources">Brand Resources</Link>
+                </li>
+                <li>
+                  <Link href="/about/website-feedback">Website Feedback</Link>
+                </li>
+                <li>
+                  <Link href="/about/service-feedback">Service Feedback</Link>
+                </li>
+              </ul>
+            </div>
+            {/* </div> */}
+            {/* </div> */}
+            {/* <div
               className="relative w-full lg:pb-0 pb-10 bg-[var(--neutral-dark)]"
               style={{ height: "2px" }}
-            ></div>
-            <div className="relative w-full lg:w-1/3 pt-10 pb-10">
-              <div
+            ></div> */}
+            <div className="relative w-full lg:w-1/4 pt-10 pb-10">
+              {/* <div
                 className="bg-[var(--neutral-dark)] absolute h-full"
                 style={{ width: "2px", top: 0, right: "15px" }}
-              ></div>
+              ></div> */}
               <p className="text-xl font-proxima-bold">Projects</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
                   <ul className="list-none text-sm">
                     <li>
-                      <Link href="/services/residential-painting">
+                      <Link href="/projects-residential-painting">
                         Residential Painting Projects
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/commercial-painting">
+                      <Link href="/projects-commercial-painting">
                         Commercial Painting Projects
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/color-consultation-custom-painting">
+                      <Link href="/projects-interior-exterior-painting">
                         Interior Painting and Exterior Painting
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/exterior-painting">
+                      <Link href="/projects/other-contractor-services">
                         Other Contractor Services
                       </Link>
                     </li>
@@ -336,37 +374,37 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="relative w-full lg:w-1/3 pt-10 pb-10">
-              <div
+            <div className="relative w-full lg:w-1/4 pt-10 pb-10">
+              {/* <div
                 className="bg-[var(--neutral-dark)] absolute h-full"
                 style={{ width: "2px", top: 0, right: "15px" }}
-              ></div>
+              ></div> */}
               <p className="text-xl font-proxima-bold">Careers</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
                   <ul className="list-none text-sm">
                     <li>
-                      <Link href="/services/residential-painting">
+                      <Link href="/careers/painter-drywall-finisher">
                         Painter / Drywall Finisher
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/commercial-painting">
+                      <Link href="/careers/pintor-masero">
                         El Pintor / Masero
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/color-consultation-custom-painting">
+                      <Link href="/careers/office-associate">
                         Office Associate
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/exterior-painting">
+                      <Link href="/careers/project-estimator">
                         Project Estimator
                       </Link>
                     </li>
                     <li>
-                      <Link href="/services/exterior-painting">
+                      <Link href="/careers/project-manager">
                         Project Manager
                       </Link>
                     </li>
@@ -384,20 +422,16 @@ export default function Footer() {
                 <div className="w-full">
                   <ul className="list-none text-sm">
                     <li>
-                      <Link href="/services/residential-painting">Contact</Link>
+                      <Link href="/contact">Contact</Link>
                     </li>
                     <li>
-                      <Link href="/services/commercial-painting">FAQs</Link>
+                      <Link href="/about/faqs">FAQs</Link>
                     </li>
                     <li>
-                      <Link href="/services/color-consultation-custom-painting">
-                        Reviews
-                      </Link>
+                      <Link href="/about/reviews">Reviews</Link>
                     </li>
                     <li>
-                      <Link href="/services/exterior-painting">
-                        Get Free Estimate
-                      </Link>
+                      <Link href="/contact">Get Free Estimate</Link>
                     </li>
                     {/* <li>
                       <Link href="/services/exterior-painting">
