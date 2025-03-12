@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ArkansasPhone,
+  ColoradoPhone,
+  OklahomaPhone,
+} from "../../components/globals.js";
 import ContactForm from "../contactForm";
 import ContentBlock from "../content-block";
 
@@ -51,8 +56,23 @@ export default function CTA() {
         columnClassName="w-full text-center"
       >
         <h2 className="text-4xl font-bold uppercase">Call Us Today</h2>
-        <Link href="/contact" className="btn-main mt-[20px]">
-          Learn More
+        <Link
+          href={`tel:1${ArkansasPhone}`}
+          className="btn-main mt-[20px] mx-2"
+        >
+          Oklahoma
+        </Link>
+        <Link
+          href={`tel:1${OklahomaPhone}`}
+          className="btn-main mt-[20px] mx-2"
+        >
+          Arkansas
+        </Link>
+        <Link
+          href={`tel:1${ColoradoPhone}`}
+          className="btn-main mt-[20px] mx-2"
+        >
+          Colorado
         </Link>
       </ContentBlock>
     </>

@@ -540,7 +540,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 title="Full-Stack Web & Software Engineer & SEO done by Latino Web Studio in Denver, CO"
               >
-                Full-Stack Web & Software Engineer and SEO in Denver, CO
+                Web Development &amp; SEO in Denver, CO
               </a>{" "}
               done by Latino Web Studio.
             </small>
