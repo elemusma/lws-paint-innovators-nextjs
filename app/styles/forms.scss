@@ -1,0 +1,14 @@
+select {
+  color: gray; // Default color before selection
+}
+  
+select:not(:has(option:checked[value=""])) {
+  color: black; // Color after a value is selected
+}
+  
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-primary);
+  transition: outline 0.2s ease-in-out;
+}

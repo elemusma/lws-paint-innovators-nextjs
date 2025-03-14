@@ -1,7 +1,7 @@
 import Image from "next/image";
 // import ContactForm from "../components/contactForm";
 import ContentBlock from "../components/content-block";
-import ContactForm from "../components/forms/ContactForm";
+import ContactFormRequestQuote from "../components/forms/ContactFormRequestQuote";
 import {
   CommercialProjectsImages,
   IndustrialProjectsImages,
@@ -17,29 +17,32 @@ export default function Contact() {
         sectionClassName="relative py-[35px]"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
-        columnClassName="w-full text-center text-white relative bg-[rgba(0,0,0,0.5)] pt-10 px-5"
+        columnClassName="w-full relative bg-[rgba(0,0,0,0.5)] pt-10 px-5"
         background={
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/photos/Contact-Paint-Innovators.jpg"}
+              src={"/photos/Free-Estimate.jpg"}
               alt="Contact Paint Innovators"
               className="absolute top-0 left-0 w-full h-full object-cover"
-              style={{ objectFit: "cover", objectPosition: "bottom" }}
+              style={{ objectFit: "cover", objectPosition: "right" }}
               fill
             />
             {/* <div className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"></div> */}
           </>
         }
       >
-        <h1 className="text-4xl font-aspira-thin uppercase">
-          Send Us a Message
-        </h1>
-        <p>
-          Fill out the contact form below and our team will reach out to you
-          within 24 - 48 hours.
-        </p>
-        <ContactForm />
+        <div className="text-center text-white md:w-3/4 w-full mx-auto">
+          <h1 className="text-4xl text-shadow font-aspira-thin uppercase">
+            Get a Free Estimate
+          </h1>
+          <p>
+            Fill out what you can below and a dedicated project estimator will
+            be in touch with you shortly to discuss your commercial painting
+            project or home painting needs.
+          </p>
+        </div>
+        <ContactFormRequestQuote />
       </ContentBlock>
       <div className="spacer"></div>
       <SwiperCarouselNewService />

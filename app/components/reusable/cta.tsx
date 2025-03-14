@@ -7,8 +7,8 @@ import {
   ColoradoPhone,
   OklahomaPhone,
 } from "../../components/globals.js";
-import ContactForm from "../contactForm";
 import ContentBlock from "../content-block";
+import ContactForm from "../forms/ContactForm";
 
 export default function CTA() {
   const pathname = usePathname(); // Get the current route

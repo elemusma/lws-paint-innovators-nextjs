@@ -91,7 +91,7 @@ export default function NotFound() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen text-center">
+    <div className="relative flex flex-col items-center justify-center pt-[210px] pb-[210px] text-center">
       {/* WebGL Background */}
       <canvas
         ref={canvasRef}
@@ -99,14 +99,16 @@ export default function NotFound() {
       ></canvas>
 
       {/* 404 Content */}
-      <h1 className="text-6xl font-bold mb-4 z-10">404</h1>
-      <p className="text-2xl mb-6 z-10">
-        Oops! The page you're looking for doesn't exist.
-      </p>
+      <div className="relative">
+        <h1 className="text-6xl font-bold mb-4 z-10">404</h1>
+        <p className="text-2xl mb-6 z-10">
+          Oops! The page you're looking for doesn't exist.
+        </p>
 
-      <Link href="/" className="btn-main">
-        Go Home
-      </Link>
+        <Link href="/" className="btn-main">
+          Go Home
+        </Link>
+      </div>
     </div>
   );
 }

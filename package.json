@@ -16,6 +16,7 @@
     "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
     "framer-motion": "^12.4.7",
+    "googleapis": "^146.0.0",
     "jquery": "^3.7.1",
     "lightbox.js-react": "^1.4.8",
     "lightgallery": "^2.8.2",

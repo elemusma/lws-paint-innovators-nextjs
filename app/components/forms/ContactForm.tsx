@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"; // Import useRouter
 import React, { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../../styles/forms.scss";
 
 const ContactForm: React.FC = () => {
   const router = useRouter(); // Initialize Next.js router
@@ -21,6 +22,7 @@ const ContactForm: React.FC = () => {
       user_name: formData.get("user_name") as string,
       user_email: formData.get("user_email") as string,
       user_phone: formData.get("user_phone") as string,
+      user_subject: formData.get("user_subject") as string,
       message: formData.get("message") as string,
       embed_url: window.location.href, // Capture the current page URL
     };
@@ -59,7 +61,7 @@ const ContactForm: React.FC = () => {
           <div className="relative">
             <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
             <Image
-              src="/photos/contact/icon-name.png"
+              src="/forms/Form-Name.png"
               alt="User Icon"
               width={20}
               height={20}
@@ -78,7 +80,7 @@ const ContactForm: React.FC = () => {
           <div className="relative">
             <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
             <Image
-              src="/photos/contact/icon-email.png"
+              src="/forms/Form-Email.png"
               alt="Email Icon"
               width={20}
               height={20}
@@ -97,7 +99,7 @@ const ContactForm: React.FC = () => {
           <div className="relative">
             <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
             <Image
-              src="/photos/contact/icon-phone.png"
+              src="/forms/Form-Phone.png"
               alt="Phone Icon"
               width={20}
               height={20}
@@ -131,11 +133,30 @@ const ContactForm: React.FC = () => {
             />
           </div>
 
+          {/* Email Field */}
+          <div className="relative">
+            <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
+            <Image
+              src="/forms/Form-Subject-Line.png"
+              alt="Subject Line"
+              width={20}
+              height={20}
+              className="absolute left-2 top-3"
+            />
+            <input
+              type="text"
+              name="user_subject"
+              className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+              placeholder="Subject"
+              required
+            />
+          </div>
+
           {/* Message Field */}
           <div className="relative">
             <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-[95%] rounded-tl-md rounded-bl-md"></div>
             <Image
-              src="/photos/contact/icon-message.png"
+              src="/forms/Form-Message.png"
               alt="Message Icon"
               width={20}
               height={20}
@@ -150,10 +171,10 @@ const ContactForm: React.FC = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="text-center">
+          <div className="text-center" style={{ marginBottom: "-55px" }}>
             <button
               type="submit"
-              className="bg-accent text-white py-3 px-6 rounded-md"
+              className="btn-main square"
               disabled={loading}
             >
               {loading ? "Sending..." : "Send us a Message"}

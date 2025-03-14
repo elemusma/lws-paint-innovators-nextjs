@@ -5,7 +5,6 @@ const CLIENT_ID = process.env.GOOGLE_CLIENT_ID!;
 const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!;
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN = process.env.GOOGLE_REFRESH_TOKEN!;
-const GMAIL_USER = process.env.GMAIL_USER!;
 
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
@@ -13,9 +12,7 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const referer = req.headers.get("referer") || ""; // Get the referring URL
-
-    const { first_name, last_name, user_name, user_email, user_phone, project_type, location, user_subject, message, embed_url } = body;
+    const { first_name, last_name,user_name, user_email, user_phone, project_type, location, message, embed_url } = body;
 
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -23,7 +20,7 @@ export async function POST(req: Request) {
       service: "gmail",
       auth: {
         type: "OAuth2",
-        user: GMAIL_USER,
+        user: process.env.GMAIL_USER, // Your Gmail address
         clientId: CLIENT_ID,
         clientSecret: CLIENT_SECRET,
         refreshToken: REFRESH_TOKEN,
@@ -31,51 +28,18 @@ export async function POST(req: Request) {
       },
     });
 
-    // Determine form type based on pathname
-    let emailSubject = "New Form Submission";
-    let emailIntro = "";
-    let emailHtml = "";
-
-    if (referer.includes("/request-quote")) {
-      // Quote Request Form
-      emailSubject = `Quote Request from ${first_name} ${last_name}`;
-      emailIntro = `<p>Quote Request from ${first_name} ${last_name}:</p>`;
-      emailHtml = `
-        <p><strong>Name:</strong> ${first_name} ${last_name}</p>
-        <p><strong>Email:</strong> ${user_email}</p>
-        <p><strong>Phone:</strong> ${user_phone}</p>
-        <p><strong>Project Type:</strong> ${project_type}</p>
-        <p><strong>Location:</strong> ${location}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `;
-    } else if (referer.includes("/contact")) {
-      // Contact Form
-      emailSubject = `Latino Web Studio: "${user_name}"`;
-      emailIntro = `<p>Someone submitted a form. See details below:</p>`;
-      emailHtml = `
-        <p><strong>Name:</strong> ${user_name}</p>
-        <p><strong>Email:</strong> ${user_email}</p>
-        <p><strong>Phone:</strong> ${user_phone}</p>
-        <p><strong>Subject:</strong> ${user_subject}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `;
-    } else {
-      return new Response(JSON.stringify({ error: "Invalid form submission." }), { status: 400 });
-    }
-
     const mailOptions = {
-      from: `"Latino Web Studio" <${GMAIL_USER}>`,
+      from: `"Latino Web Studio" <${process.env.GMAIL_USER}>`,
       to: "tadeoycuba@gmail.com",
-      subject: emailSubject,
-      html: `
-        <table style="background-color: #f7f7f7; width: 100%;">
+      subject: `Latino Web Studio: "${first_name}"`,
+      html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
 <tr>
 <td>
 <table style="margin: auto; padding-top:20px;padding-bottom: 20px;">
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="250px" height="auto" /></td>
+<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="200px" height="auto" /></td>
 </tr>
 </tbody>
 </table>
@@ -83,13 +47,24 @@ export async function POST(req: Request) {
 <tbody>
 <tr>
 <td style="padding: 20px 20px;">
-${emailIntro}${emailHtml}
+<p>Hello Paint Innovators! Tadeo here, someone requested a free estimate. See details below:</p>
+<p><strong>Name:</strong> ${first_name} ${last_name}</p>
+<p><strong>Email:</strong> ${user_email}</p>
+<p><strong>Phone:</strong> ${user_phone}</p>
+<p><strong>Project Type:</strong> ${project_type}</p>
+<p><strong>Location:</strong> ${location}</p>
+<p><strong>Message:</strong> ${message}</p>
 </td>
 </tr>
 </tbody>
 </table>
 <table style="margin: auto; padding: 20px; width: 100%; max-width: 600px; text-align: center;">
 <tbody>
+<tr>
+<td>
+<h4>Congrats on Your New Website Lead!</h4>
+</td>
+</tr>
 <tr>
 <td><em><small><p><strong>Submitted from:</strong> <a href="${embed_url}" target="_blank">${embed_url}</a></p></small></em></td>
 </tr>
@@ -102,8 +77,7 @@ Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@
 </td>
 </tr>
 </tbody>
-</table>
-      `,
+</table>`,
     };
 
     const result = await transport.sendMail(mailOptions);
