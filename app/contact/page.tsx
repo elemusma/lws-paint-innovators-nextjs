@@ -1,6 +1,7 @@
 import Image from "next/image";
-import ContactForm from "../components/contactForm";
+// import ContactForm from "../components/contactForm";
 import ContentBlock from "../components/content-block";
+import ContactForm from "../components/forms/ContactForm";
 import {
   CommercialProjectsImages,
   IndustrialProjectsImages,

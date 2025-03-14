@@ -4,11 +4,11 @@ import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 import ValueColumn from "@/app/components/reusable/ValueColumn";
-import ArkansasLocationMap from "@/app/map/ArkansasLocation";
+import OklahomaLocationMap from "@/app/map/OklahomaLocation";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ArkansasLocation() {
+export default function OklahomaLocation() {
   return (
     <>
       <ContentBlock
@@ -38,7 +38,7 @@ export default function ArkansasLocation() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            Professional Painter in Arkansas
+            Professional Painter in Oklahoma
           </h1>
           {/* <h2 className="font-aspira-bold text-2xl">
             People <span className="text-accent">&bull;</span> Family{" "}
@@ -46,7 +46,7 @@ export default function ArkansasLocation() {
           </h2> */}
           <p className="text-shadow">
             View our interactive map below to see all our areas of service in
-            Arkansas.
+            Oklahoma.
           </p>
           <Link href="/contact" className="btn-main mt-[20px]">
             Get Free Estimate
@@ -58,17 +58,17 @@ export default function ArkansasLocation() {
         sectionClassName=""
         imageSrc="/team/Ensuring-Quality.jpg"
         imageAlt="Wallpaper"
-        overlayText="Humble Beginnings"
+        overlayText="Our Second Location"
         borderSubtitle={true}
-        overlayTextSubtitle="Springdale, AR"
+        overlayTextSubtitle="Opened in 2019"
         contentBorderOff={true}
         heading="Transform a Room"
-        content="Paint Innovators is located in Springdale, AR, which is a part of Northwest Arkansas. Our office is located at the corner of Har-ber Avenue and S 48th Street in Springdale, AR.  Our office is located in Washington county.  Paint innovators was started in Springdale in 2014 at 133 South 40th Street, Springdale, AR and then moved to Har-ber in 2020.  To locals in Northwest Arkansas, we are located in the Har-ber side of Springdale - which originated from the presence of Har-ber High School in our area."
+        content="Paint Innovators Oklahoma office is located in Tulsa, Oklahoma, which is in Northeast Oklahoma. Our office is located off of N 108th Avenue on E Newton Street - across the street from General Parts Group in Tulsa County. Paint innovators opened its Tulsa, OK location in October 2019 and is excited to serve the communities of Tulsa, Broken Arrow, and Oklahoma City to name just a few!"
         buttonLabel="Get Free Estimate"
         buttonLink="/contact"
       />
 
-      <ImageContentBlock
+      {/* <ImageContentBlock
         sectionClassName="even"
         imageSrc="/team/Our-Successful-Team.jpg"
         imageAlt="The History of Wall Paper"
@@ -77,10 +77,10 @@ export default function ArkansasLocation() {
         heading="Transform a Room"
         contentBorderOff={true}
         overlayTextSubtitle="Commercial & Residential"
-        content="At our Northwest Arkansas location, we have a team of experienced painters and technicians. Paint Innovators offers painting and contractor services to residential and commercial clients including custom painting, interior painting, exterior painting, drywall repair, cabinet & door staining or painting, concrete staining and epoxy floors, and deck coatings."
+        content="At our Tulsa location, we have a team of painters, technicians, and project managers to serve the professional painting needs of business owners and homeowners in Oklahoma. Paint Innovators is a painting company that is dedicated to quality painting, staining, deck coating, finishes, and more! We offer painting solutions for both commercial and residential painting projects across the state of OK."
         buttonLabel="Get Free Estimate"
         buttonLink="/contact"
-      />
+      /> */}
       <ContentBlock
         sectionClassName="bg-white text-black pt-7"
         containerClassName="max-w-screen-lg mx-auto pt-8"
@@ -88,14 +88,15 @@ export default function ArkansasLocation() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <h2 className="uppercase font-aspira-bold text-accent text-5xl">
-          Our Arkansas Location
+          Our Oklahoma Location
         </h2>
         <p className="text-gray-700 text-2xl pt-8 mb-20 font-aspira-bold">
-          {Company} is honored to be a part of the community of Springdale. Our
-          team of top-rated painters and technicians have families that
-          contribute to make Springdale an even better place to work and live!
-          Over the years, we have been involved with Washington Regional and
-          other community causes that support Springdale and Northwest Arkansas.
+          {Company} at our Tulsa location, we have a team of painters,
+          technicians, and project managers to serve the professional painting
+          needs of business owners and homeowners in Oklahoma. Paint Innovators
+          is a painting company that is dedicated to quality painting, staining,
+          deck coating, finishes, and more! We offer painting solutions for both
+          commercial and residential painting projects across the state of OK.
         </p>
         <div className="divider"></div>
         <div className="mb-20"></div>
@@ -106,17 +107,16 @@ export default function ArkansasLocation() {
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
       >
-        <ArkansasLocationMap />
-        <h2 className="mt-10 font-aspira-bold text-accent text-2xl">
-          Cities Served by our Arkansas location:
+        <OklahomaLocationMap />
+        <h2 className="mt-20 font-aspira-bold text-accent text-2xl">
+          Cities Served by our Tulsa, Oklahoma location:
         </h2>
         <p className="text-gray-700 pt-8 mb-20 font-aspira-bold">
-          Fayetteville • Tontitown • Siloam Springs • Rogers • Bentonville •
-          Prairie Grove • Farmington • Elkins • Bella Vista • Centerton • Lowell
-          • West Fork • Winslow • Lincoln • Greenland • Johnson • Cave Springs •
-          Goshen • Huntsville • Hindsville • Gentry • Decatur • Eureka Springs •
-          Berryville • Flippin • Mountain Home • Fort Smith • Russellville • Van
-          Buren • Greenwood • Clarksville • Central Arkansas
+          Tulsa • Broken Arrow • Oklahoma City (OKC) • Glenpool • Jenks •
+          Oakhurst • Owasso • Prue • Sand Springs • Sperry • Bixby • Mannford •
+          Inola • Chouteau • Pryor • Bartlesville • Claremore • Terlton, OK •
+          Depew • Bristow • Cushing • Drumright • Pawnee, OK • Bristow • Haskell
+          • Coweta • Skiatook • Collinsville • Limestone • Catoosa • Fair Oaks
         </p>
       </ContentBlock>
 
@@ -137,31 +137,31 @@ export default function ArkansasLocation() {
         <div className="w-full flex flex-wrap justify-center">
           <ValueColumn
             number={1}
-            heading="Friendly Community"
-            text="According to Springdalear.gov, the city of Springdale is a diverse and friendly community and is the 4th largest city in the state of Arkansas.  In 2017, Springdale was the best city in the country for new graduates and was the 6th fastest growing city in the country (with less than 100,000 residents)."
+            heading="Riverside Gateway to the Universe"
+            text="Tulsa is on the Arkansas River and some say that it is the center of the Universe."
             delay={0.1}
           />
 
           <ValueColumn
             className="order-2 md:order-3"
             number={2}
-            heading="Community Roots"
-            text="According to Arkansas.com, Springdale has about 75,000 people and was started in the 1850s as a small community named Shiloh."
+            heading="Second Largest City"
+            text="According to Wikipedia - Tulsa, Oklahoma is the second largest city in Oklahoma and is the 47th most populous city in the US.  Population of about 401,000."
             delay={0.2}
           />
           <ValueColumn
             className="order-3 md:order-5"
             number={3}
-            heading="Historic Value"
-            text="According to Wikipedia, Springdale is located on the Springfield Plateau deep in the Ozark mountains and is an important industrial city in the region."
+            heading="Home to Fortune 500 Leaders"
+            text="Tulsa is home to fortune 500 companies such as Williams, ONEOK, Avis, and NGL Energy Partners."
             delay={0.3}
           />
 
           <ValueColumn
             className="order-4 md:order-2"
             number={4}
-            heading="Heart of the Ozarks"
-            text="Springdale is home to many large companies including Tyson, PAM Transport, George's Inc, Harps, and Northwest Health. Springdale is located in Washington and Benton counties and includes the following zip codes: 72762, 72764, 72765, and 72766."
+            heading="A City Spanning Four Counties"
+            text="Tulsa is located in Osage, Rogers, Tulsa, and Wagoner counties."
             delay={0.4}
           />
         </div>
