@@ -1,45 +1,36 @@
-import Image from "next/image";
 // import ContactForm from "../components/contactForm";
-import ContentBlock from "../components/content-block";
-import ContactForm from "../components/forms/ContactForm";
+"use client";
+import CareerOfficeAssociate from "@/app/components/forms/CareerEnglish";
+import ContentBlock from "../../components/content-block";
 import {
   CommercialProjectsImages,
   IndustrialProjectsImages,
   ResidentialProjectsImages,
-} from "../components/globals";
-import SwiperCarouselNewService from "../components/swiperCarouselNewService";
-import SwiperCarouselProjects from "../components/swiperCarouselProjects";
+} from "../../components/globals";
+import SwiperCarouselNewService from "../../components/swiperCarouselNewService";
+import SwiperCarouselProjects from "../../components/swiperCarouselProjects";
 
 export default function Contact() {
   return (
     <>
       <ContentBlock
-        sectionClassName="relative py-[35px]"
+        sectionClassName="relative py-[50px]"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
-        columnClassName="w-full text-center text-white relative bg-[rgba(0,0,0,0.5)] pt-10 px-5"
-        background={
-          // Optional background element; can be omitted if not needed.
-          <>
-            <Image
-              src={"/photos/Contact.jpg"}
-              alt="Contact Paint Innovators"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              style={{ objectFit: "cover", objectPosition: "bottom" }}
-              fill
-            />
-            {/* <div className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"></div> */}
-          </>
-        }
+        columnClassName="w-full relative px-5"
       >
-        <h1 className="text-4xl font-aspira-thin uppercase">
-          Send Us a Message
-        </h1>
-        <p>
-          Fill out the contact form below and our team will reach out to you
-          within 24 - 48 hours.
-        </p>
-        <ContactForm />
+        <div className="text-center md:w-3/4 w-full mx-auto pb-[50px]">
+          <h1 className="mt-6 text-3xl font-extrabold text-gray-900">
+            Drywall Finisher
+          </h1>
+
+          <p className="my-2 text-sm">
+            Drywall finishers fasten pre-made <strong>drywall</strong> panels to
+            the interiors of rooms, finishing or taping joints to prepare
+            surfaces for final finish work.
+          </p>
+        </div>
+        <CareerOfficeAssociate />
       </ContentBlock>
       <div className="spacer"></div>
       <SwiperCarouselNewService />

@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const referer = req.headers.get("referer") || ""; // Get the referring URL
 
-    const { first_name, last_name, user_name, user_email, user_phone, project_type, location, user_subject, message, embed_url } = body;
+    const { first_name, last_name, user_name, user_email, user_phone, project_type, location, user_subject, message, embed_url,position } = body;
 
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -59,7 +59,18 @@ export async function POST(req: Request) {
         <p><strong>Subject:</strong> ${user_subject}</p>
         <p><strong>Message:</strong> ${message}</p>
       `;
-    } else {
+    } else if (referer.includes("/careers")) {
+      // Careers Form (for any career submission)
+      emailSubject = `Job Application: ${position} - ${first_name} ${last_name}`;
+      emailIntro = `<p>New job application for <strong>${position}</strong>:</p>`;
+      emailHtml = `
+        <p><strong>Name:</strong> ${first_name} ${last_name}</p>
+        <p><strong>Email:</strong> ${user_email}</p>
+        <p><strong>Phone:</strong> ${user_phone}</p>
+        <p><strong>Position:</strong> ${position}</p>
+      `;
+    } 
+    else {
       return new Response(JSON.stringify({ error: "Invalid form submission." }), { status: 400 });
     }
 

@@ -384,8 +384,11 @@ export default function Footer() {
                 <div className="w-full">
                   <ul className="list-none text-sm">
                     <li>
-                      <Link href="/careers/painter-drywall-finisher">
-                        Painter / Drywall Finisher
+                      <Link href="/careers/painter">Painter</Link>
+                    </li>
+                    <li>
+                      <Link href="/careers/drywall-finisher">
+                        Drywall Finisher
                       </Link>
                     </li>
                     <li>
@@ -540,7 +543,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 title="Full-Stack Web & Software Engineer & SEO done by Latino Web Studio in Denver, CO"
               >
-                Web Development &amp; SEO in Denver, CO
+                Web Design &amp; SEO in Denver, CO
               </a>{" "}
               done by Latino Web Studio.
             </small>

@@ -6,9 +6,17 @@ select:not(:has(option:checked[value=""])) {
   color: black; // Color after a value is selected
 }
   
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid var(--accent-primary);
-  transition: outline 0.2s ease-in-out;
+input,
+select,
+textarea {
+  padding:.75rem;
+  border-radius: .375rem;
+  border: 1px solid var(--neutral-dark);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:focus {
+    border-color: var(--accent-primary);
+    outline: 2px solid var(--accent-primary); // Remove default browser outline
+    box-shadow: 0 0 4px var(--accent-primary); // Adds a glow effect
+  }
 }
