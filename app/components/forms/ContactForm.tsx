@@ -6,6 +6,7 @@ import React, { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/forms.scss";
+import { formatPhoneNumber } from "./phoneFormatting";
 
 const ContactForm: React.FC = () => {
   const router = useRouter(); // Initialize Next.js router
@@ -59,115 +60,138 @@ const ContactForm: React.FC = () => {
         <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
           {/* Name Field */}
           <div className="relative">
-            <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
-            <Image
-              src="/forms/Form-Name.png"
-              alt="User Icon"
-              width={20}
-              height={20}
-              className="absolute left-2 top-3"
-            />
-            <input
-              type="text"
-              name="user_name"
-              className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
-              placeholder="Name"
-              required
-            />
+            <label
+              htmlFor="user_name"
+              className="block text-sm font-medium text-white"
+            >
+              Name <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
+              <Image
+                src="/forms/Form-Name.png"
+                alt="User Icon"
+                width={20}
+                height={20}
+                className="absolute left-2 top-3"
+              />
+              <input
+                type="text"
+                name="user_name"
+                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                placeholder="Name"
+                required
+              />
+            </div>
           </div>
 
           {/* Email Field */}
           <div className="relative">
-            <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
-            <Image
-              src="/forms/Form-Email.png"
-              alt="Email Icon"
-              width={20}
-              height={20}
-              className="absolute left-2 top-3"
-            />
-            <input
-              type="email"
-              name="user_email"
-              className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
-              placeholder="Email Address"
-              required
-            />
+            <label
+              htmlFor="user_email"
+              className="block text-sm font-medium text-white"
+            >
+              Email Address <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
+              <Image
+                src="/forms/Form-Email.png"
+                alt="Email Icon"
+                width={20}
+                height={20}
+                className="absolute left-2 top-3"
+              />
+              <input
+                type="email"
+                name="user_email"
+                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                placeholder="Email Address"
+                required
+              />
+            </div>
           </div>
 
           {/* Phone Field */}
           <div className="relative">
-            <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
-            <Image
-              src="/forms/Form-Phone.png"
-              alt="Phone Icon"
-              width={20}
-              height={20}
-              className="absolute left-2 top-3"
-            />
-            <input
-              type="tel"
-              name="user_phone"
-              className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
-              placeholder="Phone"
-              required
-              maxLength={14} // Prevents extra characters after formatting
-              onChange={(e) => {
-                let value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
-                if (value.length > 10) value = value.slice(0, 10); // Limit to 10 digits
-
-                let formatted = "";
-                if (value.length > 6) {
-                  formatted = `(${value.slice(0, 3)}) ${value.slice(
-                    3,
-                    6
-                  )}-${value.slice(6)}`;
-                } else if (value.length > 3) {
-                  formatted = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-                } else if (value.length > 0) {
-                  formatted = `(${value}`;
-                }
-
-                e.target.value = formatted; // Update input value
-              }}
-            />
+            <label
+              htmlFor="user_phone"
+              className="block text-sm font-medium text-white"
+            >
+              Phone <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
+              <Image
+                src="/forms/Form-Phone.png"
+                alt="Phone Icon"
+                width={20}
+                height={20}
+                className="absolute left-2 top-3"
+              />
+              <input
+                type="tel"
+                name="user_phone"
+                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                placeholder="Phone"
+                required
+                maxLength={14} // Prevents extra characters after formatting
+                onChange={formatPhoneNumber}
+              />
+            </div>
           </div>
 
           {/* Email Field */}
           <div className="relative">
-            <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
-            <Image
-              src="/forms/Form-Subject-Line.png"
-              alt="Subject Line"
-              width={20}
-              height={20}
-              className="absolute left-2 top-3"
-            />
-            <input
-              type="text"
-              name="user_subject"
-              className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
-              placeholder="Subject"
-              required
-            />
+            <label
+              htmlFor="user_subject"
+              className="block text-sm font-medium text-white"
+            >
+              Subject <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-full rounded-tl-md rounded-bl-md"></div>
+              <Image
+                src="/forms/Form-Subject-Line.png"
+                alt="Subject Line"
+                width={20}
+                height={20}
+                className="absolute left-2 top-3"
+              />
+              <input
+                type="text"
+                name="user_subject"
+                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                placeholder="Subject"
+                required
+              />
+            </div>
           </div>
 
           {/* Message Field */}
           <div className="relative">
-            <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-[95%] rounded-tl-md rounded-bl-md"></div>
-            <Image
-              src="/forms/Form-Message.png"
-              alt="Message Icon"
-              width={20}
-              height={20}
-              className="absolute left-2 top-3"
-            />
-            <textarea
-              name="message"
-              className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md min-h-[120px]"
-              placeholder="Message"
-              required
-            ></textarea>
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-white"
+            >
+              Message <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <div className="absolute top-0 left-0 bg-white/80 w-[35px] h-[95%] rounded-tl-md rounded-bl-md"></div>
+              <Image
+                src="/forms/Form-Message.png"
+                alt="Message Icon"
+                width={20}
+                height={20}
+                className="absolute left-2 top-3"
+              />
+              <textarea
+                name="message"
+                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md min-h-[120px]"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
           </div>
 
           {/* Submit Button */}

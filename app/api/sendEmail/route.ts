@@ -15,7 +15,50 @@ export async function POST(req: Request) {
     const body = await req.json();
     const referer = req.headers.get("referer") || ""; // Get the referring URL
 
-    const { first_name, last_name, user_name, user_email, user_phone, project_type, location, user_subject, message, embed_url,position } = body;
+    const { 
+      first_name, 
+      last_name, 
+      user_name, 
+      user_email, 
+      user_phone, 
+      project_type, 
+      location, 
+      user_subject, 
+      message, 
+      embed_url,
+      position,
+      alt_phone,
+      referral_source,
+      address: {
+        line1,
+        line2,
+        city,
+        state,
+        zip
+      },
+      start_date,
+      compensation,
+      employment_type,
+      legal_work_status,
+      previous_employer_1: {
+        company_name,
+        responsibilities,
+        start_title,
+        end_title,
+        years_worked,
+        reason_leaving,
+        contact_permission
+      },
+      reference: {
+        first_name: ref_first_name,
+        last_name: ref_last_name,
+        phone: ref_phone,
+        email: ref_email,
+        relation: ref_relation
+      },
+      skills_qualifications,
+      certification_agreement
+    } = body;
 
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -39,7 +82,7 @@ export async function POST(req: Request) {
     if (referer.includes("/request-quote")) {
       // Quote Request Form
       emailSubject = `Quote Request from ${first_name} ${last_name}`;
-      emailIntro = `<p>Quote Request from ${first_name} ${last_name}:</p>`;
+      emailIntro = `<p>Tadeo here! Quote Request from ${first_name} ${last_name}:</p>`;
       emailHtml = `
         <p><strong>Name:</strong> ${first_name} ${last_name}</p>
         <p><strong>Email:</strong> ${user_email}</p>
@@ -51,7 +94,7 @@ export async function POST(req: Request) {
     } else if (referer.includes("/contact")) {
       // Contact Form
       emailSubject = `Latino Web Studio: "${user_name}"`;
-      emailIntro = `<p>Someone submitted a form. See details below:</p>`;
+      emailIntro = `<p>Tadeo here! Someone submitted a form. See their details below:</p>`;
       emailHtml = `
         <p><strong>Name:</strong> ${user_name}</p>
         <p><strong>Email:</strong> ${user_email}</p>
@@ -62,12 +105,50 @@ export async function POST(req: Request) {
     } else if (referer.includes("/careers")) {
       // Careers Form (for any career submission)
       emailSubject = `Job Application: ${position} - ${first_name} ${last_name}`;
-      emailIntro = `<p>New job application for <strong>${position}</strong>:</p>`;
+      emailIntro = `<p>Tadeo here! Congrats, there is a new job application for <strong>${position}</strong>:</p>`;
       emailHtml = `
-        <p><strong>Name:</strong> ${first_name} ${last_name}</p>
-        <p><strong>Email:</strong> ${user_email}</p>
-        <p><strong>Phone:</strong> ${user_phone}</p>
-        <p><strong>Position:</strong> ${position}</p>
+  <h2>Personal Information</h2>
+  <p><strong>Name:</strong> ${first_name} ${last_name}</p>
+  <p><strong>Email:</strong> ${user_email}</p>
+  <p><strong>Phone:</strong> ${user_phone}</p>
+  <p><strong>Alternative Phone:</strong> ${alt_phone || 'N/A'}</p>
+  <p><strong>Referral Source:</strong> ${referral_source || 'N/A'}</p>
+  <p><strong>Position:</strong> ${position}</p>
+
+  <h2>Address</h2>
+  <p><strong>Address Line 1:</strong> ${line1}</p>
+  <p><strong>Address Line 2:</strong> ${line2 || 'N/A'}</p>
+  <p><strong>City:</strong> ${city}</p>
+  <p><strong>State:</strong> ${state}</p>
+  <p><strong>ZIP:</strong> ${zip}</p>
+
+  <h2>Employment Details</h2>
+  <p><strong>Available Start Date:</strong> ${start_date}</p>
+  <p><strong>Desired Compensation:</strong> ${compensation}</p>
+  <p><strong>Employment Type:</strong> ${employment_type}</p>
+  <p><strong>Legal Work Status:</strong> ${legal_work_status}</p>
+
+  <h2>Most Recent Employment</h2>
+  <p><strong>Company Name:</strong> ${company_name}</p>
+  <p><strong>Responsibilities:</strong> ${responsibilities}</p>
+  <p><strong>Starting Position:</strong> ${start_title}</p>
+  <p><strong>Ending Position:</strong> ${end_title || 'N/A'}</p>
+  <p><strong>Years Worked:</strong> ${years_worked || 'N/A'}</p>
+  <p><strong>Reason for Leaving:</strong> ${reason_leaving || 'N/A'}</p>
+  <p><strong>Contact Permission:</strong> ${contact_permission}</p>
+
+  <h2>Professional Reference</h2>
+  <p><strong>Name:</strong> ${ref_first_name || 'N/A'} ${ref_last_name || 'N/A'}</p>
+  <p><strong>Phone:</strong> ${ref_phone || 'N/A'}</p>
+  <p><strong>Email:</strong> ${ref_email || 'N/A'}</p>
+  <p><strong>Relationship:</strong> ${ref_relation || 'N/A'}</p>
+
+  <h2>Skills and Certification</h2>
+  <p><strong>Skills & Qualifications:</strong> ${skills_qualifications}</p>
+  <p><strong>Certification Agreement:</strong> ${certification_agreement}</p>
+
+  <h2>Additional Information</h2>
+  <p><strong>Application URL:</strong> ${embed_url}</p>
       `;
     } 
     else {

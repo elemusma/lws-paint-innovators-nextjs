@@ -63,7 +63,7 @@ const ContactFormRequestQuote: React.FC = () => {
           <div className="flex flex-wrap justify-around">
             <div className="w-1/2 pr-2">
               <label htmlFor="fname" className="block text-white">
-                First Name
+                First Name <span className="text-red-500">*</span>
               </label>
               <input
                 id="fname"
@@ -76,7 +76,7 @@ const ContactFormRequestQuote: React.FC = () => {
             </div>
             <div className="w-1/2 pl-2">
               <label htmlFor="lname" className="block text-white">
-                Last Name
+                Last Name <span className="text-red-500">*</span>
               </label>
               <input
                 id="lname"
@@ -91,7 +91,7 @@ const ContactFormRequestQuote: React.FC = () => {
           <div className="flex flex-wrap justify-around">
             <div className="w-1/2 pr-2">
               <label htmlFor="email" className="block text-white">
-                Email Address
+                Email Address <span className="text-red-500">*</span>
               </label>
               <input
                 id="email"
@@ -104,7 +104,7 @@ const ContactFormRequestQuote: React.FC = () => {
             </div>
             <div className="w-1/2 pl-2">
               <label htmlFor="phone" className="block text-white">
-                Phone
+                Phone <span className="text-red-500">*</span>
               </label>
               <input
                 id="phone"
@@ -120,7 +120,7 @@ const ContactFormRequestQuote: React.FC = () => {
           <div className="flex flex-wrap justify-around">
             <div className="w-1/2 pr-2">
               <label htmlFor="project_type" className="block text-white">
-                Project Type
+                Project Type <span className="text-red-500">*</span>
               </label>
               <select
                 id="project_type"
@@ -138,7 +138,7 @@ const ContactFormRequestQuote: React.FC = () => {
             </div>
             <div className="w-1/2 pl-2">
               <label htmlFor="location" className="block text-white">
-                Location
+                Location <span className="text-red-500">*</span>
               </label>
               <select
                 id="location"
@@ -156,7 +156,7 @@ const ContactFormRequestQuote: React.FC = () => {
             </div>
           </div>
           <label htmlFor="message" className="block text-white">
-            Message
+            Message <span className="text-red-500">*</span>
           </label>
           <textarea
             id="message"

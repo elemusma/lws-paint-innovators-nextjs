@@ -58,7 +58,7 @@ export default function OurTeam() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/services/Services-Wallpaper-Removal-Paint-Innovators.jpg"}
+              src={"/team/Team.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -82,7 +82,7 @@ export default function OurTeam() {
             People <span className="text-accent">&bull;</span> Family{" "}
             <span className="text-accent">&bull;</span> Community
           </h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/free-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>

@@ -7,6 +7,7 @@ import {
   IndustrialProjectsImages,
   ResidentialProjectsImages,
 } from "../components/globals";
+import Testimonials from "../components/reusable/Testimonials";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 import SwiperCarouselProjects from "../components/swiperCarouselProjects";
 
@@ -17,7 +18,7 @@ export default function Contact() {
         sectionClassName="relative py-[35px]"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
-        columnClassName="w-full text-center text-white relative bg-[rgba(0,0,0,0.5)] pt-10 px-5"
+        columnClassName="w-full relative bg-[rgba(0,0,0,0.5)] pt-10 px-5"
         background={
           // Optional background element; can be omitted if not needed.
           <>
@@ -32,13 +33,15 @@ export default function Contact() {
           </>
         }
       >
-        <h1 className="text-4xl font-aspira-thin uppercase">
-          Send Us a Message
-        </h1>
-        <p>
-          Fill out the contact form below and our team will reach out to you
-          within 24 - 48 hours.
-        </p>
+        <div className="text-center text-white">
+          <h1 className="text-4xl font-aspira-thin uppercase">
+            Send Us a Message
+          </h1>
+          <p>
+            Fill out the contact form below and our team will reach out to you
+            within 24 - 48 hours.
+          </p>
+        </div>
         <ContactForm />
       </ContentBlock>
       <div className="spacer"></div>
@@ -79,6 +82,8 @@ export default function Contact() {
           </h2>
         </div>
       </ContentBlock>
+      <div className="spacer"></div>
+      <Testimonials />
       <div className="spacer"></div>
     </>
   );

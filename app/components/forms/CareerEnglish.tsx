@@ -151,7 +151,7 @@ function CareerOfficeAssociate() {
 
         // ✅ Wait briefly before redirecting
         setTimeout(() => {
-          window.location.href = "/completed-job-application";
+          window.location.href = "/thank-you";
         }, 200); // Small delay to ensure state is updated
       } else {
         toast.error(result.error || "Error submitting application.");

@@ -9,6 +9,7 @@ import {
 } from "../../components/globals.js";
 import ContentBlock from "../content-block";
 import ContactForm from "../forms/ContactForm";
+import Testimonials from "./Testimonials";
 
 export default function CTA() {
   const pathname = usePathname(); // Get the current route
@@ -23,6 +24,8 @@ export default function CTA() {
 
   return (
     <>
+      <Testimonials />
+      <div className="spacer"></div>
       <ContentBlock
         sectionClassName="bg-accent text-white"
         containerClassName="max-w-screen-lg mx-auto py-8"
@@ -40,7 +43,7 @@ export default function CTA() {
         sectionClassName="relative py-[100px]"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
-        columnClassName="w-full text-center relative bg-[rgba(0,0,0,0.5)] pt-10 px-5"
+        columnClassName="w-full relative bg-[rgba(0,0,0,0.5)] pt-10 px-5"
         background={
           // Optional background element; can be omitted if not needed.
           <>
@@ -55,7 +58,7 @@ export default function CTA() {
           </>
         }
       >
-        <h2 className="text-4xl font-aspira-thin uppercase text-white">
+        <h2 className="text-4xl font-aspira-thin uppercase text-center text-white">
           Have a Question?
         </h2>
         <ContactForm />
