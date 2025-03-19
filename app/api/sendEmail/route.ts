@@ -38,8 +38,12 @@ export async function POST(req: Request) {
       },
       start_date,
       compensation,
-      employment_type,
+      work_permit,
+      work_permit_explanation,
+      work_for_paint_innovators,
       legal_work_status,
+      employment_type,
+      criminal_record,
       previous_employer_1: {
         company_name,
         responsibilities,
@@ -47,15 +51,40 @@ export async function POST(req: Request) {
         end_title,
         years_worked,
         reason_leaving,
-        contact_permission
+        contact_permission,
+        address: {
+          line1: prev1_address_line1,
+          line2: prev1_address_line2,
+          city: prev1_city,
+          state: prev1_state,
+          zip: prev1_zip,
+          // country: prev1_country,
+        },
       },
-      reference: {
-        first_name: ref_first_name,
-        last_name: ref_last_name,
-        phone: ref_phone,
-        email: ref_email,
-        relation: ref_relation
+      previous_employer_2: {
+        company_name_prev2,
+        responsibilities_prev2,
+        start_title_prev2,
+        end_title_prev2,
+        years_worked_prev2,
+        reason_leaving_prev2,
+        contact_permission_prev2,
+        address: {
+          line1: address_line1_prev2,
+          line2: address_line2_prev2,
+          city: city_prev2,
+          state: state_prev2,
+          zip: zip_prev2,
+          // country: country_prev2,
+        },
       },
+      // reference: {
+      //   first_name: ref_first_name,
+      //   last_name: ref_last_name,
+      //   phone: ref_phone,
+      //   email: ref_email,
+      //   relation: ref_relation
+      // },
       skills_qualifications,
       certification_agreement
     } = body;
@@ -123,25 +152,44 @@ export async function POST(req: Request) {
   <p><strong>ZIP:</strong> ${zip}</p>
 
   <h2>Employment Details</h2>
-  <p><strong>Available Start Date:</strong> ${start_date}</p>
-  <p><strong>Desired Compensation:</strong> ${compensation}</p>
-  <p><strong>Employment Type:</strong> ${employment_type}</p>
+  <p><strong>Date Available to Start:</strong> ${start_date}</p>
+  <p><strong>Compensation Requirements:</strong> ${compensation}</p>
+  <p><strong>If you are under 18 years of age, can you provide a work permit?:</strong> ${work_permit}</p>
+  <p><strong>If no, please explain:</strong> ${work_permit_explanation || 'N/A'}</p>
+  <p><strong>Have you ever worked for Paint Innovators, Inc.?:</strong> ${work_for_paint_innovators}</p>
   <p><strong>Legal Work Status:</strong> ${legal_work_status}</p>
+  <p><strong>Type of Employment Desired:</strong> ${employment_type}</p>
+  <p><strong>Have you ever pleaded guilty, no contest, or been convicted of a crime?:</strong> ${criminal_record}</p>
 
   <h2>Most Recent Employment</h2>
   <p><strong>Company Name:</strong> ${company_name}</p>
+  <p><strong>Address Line 1:</strong> ${prev1_address_line1}</p>
+  <p><strong>Address Line 2:</strong> ${prev1_address_line2 || 'N/A'}</p>
+  <p><strong>City:</strong> ${prev1_city}</p>
+  <p><strong>State:</strong> ${prev1_state}</p>
+  <p><strong>ZIP:</strong> ${prev1_zip}</p>
   <p><strong>Responsibilities:</strong> ${responsibilities}</p>
   <p><strong>Starting Position:</strong> ${start_title}</p>
   <p><strong>Ending Position:</strong> ${end_title || 'N/A'}</p>
   <p><strong>Years Worked:</strong> ${years_worked || 'N/A'}</p>
   <p><strong>Reason for Leaving:</strong> ${reason_leaving || 'N/A'}</p>
   <p><strong>Contact Permission:</strong> ${contact_permission}</p>
+  
 
-  <h2>Professional Reference</h2>
-  <p><strong>Name:</strong> ${ref_first_name || 'N/A'} ${ref_last_name || 'N/A'}</p>
-  <p><strong>Phone:</strong> ${ref_phone || 'N/A'}</p>
-  <p><strong>Email:</strong> ${ref_email || 'N/A'}</p>
-  <p><strong>Relationship:</strong> ${ref_relation || 'N/A'}</p>
+  <h2>Previous Employment</h2>
+  <p><strong>Company Name:</strong> ${company_name_prev2}</p>
+  <p><strong>Address Line 1:</strong> ${address_line1_prev2}</p>
+  <p><strong>Address Line 2:</strong> ${address_line2_prev2 || 'N/A'}</p>
+  <p><strong>City:</strong> ${city_prev2}</p>
+  <p><strong>State:</strong> ${state_prev2}</p>
+  <p><strong>ZIP:</strong> ${zip_prev2}</p>
+  <p><strong>Responsibilities:</strong> ${responsibilities_prev2}</p>
+  <p><strong>Starting Position:</strong> ${start_title_prev2}</p>
+  <p><strong>Ending Position:</strong> ${end_title_prev2 || 'N/A'}</p>
+  <p><strong>Years Worked:</strong> ${years_worked_prev2 || 'N/A'}</p>
+  <p><strong>Reason for Leaving:</strong> ${reason_leaving_prev2 || 'N/A'}</p>
+  <p><strong>Contact Permission:</strong> ${contact_permission_prev2}</p>
+  
 
   <h2>Skills and Certification</h2>
   <p><strong>Skills & Qualifications:</strong> ${skills_qualifications}</p>

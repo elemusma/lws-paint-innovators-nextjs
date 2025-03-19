@@ -25,8 +25,119 @@ export async function POST(req: Request) {
   }
 }
 
-function CareerOfficeAssociate() {
+function CareerEnglish() {
   const pathname = usePathname();
+  const language = pathname === "/careers/pintor-masero" ? "es" : "en";
+  const translations = {
+    en: {
+      instructions:
+        "Please fill out all required fields marked with an asterisk",
+      disclaimer:
+        "It is important that you DO NOT REFRESH the web page while completing this job application. Programs, services, and employment are equally available to everyone. Please inform the Human Resources Department if you require reasonable accommodation for the application or interview.",
+      personal_information: "Personal Information",
+      first_name: "First Name",
+      last_name: "Last Name",
+      phone: "Phone",
+      alt_phone: "Alternative Phone",
+      email: "Email",
+      position: "Position Applied for",
+      referral_source: "How did you hear about us?",
+      address_title: "Address",
+      address_line_1: "Address Line 1",
+      address_line_2: "Address Line 2",
+      city: "City",
+      state: "State",
+      zip: "ZIP Code",
+      employment_title: "Employment Details",
+      start_date: "Date Available to Start",
+      compensation: "Compensation Requirements ($/Hour)",
+      work_permit: "If you are under 18, can you provide a work permit?",
+      work_permit_explanation: "If no, please explain:",
+      previous_employment: "Have you ever worked for Paint Innovators, Inc.?",
+      legal_work_status: "Are you legally authorized to work in the U.S.?",
+      employment_type: "Type of Employment Desired",
+      criminal_record:
+        "Have you ever pleaded guilty, no contest, or been convicted of a crime?",
+      prev1_employer: "Previous Employer #1",
+      prev2_employer: "Previous Employer #2",
+      company_name: "Company Name",
+      starting_position: "Starting Position",
+      ending_position: "Ending Position",
+      years_worked: "Years Worked",
+      reason_for_leaving: "Reasons for Leaving",
+      contact_permission: "May we contact this employer?",
+      responsibilities: "Responsibilities",
+      skills_qualifications_title: "Skills and Certification",
+      skills_qualifications: "Summarize your special skills or qualifications",
+      certification_agreement_title: "Certification and Agreement",
+      certification_agreement_text:
+        "I certify that my answers are true and complete to the best of my knowledge. I authorize investigations of all statements contained in this application as may be necessary in arriving at an employment decision. I understand that false or misleading information in my application or interview may result in discharge.",
+      agreement_text: "I Agree",
+      submit: "Submit Application",
+      yes: "Yes",
+      no: "No",
+      fulltime: "Full-Time",
+      parttime: "Part-Time",
+      temporary: "Temporary",
+      seasonal: "Seasonal",
+    },
+    es: {
+      instructions:
+        "Por favor, complete todos los campos obligatorios marcados con un asterisco",
+      disclaimer:
+        "Es importante que NO ACTUALICE la página web mientras completa esta solicitud de empleo. Los programas, servicios y empleos están igualmente disponibles para todos. Informe al Departamento de Recursos Humanos si necesita un ajuste razonable para la solicitud o la entrevista.",
+      personal_information: "Información Personal",
+      first_name: "Nombre",
+      last_name: "Apellido",
+      phone: "Teléfono",
+      alt_phone: "Teléfono Alternativo",
+      email: "Correo Electrónico",
+      position: "Posición Deseada",
+      referral_source: "¿Cómo escucho de nosotros?",
+      address_title: "Dirección",
+      address_line_1: "Dirección Línea 1",
+      address_line_2: "Dirección Línea 2",
+      city: "Ciudad",
+      state: "Estado",
+      zip: "Código Postal",
+      employment_title: "Detalles del Empleo",
+      start_date: "Fecha Disponible para Comenzar",
+      compensation: "Salario Deseado ($/Hora)",
+      work_permit:
+        "Si tiene menos de 18 años, ¿puede proporcionar un permiso de trabajo?",
+      work_permit_explanation: "Si no, por favor explique el motivo:",
+      previous_employment:
+        "¿Ha trabajado alguna vez para Paint Innovators, Inc.?",
+      legal_work_status:
+        "¿Está autorizado legalmente para trabajar en los EE.UU.?",
+      employment_type: "Tipo de Empleo Deseado",
+      criminal_record:
+        "¿Alguna vez se ha declarado culpable, no impugnó o ha sido condenado por un delito?",
+      prev1_employer: "Empleador Anterior #1",
+      prev2_employer: "Empleador Anterior #2",
+      company_name: "Nombre de la Empresa",
+      starting_position: "Puesto inicial en la empresa",
+      ending_position: "Puesto final en la empresa",
+      years_worked: "Años trabajados en esa empresa",
+      reason_for_leaving: "Razon por la cual dejó ese empleo",
+      contact_permission: "¿Podemos contactar a este empleador?",
+      responsibilities: "Responsabilidades",
+      skills_qualifications_title: "Habilidades y Certificaciones",
+      skills_qualifications:
+        "Describa sus habilidades o calificaciones especiales",
+      certification_agreement_title: "Certificación y Acuerdo",
+      certification_agreement_text:
+        "Certifico que mis respuestas son verdaderas y completas según mi mejor conocimiento. Autorizo la investigación de todas las declaraciones contenidas en esta solicitud, según sea necesario para tomar una decisión de empleo. Entiendo que la información falsa o engañosa en mi solicitud o entrevista puede resultar en mi despido.",
+      agreement_text: "Estoy de Acuerdo",
+      submit: "Enviar Solicitud",
+      yes: "Si",
+      no: "No",
+      fulltime: "Tiempo Completo",
+      parttime: "Tiempo Parcial",
+      temporary: "Temporal",
+      seasonal: "Por Temporada",
+    },
+  };
 
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
@@ -60,6 +171,7 @@ function CareerOfficeAssociate() {
       user_email: formData.get("email") as string,
       user_phone: formData.get("phone") as string,
       alt_phone: formData.get("alt_phone") as string,
+      position: formData.get("position_desired") as string,
       referral_source: formData.get("referral_source") as string,
       address: {
         country: formData.get("country") as string,
@@ -74,6 +186,9 @@ function CareerOfficeAssociate() {
       work_permit: formData.get("work_permit") as string,
       work_permit_explanation: formData.get(
         "work_permit_explanation"
+      ) as string,
+      work_for_paint_innovators: formData.get(
+        "work_for_paint_innovators"
       ) as string,
       previous_employment: formData.get("previous_employment") as string,
       previous_employment_date: formData.get(
@@ -100,7 +215,7 @@ function CareerOfficeAssociate() {
         contact_permission: formData.get("prev1_contact_permission") as string,
       },
       previous_employer_2: {
-        company_name: formData.get("prev2_company_name") as string,
+        company_name_prev2: formData.get("prev2_company_name") as string,
         address: {
           country: formData.get("prev2_country") as string,
           line1: formData.get("prev2_address_line1") as string,
@@ -109,27 +224,31 @@ function CareerOfficeAssociate() {
           state: formData.get("prev2_state") as string,
           zip: formData.get("prev2_zip") as string,
         },
-        start_title: formData.get("prev2_start_title") as string,
-        responsibilities: formData.get("prev2_responsibilities") as string,
-        years_worked: formData.get("prev2_years_worked") as string,
-        end_title: formData.get("prev2_end_title") as string,
-        reason_leaving: formData.get("prev2_reason_leaving") as string,
-        contact_permission: formData.get("prev2_contact_permission") as string,
+        start_title_prev2: formData.get("prev2_start_title") as string,
+        end_title_prev2: formData.get("prev2_end_title") as string,
+        responsibilities_prev2: formData.get(
+          "prev2_responsibilities"
+        ) as string,
+        years_worked_prev2: formData.get("prev2_years_worked") as string,
+        reason_leaving_prev2: formData.get("prev2_reason_leaving") as string,
+        contact_permission_prev2: formData.get(
+          "prev2_contact_permission"
+        ) as string,
       },
-      reference: {
-        first_name: formData.get("ref_fname") as string,
-        last_name: formData.get("ref_lname") as string,
-        phone: formData.get("ref_phone") as string,
-        email: formData.get("ref_email") as string,
-        relation: formData.get("ref_relation") as string,
-      },
+      // reference: {
+      //   first_name: formData.get("ref_fname") as string,
+      //   last_name: formData.get("ref_lname") as string,
+      //   phone: formData.get("ref_phone") as string,
+      //   email: formData.get("ref_email") as string,
+      //   relation: formData.get("ref_relation") as string,
+      // },
       skills_qualifications: formData.get("skills_qualifications") as string,
       certification_agreement: formData.get(
         "certification_agreement"
       ) as string,
       embed_url: window.location.href,
       // position: document.title, // Page Title
-      position: document.querySelector("h1")?.innerText, // Page Title
+      // position: document.querySelector("h1")?.innerText, // Page Title
     };
     console.log("Sending data:", JSON.stringify(data, null, 2));
     setLoading(true);
@@ -169,18 +288,12 @@ function CareerOfficeAssociate() {
       <div className="max-w-4xl w-full space-y-8">
         <div className="text-center">
           <p className="mt-2 text-sm text-gray-600 mb-2">
-            Please fill out all required fields marked with an asterisk (
+            {translations[language].instructions} (
             <span className="text-accent">*</span>)
           </p>
           <p>
             <em>
-              <small>
-                It is important that you DO NOT REFRESH the web page while
-                completing this job application. Programs, services, and
-                employment are equally available to everyone. Please inform the
-                Human Resources Department if you require reasonable
-                accommodation for the application or interview.
-              </small>
+              <small>{translations[language].disclaimer}</small>
             </em>
           </p>
         </div>
@@ -195,7 +308,7 @@ function CareerOfficeAssociate() {
           {/* Personal Information */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2">
-              Personal Information
+              {translations[language].personal_information}
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -204,7 +317,8 @@ function CareerOfficeAssociate() {
                   htmlFor="fname"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  First Name <span className="text-red-500">*</span>
+                  {translations[language].first_name}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="fname"
@@ -220,7 +334,8 @@ function CareerOfficeAssociate() {
                   htmlFor="lname"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Last Name <span className="text-red-500">*</span>
+                  {translations[language].last_name}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="lname"
@@ -238,7 +353,8 @@ function CareerOfficeAssociate() {
                   htmlFor="phone"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Phone <span className="text-red-500">*</span>
+                  {translations[language].phone}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="phone"
@@ -255,7 +371,7 @@ function CareerOfficeAssociate() {
                   htmlFor="alt_phone"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Alternative Phone
+                  {translations[language].alt_phone}
                 </label>
                 <input
                   id="alt_phone"
@@ -272,7 +388,8 @@ function CareerOfficeAssociate() {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700"
               >
-                Email <span className="text-red-500">*</span>
+                {translations[language].email}{" "}
+                <span className="text-red-500">*</span>
               </label>
               <input
                 id="email"
@@ -282,35 +399,99 @@ function CareerOfficeAssociate() {
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            {/* <div>
-              {pathname === "/careers/painter" && (
+            <div>
+              {pathname === "/careers/painter-drywall-finisher" && (
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+                  <label className="block text-sm font-medium text-gray-700">
                     Position Applied for <span className="text-red-500">*</span>
                   </label>
-                  <select
-                    id="position"
-                    name="position"
-                    required
-                    className="w-full p-3 rounded-md"
-                  >
-                    <option value="">Select an option</option>
-                    <option value="Painter">Painter</option>
-                    <option value="Drywall Finisher">Drywall Finisher</option>
-                  </select>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="position_desired"
+                        value="Painter"
+                        required
+                        className="w-4 h-4"
+                      />
+                      <span>Painter</span>
+                    </label>
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="position_desired"
+                        value="Drywall Finisher"
+                        required
+                        className="w-4 h-4"
+                      />
+                      <span>Drywall Finisher</span>
+                    </label>
+                  </div>
                 </div>
               )}
-            </div> */}
+              {pathname === "/careers/pintor-masero" && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Posición Deseada <span className="text-red-500">*</span>
+                  </label>
+                  <div className="space-y-2">
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="position_desired"
+                        value="Pintor"
+                        required
+                        className="w-4 h-4"
+                      />
+                      <span>El Pintor</span>
+                    </label>
+                    <label className="flex items-center space-x-2">
+                      <input
+                        type="radio"
+                        name="position_desired"
+                        value="Drywall Finisher"
+                        required
+                        className="w-4 h-4"
+                      />
+                      <span>Acabado Drywall</span>
+                    </label>
+                  </div>
+                </div>
+              )}
+              {pathname === "/careers/project-estimator" && (
+                <>
+                  <input
+                    type="text"
+                    name="position_desired"
+                    value="Project Estimator"
+                    hidden
+                  />
+                </>
+              )}
+              {pathname === "/careers/project-manager" && (
+                <input
+                  type="text"
+                  name="position_desired"
+                  value="Project Manager"
+                  hidden
+                />
+              )}
+              {pathname === "/careers/office-associate" && (
+                <input
+                  type="text"
+                  name="position_desired"
+                  value="Office Associate"
+                  hidden
+                />
+              )}
+            </div>
 
             <div>
               <label
                 htmlFor="referral_source"
                 className="block text-sm font-medium text-gray-700"
               >
-                How did you hear about us?
+                {translations[language].referral_source}
               </label>
               <input
                 id="referral_source"
@@ -324,7 +505,7 @@ function CareerOfficeAssociate() {
           {/* Address Information */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2">
-              Address
+              {translations[language].address_title}
             </h3>
 
             <div>
@@ -332,7 +513,8 @@ function CareerOfficeAssociate() {
                 htmlFor="address_line1"
                 className="block text-sm font-medium text-gray-700"
               >
-                Address Line 1 <span className="text-red-500">*</span>
+                {translations[language].address_line_1}{" "}
+                <span className="text-red-500">*</span>
               </label>
               <input
                 id="address_line1"
@@ -348,7 +530,7 @@ function CareerOfficeAssociate() {
                 htmlFor="address_line2"
                 className="block text-sm font-medium text-gray-700"
               >
-                Address Line 2
+                {translations[language].address_line_2}
               </label>
               <input
                 id="address_line2"
@@ -364,7 +546,8 @@ function CareerOfficeAssociate() {
                   htmlFor="city"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  City <span className="text-red-500">*</span>
+                  {translations[language].city}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="city"
@@ -380,7 +563,8 @@ function CareerOfficeAssociate() {
                   htmlFor="state"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  State <span className="text-red-500">*</span>
+                  {translations[language].state}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="state"
@@ -396,7 +580,8 @@ function CareerOfficeAssociate() {
                   htmlFor="zip"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  ZIP Code <span className="text-red-500">*</span>
+                  {translations[language].zip}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="zip"
@@ -412,7 +597,7 @@ function CareerOfficeAssociate() {
           {/* Employment Details */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2">
-              Employment Details
+              {translations[language].employment_title}
             </h3>
 
             <div>
@@ -420,7 +605,8 @@ function CareerOfficeAssociate() {
                 htmlFor="start_date"
                 className="block text-sm font-medium text-gray-700"
               >
-                Date Available to Start <span className="text-red-500">*</span>
+                {translations[language].start_date}{" "}
+                <span className="text-red-500">*</span>
               </label>
               <input
                 id="start_date"
@@ -436,7 +622,7 @@ function CareerOfficeAssociate() {
                 htmlFor="compensation"
                 className="block text-sm font-medium text-gray-700"
               >
-                Desired Compensation ($/Hour){" "}
+                {translations[language].compensation}{" "}
                 <span className="text-red-500">*</span>
               </label>
               <input
@@ -449,25 +635,80 @@ function CareerOfficeAssociate() {
               />
             </div>
 
+            {/* Work Permit for Under 18 */}
             <div>
-              <label
-                htmlFor="employment_type"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Type of Employment Desired{" "}
+              <label className="block text-sm font-medium text-gray-700">
+                {translations[language].work_permit}
                 <span className="text-red-500">*</span>
               </label>
-              <select
-                id="employment_type"
-                name="employment_type"
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              <div className="mt-2 space-y-2">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="work_permit"
+                    value={`${translations[language].yes}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].yes}</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="work_permit"
+                    value={`${translations[language].no}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].no}</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Explanation if No Work Permit */}
+            <div>
+              <label
+                htmlFor="work_permit_explanation"
+                className="block text-sm font-medium text-gray-700"
               >
-                <option value="">Select an option</option>
-                <option value="Full-time">Full-time</option>
-                <option value="Part-time">Part-time</option>
-                <option value="Temporary">Temporary</option>
-              </select>
+                {translations[language].work_permit_explanation}
+              </label>
+              <input
+                id="work_permit_explanation"
+                name="work_permit_explanation"
+                type="text"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            {/* Previous Employment with Paint Innovators */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                {translations[language].previous_employment}
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="mt-2 space-y-2">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="work_for_paint_innovators"
+                    value={`${translations[language].yes}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].yes}</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="work_for_paint_innovators"
+                    value={`${translations[language].no}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].no}</span>
+                </label>
+              </div>
             </div>
 
             <div>
@@ -475,40 +716,135 @@ function CareerOfficeAssociate() {
                 htmlFor="legal_work_status"
                 className="block text-sm font-medium text-gray-700"
               >
-                Are you legally authorized to work in the United States?{" "}
+                {translations[language].legal_work_status}{" "}
                 <span className="text-red-500">*</span>
               </label>
-              <select
-                id="legal_work_status"
-                name="legal_work_status"
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              <div className="mt-2 space-y-2">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="legal_work_status"
+                    value={`${translations[language].yes}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].yes}</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="legal_work_status"
+                    value={`${translations[language].no}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].no}</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label
+                htmlFor="employment_type"
+                className="block text-sm font-medium text-gray-700"
               >
-                <option value="">Select an option</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-              </select>
+                {translations[language].employment_type}{" "}
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="mt-2 space-y-2">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="employment_type"
+                    value="Full-time"
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].fulltime}</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="employment_type"
+                    value="Part-time"
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].parttime}</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="employment_type"
+                    value="Temporary"
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].temporary}</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="employment_type"
+                    value="Seasonal"
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].seasonal}</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {/* Criminal Record */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              {translations[language].criminal_record}
+              <span className="text-red-500">*</span>
+            </label>
+            <div className="mt-2 space-y-2">
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="criminal_record"
+                  value={`${translations[language].yes}`}
+                  required
+                  className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                />
+                <span>{translations[language].yes}</span>
+              </label>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="criminal_record"
+                  value={`${translations[language].no}`}
+                  required
+                  className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                />
+                <span>{translations[language].no}</span>
+              </label>
             </div>
           </div>
 
           {/* Previous Employment */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2">
-              Previous Employment
+              {translations[language].prev1_employer}
             </h3>
 
             {/* Previous Employer 1 */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-gray-900">
+              {/* <h4 className="text-lg font-semibold text-gray-900">
                 Most Recent Employer
-              </h4>
+              </h4> */}
 
               <div>
                 <label
                   htmlFor="prev1_company_name"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Company Name <span className="text-red-500">*</span>
+                  {translations[language].company_name}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="prev1_company_name"
@@ -521,10 +857,96 @@ function CareerOfficeAssociate() {
 
               <div>
                 <label
+                  htmlFor="prev1_address_line1"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  {translations[language].address_line_1}{" "}
+                  <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="prev1_address_line1"
+                  name="prev1_address_line1"
+                  type="text"
+                  required
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="prev1_address_line2"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  {translations[language].address_line_2}
+                </label>
+                <input
+                  id="prev1_address_line2"
+                  name="prev1_address_line2"
+                  type="text"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="col-span-2">
+                  <label
+                    htmlFor="prev1_city"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    {translations[language].city}{" "}
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="prev1_city"
+                    name="prev1_city"
+                    type="text"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="prev1_state"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    {translations[language].state}{" "}
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="prev1_state"
+                    name="prev1_state"
+                    type="text"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="prev1_zip"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    {translations[language].zip}{" "}
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="prev1_zip"
+                    name="prev1_zip"
+                    type="text"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
                   htmlFor="prev1_responsibilities"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Responsibilities <span className="text-red-500">*</span>
+                  {translations[language].responsibilities}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   id="prev1_responsibilities"
@@ -541,7 +963,8 @@ function CareerOfficeAssociate() {
                     htmlFor="prev1_start_title"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Starting Position <span className="text-red-500">*</span>
+                    {translations[language].starting_position}{" "}
+                    <span className="text-red-500">*</span>
                   </label>
                   <input
                     id="prev1_start_title"
@@ -557,7 +980,7 @@ function CareerOfficeAssociate() {
                     htmlFor="prev1_end_title"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Ending Position
+                    {translations[language].ending_position}
                   </label>
                   <input
                     id="prev1_end_title"
@@ -573,7 +996,7 @@ function CareerOfficeAssociate() {
                   htmlFor="prev1_years_worked"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Years Worked
+                  {translations[language].years_worked}
                 </label>
                 <input
                   id="prev1_years_worked"
@@ -589,7 +1012,7 @@ function CareerOfficeAssociate() {
                   htmlFor="prev1_reason_leaving"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Reason for Leaving
+                  {translations[language].reason_for_leaving}
                 </label>
                 <input
                   id="prev1_reason_leaving"
@@ -604,19 +1027,31 @@ function CareerOfficeAssociate() {
                   htmlFor="prev1_contact_permission"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  May we contact this employer?{" "}
+                  {translations[language].contact_permission}{" "}
                   <span className="text-red-500">*</span>
                 </label>
-                <select
-                  id="prev1_contact_permission"
-                  name="prev1_contact_permission"
-                  required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                >
-                  <option value="">Select an option</option>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
+                <div className="mt-2 space-y-2">
+                  <label className="flex items-center space-x-2">
+                    <input
+                      type="radio"
+                      name="prev1_contact_permission"
+                      value={`${translations[language].yes}`}
+                      required
+                      className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    />
+                    <span>{translations[language].yes}</span>
+                  </label>
+                  <label className="flex items-center space-x-2">
+                    <input
+                      type="radio"
+                      name="prev1_contact_permission"
+                      value={`${translations[language].no}`}
+                      required
+                      className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    />
+                    <span>{translations[language].no}</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -624,35 +1059,156 @@ function CareerOfficeAssociate() {
           {/* References */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2">
-              Professional Reference
+              {translations[language].prev2_employer}
             </h3>
+
+            <div>
+              <label
+                htmlFor="prev2_company_name"
+                className="block text-sm font-medium text-gray-700"
+              >
+                {translations[language].company_name}{" "}
+                <span className="text-red-500">*</span>
+              </label>
+              <input
+                id="prev2_company_name"
+                name="prev2_company_name"
+                type="text"
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="prev2_address_line1"
+                className="block text-sm font-medium text-gray-700"
+              >
+                {translations[language].address_line_1}{" "}
+                <span className="text-red-500">*</span>
+              </label>
+              <input
+                id="prev2_address_line1"
+                name="prev2_address_line1"
+                type="text"
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="prev2_address_line2"
+                className="block text-sm font-medium text-gray-700"
+              >
+                {translations[language].address_line_2}
+              </label>
+              <input
+                id="prev2_address_line2"
+                name="prev2_address_line2"
+                type="text"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="col-span-2">
+                <label
+                  htmlFor="prev2_city"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  {translations[language].city}{" "}
+                  <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="prev2_city"
+                  name="prev2_city"
+                  type="text"
+                  required
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="prev2_state"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  {translations[language].state}{" "}
+                  <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="prev2_state"
+                  name="prev2_state"
+                  type="text"
+                  required
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="prev2_zip"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  {translations[language].zip}{" "}
+                  <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="prev2_zip"
+                  name="prev2_zip"
+                  type="text"
+                  required
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                htmlFor="prev2_responsibilities"
+                className="block text-sm font-medium text-gray-700"
+              >
+                {translations[language].responsibilities}{" "}
+                <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="prev2_responsibilities"
+                name="prev2_responsibilities"
+                required
+                rows={3}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label
-                  htmlFor="ref_fname"
+                  htmlFor="prev2_start_title"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  First Name
+                  {translations[language].starting_position}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
-                  id="ref_fname"
-                  name="ref_fname"
+                  id="prev2_start_title"
+                  name="prev2_start_title"
                   type="text"
+                  required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
 
               <div>
                 <label
-                  htmlFor="ref_lname"
+                  htmlFor="prev2_end_title"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Last Name
+                  {translations[language].ending_position}
                 </label>
                 <input
-                  id="ref_lname"
-                  name="ref_lname"
+                  id="prev2_end_title"
+                  name="prev2_end_title"
                   type="text"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
@@ -661,55 +1217,72 @@ function CareerOfficeAssociate() {
 
             <div>
               <label
-                htmlFor="ref_phone"
+                htmlFor="prev2_years_worked"
                 className="block text-sm font-medium text-gray-700"
               >
-                Phone Number
+                {translations[language].years_worked}
               </label>
               <input
-                id="ref_phone"
-                name="ref_phone"
-                type="tel"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                onChange={formatPhoneNumber}
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="ref_email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
-              <input
-                id="ref_email"
-                name="ref_email"
-                type="email"
+                id="prev2_years_worked"
+                name="prev2_years_worked"
+                type="number"
+                step="0.1"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
 
             <div>
               <label
-                htmlFor="ref_relation"
+                htmlFor="prev2_reason_leaving"
                 className="block text-sm font-medium text-gray-700"
               >
-                Relationship to Reference
+                {translations[language].reason_for_leaving}
               </label>
               <input
-                id="ref_relation"
-                name="ref_relation"
+                id="prev2_reason_leaving"
+                name="prev2_reason_leaving"
                 type="text"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               />
+            </div>
+
+            <div>
+              <label
+                htmlFor="prev2_contact_permission"
+                className="block text-sm font-medium text-gray-700"
+              >
+                {translations[language].contact_permission}{" "}
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="mt-2 space-y-2">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="prev2_contact_permission"
+                    value={`${translations[language].yes}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].yes}</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="prev2_contact_permission"
+                    value={`${translations[language].no}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].no}</span>
+                </label>
+              </div>
             </div>
           </div>
 
           {/* Skills and Certification */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2">
-              Skills and Certification
+              {translations[language].skills_qualifications_title}
             </h3>
 
             <div>
@@ -717,7 +1290,7 @@ function CareerOfficeAssociate() {
                 htmlFor="skills_qualifications"
                 className="block text-sm font-medium text-gray-700"
               >
-                Summarize your special skills or qualifications{" "}
+                {translations[language].skills_qualifications}{" "}
                 <span className="text-red-500">*</span>
               </label>
               <textarea
@@ -734,26 +1307,25 @@ function CareerOfficeAssociate() {
                 htmlFor="certification_agreement"
                 className="block text-sm font-medium text-gray-700"
               >
-                Certification and Agreement{" "}
+                {translations[language].certification_agreement_title}{" "}
                 <span className="text-red-500">*</span>
               </label>
-              <select
-                id="certification_agreement"
-                name="certification_agreement"
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              >
-                <option value="">Select an option</option>
-                <option value="I Agree">I Agree</option>
-              </select>
+
               <p className="mt-2 text-sm text-gray-500">
-                I certify that my answers are true and complete to the best of
-                my knowledge. I authorize investigations of all statements
-                contained in this application as may be necessary in arriving at
-                an employment decision. I understand that false or misleading
-                information in my application or interview may result in
-                discharge.
+                {translations[language].certification_agreement_text}
               </p>
+              <div className="mt-2">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    name="certification_agreement"
+                    value={`${translations[language].agreement_text}`}
+                    required
+                    className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                  />
+                  <span>{translations[language].agreement_text}</span>
+                </label>
+              </div>
             </div>
           </div>
 
@@ -763,7 +1335,11 @@ function CareerOfficeAssociate() {
               disabled={loading}
               className="btn-main square"
             >
-              {loading ? "Submitting..." : "Submit Application"}
+              {loading
+                ? language === "en"
+                  ? "Submitting..."
+                  : "Enviando..."
+                : translations[language].submit}
             </button>
           </div>
         </form>
@@ -772,4 +1348,4 @@ function CareerOfficeAssociate() {
   );
 }
 
-export default CareerOfficeAssociate;
+export default CareerEnglish;

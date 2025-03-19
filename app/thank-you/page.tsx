@@ -41,8 +41,7 @@ export default function ThankYou() {
       >
         <h1 className="text-4xl font-aspira-thin uppercase">Thank You</h1>
         <p className="px-[50px]">
-          Thank you for reaching out to us at Paint Innovators. We will reach
-          back out to you within 24 - 48 hours.
+          We will reach back out to you within 24 - 48 hours.
         </p>
       </ContentBlock>
       <div className="spacer"></div>

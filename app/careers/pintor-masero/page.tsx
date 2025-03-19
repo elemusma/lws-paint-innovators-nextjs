@@ -1,7 +1,8 @@
 // import ContactForm from "../components/contactForm";
 // import ContactFormPainterDrywallFinisher from "@/app/components/forms/ContactFormPainterDrywallFinisher";
 "use client";
-import CareerPintorMasero from "@/app/components/forms/CareerPintorMasero";
+// import CareerSpanish from "@/app/components/forms/CareerSpanish";
+import CareerEnglish from "@/app/components/forms/CareerEnglish";
 import ContentBlock from "../../components/content-block";
 import {
   CommercialProjectsImages,
@@ -21,14 +22,12 @@ export default function Contact() {
         columnClassName="w-full relative pt-10 px-5"
       >
         <div className="text-center md:w-3/4 w-full mx-auto">
-          <h1 className="text-4xl font-aspira-thin uppercase">Pinto Masero</h1>
+          <h1 className="text-4xl font-aspira-thin uppercase">
+            Pinto / Masero
+          </h1>
           <h2 className="text-2xl">Solicitud de empleo</h2>
-          <p className="mb-2">
-            Es importante que NO ACTUALICE la página web mientras completa esta
-            solicitud de empleo.
-          </p>
         </div>
-        <CareerPintorMasero />
+        <CareerEnglish />
       </ContentBlock>
       <div className="spacer"></div>
       <SwiperCarouselNewService />

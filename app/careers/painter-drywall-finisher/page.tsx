@@ -21,14 +21,17 @@ export default function Contact() {
       >
         <div className="text-center md:w-3/4 w-full mx-auto pb-[50px]">
           <h1 className="mt-6 text-3xl font-extrabold text-gray-900">
-            Painter
+            Painter / Drywall Finisher
           </h1>
 
           <p className="my-2 text-sm">
             Painters work on job sites on a daily basis. They are directly
             involved in both residential and commercial painting projects.
             Painters are detail oriented, take pride in their work and deliver
-            extraordinary experiences for customers.
+            extraordinary experiences for customers. Drywall finishers fasten
+            pre-made <strong>drywall</strong> panels to the interiors of rooms,
+            finishing or taping joints to prepare surfaces for final finish
+            work.
           </p>
         </div>
         <CareerOfficeAssociate />

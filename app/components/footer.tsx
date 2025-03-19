@@ -384,13 +384,15 @@ export default function Footer() {
                 <div className="w-full">
                   <ul className="list-none text-sm">
                     <li>
-                      <Link href="/careers/painter">Painter</Link>
+                      <Link href="/careers/painter-drywall-finisher">
+                        Painter / Drywall Finisher
+                      </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link href="/careers/drywall-finisher">
                         Drywall Finisher
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/careers/pintor-masero">
                         El Pintor / Masero
