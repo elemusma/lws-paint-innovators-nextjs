@@ -1003,6 +1003,7 @@ function CareerEnglish() {
                   name="prev1_years_worked"
                   type="number"
                   step="0.1"
+                  onWheel={(e) => (e.target as HTMLInputElement).blur()}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
@@ -1227,6 +1228,7 @@ function CareerEnglish() {
                 name="prev2_years_worked"
                 type="number"
                 step="0.1"
+                onWheel={(e) => (e.target as HTMLInputElement).blur()}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               />
             </div>

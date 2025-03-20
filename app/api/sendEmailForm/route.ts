@@ -12,7 +12,7 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { first_name, last_name,user_email, user_phone, project_type, location, message, embed_url } = body;
+    const { user_name, user_email, user_phone, project_type, location, message, embed_url } = body;
 
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: `"Latino Web Studio" <${process.env.GMAIL_USER}>`,
       to: "tadeoycuba@gmail.com",
-      subject: `Latino Web Studio: "${first_name}"`,
+      subject: `Latino Web Studio: "${user_name}"`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
 <tr>
@@ -47,8 +47,8 @@ export async function POST(req: Request) {
 <tbody>
 <tr>
 <td style="padding: 20px 20px;">
-<p>Hello Paint Innovators! Tadeo here, someone requested a free estimate. See details below:</p>
-<p><strong>Name:</strong> ${first_name} ${last_name}</p>
+<p>Hello Paint Innovators! Tadeo here, someone filled the contact form. See details below:</p>
+<p><strong>Name:</strong> ${user_name}</p>
 <p><strong>Email:</strong> ${user_email}</p>
 <p><strong>Phone:</strong> ${user_phone}</p>
 <p><strong>Project Type:</strong> ${project_type}</p>
@@ -60,11 +60,6 @@ export async function POST(req: Request) {
 </table>
 <table style="margin: auto; padding: 20px; width: 100%; max-width: 600px; text-align: center;">
 <tbody>
-<tr>
-<td>
-<h4>Congrats on Your New Website Lead!</h4>
-</td>
-</tr>
 <tr>
 <td><em><small><p><strong>Submitted from:</strong> <a href="${embed_url}" target="_blank">${embed_url}</a></p></small></em></td>
 </tr>

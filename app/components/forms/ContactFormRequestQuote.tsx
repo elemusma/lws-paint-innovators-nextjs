@@ -34,7 +34,7 @@ const ContactFormRequestQuote: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/sendEmailRequestQuote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

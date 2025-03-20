@@ -10,10 +10,14 @@ const GMAIL_USER = process.env.GMAIL_USER!;
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
+console.log('helo thereeshd ja')
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const referer = req.headers.get("referer") || ""; // Get the referring URL
+    // const referer = req.headers.get("referer") || ""; // Get the referring URL
+    // const referer = body.referer || req.headers.get("referer") || "";
+    const referer = body.referer || req.headers.get("referer") || "";
+    console.log('Referer:', referer);
 
     const { 
       first_name, 
@@ -108,7 +112,7 @@ export async function POST(req: Request) {
     let emailIntro = "";
     let emailHtml = "";
 
-    if (referer.includes("/request-quote")) {
+    if (referer.includes("/free-estimate")) {
       // Quote Request Form
       emailSubject = `Quote Request from ${first_name} ${last_name}`;
       emailIntro = `<p>Tadeo here! Quote Request from ${first_name} ${last_name}:</p>`;
@@ -133,7 +137,7 @@ export async function POST(req: Request) {
       `;
     } else if (referer.includes("/careers")) {
       // Careers Form (for any career submission)
-      emailSubject = `Job Application: ${position} - ${first_name} ${last_name}`;
+      emailSubject = `Job Application: ${position} - ${first_name}`;
       emailIntro = `<p>Tadeo here! Congrats, there is a new job application for <strong>${position}</strong>:</p>`;
       emailHtml = `
   <h2>Personal Information</h2>
@@ -226,6 +230,10 @@ export async function POST(req: Request) {
 ${emailIntro}${emailHtml}
 </td>
 </tr>
+<tr>
+<td>Have questions about the form submission or the website?
+Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@latinowebstudio.com</a></td>
+</tr>
 </tbody>
 </table>
 <table style="margin: auto; padding: 20px; width: 100%; max-width: 600px; text-align: center;">
@@ -233,10 +241,7 @@ ${emailIntro}${emailHtml}
 <tr>
 <td><em><small><p><strong>Submitted from:</strong> <a href="${embed_url}" target="_blank">${embed_url}</a></p></small></em></td>
 </tr>
-<tr>
-<td>Have questions about the form submission or the website?
-Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@latinowebstudio.com</a></td>
-</tr>
+
 </tbody>
 </table>
 </td>

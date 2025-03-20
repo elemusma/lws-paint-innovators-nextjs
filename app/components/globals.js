@@ -11,80 +11,88 @@ export const ColoradoPhone = '720.909.9974';
 
 export const ResidentialProjectsImages = [
     {
-      imageSrc: "/photos/Project-Completed-Residential-01.jpg",
+      imageSrc: "/gallery/Residential-Painting-01.jpg",
       imageAlt: "Project-Completed-Residential-01",
     },
     {
-      imageSrc: "/photos/Project-Completed-Residential-02.jpg",
+      imageSrc: "/gallery/Residential-Painting-02.jpg",
       imageAlt: "Project-Completed-Residential-02",
     },
     {
-      imageSrc: "/photos/Project-Completed-Residential-03.jpg",
+      imageSrc: "/gallery/Residential-Painting-03.jpg",
       imageAlt: "Project-Completed-Residential-03",
     },
     {
-      imageSrc: "/photos/Project-Completed-Residential-04.jpg",
+      imageSrc: "/gallery/Residential-Painting-04.jpg",
       imageAlt: "Project-Completed-Residential-04",
     },
     {
-        imageSrc: "/photos/Project-Completed-Residential-01.jpg",
+        imageSrc: "/gallery/Residential-Painting-05.jpg",
         imageAlt: "Project-Completed-Residential-01",
     },
     {
-        imageSrc: "/photos/Project-Completed-Residential-02.jpg",
+        imageSrc: "/gallery/Residential-Painting-06.jpg",
+        imageAlt: "Project-Completed-Residential-02",
+    },
+    {
+        imageSrc: "/gallery/Residential-Painting-07.jpg",
+        imageAlt: "Project-Completed-Residential-01",
+    },
+    {
+        imageSrc: "/gallery/Residential-Painting-08.jpg",
         imageAlt: "Project-Completed-Residential-02",
     },
   ];
 
   export const CommercialProjectsImages = [
     {
-      imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
+      imageSrc: "/gallery/Commercial-Painting-01.jpg",
       imageAlt: "Project-Completed-Commercial-01",
     },
     {
-      imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
+      imageSrc: "/gallery/Commercial-Painting-02.jpg",
       imageAlt: "Project-Completed-Commercial-02",
     },
     {
-      imageSrc: "/photos/Project-Completed-Commercial-03.jpg",
+      imageSrc: "/gallery/Commercial-Painting-03.jpg",
       imageAlt: "Project-Completed-Commercial-03",
     },
     {
-      imageSrc: "/photos/Project-Completed-Commercial-04.jpg",
+      imageSrc: "/gallery/Commercial-Painting-04.jpg",
       imageAlt: "Project-Completed-Commercial-04",
     },
     {
-        imageSrc: "/photos/Project-Completed-Commercial-01.jpg",
+        imageSrc: "/gallery/Commercial-Painting-05.jpg",
         imageAlt: "Project-Completed-Commercial-01",
     },
     {
-        imageSrc: "/photos/Project-Completed-Commercial-02.jpg",
+        imageSrc: "/gallery/Commercial-Painting-06.jpg",
         imageAlt: "Project-Completed-Commercial-02",
     },
   ];
   export const IndustrialProjectsImages = [
     {
-      imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
+      imageSrc: "/gallery/Industrial-45.jpg",
       imageAlt: "Project-Completed-Industrial-01",
     },
     {
-      imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
+      imageSrc: "/gallery/Industrial-49.jpg",
       imageAlt: "Project-Completed-Industrial-02",
     },
     {
-      imageSrc: "/photos/Project-Completed-Industrial-03.jpg",
+      imageSrc: "/gallery/Industrial-53.jpg",
       imageAlt: "Project-Completed-Industrial-03",
     },
     {
-      imageSrc: "/photos/Project-Completed-Industrial-04.jpg",
+      imageSrc: "/gallery/Industrial-56.jpg",
       imageAlt: "Project-Completed-Industrial-04",
     },
     {
-        imageSrc: "/photos/Project-Completed-Industrial-01.jpg",
+        imageSrc: "/gallery/Industrial-60.jpg",
         imageAlt: "Project-Completed-Industrial-01",
     },
     {
-        imageSrc: "/photos/Project-Completed-Industrial-02.jpg",
+        imageSrc: "/gallery/Industrial-62.jpg",
         imageAlt: "Project-Completed-Industrial-02",
     },
   ];

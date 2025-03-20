@@ -31,13 +31,14 @@ const ContactForm: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/sendEmailForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
       const result = await response.json();
+      console.log(result);
       if (response.ok) {
         toast.success("Message sent successfully!");
         formRef.current.reset();
