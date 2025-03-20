@@ -109,7 +109,7 @@ export default function ProjectsWorkedOn() {
         sectionClassName="bg-white text-black"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName=""
-        columnClassName="flex flex-wrap justify-center items-center"
+        columnClassName="flex flex-wrap"
       >
         <div className="w-full text-center pb-10">
           <h2 className="font-aspira-light text-5xl uppercase">
@@ -168,9 +168,11 @@ export default function ProjectsWorkedOn() {
             </div>
             <div className="bg-[#e5e5e5] p-5">
               <p>
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and
-                visual mockups.
+                We also provide color consultation and custom painting to
+                perfectly match your style and personality. Beyond painting, we
+                offer services like drywall repair, popcorn ceiling removal,
+                wallpaper removal, and deck coating to ensure a flawless finish
+                for your home.
               </p>
             </div>
           </div>
@@ -226,9 +228,10 @@ export default function ProjectsWorkedOn() {
             </div>
             <div className="bg-[#e5e5e5] p-5">
               <p>
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and
-                visual mockups.
+                Paint Innovators handles new construction and remodel projects
+                and offers additional contractor services such as epoxy floors,
+                concrete staining, pressure washing, trim and siding painting,
+                and gutter painting to meet all your commercial needs.
               </p>
             </div>
           </div>
@@ -284,9 +287,10 @@ export default function ProjectsWorkedOn() {
             </div>
             <div className="bg-[#e5e5e5] p-5">
               <p>
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and
-                visual mockups.
+                Paint Innovators' protective coatings are designed to solve
+                corrosion problems in various industrial applications, including
+                commercial heating, cooling, refrigeration, and other components
+                regularly exposed to corrosive conditions.
               </p>
             </div>
           </div>

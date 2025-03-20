@@ -6,13 +6,14 @@ import {
   IndustrialProjectsImages,
   ResidentialProjectsImages,
 } from "./components/globals.js"; // Adjust path as needed
+import CoreValues from "./components/reusable/core-values";
 import CTA from "./components/reusable/cta";
 import SwiperCarousel from "./components/swiperCarousel";
 import SwiperCarouselNewService from "./components/swiperCarouselNewService";
 import SwiperCarouselProjects, {
   Slide,
 } from "./components/swiperCarouselProjects";
-import Tabs, { Tab } from "./components/tabs";
+import { Tab } from "./components/tabs";
 
 export interface SwiperCarouselPropsResidentialProjects {
   ResidentialProjectsImages: Slide[];
@@ -113,12 +114,12 @@ export default function Home() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/assets/Home/Our-Team-Bg.jpg"}
+              src={"/home/Paint-Innovators-2025-06.jpg"}
               alt="Paint Innovators Industrial"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              style={{ objectFit: "contain", objectPosition: "right" }}
-              width={100}
-              height={100}
+              className="absolute top-0 right-0 w-7/12 h-full object-cover opacity-[.25]"
+              style={{ objectPosition: "right" }}
+              width={1000}
+              height={1000}
             />
           </>
         }
@@ -178,23 +179,24 @@ export default function Home() {
         </div>
         {/* </div> */}
       </ContentBlock>
-      {/* <div className="spacer"></div> */}
-      <ContentBlock
+      <div className="spacer"></div>
+      <CoreValues />
+      {/* <ContentBlock
         sectionClassName=""
         containerClassName="max-w-screen-lg mx-auto py-3"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
       >
         <h2 className="text-5xl font-aspira-thin">INDUSTRIES SERVED</h2>
-      </ContentBlock>
-      <Tabs
+      </ContentBlock> */}
+      {/* <Tabs
         tabs={tabsData}
         containerClassName="my-custom-container max-w-screen-lg mx-auto"
         headerClassName="flex flex-wrap justify-center mb-4 px-4 headerClassName"
         tabButtonClassName="px-4 py-2 border mr-2"
         activeTabButtonClassName="bg-blue-600 text-white activeTabButtonClassName"
         contentClassName="p-4"
-      />
+      /> */}
       <div className="spacer"></div>
       <SwiperCarouselNewService />
       <div className="spacer"></div>

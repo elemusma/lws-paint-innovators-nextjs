@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Company, Website } from "../../components/globals";
-import IndustriesServed from "../../components/reusable/industries-served";
+import IndustriesServed from "../../components/reusable/core-values";
 import TeamCol from "../../components/reusable/team-col";
 import ValueColumn from "../../components/reusable/ValueColumn";
 // import Navigation from "./components/navigation";

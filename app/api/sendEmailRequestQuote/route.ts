@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 <table style="margin: auto; padding-top:20px;padding-bottom: 20px;">
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="200px" height="auto" /></td>
+<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="250px" height="auto" /></td>
 </tr>
 </tbody>
 </table>

@@ -79,7 +79,7 @@ const ContactForm: React.FC = () => {
               <input
                 type="text"
                 name="user_name"
-                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                className="w-full p-3 pl-12 bg-white/90 text-black border border-white placeholder-gray rounded-md"
                 placeholder="Name"
                 required
               />
@@ -106,7 +106,7 @@ const ContactForm: React.FC = () => {
               <input
                 type="email"
                 name="user_email"
-                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                className="w-full p-3 pl-12 bg-white/90 text-black border border-white placeholder-gray rounded-md"
                 placeholder="Email Address"
                 required
               />
@@ -133,7 +133,7 @@ const ContactForm: React.FC = () => {
               <input
                 type="tel"
                 name="user_phone"
-                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                className="w-full p-3 pl-12 bg-white/90 text-black border border-white placeholder-gray rounded-md"
                 placeholder="Phone"
                 required
                 maxLength={14} // Prevents extra characters after formatting
@@ -162,7 +162,7 @@ const ContactForm: React.FC = () => {
               <input
                 type="text"
                 name="user_subject"
-                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md"
+                className="w-full p-3 pl-12 bg-white/90 text-black border border-white placeholder-gray rounded-md"
                 placeholder="Subject"
                 required
               />
@@ -188,7 +188,7 @@ const ContactForm: React.FC = () => {
               />
               <textarea
                 name="message"
-                className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 rounded-md min-h-[120px]"
+                className="w-full p-3 pl-12 bg-white/90 border border-white placeholder-gray rounded-md min-h-[120px]"
                 placeholder="Message"
                 required
               ></textarea>

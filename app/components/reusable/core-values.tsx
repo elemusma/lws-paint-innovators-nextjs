@@ -1,16 +1,17 @@
 import ContentBlock from "../content-block";
 import Tabs, { Tab } from "../tabs";
 
-export default function IndustriesServed() {
+export default function CoreValues() {
   const tabsData: Tab[] = [
     {
-      title: "Residential",
+      title: "Integrity",
       content: (
         <div>
           <p>
-            Residential Lorem ipsum is placeholder text commonly used in the
-            graphic, print, and publishing industries for previewing layouts and
-            visual mockups.
+            At Paint Innovators, integrity is our highest priority. We are
+            committed to delivering excellent customer service with ethics and
+            morals, and we diligently take responsibility for our work to ensure
+            your complete satisfaction.
           </p>
         </div>
       ),
@@ -18,13 +19,13 @@ export default function IndustriesServed() {
       customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
     },
     {
-      title: "Commercial",
+      title: "Safety",
       content: (
         <div>
           <p>
-            Commercial Lorem ipsum is placeholder text commonly used in the
-            graphic, print, and publishing industries for previewing layouts and
-            visual mockups.
+            Safety is paramount in everything we do. We strictly adhere to CDC
+            Safety Guidelines during all our in-person estimates and painting
+            projects.
           </p>
         </div>
       ),
@@ -33,13 +34,13 @@ export default function IndustriesServed() {
       customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
     },
     {
-      title: "Government",
+      title: "Respect",
       content: (
         <div>
           <p>
-            Government Lorem ipsum is placeholder text commonly used in the
-            graphic, print, and publishing industries for previewing layouts and
-            visual mockups.
+            We believe in treating every client and their property with the
+            utmost respect. We are committed to fostering a positive and
+            professional environment
           </p>
         </div>
       ),
@@ -55,7 +56,7 @@ export default function IndustriesServed() {
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
       >
-        <h2 className="text-5xl font-aspira-thin">INDUSTRIES SERVED</h2>
+        <h2 className="text-5xl font-aspira-thin">CORE VALUES</h2>
       </ContentBlock>
       <Tabs
         tabs={tabsData}

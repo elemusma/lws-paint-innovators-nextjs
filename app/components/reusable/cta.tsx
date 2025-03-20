@@ -48,7 +48,7 @@ export default function CTA() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/photos/Contact.jpg"}
+              src={"/home/Paint-Innovators-2025-04.jpg"}
               alt="Contact Paint Innovators"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}

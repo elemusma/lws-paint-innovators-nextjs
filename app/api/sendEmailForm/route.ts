@@ -12,7 +12,7 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { user_name, user_email, user_phone, project_type, location, message, embed_url } = body;
+    const { user_name, user_email, user_phone,user_subject, project_type, location, message, embed_url } = body;
 
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 <table style="margin: auto; padding-top:20px;padding-bottom: 20px;">
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="200px" height="auto" /></td>
+<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="250px" height="auto" /></td>
 </tr>
 </tbody>
 </table>
@@ -51,8 +51,7 @@ export async function POST(req: Request) {
 <p><strong>Name:</strong> ${user_name}</p>
 <p><strong>Email:</strong> ${user_email}</p>
 <p><strong>Phone:</strong> ${user_phone}</p>
-<p><strong>Project Type:</strong> ${project_type}</p>
-<p><strong>Location:</strong> ${location}</p>
+<p><strong>Subject:</strong> ${user_subject}</p>
 <p><strong>Message:</strong> ${message}</p>
 </td>
 </tr>

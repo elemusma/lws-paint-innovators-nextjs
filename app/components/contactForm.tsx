@@ -57,8 +57,8 @@ const ContactForm: React.FC = () => {
             <input
               type="text"
               name="user_name"
-              className="w-full p-3 pl-12 bg-white/30 text-white placeholder-gray-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-white"
-              placeholder="Name"
+              className="w-full p-3 pl-12 text-black placeholder-gray-300 border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              placeholder="Namesss"
               required
             />
           </div>
