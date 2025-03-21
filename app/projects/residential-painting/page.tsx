@@ -1,9 +1,56 @@
-import CoreValuesBlock from "@/app/components/reusable/CoreValuesBlock";
+"use client";
+import ContentBlock from "@/app/components/content-block";
+import ServingTagline from "@/app/components/reusable/serving-tagline";
+// import { Link } from "lucide-react";
+// import * as motion from "motion/react-client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import ContentBlock from "../../components/content-block";
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import "../../styles/gallery.scss";
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
 
-export default function ResidentialaintingProjects() {
+export default function ResidentialPaintingProjects() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
+  const galleryImages = [
+    { src: "/gallery/Residential-Painting-01.jpg", alt: "Hero Image" },
+    { src: "/gallery/Residential-Painting-02.jpg", alt: "Grid Image 1" },
+    { src: "/gallery/Residential-Painting-03.jpg", alt: "Grid Image 2" },
+    { src: "/gallery/Residential-Painting-04.jpg", alt: "Grid Image 3" },
+    { src: "/gallery/Residential-Painting-05.jpg", alt: "Full Width Image" },
+    { src: "/gallery/Residential-Painting-06.jpg", alt: "Column Image 1" },
+    { src: "/gallery/Residential-Painting-07.jpg", alt: "Column Image 2" },
+    { src: "/gallery/Residential-Painting-08.jpg", alt: "Column Image 3" },
+    { src: "/gallery/Residential-Painting-09.jpg", alt: "Grid Image 1" },
+    { src: "/gallery/Residential-Painting-10.jpg", alt: "Grid Image 2" },
+    { src: "/gallery/Residential-Painting-11.jpg", alt: "Grid Image 3" },
+    { src: "/gallery/Residential-Painting-12.jpg", alt: "Full Width Image" },
+    { src: "/gallery/Residential-Painting-13.jpg", alt: "Column Image 1" },
+    { src: "/gallery/Residential-Painting-14.jpg", alt: "Column Image 2" },
+    { src: "/gallery/Residential-Painting-15.jpg", alt: "Column Image 3" },
+    { src: "/gallery/Residential-Painting-16.jpg", alt: "Column Image 3" },
+    { src: "/gallery/Residential-Painting-17.jpg", alt: "Column Image 3" },
+    { src: "/gallery/Residential-Painting-18.jpg", alt: "Column Image 3" },
+    { src: "/gallery/Residential-Painting-19.jpg", alt: "Column Image 3" },
+    { src: "/gallery/Residential-Painting-20.jpg", alt: "Column Image 3" },
+  ];
+
+  const openLightbox = (index: number) => {
+    setPhotoIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <>
       <ContentBlock
@@ -43,61 +90,212 @@ export default function ResidentialaintingProjects() {
             <span className="text-shadow">Home</span>
             <span className="text-accent">&bull;</span>{" "}
             <span className="text-shadow">Shed</span>
+            <br></br>
+            <span className="text-shadow">Trim</span>{" "}
+            <span className="text-accent">&bull;</span>{" "}
+            <span className="text-shadow">Siding</span>{" "}
+            <span className="text-accent">&bull;</span>{" "}
+            <span className="text-shadow">Molding</span>
           </h2>
           <Link href="/contact" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
       </ContentBlock>
-      <ContentBlock
-        sectionClassName="text-white relative py-[150px]"
-        containerClassName="max-w-screen-lg mx-auto"
-        rowClassName="flex flex-wrap flex-col items-center"
-        columnClassName="flex flex-wrap w-full"
-      >
-        <div className="w-full px-4 mb-4 relative">
-          <Image
-            src={"/gallery/Residential-Painting-01.jpg"}
-            alt="Wall paper removal"
-            className=""
-            style={{}}
-            width={2000}
-            height={2000}
-          />
+      <ServingTagline />
+      <div className="max-w-screen-lg mx-auto py-12 px-4">
+        {/* Example: Full Width Image */}
+        <div
+          className="relative w-full h-[400px] mb-4 cursor-pointer hover-img"
+          onClick={() => openLightbox(0)}
+        >
+          <motion.div
+            variants={fadeUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative h-full w-full will-change-transform"
+          >
+            <Image
+              src={galleryImages[0].src}
+              alt={galleryImages[0].alt}
+              fill
+              className="object-cover"
+            />
+          </motion.div>
         </div>
-        <div className="w-1/3 px-4">
-          <Image
-            src={"/gallery/Residential-Painting-01.jpg"}
-            alt="Wall paper removal"
-            className=""
-            style={{}}
-            width={2000}
-            height={2000}
-          />
+
+        {/* Example: 3-column Grid */}
+        <div className="flex flex-wrap justify-around gap-4 my-4">
+          {[1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="relative w-[32%] h-[250px] cursor-pointer hover-img"
+              onClick={() => openLightbox(i)}
+            >
+              <motion.div
+                variants={fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="relative h-full w-full will-change-transform"
+              >
+                <Image
+                  src={galleryImages[i].src}
+                  alt={galleryImages[i].alt}
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
+          ))}
         </div>
-        <div className="w-1/3 px-4">
-          <Image
-            src={"/gallery/Residential-Painting-02.jpg"}
-            alt="Wall paper removal"
-            className=""
-            style={{}}
-            width={2000}
-            height={2000}
-          />
+
+        {/* Example: Another full-width image */}
+        <div
+          className="relative w-full h-[300px] my-4 cursor-pointer hover-img"
+          onClick={() => openLightbox(4)}
+        >
+          <motion.div
+            variants={fadeUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative h-full w-full will-change-transform"
+          >
+            <Image
+              src={galleryImages[4].src}
+              alt={galleryImages[4].alt}
+              fill
+              className="object-cover"
+            />
+          </motion.div>
         </div>
-        <div className="w-1/3 px-4">
-          <Image
-            src={"/gallery/Residential-Painting-03.jpg"}
-            alt="Wall paper removal"
-            className=""
-            style={{}}
-            width={2000}
-            height={2000}
-          />
+
+        {/* Example: Bottom 3-column section */}
+        <div className="flex flex-wrap justify-around gap-4">
+          {[5, 6, 7].map((i) => (
+            <div
+              key={i}
+              className="relative w-[32%] h-[250px] cursor-pointer hover-img"
+              onClick={() => openLightbox(i)}
+            >
+              <motion.div
+                variants={fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="relative h-full w-full will-change-transform"
+              >
+                <Image
+                  src={galleryImages[i].src}
+                  alt={galleryImages[i].alt}
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
+          ))}
         </div>
-      </ContentBlock>
-      <CoreValuesBlock />
-      <div className="spacer"></div>
+        <div
+          className="relative w-full h-[300px] my-4 cursor-pointer hover-img"
+          onClick={() => openLightbox(8)}
+        >
+          <motion.div
+            variants={fadeUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative h-full w-full will-change-transform"
+          >
+            <Image
+              src={galleryImages[8].src}
+              alt={galleryImages[8].alt}
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
+
+        {/* Example: Bottom 3-column section */}
+        <div className="flex flex-wrap justify-around gap-4">
+          {[9, 10, 11].map((i) => (
+            <div
+              key={i}
+              className="relative w-[32%] h-[250px] cursor-pointer hover-img"
+              onClick={() => openLightbox(i)}
+            >
+              <motion.div
+                variants={fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="relative h-full w-full will-change-transform"
+              >
+                <Image
+                  src={galleryImages[i].src}
+                  alt={galleryImages[i].alt}
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
+          ))}
+        </div>
+        <div
+          className="relative w-full h-[300px] my-4 cursor-pointer hover-img"
+          onClick={() => openLightbox(12)}
+        >
+          <motion.div
+            variants={fadeUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative h-full w-full will-change-transform"
+          >
+            <Image
+              src={galleryImages[12].src}
+              alt={galleryImages[12].alt}
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
+
+        {/* Example: Bottom 3-column section */}
+        <div className="flex flex-wrap justify-around gap-4">
+          {[13, 14, 15].map((i) => (
+            <div
+              key={i}
+              className="relative w-[32%] h-[250px] cursor-pointer hover-img"
+              onClick={() => openLightbox(i)}
+            >
+              <motion.div
+                variants={fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="relative h-full w-full will-change-transform"
+              >
+                <Image
+                  src={galleryImages[i].src}
+                  alt={galleryImages[i].alt}
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
+          ))}
+        </div>
+
+        {/* Lightbox Component */}
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          slides={galleryImages.map(({ src, alt }) => ({ src, alt }))}
+          index={photoIndex}
+        />
+      </div>
     </>
   );
 }
