@@ -19,170 +19,170 @@ const fadeUpVariants = {
   },
 };
 
-export default function ResidentialPaintingProjects() {
+export default function InteriorExteriorPaintingProjects() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const galleryImages = [
     {
-      src: "/gallery/Residential-Painting-01.jpg",
-      alt: "Residential Painting 01",
+      src: "/gallery/Interior-Exterior-Painting-01.jpg",
+      alt: "Interior & Exterior Painting Projects 00",
     },
     {
-      src: "/gallery/Residential-Painting-02.jpg",
-      alt: "Residential Painting 02",
+      src: "/gallery/Interior-Exterior-Painting-02.jpg",
+      alt: "Interior & Exterior Painting Projects 01",
     },
     {
-      src: "/gallery/Residential-Painting-03.jpg",
-      alt: "Residential Painting 03",
+      src: "/gallery/Interior-Exterior-Painting-03.jpg",
+      alt: "Interior & Exterior Painting Projects 02",
     },
     {
-      src: "/gallery/Residential-Painting-04.jpg",
-      alt: "Residential Painting 04",
+      src: "/gallery/Interior-Exterior-Painting-04.jpg",
+      alt: "Interior & Exterior Painting Projects 03",
     },
     {
-      src: "/gallery/Residential-Painting-05.jpg",
-      alt: "Residential Painting 05",
+      src: "/gallery/Interior-Exterior-Painting-05.jpg",
+      alt: "Interior & Exterior Painting Projects 04",
     },
     {
-      src: "/gallery/Residential-Painting-06.jpg",
-      alt: "Residential Painting 06",
+      src: "/gallery/Interior-Exterior-Painting-06.jpg",
+      alt: "Interior & Exterior Painting Projects 05",
     },
     {
-      src: "/gallery/Residential-Painting-07.jpg",
-      alt: "Residential Painting 07",
+      src: "/gallery/Interior-Exterior-Painting-07.jpg",
+      alt: "Interior & Exterior Painting Projects 06",
     },
     {
-      src: "/gallery/Residential-Painting-08.jpg",
-      alt: "Residential Painting 08",
+      src: "/gallery/Interior-Exterior-Painting-08.jpg",
+      alt: "Interior & Exterior Painting Projects 07",
     },
     {
-      src: "/gallery/Residential-Painting-09.jpg",
-      alt: "Residential Painting 09",
+      src: "/gallery/Interior-Exterior-Painting-09.jpg",
+      alt: "Interior & Exterior Painting Projects 08",
     },
     {
-      src: "/gallery/Residential-Painting-10.jpg",
-      alt: "Residential Painting 10",
+      src: "/gallery/Interior-Exterior-Painting-10.jpg",
+      alt: "Interior & Exterior Painting Projects 09",
     },
     {
-      src: "/gallery/Residential-Painting-11.jpg",
-      alt: "Residential Painting 11",
+      src: "/gallery/Interior-Exterior-Painting-11.jpg",
+      alt: "Interior & Exterior Painting Projects 10",
     },
     {
-      src: "/gallery/Residential-Painting-12.jpg",
-      alt: "Residential Painting 12",
+      src: "/gallery/Interior-Exterior-Painting-12.jpg",
+      alt: "Interior & Exterior Painting Projects 11",
     },
     {
-      src: "/gallery/Residential-Painting-13.jpg",
-      alt: "Residential Painting 13",
+      src: "/gallery/Interior-Exterior-Painting-13.jpg",
+      alt: "Interior & Exterior Painting Projects 12",
     },
     {
-      src: "/gallery/Residential-Painting-14.jpg",
-      alt: "Residential Painting 14",
+      src: "/gallery/Interior-Exterior-Painting-14.jpg",
+      alt: "Interior & Exterior Painting Projects 13",
     },
     {
-      src: "/gallery/Residential-Painting-15.jpg",
-      alt: "Residential Painting 15",
+      src: "/gallery/Interior-Exterior-Painting-15.jpg",
+      alt: "Interior & Exterior Painting Projects 14",
     },
     {
-      src: "/gallery/Residential-Painting-16.jpg",
-      alt: "Residential Painting 16",
+      src: "/gallery/Interior-Exterior-Painting-16.jpg",
+      alt: "Interior & Exterior Painting Projects 15",
     },
     {
-      src: "/gallery/Residential-Painting-17.jpg",
-      alt: "Residential Painting 17",
+      src: "/gallery/Interior-Exterior-Painting-17.jpg",
+      alt: "Interior & Exterior Painting Projects 16",
     },
     {
-      src: "/gallery/Residential-Painting-18.jpg",
-      alt: "Residential Painting 18",
+      src: "/gallery/Interior-Exterior-Painting-18.jpg",
+      alt: "Interior & Exterior Painting Projects 17",
     },
     {
-      src: "/gallery/Residential-Painting-19.jpg",
-      alt: "Residential Painting 19",
+      src: "/gallery/Interior-Exterior-Painting-19.jpg",
+      alt: "Interior & Exterior Painting Projects 18",
     },
     {
-      src: "/gallery/Residential-Painting-20.jpg",
-      alt: "Residential Painting 20",
+      src: "/gallery/Interior-Exterior-Painting-20.jpg",
+      alt: "Interior & Exterior Painting Projects 19",
     },
     {
-      src: "/gallery/Residential-Painting-21.jpg",
-      alt: "Residential Painting 21",
+      src: "/gallery/Interior-Exterior-Painting-21.jpg",
+      alt: "Interior & Exterior Painting Projects 20",
     },
     {
-      src: "/gallery/Residential-Painting-22.jpg",
-      alt: "Residential Painting 22",
+      src: "/gallery/Interior-Exterior-Painting-22.jpg",
+      alt: "Interior & Exterior Painting Projects 21",
     },
     {
-      src: "/gallery/Residential-Painting-23.jpg",
-      alt: "Residential Painting 23",
+      src: "/gallery/Interior-Exterior-Painting-23.jpg",
+      alt: "Interior & Exterior Painting Projects 22",
     },
     {
-      src: "/gallery/Residential-Painting-24.jpg",
-      alt: "Residential Painting 24",
+      src: "/gallery/Interior-Exterior-Painting-24.jpg",
+      alt: "Interior & Exterior Painting Projects 23",
     },
     {
-      src: "/gallery/Residential-Painting-25.jpg",
-      alt: "Residential Painting 25",
+      src: "/gallery/Interior-Exterior-Painting-25.jpg",
+      alt: "Interior & Exterior Painting Projects 24",
     },
     {
-      src: "/gallery/Residential-Painting-26.jpg",
-      alt: "Residential Painting 26",
+      src: "/gallery/Interior-Exterior-Painting-26.jpg",
+      alt: "Interior & Exterior Painting Projects 25",
     },
     {
-      src: "/gallery/Residential-Painting-27.jpg",
-      alt: "Residential Painting 27",
+      src: "/gallery/Interior-Exterior-Painting-27.jpg",
+      alt: "Interior & Exterior Painting Projects 26",
     },
     {
-      src: "/gallery/Residential-Painting-28.jpg",
-      alt: "Residential Painting 28",
+      src: "/gallery/Interior-Exterior-Painting-28.jpg",
+      alt: "Interior & Exterior Painting Projects 27",
     },
     {
-      src: "/gallery/Residential-Painting-29.jpg",
-      alt: "Residential Painting 29",
+      src: "/gallery/Interior-Exterior-Painting-29.jpg",
+      alt: "Interior & Exterior Painting Projects 28",
     },
     {
-      src: "/gallery/Residential-Painting-30.jpg",
-      alt: "Residential Painting 30",
+      src: "/gallery/Interior-Exterior-Painting-30.jpg",
+      alt: "Interior & Exterior Painting Projects 29",
     },
     {
-      src: "/gallery/Residential-Painting-31.jpg",
-      alt: "Residential Painting 31",
+      src: "/gallery/Interior-Exterior-Painting-31.jpg",
+      alt: "Interior & Exterior Painting Projects 30",
     },
     {
-      src: "/gallery/Residential-Painting-32.jpg",
-      alt: "Residential Painting 32",
+      src: "/gallery/Interior-Exterior-Painting-32.jpg",
+      alt: "Interior & Exterior Painting Projects 31",
     },
     {
-      src: "/gallery/Residential-Painting-33.jpg",
-      alt: "Residential Painting 33",
+      src: "/gallery/Interior-Exterior-Painting-33.jpg",
+      alt: "Interior & Exterior Painting Projects 32",
     },
     {
-      src: "/gallery/Residential-Painting-34.jpg",
-      alt: "Residential Painting 34",
+      src: "/gallery/Interior-Exterior-Painting-34.jpg",
+      alt: "Interior & Exterior Painting Projects 33",
     },
     {
-      src: "/gallery/Residential-Painting-35.jpg",
-      alt: "Residential Painting 35",
+      src: "/gallery/Interior-Exterior-Painting-35.jpg",
+      alt: "Interior & Exterior Painting Projects 34",
     },
     {
-      src: "/gallery/Residential-Painting-36.jpg",
-      alt: "Residential Painting 36",
+      src: "/gallery/Interior-Exterior-Painting-36.jpg",
+      alt: "Interior & Exterior Painting Projects 35",
     },
     {
-      src: "/gallery/Residential-Painting-37.jpg",
-      alt: "Residential Painting 37",
+      src: "/gallery/Interior-Exterior-Painting-37.jpg",
+      alt: "Interior & Exterior Painting Projects 36",
     },
     {
-      src: "/gallery/Residential-Painting-38.jpg",
-      alt: "Residential Painting 38",
+      src: "/gallery/Interior-Exterior-Painting-38.jpg",
+      alt: "Interior & Exterior Painting Projects 37",
     },
     {
-      src: "/gallery/Residential-Painting-39.jpg",
-      alt: "Residential Painting 39",
+      src: "/gallery/Interior-Exterior-Painting-39.jpg",
+      alt: "Interior & Exterior Painting Projects 38",
     },
     {
-      src: "/gallery/Residential-Painting-40.jpg",
-      alt: "Residential Painting 40",
+      src: "/gallery/Interior-Exterior-Painting-40.jpg",
+      alt: "Interior & Exterior Painting Projects 39",
     },
   ];
 
@@ -202,8 +202,8 @@ export default function ResidentialPaintingProjects() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/services/Services-Interior-Painting-01.jpg"}
-              alt="Wall paper removal"
+              src={"/services/Services-Exterior-Painting.jpg"}
+              alt="Interior & Exterior Painting Projects"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
               fill
@@ -220,22 +220,16 @@ export default function ResidentialPaintingProjects() {
       >
         <div className="relative">
           <h1 className="md:text-6xl text-5xl uppercase font-aspira-light text-shadow">
-            Residential Painting Projects
+            Interior &amp; Exterior Painting Projects
           </h1>
           <h2 className="font-aspira-bold text-2xl">
             <span className="text-shadow">Interior</span>{" "}
             <span className="text-accent">&bull;</span>{" "}
             <span className="text-shadow">Exterior</span>{" "}
             <span className="text-accent">&bull;</span>{" "}
-            <span className="text-shadow">Home</span>
+            <span className="text-shadow">Doors</span>{" "}
             <span className="text-accent">&bull;</span>{" "}
-            <span className="text-shadow">Shed</span>
-            <br></br>
-            <span className="text-shadow">Trim</span>{" "}
-            <span className="text-accent">&bull;</span>{" "}
-            <span className="text-shadow">Siding</span>{" "}
-            <span className="text-accent">&bull;</span>{" "}
-            <span className="text-shadow">Molding</span>
+            <span className="text-shadow">Cabinets</span>
           </h2>
           <Link href="/contact" className="btn-main mt-[20px]">
             Get Free Estimate
@@ -422,6 +416,7 @@ export default function ResidentialPaintingProjects() {
             </div>
           ))}
         </div>
+
         <div className="flex flex-wrap justify-around my-4">
           {[24, 25, 26, 27].map((i) => (
             <div
@@ -472,62 +467,12 @@ export default function ResidentialPaintingProjects() {
             </div>
           ))}
         </div>
+
         <div className="flex flex-wrap justify-around my-4">
           {[31, 32, 33, 34].map((i) => (
             <div
               key={i}
               className="relative lg:py-0 py-2 lg:w-1/4 md:w-1/2 w-full px-2 h-[350px] cursor-pointer hover-img"
-              onClick={() => openLightbox(i)}
-            >
-              <motion.div
-                variants={fadeUpVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                className="relative h-full w-full will-change-transform"
-              >
-                <Image
-                  src={galleryImages[i].src}
-                  alt={galleryImages[i].alt}
-                  fill
-                  className="object-cover"
-                />
-              </motion.div>
-            </div>
-          ))}
-        </div>
-
-        {/* Example: 3-column Grid */}
-        <div className="flex flex-wrap justify-around my-4">
-          {[35, 36, 37].map((i) => (
-            <div
-              key={i}
-              className="relative lg:py-0 py-2 md:w-1/3 w-full h-[350px] px-2 cursor-pointer hover-img"
-              onClick={() => openLightbox(i)}
-            >
-              <motion.div
-                variants={fadeUpVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                className="relative h-full w-full will-change-transform"
-              >
-                <Image
-                  src={galleryImages[i].src}
-                  alt={galleryImages[i].alt}
-                  fill
-                  className="object-cover"
-                />
-              </motion.div>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap justify-around my-4">
-          {[38, 39].map((i) => (
-            <div
-              key={i}
-              className="relative lg:py-0 py-2 md:w-1/2 w-full px-2 h-[350px] cursor-pointer hover-img"
               onClick={() => openLightbox(i)}
             >
               <motion.div

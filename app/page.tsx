@@ -148,7 +148,14 @@ export default function Home() {
           </Link>
         </div>
         <div className="w-full md:w-1/2 lg:text-right">
-          <iframe
+          <Image
+            src={`/team/Paint-Innovators-Team-Home.jpg`}
+            alt={`Paint Innovators Team`}
+            width={1000}
+            height={1000}
+            className="object-cover"
+          />
+          {/* <iframe
             src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FPaintInnovators%2Fvideos%2F979154837397440%2F&show_text=false&width=267&t=0"
             width="50%"
             height="476"
@@ -161,8 +168,8 @@ export default function Home() {
             frameBorder="0"
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-          <iframe
+          ></iframe> */}
+          {/* <iframe
             src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FPaintInnovators%2Fvideos%2F1098726621971511%2F&show_text=false&width=267&t=0"
             width="50%"
             height="476"
@@ -175,7 +182,7 @@ export default function Home() {
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
         </div>
         {/* </div> */}
       </ContentBlock>

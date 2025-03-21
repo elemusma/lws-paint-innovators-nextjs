@@ -36,12 +36,6 @@ export default function Footer() {
                   alt="Arkansas Professional Painters. Get Free Estimate"
                   fill
                 />
-                {/* <img
-                  src="photos/Arkansas.jpg"
-                  className="w-full absolute h-full"
-                  style={{ objectFit: "cover", top: 0, left: 0 }}
-                  alt=""
-                /> */}
                 <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
                 <div
                   className="relative text-center text-white text-shadow"
@@ -52,8 +46,6 @@ export default function Footer() {
                     dangerouslySetInnerHTML={{ __html: ArkansasAddress }}
                     className="text-sm"
                   ></p>
-                  {/* dangerouslySetInnerHTML={{ __html: ArkansasAddress }} */}
-                  {/* <p className="text:sm">{ArkansasAddress}</p> */}
                   <a href={`tel:+${ArkansasPhone}`} className="text-3xl">
                     {ArkansasPhone}
                   </a>
@@ -124,11 +116,9 @@ export default function Footer() {
           <NavItems logoContainerClassName="lg:w-1/3" />
         </div>
         {/* columns */}
-        <div className="max-w-screen-lg mx-auto pt-10 pb-10">
+        <div className="max-w-screen-lg mx-auto pt-10 pb-10 lg:px-0 px-4">
           <div className="flex flex-wrap justify-start">
-            {/* <div className="w-full lg:w-1/2 pb-10 relative"> */}
-            {/* <div className="flex flex-wrap pr-10"> */}
-            <div className="w-full lg:w-1/4 pb-10 relative">
+            <div className="w-full md:w-1/4 w-full pb-10 relative">
               <p className="text-xl font-proxima-bold">Services</p>
               <ul className="list-none text-sm">
                 <li>
@@ -166,44 +156,9 @@ export default function Footer() {
                     Popcorn Ceiling Removal
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="/services/new-construction-painting">
-                    Wallpaper Removal
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Drywall Repair
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Deck Coating
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Industrial Coating
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Epoxy Floors
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Pressure Washing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    COVID-19 Sanitation
-                  </Link>
-                </li> */}
               </ul>
             </div>
-            <div className="w-full lg:w-1/4 pb-10 relative">
+            <div className="w-full md:w-1/4 w-full pb-10 relative">
               <div style={{ height: 28 }}></div>
               <ul className="list-none text-sm">
                 <li>
@@ -237,30 +192,8 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            {/* </div> */}
-            {/* <div
-                className="bg-[var(--neutral-dark)] absolute h-full"
-                style={{ width: "2px", top: 0, right: "15px" }}
-              ></div> */}
-            {/* </div> */}
-            {/* <div className="relative w-full lg:w-1/6 lg:pb-0 pb-10">
-              <div
-                className="bg-[var(--neutral-dark)] absolute h-full"
-                style={{
-                  width: "2px",
-                  top: "0",
-                  left: "50%",
-                  transform: "translate(-50%, 0)",
-                }}
-              ></div>
-            </div> */}
-            {/* <div className="relative w-full lg:w-1/4 pb-10"> */}
-            {/* <div
-                className="bg-[var(--neutral-dark)] absolute h-full"
-                style={{ width: "2px", top: 0, right: "15px" }}
-              ></div> */}
-            {/* <div className="flex flex-wrap pr-10"> */}
-            <div className="w-full lg:w-1/4 pb-10">
+
+            <div className="w-full md:w-1/4 w-full pb-10">
               <p className="text-xl font-proxima-bold">About</p>
               <ul className="list-none text-sm">
                 <li>
@@ -278,47 +211,9 @@ export default function Footer() {
                 <li>
                   <Link href="/about/oklahoma-location">Oklahoma Location</Link>
                 </li>
-                {/* <li>
-                  <Link href="/colorado-location">Colorado Location</Link>
-                </li> */}
-                {/* <li>
-                  <Link href="/services/interior-painting">
-                    Colorado Location
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Brand Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Website Feedback
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    Service Feedback
-                  </Link>
-                </li> */}
-                {/* <li>
-                      <Link href="/services/new-construction-painting">
-                        Brand Resources
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Website Feedback
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/new-construction-painting">
-                        Service Feedback
-                      </Link>
-                    </li> */}
               </ul>
             </div>
-            <div className="w-full lg:w-1/4 pb-10">
+            <div className="w-full md:w-1/4 pb-10">
               <div style={{ height: 28 }}></div>
               <ul className="list-none text-sm">
                 <li>
@@ -335,17 +230,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            {/* </div> */}
-            {/* </div> */}
-            {/* <div
-              className="relative w-full lg:pb-0 pb-10 bg-[var(--neutral-dark)]"
-              style={{ height: "2px" }}
-            ></div> */}
-            <div className="relative w-full lg:w-1/4 pt-10 pb-10">
-              {/* <div
-                className="bg-[var(--neutral-dark)] absolute h-full"
-                style={{ width: "2px", top: 0, right: "15px" }}
-              ></div> */}
+            <div className="relative w-full md:w-1/4 w-full pt-10 pb-10">
               <p className="text-xl font-proxima-bold">Projects</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
@@ -374,11 +259,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="relative w-full lg:w-1/4 pt-10 pb-10">
-              {/* <div
-                className="bg-[var(--neutral-dark)] absolute h-full"
-                style={{ width: "2px", top: 0, right: "15px" }}
-              ></div> */}
+            <div className="relative w-full md:w-1/4 w-full pt-10 pb-10">
               <p className="text-xl font-proxima-bold">Careers</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
@@ -388,11 +269,6 @@ export default function Footer() {
                         Painter / Drywall Finisher
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link href="/careers/drywall-finisher">
-                        Drywall Finisher
-                      </Link>
-                    </li> */}
                     <li>
                       <Link href="/careers/pintor-masero">
                         El Pintor / Masero
@@ -417,11 +293,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="relative w-full lg:w-1/3 pt-10 pb-10">
-              {/* <div
-                className="bg-[var(--neutral-dark)] absolute h-full"
-                style={{ width: "2px", top: 0, right: "15px" }}
-              ></div> */}
+            <div className="relative w-full md:w-1/4 w-full pt-10 pb-10">
               <p className="text-xl font-proxima-bold">Helpful Links</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
@@ -438,21 +310,10 @@ export default function Footer() {
                     <li>
                       <Link href="/contact">Get Free Estimate</Link>
                     </li>
-                    {/* <li>
-                      <Link href="/services/exterior-painting">
-                        Project Manager
-                      </Link>
-                    </li> */}
                   </ul>
                 </div>
               </div>
             </div>
-            {/* <div className="w-full lg:w-1/3 text-right flex lg:justify-start justify-center lg:pb-0 pb-10">
-              <p className="font-proxima-bold">Services</p>
-            </div> */}
-            {/* <div className="w-full lg:w-1/4 text-right flex lg:justify-start justify-center lg:pb-0 pb-10">
-              <p className="font-proxima-bold">Services</p>
-            </div> */}
           </div>
         </div>
         {/* icons */}
@@ -500,12 +361,6 @@ export default function Footer() {
             </div>
             <div className="w-full lg:w-1/3 text-center">
               <a href={`tel:+${Phone}`}>
-                {/* <img
-                  src="/assets/Headphones-Black.png"
-                  style={{ width: "65px" }}
-                  className="m-auto"
-                  alt=""
-                /> */}
                 <Image
                   src="/assets/Headphones-Black.png"
                   className="m-auto"

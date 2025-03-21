@@ -51,7 +51,7 @@ const SwiperCarousel = () => {
                 Innovators' residential painting services in Arkansas and
                 Oklahoma.
               </p>
-              <Link href="/contact" className="btn-main mt-[20px]">
+              <Link href="/free-estimate" className="btn-main mt-[20px]">
                 Get Free Estimate
               </Link>
               <div className="spacer"></div>
@@ -88,7 +88,7 @@ const SwiperCarousel = () => {
                 Enhance your business with Paint Innovators' professional
                 commercial painting services across Arkansas and Oklahoma.
               </p>
-              <Link href="/contact" className="btn-main mt-[20px]">
+              <Link href="/free-estimate" className="btn-main mt-[20px]">
                 Get Free Estimate
               </Link>
               <div className="spacer"></div>
@@ -125,7 +125,7 @@ const SwiperCarousel = () => {
                 Protect your valuable assets with Paint Innovators' industrial
                 coating services in Arkansas and Oklahoma.
               </p>
-              <Link href="/contact" className="btn-main mt-[20px]">
+              <Link href="/free-estimate" className="btn-main mt-[20px]">
                 Get Free Estimate
               </Link>
               <div className="spacer"></div>
@@ -133,21 +133,6 @@ const SwiperCarousel = () => {
           </div>
         </div>
       </SwiperSlide>
-      {/* <SwiperSlide>
-        <div>
-          <p>hello theressss123</p>
-        </div>
-      </SwiperSlide> */}
-      {/* <SwiperSlide>
-        <div>
-          <p>hello theressss123</p>
-        </div>
-      </SwiperSlide> */}
-      {/* {[...Array(12)].map((_, index) => (
-        <SwiperSlide key={index} className="bg-gray-200 p-6 rounded-md">
-          <h4 className="text-center">Slide {index + 1}</h4>
-        </SwiperSlide>
-      ))} */}
     </Swiper>
   );
 };
