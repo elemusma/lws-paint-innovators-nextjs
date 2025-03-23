@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 // import type { Swiper as SwiperType } from "swiper/react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -41,7 +41,7 @@ export default function ProjectsWorkedOn() {
   // const commSwiperRef = useRef<any>(null);
   // const indSwiperRef = useRef<any>(null);
 
-  // Use 'typeof' to get the type of Swiper
+  // Use &apos;typeof&apos; to get the type of Swiper
   // const resSwiperRef = useRef<typeof Swiper | null>(null);
   // const commSwiperRef = useRef<typeof Swiper | null>(null);
   // const indSwiperRef = useRef<typeof Swiper | null>(null);
@@ -123,7 +123,7 @@ export default function ProjectsWorkedOn() {
       >
         <div className="w-full text-center pb-10">
           <h2 className="font-aspira-light text-5xl uppercase">
-            Projects We've Worked On
+            Projects We&apos;ve Worked On
           </h2>
         </div>
         {/* Residential Projects */}
@@ -297,7 +297,7 @@ export default function ProjectsWorkedOn() {
             </div>
             <div className="bg-[#e5e5e5] p-5">
               <p>
-                Paint Innovators' protective coatings are designed to solve
+                Paint Innovators&apos; protective coatings are designed to solve
                 corrosion problems in various industrial applications, including
                 commercial heating, cooling, refrigeration, and other components
                 regularly exposed to corrosive conditions.

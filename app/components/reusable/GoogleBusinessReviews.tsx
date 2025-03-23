@@ -10,6 +10,16 @@ interface Review {
   profile_photo_url?: string;
 }
 
+interface RawReview {
+  reviewer: {
+    displayName: string;
+    profilePhotoUrl?: string;
+  };
+  starRating: number;
+  createTime: string;
+  comment?: string;
+}
+
 interface GoogleBusinessReviewsProps {
   accountId: string;
   locationId: string;
@@ -48,7 +58,7 @@ function GoogleBusinessReviews({
         console.log("Fetched data:", JSON.stringify(data, null, 2));
 
         if (data.reviews) {
-          const formattedReviews = data.reviews.map((review: any) => ({
+          const formattedReviews = data.reviews.map((review: RawReview) => ({
             author_name: review.reviewer.displayName || "Anonymous",
             rating: review.starRating,
             relative_time_description: new Date(
@@ -94,6 +104,8 @@ function GoogleBusinessReviews({
               src={review.profile_photo_url || "/default-avatar.png"}
               alt={`${review.author_name}'s profile`}
               className="w-12 h-12 rounded-full object-cover"
+              width={100} // Add width
+              height={100} // Add height
             />
             <div>
               <h3 className="font-semibold">{review.author_name}</h3>

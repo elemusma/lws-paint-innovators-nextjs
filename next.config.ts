@@ -1,11 +1,13 @@
-import type { NextConfig } from 'next'
- 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   experimental: {
     turbo: {
-      // ...
+      // ... your turbo configurations
     },
   },
-}
- 
-export default nextConfig
+  images: {
+    domains: ['lh3.googleusercontent.com'],
+  },
+};
+
+module.exports = nextConfig;

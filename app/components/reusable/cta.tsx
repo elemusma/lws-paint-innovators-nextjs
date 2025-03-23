@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import {
   ArkansasPhone,
   ColoradoPhone,
@@ -12,7 +12,7 @@ import ContactForm from "../forms/ContactForm";
 import Testimonials from "./Testimonials";
 
 export default function CTA() {
-  const pathname = usePathname(); // Get the current route
+  // const pathname = usePathname(); // Get the current route
 
   // Define dynamic links based on the page URL
   // const getContactLink = () => {

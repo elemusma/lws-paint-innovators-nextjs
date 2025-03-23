@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import ButtonSquare from "./buttons/btn-square";
 import { Company } from "./globals";
@@ -56,25 +57,25 @@ const MobileMenuToggle = () => {
 
             {/* Logo Section */}
             <div style={{ width: "100%", maxWidth: "205px" }} id="logoMain">
-              <a href="/" title={`Homepage link for ${Company}`}>
+              <Link href="/" title={`Homepage link for ${Company}`}>
                 {/** Replace `logoSVG()` with your logo component or JSX */}
                 <Logo />
-              </a>
+              </Link>
             </div>
 
             {/* Navigation Menu */}
             <ul className="menu list-unstyled mb-0">
               <li>
-                <a href="/team">Our Team</a>
+                <Link href="/team">Our Team</Link>
               </li>
               <li>
-                <a href="/services">Services</a>
+                <Link href="/services">Services</Link>
               </li>
               <li>
-                <a href="/work">Our Work</a>
+                <Link href="/work">Our Work</Link>
               </li>
               <li>
-                <a href="/contact">Contact Us</a>
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
 

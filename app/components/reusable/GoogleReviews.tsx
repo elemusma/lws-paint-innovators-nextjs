@@ -14,7 +14,17 @@ interface Review {
   rating: number;
   relative_time_description: string;
   text: { text: string; languageCode: string };
-  profile_photo_url?: string; // ✅ This now comes from `review.authorAttribution.photoUri`
+  profile_photo_url?: string;
+}
+
+interface RawGoogleReview {
+  authorAttribution?: {
+    displayName?: string;
+    photoUri?: string;
+  };
+  rating: number;
+  relativePublishTimeDescription: string;
+  text: { text: string; languageCode: string };
 }
 
 interface GoogleReviewsProps {
@@ -27,15 +37,14 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [expandedStates, setExpandedStates] = useState<{
     [key: number]: boolean;
-  }>({}); // ✅ Store expanded states in an object
+  }>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  // const swiperRef = useRef<any>(null);
 
   const toggleExpand = (index: number) => {
     setExpandedStates((prev) => ({
       ...prev,
-      [index]: !prev[index], // Toggle state for the specific review
+      [index]: !prev[index],
     }));
   };
 
@@ -64,7 +73,7 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
         if (data.reviews) {
           const formattedReviews = (
             maxReviews ? data.reviews.slice(0, maxReviews) : data.reviews
-          ).map((review: any) => ({
+          ).map((review: RawGoogleReview) => ({
             author_name: review.authorAttribution?.displayName || "Anonymous",
             rating: review.rating,
             relative_time_description: review.relativePublishTimeDescription,
@@ -87,16 +96,6 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
 
     fetchReviews();
   }, [placeId, apiKey, maxReviews]);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (swiperRef.current && swiperRef.current.slideNext) {
-  //       swiperRef.current.slideNext(); // ✅ Properly advance slides
-  //     }
-  //   }, 3000);
-
-  //   return () => clearInterval(interval); // ✅ Cleanup interval on unmount
-  // }, []);
 
   if (loading) {
     return (
@@ -132,14 +131,12 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
       </div>
 
       <div className="w-4/5">
-        {/* ✅ Remove Nested Swiper */}
         <Swiper
           loop={true}
           slidesPerView={3}
           spaceBetween={30}
           autoplay={true}
           modules={[Navigation, Pagination, Autoplay]}
-          // onSwiper={(swiper) => (swiperRef.current = swiper)} // ✅ Assign Swiper instance
         >
           {reviews.map((review, index) => {
             const text = review.text?.text || "No review text available";
@@ -154,6 +151,8 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
                       src={review.profile_photo_url || "/default-avatar.png"}
                       alt={`${review.author_name}'s profile`}
                       className="w-12 h-12 rounded-full object-cover"
+                      width={48}
+                      height={48}
                     />
                     <div>
                       <h3 className="font-semibold">{review.author_name}</h3>
@@ -171,7 +170,6 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
                     ))}
                   </div>
 
-                  {/* ✅ Fixed "Read More" Button */}
                   <p className="text-sm text-gray-600">
                     {isExpanded ? text : `${text.slice(0, 200)}...`}
                     {isLongText && (
