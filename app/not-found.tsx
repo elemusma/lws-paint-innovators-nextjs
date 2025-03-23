@@ -102,7 +102,7 @@ export default function NotFound() {
       <div className="relative">
         <h1 className="text-6xl font-bold mb-4 z-10">404</h1>
         <p className="text-2xl mb-6 z-10">
-          Oops! The page you're looking for doesn't exist.
+          Oops! The page you&apos;re looking for doesn&apos;t exist.
         </p>
 
         <Link href="/" className="btn-main">

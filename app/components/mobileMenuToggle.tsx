@@ -20,10 +20,11 @@ const MobileMenuToggle = () => {
   return (
     <>
       {/* Toggle Button */}
-      <a
+      <button
         id="mobileMenuToggle"
         className="openModalBtn nav-toggle"
         title={`mobile menu nav toggle for ${Company}`}
+        style={{ cursor: "pointer" }}
         onClick={handleToggle}
       >
         <div style={{ padding: "10px 0px" }}>
@@ -31,7 +32,7 @@ const MobileMenuToggle = () => {
           <div className="line-2 bg-accent"></div>
           <div className="line-3 bg-accent"></div>
         </div>
-      </a>
+      </button>
 
       {/* Modal */}
       {isModalOpen && (
@@ -97,6 +98,6 @@ const MobileMenuToggle = () => {
 };
 
 export default MobileMenuToggle;
-function setupModals(arg0: string) {
-  throw new Error("Function not implemented.");
-}
+// function setupModals(arg0: string) {
+//   throw new Error("Function not implemented.");
+// }

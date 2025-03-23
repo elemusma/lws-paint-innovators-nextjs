@@ -21,10 +21,7 @@ export interface SwiperCarouselProps {
   sliderId?: string;
 }
 
-const SwiperCarouselProjects: React.FC<SwiperCarouselProps> = ({
-  slides,
-  sliderId,
-}) => {
+const SwiperCarouselProjects: React.FC<SwiperCarouselProps> = ({ slides }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 

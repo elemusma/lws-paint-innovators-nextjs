@@ -1,5 +1,5 @@
 import { usePathname } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import "../../styles/forms.scss";
 import { formatPhoneNumber } from "./phoneFormatting";
@@ -142,18 +142,21 @@ function CareerEnglish() {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
-  const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-    if (isDirty) {
-      e.preventDefault();
-      e.returnValue =
-        "Are you sure you want to leave? Changes you made may not be saved.";
-      return e.returnValue;
-    }
-  };
+  const handleBeforeUnload = useCallback(
+    (e: BeforeUnloadEvent) => {
+      if (isDirty) {
+        e.preventDefault();
+        e.returnValue =
+          "Are you sure you want to leave? Changes you made may not be saved.";
+        return e.returnValue;
+      }
+    },
+    [isDirty]
+  ); // Add isDirty to dependency array if it's used inside
   useEffect(() => {
     window.addEventListener("beforeunload", handleBeforeUnload);
     return () => window.removeEventListener("beforeunload", handleBeforeUnload);
-  }, [isDirty]);
+  }, [isDirty, handleBeforeUnload]);
 
   const handleInputChange = () => {
     setIsDirty(true);

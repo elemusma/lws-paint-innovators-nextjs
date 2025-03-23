@@ -12,7 +12,7 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { user_name, user_email, user_phone,user_subject, project_type, location, message, embed_url } = body;
+    const { user_name, user_email, user_phone,user_subject, message, embed_url } = body;
 
     const accessToken = await oAuth2Client.getAccessToken();
 

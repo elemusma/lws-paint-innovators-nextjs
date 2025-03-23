@@ -12,7 +12,7 @@ export default function OklahomaLocationMap() {
       if (!isMapLoaded) initMap();
       return;
     }
-  }, []);
+  }, [isMapLoaded]);
 
   const initMap = () => {
     const mapElement = document.getElementById("map");

@@ -13,15 +13,6 @@ import { Company, Website } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
-// Define your fade-up variant:
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
 export const metadata: Metadata = {
   title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
   description: "Professional painting.",

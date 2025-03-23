@@ -13,7 +13,6 @@ import SwiperCarouselNewService from "./components/swiperCarouselNewService";
 import SwiperCarouselProjects, {
   Slide,
 } from "./components/swiperCarouselProjects";
-import { Tab } from "./components/tabs";
 
 export interface SwiperCarouselPropsResidentialProjects {
   ResidentialProjectsImages: Slide[];
@@ -29,66 +28,6 @@ export interface SwiperCarouselPropsIndustrialProjects {
 }
 
 export default function Home() {
-  const tabsData: Tab[] = [
-    {
-      title: "Residential",
-      content: (
-        <div>
-          <p>
-            Residential Lorem ipsum is placeholder text commonly used in the
-            graphic, print, and publishing industries for previewing layouts and
-            visual mockups.
-          </p>
-        </div>
-      ),
-      customTabButtonClassName: "lg:w-1/4 w-1/2", // Custom class for first tab button
-      customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
-    },
-    {
-      title: "Commercial",
-      content: (
-        <div>
-          <p>
-            Commercial Lorem ipsum is placeholder text commonly used in the
-            graphic, print, and publishing industries for previewing layouts and
-            visual mockups.
-          </p>
-        </div>
-      ),
-      // No custom classes/styles; will use defaults.
-      customTabButtonClassName: "lg:w-1/4 w-1/2", // Custom class for first tab button
-      customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
-    },
-    {
-      title: "Government",
-      content: (
-        <div>
-          <p>
-            Government Lorem ipsum is placeholder text commonly used in the
-            graphic, print, and publishing industries for previewing layouts and
-            visual mockups.
-          </p>
-        </div>
-      ),
-      customTabButtonClassName: "lg:w-1/4 w-full", // Custom class for first tab button
-      customTabButtonStyle: { fontSize: "1.2rem" }, // Custom style for first tab button
-    },
-  ];
-
-  const lightboxSlides = ResidentialProjectsImages.map((slide) => ({
-    src: slide.imageSrc,
-    alt: slide.imageAlt || "Slide Image",
-  }));
-
-  const lightboxSlidesCommercial = CommercialProjectsImages.map((slide) => ({
-    src: slide.imageSrc,
-    alt: slide.imageAlt || "Slide Image",
-  }));
-  const lightboxSlidesIndustrial = IndustrialProjectsImages.map((slide) => ({
-    src: slide.imageSrc,
-    alt: slide.imageAlt || "Slide Image",
-  }));
-
   return (
     <>
       <div className="hero">

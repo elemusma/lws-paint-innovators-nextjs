@@ -5,7 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+// import type { Swiper as SwiperType } from "swiper/react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import ContentBlock from "../content-block";
@@ -36,9 +37,17 @@ export interface SwiperCarouselPropsIndustrialProjects {
 
 export default function ProjectsWorkedOn() {
   // Create refs for each Swiper instance
-  const resSwiperRef = useRef<any>(null);
-  const commSwiperRef = useRef<any>(null);
-  const indSwiperRef = useRef<any>(null);
+  // const resSwiperRef = useRef<any>(null);
+  // const commSwiperRef = useRef<any>(null);
+  // const indSwiperRef = useRef<any>(null);
+
+  // Use 'typeof' to get the type of Swiper
+  // const resSwiperRef = useRef<typeof Swiper | null>(null);
+  // const commSwiperRef = useRef<typeof Swiper | null>(null);
+  // const indSwiperRef = useRef<typeof Swiper | null>(null);
+  const resSwiperRef = useRef<SwiperRef | null>(null); // Use SwiperRef
+  const commSwiperRef = useRef<SwiperRef | null>(null); // Use SwiperRef
+  const indSwiperRef = useRef<SwiperRef | null>(null); // Use SwiperRef
 
   useEffect(() => {
     // base delay for the first slider (3000ms)
@@ -46,15 +55,16 @@ export default function ProjectsWorkedOn() {
     const baseDelay = 3000;
     const interval = setInterval(() => {
       // trigger the first slider immediately at each cycle
-      resSwiperRef.current?.slideNext();
+      // resSwiperRef.current?.slideNext();
+      resSwiperRef.current?.swiper.slideNext(); // access swiper property
 
       // trigger the second slider after 200ms
       setTimeout(() => {
-        commSwiperRef.current?.slideNext();
+        commSwiperRef.current?.swiper.slideNext();
       }, 500);
 
       setTimeout(() => {
-        indSwiperRef.current?.slideNext();
+        indSwiperRef.current?.swiper.slideNext();
       }, 1000);
     }, baseDelay);
 
@@ -128,7 +138,7 @@ export default function ProjectsWorkedOn() {
                 // navigation
                 // pagination={{ clickable: true }}
                 modules={[Navigation, Pagination]}
-                onSwiper={(swiper) => (resSwiperRef.current = swiper)}
+                onSwiper={(swiper) => (resSwiperRef.current = { swiper })}
                 className="mySwiper w-full overflow-hidden"
               >
                 {ResidentialProjectsImages.map(
@@ -190,7 +200,7 @@ export default function ProjectsWorkedOn() {
                 // navigation
                 // pagination={{ clickable: true }}
                 modules={[Navigation, Pagination]}
-                onSwiper={(swiper) => (commSwiperRef.current = swiper)}
+                onSwiper={(swiper) => (commSwiperRef.current = { swiper })}
                 className="mySwiper w-full overflow-hidden"
               >
                 {CommercialProjectsImages.map((slide, index) => (
@@ -249,7 +259,7 @@ export default function ProjectsWorkedOn() {
                 // navigation
                 // pagination={{ clickable: true }}
                 modules={[Navigation, Pagination]}
-                onSwiper={(swiper) => (indSwiperRef.current = swiper)}
+                onSwiper={(swiper) => (indSwiperRef.current = { swiper })}
                 className="mySwiper w-full overflow-hidden"
               >
                 {IndustrialProjectsImages.map((slide, index) => (

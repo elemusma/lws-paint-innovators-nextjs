@@ -15,12 +15,12 @@ export default function CTA() {
   const pathname = usePathname(); // Get the current route
 
   // Define dynamic links based on the page URL
-  const getContactLink = () => {
-    if (pathname.includes("oklahoma-location")) return `tel:1${OklahomaPhone}`;
-    if (pathname.includes("arkansas-location")) return `tel:1${ArkansasPhone}`;
-    if (pathname.includes("colorado-location")) return `tel:1${ColoradoPhone}`;
-    return "/contact"; // Default for all other pages
-  };
+  // const getContactLink = () => {
+  //   if (pathname.includes("oklahoma-location")) return `tel:1${OklahomaPhone}`;
+  //   if (pathname.includes("arkansas-location")) return `tel:1${ArkansasPhone}`;
+  //   if (pathname.includes("colorado-location")) return `tel:1${ColoradoPhone}`;
+  //   return "/contact"; // Default for all other pages
+  // };
 
   return (
     <>

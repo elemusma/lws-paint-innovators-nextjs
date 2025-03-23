@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface Review {
@@ -89,7 +90,7 @@ function GoogleBusinessReviews({
       {reviews.map((review, index) => (
         <div key={index} className="bg-white rounded-lg shadow-md p-6 mb-4">
           <div className="flex items-center gap-4 mb-4">
-            <img
+            <Image
               src={review.profile_photo_url || "/default-avatar.png"}
               alt={`${review.author_name}'s profile`}
               className="w-12 h-12 rounded-full object-cover"

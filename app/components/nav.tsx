@@ -8,16 +8,16 @@ import MobileMenuToggle from "./mobileMenuToggle";
 import NavItems from "./nav-items";
 
 export default function Navigation() {
-  const menuHeightRef = useRef<HTMLUListElement | null>(null);
-  const navMenuRef = useRef<HTMLDivElement | null>(null);
-  const navMenuToggleRef = useRef<HTMLButtonElement | null>(null);
-  const navMenuOverlayRef = useRef<HTMLDivElement | null>(null);
-  const navMenuCloseRef = useRef<HTMLButtonElement | null>(null);
+  // const menuHeightRef = useRef<HTMLUListElement | null>(null);
+  // const navMenuRef = useRef<HTMLDivElement | null>(null);
+  // const navMenuToggleRef = useRef<HTMLButtonElement | null>(null);
+  // const navMenuOverlayRef = useRef<HTMLDivElement | null>(null);
+  // const navMenuCloseRef = useRef<HTMLButtonElement | null>(null);
   const headerRef = useRef<HTMLHeadingElement | null>(null);
   const blankSpaceRef = useRef<HTMLDivElement | null>(null);
-  const logoMainRef = useRef<HTMLImageElement | null>(null);
-  const logoSecondaryRef = useRef<HTMLImageElement | null>(null);
-  const searchIconRef = useRef<HTMLButtonElement | null>(null);
+  // const logoMainRef = useRef<HTMLImageElement | null>(null);
+  // const logoSecondaryRef = useRef<HTMLImageElement | null>(null);
+  // const searchIconRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     const header = headerRef.current;

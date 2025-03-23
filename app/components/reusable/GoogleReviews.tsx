@@ -1,6 +1,7 @@
 "use client";
 import { Star } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -29,7 +30,7 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
   }>({}); // ✅ Store expanded states in an object
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const swiperRef = useRef<any>(null);
+  // const swiperRef = useRef<any>(null);
 
   const toggleExpand = (index: number) => {
     setExpandedStates((prev) => ({
@@ -149,7 +150,7 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
               <SwiperSlide key={index} className="w-full">
                 <div className="bg-white rounded-lg shadow-md p-6">
                   <div className="flex items-center gap-4 mb-4">
-                    <img
+                    <Image
                       src={review.profile_photo_url || "/default-avatar.png"}
                       alt={`${review.author_name}'s profile`}
                       className="w-12 h-12 rounded-full object-cover"

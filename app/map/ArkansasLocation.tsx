@@ -12,7 +12,7 @@ export default function ArkansasLocationMap() {
       if (!isMapLoaded) initMap();
       return;
     }
-  }, []);
+  }, [isMapLoaded]);
 
   const initMap = () => {
     const mapElement = document.getElementById("map");

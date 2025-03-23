@@ -201,11 +201,11 @@ export default function OurTeam() {
                   He ensures customer satisfaction, organizes and motivates his
                   team, and oversees the painting or construction project from
                   beginning to end. What does Victor like about working at Paint
-                  Innovators? “The culture.” Victor's Hobbies: Fishing, playing
-                  basketball, camping, reading, podcasting, golf, family time,
-                  UFC, and boxing. Victor's Favorite quote: “Sometimes you will
-                  never know the value of a moment, until it becomes a memory.”
-                  - Dr Seuss
+                  Innovators? “The culture.” Victor&apos;s Hobbies: Fishing,
+                  playing basketball, camping, reading, podcasting, golf, family
+                  time, UFC, and boxing. Victor&apos;s Favorite quote:
+                  “Sometimes you will never know the value of a moment, until it
+                  becomes a memory.” - Dr Seuss
                 </p>
               </>
             }
@@ -226,8 +226,8 @@ export default function OurTeam() {
                 <p>
                   He also monitors project progress and communicates with his
                   team to establish scope of work. Allen is dedicated to
-                  exceeding customer expectations and ensuring clients' receive
-                  quality workmanship.
+                  exceeding customer expectations and ensuring clients&apos;
+                  receive quality workmanship.
                 </p>
               </>
             }
@@ -253,10 +253,10 @@ export default function OurTeam() {
                 <p>
                   What do you like about working at PI? “I enjoy the challenge
                   that comes with working in an office of a small business with
-                  a variety of daily tasks.” Hope's Hobbies: Spending time with
-                  family, listening to audio books, hanging out and playing
-                  games with friends. Hope's Favorite quote: “You never fail
-                  until you stop trying.” - Albert Einstein
+                  a variety of daily tasks.” Hope&apos;s Hobbies: Spending time
+                  with family, listening to audio books, hanging out and playing
+                  games with friends. Hope&apos;s Favorite quote: “You never
+                  fail until you stop trying.” - Albert Einstein
                 </p>
               </>
             }
@@ -279,10 +279,10 @@ export default function OurTeam() {
                 <p>
                   What do you like about working at PI? “I really like
                   collaborating with people who have the same vision and
-                  dedication.” Jeff's Hobbies: Leisure time with my friends,
-                  golfing and hunting. Jeff's Favorite quote: “We are what we
-                  repeatedly do. Excellence, therefore, is not an act but a
-                  habit.” - Aristotle
+                  dedication.” Jeff&apos;s Hobbies: Leisure time with my
+                  friends, golfing and hunting. Jeff&apos;s Favorite quote: “We
+                  are what we repeatedly do. Excellence, therefore, is not an
+                  act but a habit.” - Aristotle
                 </p>
               </>
             }
