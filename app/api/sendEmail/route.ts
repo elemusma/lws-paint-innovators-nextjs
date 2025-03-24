@@ -112,7 +112,7 @@ export async function POST(req: Request) {
     let emailIntro = "";
     let emailHtml = "";
 
-    if (referer.includes("/free-estimate")) {
+    if (referer.includes("/get-estimate")) {
       // Quote Request Form
       emailSubject = `Quote Request from ${first_name} ${last_name}`;
       emailIntro = `<p>Tadeo here! Quote Request from ${first_name} ${last_name}:</p>`;

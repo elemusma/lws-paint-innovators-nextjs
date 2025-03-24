@@ -144,37 +144,31 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/wall-paper-removal">
+                  <Link href="/services/wallpaper-removal">
                     Wallpaper Removal
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
-                    Drywall Repair
-                  </Link>
+                  <Link href="/services/drywall-repair">Drywall Repair</Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
-                    Deck Coating
-                  </Link>
+                  <Link href="/services/deck-coating">Deck Coating</Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
+                  <Link href="/services/industrial-coating">
                     Industrial Coating
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
-                    Epoxy Floors
-                  </Link>
+                  <Link href="/services/epoxy-floors">Epoxy Floors</Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
+                  <Link href="/services/pressure-washing">
                     Pressure Washing
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
+                  <Link href="/services/covid19-sanitation">
                     COVID-19 Sanitation
                   </Link>
                 </li>

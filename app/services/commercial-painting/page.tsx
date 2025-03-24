@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal-Paint-Innovators.jpg", // Replace with the actual image path
+        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     ],
   },
 };
-export default function WallPaperRemoval() {
+export default function CommercialPainting() {
   return (
     <>
       <ContentBlock
@@ -43,7 +43,9 @@ export default function WallPaperRemoval() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/services/Services-Wallpaper-Removal-Paint-Innovators.jpg"}
+              src={
+                "/services/Services-Commercial-Exterior-Building-Painting.png"
+              }
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -61,7 +63,7 @@ export default function WallPaperRemoval() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            Wall Paper Removal
+            Commercial Painting
           </h1>
           <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
           <Link href="/contact" className="btn-main mt-[20px]">

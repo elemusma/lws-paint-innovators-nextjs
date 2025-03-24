@@ -51,7 +51,7 @@ const SwiperCarousel = () => {
                 Innovators&apos; residential painting services in Arkansas and
                 Oklahoma.
               </p>
-              <Link href="/free-estimate" className="btn-main mt-[20px]">
+              <Link href="/get-estimate" className="btn-main mt-[20px]">
                 Get Free Estimate
               </Link>
               <div className="spacer"></div>
@@ -88,7 +88,7 @@ const SwiperCarousel = () => {
                 Enhance your business with Paint Innovators&apos; professional
                 commercial painting services across Arkansas and Oklahoma.
               </p>
-              <Link href="/free-estimate" className="btn-main mt-[20px]">
+              <Link href="/get-estimate" className="btn-main mt-[20px]">
                 Get Free Estimate
               </Link>
               <div className="spacer"></div>
@@ -125,7 +125,7 @@ const SwiperCarousel = () => {
                 Protect your valuable assets with Paint Innovators&apos;
                 industrial coating services in Arkansas and Oklahoma.
               </p>
-              <Link href="/free-estimate" className="btn-main mt-[20px]">
+              <Link href="/get-estimate" className="btn-main mt-[20px]">
                 Get Free Estimate
               </Link>
               <div className="spacer"></div>

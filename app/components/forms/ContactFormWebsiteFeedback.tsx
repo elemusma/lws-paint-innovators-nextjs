@@ -23,9 +23,8 @@ const ContactFormRequestQuote: React.FC = () => {
       first_name: formData.get("fname") as string,
       last_name: formData.get("lname") as string,
       user_email: formData.get("email") as string,
-      user_phone: formData.get("phone") as string,
-      project_type: formData.get("project_type") as string,
-      location: formData.get("location") as string,
+      user_subject: formData.get("user_subject") as string,
+      user_page_url: formData.get("user_page_url") as string,
       message: formData.get("message") as string,
       embed_url: window.location.href,
     };
@@ -121,7 +120,7 @@ const ContactFormRequestQuote: React.FC = () => {
           </div>
           <div className="relative">
             <label
-              htmlFor="user_subject"
+              htmlFor="user_page_url"
               className="block text-sm font-medium text-white"
             >
               Page or URL <span className="text-red-500">*</span>
@@ -129,7 +128,7 @@ const ContactFormRequestQuote: React.FC = () => {
             <div className="relative">
               <input
                 type="text"
-                name="user_subject"
+                name="user_page_url"
                 className="w-full p-3 bg-white/90 text-black border border-white placeholder-gray rounded-md"
                 placeholder="https://"
                 required
@@ -154,7 +153,7 @@ const ContactFormRequestQuote: React.FC = () => {
               className="btn-main square"
               disabled={loading}
             >
-              {loading ? "Sending..." : "Request a Quote"}
+              {loading ? "Sending..." : "Send Website Feedback"}
             </button>
           </div>
         </form>

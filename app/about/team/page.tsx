@@ -82,7 +82,7 @@ export default function OurTeam() {
             People <span className="text-accent">&bull;</span> Family{" "}
             <span className="text-accent">&bull;</span> Community
           </h2>
-          <Link href="/free-estimate" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>

@@ -12,7 +12,7 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { first_name, last_name,user_email, user_subject,user_page_url, embed_url,message } = body;
+    const { first_name, last_name,user_email, feedback_type, service_completed, other_service, recommendation_likelihood, core_values_representation,comments, friendliness_satisfaction, knowledge_satisfaction, reliability_satisfaction, final_comments, embed_url } = body;
 
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -47,12 +47,19 @@ export async function POST(req: Request) {
 <tbody>
 <tr>
 <td style="padding: 20px 20px;">
-<p>Hello Paint Innovators! Tadeo here, someone submitted website feedback. See details below:</p>
+<p>Hello Paint Innovators! Tadeo here, someone submitted service feedback. See details below:</p>
 <p><strong>Name:</strong> ${first_name} ${last_name}</p>
 <p><strong>Email:</strong> ${user_email}</p>
-<p><strong>Subject:</strong> ${user_subject}</p>
-<p><strong>Page or URL Type:</strong> ${user_page_url}</p>  
-<p><strong>Message:</strong> ${message}</p>
+<p><strong>Feedback Type:</strong> ${feedback_type}</p>
+<p><strong>Service Completed:</strong> ${service_completed}</p>  
+<p><strong>Other Service:</strong> ${other_service}</p>
+<p><strong>Recommendation Likelihood:</strong> ${recommendation_likelihood}</p>
+<p><strong>Core Values Representation:</strong> ${core_values_representation}</p>
+<p><strong>Comments:</strong> ${comments}</p>
+<p><strong>Friendliness Satisfaction:</strong> ${friendliness_satisfaction}</p>
+<p><strong>Knowledge Satisfaction:</strong> ${knowledge_satisfaction}</p>
+<p><strong>Reliability Satisfaction:</strong> ${reliability_satisfaction}</p>
+<p><strong>Final Comments:</strong> ${final_comments}</p>
 </td>
 </tr>
 </tbody>

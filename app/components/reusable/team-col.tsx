@@ -12,10 +12,16 @@ import {
 interface TeamColProps {
   img: string;
   name: string;
+  nameTag?: keyof JSX.IntrinsicElements; // New prop for choosing element type (e.g., 'h2', 'h3', etc.)
+  nameTagClassName?: string; // New prop for additional class names for nameTag
   description?: ReactNode;
   role: string;
   delay?: number;
   maxDescriptionLength?: number;
+  buttonLink?: string; // Optional button link
+  buttonText?: string; // Optional text for the custom button
+  buttonTarget?: string;
+  buttonAriaLabel?: string;
 }
 
 // Helper function to extract text content from JSX
@@ -26,7 +32,6 @@ function extractTextFromJSX(node: ReactNode): string {
 
   if (isValidElement(node)) {
     const element = node as ReactElement;
-    // Use type assertion to access props.children
     const props = element.props as { children?: ReactNode };
     if (Array.isArray(props.children)) {
       return props.children.map((child) => extractTextFromJSX(child)).join(" ");
@@ -44,10 +49,16 @@ function extractTextFromJSX(node: ReactNode): string {
 export default function TeamCol({
   img,
   name,
+  nameTag = "h3", // Default to 'h3' if not specified
+  nameTagClassName,
   description,
   role,
   delay,
-  maxDescriptionLength = 162, // Default truncation length
+  maxDescriptionLength = 175,
+  buttonLink, // New prop for custom button
+  buttonText = "Learn More", // Default text for the custom button
+  buttonTarget = "_self", // Default target for the custom button
+  buttonAriaLabel,
 }: TeamColProps) {
   const fadeUpVariants = {
     hidden: {
@@ -58,7 +69,7 @@ export default function TeamCol({
       opacity: 1,
       y: 0,
       transition: {
-        delay, // use the delay prop here
+        delay,
         duration: 0.5,
       },
     },
@@ -66,7 +77,6 @@ export default function TeamCol({
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Handle escape key press to close modal
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -80,7 +90,6 @@ export default function TeamCol({
     };
   }, []);
 
-  // Prevent body scroll when modal is open
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
@@ -92,16 +101,17 @@ export default function TeamCol({
     };
   }, [isModalOpen]);
 
-  // Extract text content for truncation
   const fullText = description ? extractTextFromJSX(description) : "";
   const shouldTruncate = fullText.length > maxDescriptionLength;
   const truncatedText = shouldTruncate
     ? `${fullText.substring(0, maxDescriptionLength)}...`
     : fullText;
 
+  const NameTag = nameTag as keyof JSX.IntrinsicElements;
+
   return (
     <>
-      <div className="lg:w-1/3 md:w-1/2 w-full px-4" style={{}}>
+      <div className="lg:w-1/3 md:w-1/2 w-full px-4">
         <motion.div
           variants={fadeUpVariants}
           initial="hidden"
@@ -130,25 +140,38 @@ export default function TeamCol({
               boxShadow: "0px 0px 4px rgba(199, 199, 199, 0.85)",
             }}
           >
-            <h3 className="team-col__title text-center font-proxima-bold">
+            <NameTag
+              className={`team-col__title text-center font-proxima-bold ${nameTagClassName}`}
+            >
               {name}
-            </h3>
+            </NameTag>
             <p className="team-col__text text-center">{role}</p>
 
-            {/* Show truncated text */}
             <div className="mt-4 mb-4">
               <p className="text-gray-700">{truncatedText}</p>
             </div>
 
-            {/* Only show Read More button if description should be truncated */}
-            {shouldTruncate && (
+            {/* Conditional button rendering */}
+            {buttonLink ? (
+              // Render a custom button if buttonLink is provided
+              <a
+                href={buttonLink}
+                className="btn-main square w-full text-center cursor-pointer"
+                target={buttonTarget}
+                aria-label={buttonAriaLabel || `Learn more about ${name}`}
+              >
+                {buttonText}
+              </a>
+            ) : shouldTruncate ? (
+              // Render the Read More button if description is truncated
               <button
                 className="btn-main square w-full text-center cursor-pointer"
                 onClick={() => setIsModalOpen(true)}
+                aria-label={buttonAriaLabel || `Learn more about ${name}`}
               >
                 Read More
               </button>
-            )}
+            ) : null}
           </div>
         </motion.div>
       </div>
