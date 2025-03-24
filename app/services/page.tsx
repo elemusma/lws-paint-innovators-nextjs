@@ -7,27 +7,6 @@ import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
 
 export default function Services() {
-  const services = [
-    {
-      title: "Industrial Painting",
-      description:
-        "Professional industrial coating solutions for manufacturing facilities and equipment",
-      icon: "🏭",
-    },
-    {
-      title: "Commercial Painting",
-      description:
-        "Expert painting services for offices, retail spaces, and commercial buildings",
-      icon: "🏢",
-    },
-    {
-      title: "Specialty Coatings",
-      description:
-        "Advanced coating applications for specific industrial requirements",
-      icon: "🎨",
-    },
-  ];
-
   return (
     <>
       <ContentBlock
@@ -124,7 +103,7 @@ export default function Services() {
             description={
               <p>
                 We find the right match for homes or businesses, aligning with
-                the owner's taste and current design.
+                the owner&apos;s taste and current design.
               </p>
             }
             buttonLink="/services/color-consultation-custom-painting"
