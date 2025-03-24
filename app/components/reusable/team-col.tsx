@@ -1,7 +1,7 @@
 "use client";
 import * as motion from "motion/react-client";
 import Image from "next/image";
-import {
+import React, {
   isValidElement,
   useEffect,
   useState,
@@ -12,19 +12,18 @@ import {
 interface TeamColProps {
   img: string;
   name: string;
-  nameTag?: keyof JSX.IntrinsicElements; // New prop for choosing element type (e.g., 'h2', 'h3', etc.)
-  nameTagClassName?: string; // New prop for additional class names for nameTag
+  nameTag?: string; // String for dynamic element type
+  nameTagClassName?: string;
   description?: ReactNode;
   role: string;
   delay?: number;
   maxDescriptionLength?: number;
-  buttonLink?: string; // Optional button link
-  buttonText?: string; // Optional text for the custom button
+  buttonLink?: string;
+  buttonText?: string;
   buttonTarget?: string;
   buttonAriaLabel?: string;
 }
 
-// Helper function to extract text content from JSX
 function extractTextFromJSX(node: ReactNode): string {
   if (typeof node === "string") return node;
   if (typeof node === "number") return String(node);
@@ -49,15 +48,15 @@ function extractTextFromJSX(node: ReactNode): string {
 export default function TeamCol({
   img,
   name,
-  nameTag = "h3", // Default to 'h3' if not specified
+  nameTag = "h3", // Default to 'h3'
   nameTagClassName,
   description,
   role,
   delay,
   maxDescriptionLength = 175,
-  buttonLink, // New prop for custom button
-  buttonText = "Learn More", // Default text for the custom button
-  buttonTarget = "_self", // Default target for the custom button
+  buttonLink,
+  buttonText = "Learn More",
+  buttonTarget = "_self",
   buttonAriaLabel,
 }: TeamColProps) {
   const fadeUpVariants = {
@@ -107,7 +106,8 @@ export default function TeamCol({
     ? `${fullText.substring(0, maxDescriptionLength)}...`
     : fullText;
 
-  const NameTag = nameTag as keyof JSX.IntrinsicElements;
+  // Dynamically creating the nameTag element
+  const NameTag = nameTag;
 
   return (
     <>
@@ -140,11 +140,13 @@ export default function TeamCol({
               boxShadow: "0px 0px 4px rgba(199, 199, 199, 0.85)",
             }}
           >
-            <NameTag
-              className={`team-col__title text-center font-proxima-bold ${nameTagClassName}`}
-            >
-              {name}
-            </NameTag>
+            {React.createElement(
+              NameTag,
+              {
+                className: `team-col__title text-center font-proxima-bold ${nameTagClassName}`,
+              },
+              name
+            )}
             <p className="team-col__text text-center">{role}</p>
 
             <div className="mt-4 mb-4">
@@ -153,7 +155,6 @@ export default function TeamCol({
 
             {/* Conditional button rendering */}
             {buttonLink ? (
-              // Render a custom button if buttonLink is provided
               <a
                 href={buttonLink}
                 className="btn-main square w-full text-center cursor-pointer"
@@ -163,7 +164,6 @@ export default function TeamCol({
                 {buttonText}
               </a>
             ) : shouldTruncate ? (
-              // Render the Read More button if description is truncated
               <button
                 className="btn-main square w-full text-center cursor-pointer"
                 onClick={() => setIsModalOpen(true)}
