@@ -8,7 +8,7 @@ import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Company, Website } from "../../components/globals";
+import { Company } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
     description: "Professional painting.",
-    url: `https://${Website}/wallpaper-removal`, // Replace with actual URL
+    url: `{Website}/services/wallpaper-removal`, // Replace with actual URL
     type: "website",
     images: [
       {

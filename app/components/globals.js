@@ -1,4 +1,4 @@
-export const Website = 'paintinnovators.com';
+export const Website = 'https://paintinnovators.com';
 export const Phone = '479.347.7521';
 export const Email = 'Info@PaintInnovators.com';
 export const Company = 'Paint Innovators, Inc.';

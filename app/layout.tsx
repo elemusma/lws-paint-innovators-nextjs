@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "./components/footer";
+import { Website } from "./components/globals.js";
 import Navigation from "./components/nav";
 // import OwlCarouselComponent from "./components/owlCarousel";
 // import { default as Carousel } from "./components/reactCarousel";
@@ -34,13 +35,13 @@ export const metadata: Metadata = {
     "Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
   description:
     "Professional painting services for residential and commercial properties in Arkansas and Oklahoma.",
-  icons: { icon: "/assets/favicon.ico" }, // Add favicon here
+  icons: { icon: `${Website}/favicon.ico` }, // Add favicon here
   openGraph: {
     title: "Professional Painter | Arkansas & Oklahoma",
     description: "Expert painting services for homes and businesses.",
     images: [
       {
-        url: "/home/Paint-Innovators-2025-01.jpg",
+        url: `${Website}/home/Paint-Innovators-2025-01.jpg`,
         width: 1200,
         height: 630,
         alt: "Paint Innovators - Arkansas & Oklahoma",
