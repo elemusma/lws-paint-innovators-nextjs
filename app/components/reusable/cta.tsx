@@ -33,7 +33,7 @@ export default function CTA() {
         columnClassName="w-full text-center"
       >
         <h2 className="text-4xl font-bold italic">FREE ESTIMATE!</h2>
-        <Link href="/contact" className="btn-main white mt-[20px]">
+        <Link href="/get-estimate" className="btn-main white mt-[20px]">
           Learn More
         </Link>
       </ContentBlock>

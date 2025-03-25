@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../components/content-block";
 import CTA from "../components/reusable/cta";
-import ImageContentBlock from "../components/reusable/ImageContentBlock";
+import ProjectsWorkedOn from "../components/reusable/projects-worked-on";
 import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
+import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 
 export default function Services() {
   return (
@@ -58,7 +59,7 @@ export default function Services() {
         <div className="absolute bg-light w-full h-[96%] top-[4%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Residential-Painting.jpg"
             name="Residential Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -76,7 +77,7 @@ export default function Services() {
             buttonAriaLabel="Learn more about residential painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Commercial-Exterior-Building-Painting-01.jpg"
             name="Commercial Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -94,7 +95,7 @@ export default function Services() {
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Color-Consultation-Custom-Painting-01.jpg"
             name="Color Consultation &amp; Custom Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -112,7 +113,7 @@ export default function Services() {
           />
           <div className="divider !mt-20 !mb-[4rem]"></div>
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/website/Our-Story-Gallery-03.jpg"
             name="Exterior Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -125,12 +126,12 @@ export default function Services() {
                 windows, trim, siding, gutters.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/exterior-painting"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/website/Paint-Innovators-01.jpg"
             name="Interior Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -143,12 +144,12 @@ export default function Services() {
                 bedrooms, bathrooms, bathroom stalls.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/interior-painting"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/work/Paint-Innovators-NWA-Homes.jpg"
             name="New Construction Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -160,13 +161,13 @@ export default function Services() {
                 construction project will run smoothly.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/new-construction-painting"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <div className="divider !mt-20 !mb-[4rem]"></div>
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Popcorn-Ceiling-Removal-Paint-Innovators.jpg"
             name="Popcorn Ceiling Removal"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -179,12 +180,12 @@ export default function Services() {
                 style.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/popcorn-ceiling-removal"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Wallpaper-Removal.jpg"
             name="Wallpaper Removal"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -197,12 +198,12 @@ export default function Services() {
                 paint or a new wallpaper covering.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/wallpaper-removal"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Drywall-Repair.jpg"
             name="Drywall Repair"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -215,13 +216,13 @@ export default function Services() {
                 surface to ensure the paint looks its best.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/drywall-repair"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <div className="divider !mt-20 !mb-[4rem]"></div>
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Deck-Coating.jpg"
             name="Deck Coating"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -234,12 +235,12 @@ export default function Services() {
                 deck maintains its beauty for years.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/deck-coating"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Industrial-Coating-Paint-Innovators.jpg"
             name="Industrial Coating"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -252,12 +253,12 @@ export default function Services() {
                 building components, and equipment.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/industrial-coating"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Epoxy-Floors-Concrete-Staining.jpg"
             name="Epoxy Floors"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -270,13 +271,13 @@ export default function Services() {
                 available in different colors that match your space.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/epoxy-floors"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <div className="divider !mt-20 !mb-[4rem]"></div>
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Pressure-Washing-Paint-Innovators-in-Arkansas-and-Oklahoma.jpg"
             name="Pressure Washing"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -289,12 +290,12 @@ export default function Services() {
                 grime from a large or small surface area.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/pressure-washing"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/team/Rodney-Family.jpg"
+            img="/services/Services-Covid-19-Sanitation-Paint-Innvovators.jpg"
             name="COVID-19 Sanitation"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -307,7 +308,7 @@ export default function Services() {
                 air. We do one-time or reoccurring sanitations.
               </p>
             }
-            buttonLink="/services/color-consultation-custom-painting"
+            buttonLink="/services/covid19-sanitation"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
@@ -316,190 +317,10 @@ export default function Services() {
           {/* </div> */}
         </div>
       </ContentBlock>
-
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/team/Ensuring-Quality.jpg"
-        imageAlt="Wallpaper"
-        overlayText="Residential Painting"
-        borderSubtitle={true}
-        overlayTextSubtitle="Craftmanship and Inspection of Every Job"
-        contentBorderOff={true}
-        heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
-        buttonLabel="Read Residential Painting"
-        buttonLink="/services/residential-painting"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Commercial Painting"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Color Consultation & Custom Painting"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Exterior Painting"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Interior Painting"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="New Construction Painting"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Popcorn Ceiling Removal"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Wallpaper Removal"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Drywall Repair"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Deck Coating"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Industrial Coating"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Epoxy Floors"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Pressure Washing"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="COVID-19 Sanitation"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Read Commercial Painting"
-        buttonLink="/services/commercial-painting"
-      />
-
+      <div className="spacer"></div>
+      <SwiperCarouselNewService />
+      <div className="spacer"></div>
+      <ProjectsWorkedOn />
       <CTA />
       <div className="spacer"></div>
     </>

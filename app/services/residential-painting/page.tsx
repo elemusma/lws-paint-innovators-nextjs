@@ -7,7 +7,6 @@ import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Company, Website } from "../../components/globals";
 // import Navigation from "./components/navigation";
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: "/services/Services-Residential-Painting.jpg", // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",
@@ -31,26 +30,24 @@ export const metadata: Metadata = {
     ],
   },
 };
-export default function CommercialPainting() {
+export default function ResidentialPainting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px]"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Residential-Painting.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
         background={
           // Optional background element; can be omitted if not needed.
           <>
-            <Image
-              src={
-                "/services/Services-Covid-19-Sanitation-Paint-Innvovators.jpg"
-              }
+            {/* <Image
+              src={"/services/Services-Residential-Painting.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
               fill
-            />
+            /> */}
             <div
               className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"
               style={{
@@ -63,7 +60,7 @@ export default function CommercialPainting() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            COVID 19 Sanitation
+            Residential Painting
           </h1>
           <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
           <Link href="/contact" className="btn-main mt-[20px]">
@@ -115,7 +112,7 @@ export default function CommercialPainting() {
         imageAlt="Wallpaper"
         overlayText="TRANSFORM A ROOM"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="At Paint Innovators, our skilled and talented painters are on hand to tackle a wide range of projects.  One of the easiest and most effective ways to personalize your home is with bright, cheerful, elegant colors, whatever your personality or preference might be, we have a paint color to match."
         buttonLabel="Get Free Estimate"
         buttonLink="/contact"
       />
@@ -126,7 +123,7 @@ export default function CommercialPainting() {
         imageAlt="The History of Wall Paper"
         overlayText="The History of Wall Paper"
         heading="Transform a Room"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
+        content="Paint Innovators is your professional painter in Arkansas and Oklahoma - we help residential clients with house painting, interior painting, exterior painting, trim and siding painting, gutter painting, and more."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
       />

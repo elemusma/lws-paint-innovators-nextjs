@@ -32,7 +32,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title:
     "Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
-  description: "Professional painting.",
+  description:
+    "Professional painting services for residential and commercial properties in Arkansas and Oklahoma.",
+  icons: { icon: "/assets/favicon.ico" }, // Add favicon here
+  openGraph: {
+    title: "Professional Painter | Arkansas & Oklahoma",
+    description: "Expert painting services for homes and businesses.",
+    images: [
+      {
+        url: "/home/Paint-Innovators-2025-01.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Paint Innovators - Arkansas & Oklahoma",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -42,25 +56,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/assets/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Professional web and software engineering services for iOS, Android, and web applications. Tailored solutions for businesses seeking high-quality, efficient app development from Latino Web Studio."
-        />
-        <meta property="og:image" content="/assets/Latino-Web-Studio.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        {/* <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-        /> */}
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
