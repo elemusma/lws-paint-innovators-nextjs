@@ -1,4 +1,6 @@
-export const Website = 'https://paintinnovators.com';
+// export const Website = 'https://paintinnovators.com';
+// export const Website = 'https://paintinnovators.netlify.app';
+export const Website = process.env.NEXT_PUBLIC_WEBSITE;
 export const Phone = '479.347.7521';
 export const Email = 'Info@PaintInnovators.com';
 export const Company = 'Paint Innovators, Inc.';

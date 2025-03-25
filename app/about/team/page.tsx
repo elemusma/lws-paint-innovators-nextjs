@@ -8,7 +8,7 @@ import ServingTagline from "@/app/components/reusable/serving-tagline";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Company } from "../../components/globals";
+import { Company, Website } from "../../components/globals";
 import IndustriesServed from "../../components/reusable/core-values";
 import TeamCol from "../../components/reusable/team-col";
 import ValueColumn from "../../components/reusable/ValueColumn";
@@ -26,19 +26,19 @@ import ValueColumn from "../../components/reusable/ValueColumn";
 // };
 export const metadata: Metadata = {
   title:
-    "Paint Innovators Team - Professional Painters in Oklahoma, Arkansas and Colorado",
+    "Team - Professional Painters in Oklahoma, Arkansas and Colorado - Paint Innovators",
   description:
     "Founded by Rodney Barnes in 2014. Victor Caldera and Allen Wootten are our Project Managers.",
   openGraph: {
     title:
-      "Paint Innovators Team - Professional Painters in Oklahoma, Arkansas and Colorado",
+      "Team - Professional Painters in Oklahoma, Arkansas and Colorado - Paint Innovators",
     description:
       "Founded by Rodney Barnes in 2014. Victor Caldera and Allen Wootten are our Project Managers.",
-    url: `/team`, // Replace with actual URL
+    url: `${Website}/team`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/team/Team.jpg", // Replace with the actual image path
+        url: `${Website}/team/Team.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",
