@@ -4,7 +4,7 @@ import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../styles/swiper-hero.scss";
 import "../styles/swiper.scss";
@@ -17,9 +17,10 @@ const SwiperCarousel = () => {
       spaceBetween={0}
       navigation
       pagination={{ clickable: true }}
-      // autoplay={{ delay: 6000 }}
-      modules={[Navigation, Pagination]}
+      autoplay={{ delay: 5000 }}
+      modules={[Navigation, Pagination, Autoplay]}
       className="mySwiper"
+      speed={1000} // Increased speed for slower transition
     >
       <SwiperSlide>
         <div className="relative flex min-h-[76vh] w-full justify-center pt-[100px] overflow-hidden">

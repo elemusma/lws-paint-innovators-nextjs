@@ -34,7 +34,7 @@ export default function CTA() {
       >
         <h2 className="text-4xl font-bold italic">FREE ESTIMATE!</h2>
         <Link href="/get-estimate" className="btn-main white mt-[20px]">
-          Learn More
+          Get Free Estimate
         </Link>
       </ContentBlock>
       <div className="spacer"></div>

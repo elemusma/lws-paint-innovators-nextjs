@@ -3,6 +3,7 @@
 export const Website = process.env.NEXT_PUBLIC_WEBSITE;
 export const Phone = '479.347.7521';
 export const Email = 'Info@PaintInnovators.com';
+export const EmailBilling = 'AP@PaintInnovators.com';
 export const Company = 'Paint Innovators, Inc.';
 export const ArkansasAddress = '4823 Har-ber Ave.<br>Springdale, AR 72762';
 export const ArkansasPhone = '479.347.7521';

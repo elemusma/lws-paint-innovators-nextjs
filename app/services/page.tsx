@@ -19,7 +19,7 @@ export default function Services() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/services/Services-Exterior-Painting-03.jpg"}
+              src={"/home/Paint-Innovators-2025-05.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -39,7 +39,7 @@ export default function Services() {
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
             Professional Painter Services
           </h1>
-          <h2 className="font-aspira-bold text-2xl">
+          <h2 className="font-aspira-bold text-2xl text-shadow">
             Industrial <span className="text-accent">&bull;</span> Commercial{" "}
             <span className="text-accent">&bull;</span> Government
           </h2>
@@ -59,7 +59,7 @@ export default function Services() {
         <div className="absolute bg-light w-full h-[96%] top-[4%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/services/Services-Residential-Painting.jpg"
+            img="/home/Paint-Innovators-2025-09.jpg"
             name="Residential Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -77,7 +77,7 @@ export default function Services() {
             buttonAriaLabel="Learn more about residential painting services"
           />
           <TeamCol
-            img="/services/Services-Commercial-Exterior-Building-Painting-01.jpg"
+            img="/home/Paint-Innovators-Commercial-02.jpg"
             name="Commercial Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -95,7 +95,7 @@ export default function Services() {
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/services/Services-Color-Consultation-Custom-Painting-01.jpg"
+            img="/home/Paint-Innovators-2025-12.jpg"
             name="Color Consultation &amp; Custom Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -113,7 +113,7 @@ export default function Services() {
           />
           <div className="divider !mt-20 !mb-[4rem]"></div>
           <TeamCol
-            img="/website/Our-Story-Gallery-03.jpg"
+            img="/home/Paint-Innovators-Commercial-01.jpg"
             name="Exterior Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -131,7 +131,7 @@ export default function Services() {
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/website/Paint-Innovators-01.jpg"
+            img="/home/Paint-Innovators-2025-11.jpg"
             name="Interior Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
