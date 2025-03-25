@@ -34,11 +34,11 @@ export const metadata: Metadata = {
       "Paint Innovators Team - Professional Painters in Oklahoma, Arkansas and Colorado",
     description:
       "Founded by Rodney Barnes in 2014. Victor Caldera and Allen Wootten are our Project Managers.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    url: `/team`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal-Paint-Innovators.jpg", // Replace with the actual image path
+        url: "/team/Team.jpg", // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",

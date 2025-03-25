@@ -33,17 +33,18 @@ export const metadata: Metadata = {
   title:
     "Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
   description:
-    "Professional painting services for residential and commercial properties in Arkansas and Oklahoma.",
-  icons: { icon: `/favicon.ico` }, // Add favicon here
+    "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
   openGraph: {
-    title: "Professional Painter | Arkansas & Oklahoma",
-    description: "Expert painting services for homes and businesses.",
+    title:
+      "Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
+    description:
+      "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
     images: [
       {
         url: `/home/Paint-Innovators-2025-01.jpg`,
         width: 1200,
         height: 630,
-        alt: "Paint Innovators - Arkansas & Oklahoma",
+        alt: "Paint Innovators - Arkansas, Oklahoma and Colorado",
       },
     ],
   },
