@@ -209,7 +209,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `"Latino Web Studio" <${GMAIL_USER}>`,
-      to: "tadeoycuba@gmail.com",
+      to: "info@latinowebstudio.com,paintinnovators@outlook.com",
       subject: emailSubject,
       html: `
         <table style="background-color: #f7f7f7; width: 100%;">
