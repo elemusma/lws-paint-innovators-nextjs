@@ -63,7 +63,7 @@ export default function ResidentialPainting() {
             Residential Painting
           </h1>
           <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -81,10 +81,11 @@ export default function ResidentialPainting() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          At {Company}, our skilled and talented painters are on hand to tackle
+          a wide range of projects. One of the easiest and most effective ways
+          to personalize your home is with bright, cheerful, elegant colors,
+          whatever your personality or preference might be, we have a paint
+          color to match.
         </p>
       </ContentBlock>
 
@@ -97,7 +98,9 @@ export default function ResidentialPainting() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">DID YOU KNOW?</h2>
+        <h2 className="text-4xl font-aspira-light pt-4">
+          RESIDENTIAL PAINTING
+        </h2>
       </ContentBlock>
 
       {/* <motion.div
@@ -110,42 +113,11 @@ export default function ResidentialPainting() {
         sectionClassName=""
         imageSrc="/services/wall-paper-removal/01-Transform-a-Room.jpg"
         imageAlt="Wallpaper"
-        overlayText="TRANSFORM A ROOM"
+        overlayText="Professional Painter"
         heading="Transform a Room"
-        content="At Paint Innovators, our skilled and talented painters are on hand to tackle a wide range of projects.  One of the easiest and most effective ways to personalize your home is with bright, cheerful, elegant colors, whatever your personality or preference might be, we have a paint color to match."
+        content="Paint Innovators is your professional painter in Arkansas and Oklahoma - we help residential clients with house painting, interior painting, exterior painting, trim and siding painting, gutter painting, and more!"
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
-      />
-      {/* </motion.div> */}
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/02-The-History-of-Wall-Paper.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="The History of Wall Paper"
-        heading="Transform a Room"
-        content="Paint Innovators is your professional painter in Arkansas and Oklahoma - we help residential clients with house painting, interior painting, exterior painting, trim and siding painting, gutter painting, and more."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
-      />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/services/wall-paper-removal/03-Smooth-Clean.jpg"
-        imageAlt="Smooth &amp; Clean"
-        overlayText="Smooth &amp; Clean"
-        heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/04-We-Make-It-Easy.jpg"
-        imageAlt="We Make It Easy"
-        overlayText="We Make It Easy"
-        heading="Transform a Room"
-        content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts. Request your free estimate."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
 
       <ContentBlock

@@ -7,7 +7,6 @@ import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Company } from "../../components/globals";
 // import Navigation from "./components/navigation";
@@ -35,22 +34,20 @@ export default function CommercialPainting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px]"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Commercial-Exterior-Building-Painting.png')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
         background={
           // Optional background element; can be omitted if not needed.
           <>
-            <Image
-              src={
-                "/services/Services-Commercial-Exterior-Building-Painting.png"
-              }
-              alt="Wall paper removal"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              style={{ objectFit: "cover", objectPosition: "right" }}
-              fill
-            />
+            {/* <Image
+                    src={"/services/Services-Residential-Painting.jpg"}
+                    alt="Wall paper removal"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    style={{ objectFit: "cover", objectPosition: "right" }}
+                    fill
+                  /> */}
             <div
               className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"
               style={{

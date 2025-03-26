@@ -31,12 +31,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title:
-    "Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
+    "Experienced Professional Painter in Arkansas, Oklahoma & Colorado | Commercial and Residential Painting",
   description:
     "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
   openGraph: {
     title:
-      "Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
+      "Experienced Professional Painter in Arkansas, Oklahoma & Oklahoma | Commercial and Residential Painting",
     description:
       "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
     images: [

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../components/content-block";
-import CompletedProjects from "../components/reusable/CompletedProjects";
 import CTA from "../components/reusable/cta";
+import ProjectsWorkedOn from "../components/reusable/projects-worked-on";
 import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 
-export default function Work() {
+export default function Locations() {
   return (
     <>
       <ContentBlock
@@ -19,7 +19,7 @@ export default function Work() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/work/Paint-Innovators-NWA-Homes.jpg"}
+              src={"/home/Paint-Innovators-2025-02.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -37,19 +37,18 @@ export default function Work() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            Our Work
+            We're Hiring
           </h1>
-          <h2 className="font-aspira-bold text-2xl">
-            People <span className="text-accent">&bull;</span> Family{" "}
-            <span className="text-accent">&bull;</span> Community
+          <h2 className="font-aspira-bold text-2xl text-shadow">
+            We Get the Job Done Right!
           </h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
       </ContentBlock>
       <ServingTagline />
-      <div className="pt-[50px]"></div>
+
       <ContentBlock
         sectionClassName="bg-white text-black pb-8"
         containerClassName="max-w-screen-lg mx-auto py-8"
@@ -60,97 +59,91 @@ export default function Work() {
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
             img="/home/Paint-Innovators-2025-15.jpg"
-            name="Residential Painting Projects"
+            name="Painter / Drywall Finisher"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
               <p className="text-sm text-accent">
-                Paint Innovators has experience with all types of residential
-                projects including interior painting, exterior painting, home
-                painting, shed painting, trim, siding, and molding painting, and
-                more. Here are photos of a few of our recent projects.
+                Painters work on job sites on a daily basis. They are directly
+                involved in both residential and commercial painting projects.
               </p>
             }
             buttonLink="/careers/painter-drywall-finisher"
-            buttonText="View Project Photos"
-            buttonAriaLabel="View Residential Painting Project Photos"
+            buttonText="Apply to Job"
+            buttonAriaLabel="Apply to Painter / Drywall Finisher Job"
           />
           <TeamCol
             img="/home/Paint-Innovators-2025-08.jpg"
-            name="Commercial Painting Projects"
+            name="El Pintor / Masero"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
               <p>
-                Paint Innovators has experience with all types of commercial
-                painting projects including interior painting, exterior
-                painting, office painting, rental property painting, and
-                building painting.
+                Los pintores trabajan en obras diariamente. Están directamente
+                involucrados en proyectos de pintura tanto residenciales como
+                comerciales.
               </p>
             }
             buttonLink="/careers/pintor-masero"
-            buttonText="View Project Photos"
-            buttonAriaLabel="View Commercial Painting Project Photos"
+            buttonText="Apply to Job"
+            buttonAriaLabel="Apply to El Pintor / Masero Job"
           />
           <TeamCol
             img="/home/Paint-Innovators-2025-14.jpg"
-            name="Interior &amp; Exterior Painting"
+            name="Office Associate"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
               <p>
-                Paint Innovators has over 100 years of combined painting
-                experience. Our team is trained and committed to quality and
-                accuracy. We help residential and commercial clients with
-                interior painting, exterior painting, door painting, cabinet
-                painting, and more.
+                They answer incoming calls, help with scheduling and develop
+                working relationships with all team members to ensure
+                expectations are met.
               </p>
             }
             buttonLink="/careers/office-associate"
-            buttonText="View Project Photos"
-            buttonAriaLabel="View Interior &amp; Exterior Project Photos"
+            buttonText="Apply to Job"
+            buttonAriaLabel="Apply to Office Associate Job"
           />
           <TeamCol
             img="/home/Paint-Innovators-Commercial-02.jpg"
-            name="Other Contractor Services"
+            name="Project Estimator"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
               <p className="text-sm text-accent">
-                Paint Innovators has experience with all types of painting and
-                staining including wood cabinets and tables, Epoxy Floors,
-                industrial coatings, deck coatings, and more.
+                Project Estimators interact with commercial customers, prepare
+                proposals, answer customer questions, and ensure customer
+                satisfaction.
               </p>
             }
             buttonLink="/careers/project-estimator"
-            buttonText="View Project Photos"
-            buttonAriaLabel="View Other Contractor Services Project Photos"
+            buttonText="Apply to Job"
+            buttonAriaLabel="Apply to Project Estimator Job"
           />
           <TeamCol
             img="/home/Paint-Innovators-2025-09.jpg"
-            name="View All Our Painting Services"
+            name="Project Manager"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
               <p>
-                Residential / Commercial / Interior / Exterior Painting, Color
-                Consultation & Custom Painting, New Construction Painting,
-                Popcorn Ceiling Removal, Wallpaper Removal.
+                Project Managers work with paint crews on job sites and manage
+                the organization of painting teams and customer communication.
               </p>
             }
             buttonLink="/careers/project-manager"
-            buttonText="View All Services"
-            buttonAriaLabel="View All Our Painting and Removal Services"
+            buttonText="Apply to Job"
+            buttonAriaLabel="Apply to Project Manager Job"
           />
 
           <div className="divider !mt-20 !mb-[4rem]"></div>
@@ -158,12 +151,10 @@ export default function Work() {
           {/* </div> */}
         </div>
       </ContentBlock>
-
       <div className="spacer"></div>
       <SwiperCarouselNewService />
       <div className="spacer"></div>
-      <CompletedProjects />
-      <div className="spacer"></div>
+      <ProjectsWorkedOn />
       <CTA />
       <div className="spacer"></div>
     </>

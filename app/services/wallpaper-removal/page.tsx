@@ -7,7 +7,6 @@ import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Company } from "../../components/globals";
 // import Navigation from "./components/navigation";
@@ -35,20 +34,20 @@ export default function WallPaperRemoval() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px]"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Wallpaper-Removal.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
         background={
           // Optional background element; can be omitted if not needed.
           <>
-            <Image
+            {/* <Image
               src={"/services/Services-Wallpaper-Removal.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
               fill
-            />
+            /> */}
             <div
               className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"
               style={{
@@ -64,7 +63,7 @@ export default function WallPaperRemoval() {
             Wall Paper Removal
           </h1>
           <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -82,10 +81,11 @@ export default function WallPaperRemoval() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          {Company} has crew of experienced wallpaper removers and is fully
+          armed with all the tools to remove that old wallpaper fast and
+          effectively. We will steam, scrape, and clean your walls until no
+          trace of that aged wallpaper remains. We effectively remove all kinds
+          of wallpaper including vinyl wallpaper.
         </p>
       </ContentBlock>
 
@@ -115,7 +115,7 @@ export default function WallPaperRemoval() {
         heading="Transform a Room"
         content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
       {/* </motion.div> */}
       <ImageContentBlock
@@ -124,7 +124,7 @@ export default function WallPaperRemoval() {
         imageAlt="The History of Wall Paper"
         overlayText="The History of Wall Paper"
         heading="Transform a Room"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
+        content="When considering removing your wallpaper, the last thing you want is spending hours scraping every piece of wallpaper and discovering left over glue. New wallcovering can transform a room, going from boring to beautiful."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
       />
@@ -134,7 +134,7 @@ export default function WallPaperRemoval() {
         imageAlt="Smooth &amp; Clean"
         overlayText="Smooth &amp; Clean"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper. If you decide to go from wallpaper to paint, our professional team leave a smooth and clean wall that will be ready for painting."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
       />
@@ -144,7 +144,7 @@ export default function WallPaperRemoval() {
         imageAlt="We Make It Easy"
         overlayText="We Make It Easy"
         heading="Transform a Room"
-        content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts. Request your free estimate."
+        content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
       />

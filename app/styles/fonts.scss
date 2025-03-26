@@ -5,6 +5,9 @@ a {
 a:hover {
     color:var(--accent-primary);
 }
+p,ul {
+    margin: 1rem 0;
+}
 h1,.h1 {
     font-size: 3rem;
     line-height: 1;

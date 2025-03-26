@@ -20,7 +20,7 @@ export default function OklahomaLocation() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/services/Services-Wallpaper-Removal-Paint-Innovators.jpg"}
+              src={"/photos/Oklahoma.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}

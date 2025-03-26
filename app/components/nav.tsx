@@ -70,7 +70,10 @@ export default function Navigation() {
               <div className="lg:w-1/4 w-1/3">
                 <Logo />
               </div>
-              <div className="md:w-6/12 w-1/4">
+              <div
+                className="md:w-6/12 w-1/4 flex flex-wrap"
+                style={{ justifyContent: "end" }}
+              >
                 <MobileMenuToggle />
               </div>
               <div className="lg:w-1/4 w-1/3">

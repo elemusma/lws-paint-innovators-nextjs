@@ -1,29 +1,13 @@
 import ContentBlock from "@/app/components/content-block";
 import CTA from "@/app/components/reusable/cta";
-import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
-// import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Company, Website } from "../../components/globals";
-import IndustriesServed from "../../components/reusable/core-values";
 import TeamCol from "../../components/reusable/team-col";
 import ValueColumn from "../../components/reusable/ValueColumn";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
-// Define your fade-up variant:
-// const fadeUpVariants = {
-//   hidden: { opacity: 0, y: 50 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.8, ease: "easeOut" },
-//   },
-// };
 export const metadata: Metadata = {
   title:
     "Team - Professional Painters in Oklahoma, Arkansas and Colorado - Paint Innovators",
@@ -78,7 +62,7 @@ export default function OurTeam() {
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
             Our Team
           </h1>
-          <h2 className="font-aspira-bold text-2xl">
+          <h2 className="font-aspira-bold text-2xl text-shadow">
             People <span className="text-accent">&bull;</span> Family{" "}
             <span className="text-accent">&bull;</span> Community
           </h2>
@@ -89,32 +73,32 @@ export default function OurTeam() {
       </ContentBlock>
       <ServingTagline />
 
-      <ContentBlock
+      {/* <ContentBlock
         sectionClassName="bg-white text-black pb-8"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName="flex flex-col items-center"
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <h2 className="text-4xl font-aspira-light pt-4">OUR VISION</h2>
-      </ContentBlock>
+      </ContentBlock> */}
 
-      <ImageContentBlock
+      {/* <ImageContentBlock
         sectionClassName=""
-        imageSrc="/team/Ensuring-Quality.jpg"
+        imageSrc="/home/Paint-Innovators-2025-06.jpg"
         imageAlt="Wallpaper"
         overlayText="Ensuring Quality & Safety"
         borderSubtitle={true}
         overlayTextSubtitle="Craftmanship and Inspection of Every Job"
         contentBorderOff={true}
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="Paint Innovators is dedicated to quality painting. We have experienced and professional painters that specialize in residential and commercial painting - including interior painting and exterior painting for homes and offices."
         buttonLabel="Get Free Estimate"
         buttonLink="/contact"
       />
 
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
+        imageSrc="/home/Paint-Innovators-2025-07.jpg"
         imageAlt="The History of Wall Paper"
         overlayText="It's Our Team That Makes Us Successful"
         borderSubtitle={true}
@@ -124,18 +108,18 @@ export default function OurTeam() {
         content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
         buttonLabel="Get Free Estimate"
         buttonLink="/contact"
-      />
+      /> */}
 
-      <IndustriesServed />
+      {/* <IndustriesServed /> */}
       <ContentBlock
         sectionClassName="bg-white text-black pt-7"
         containerClassName="max-w-screen-lg mx-auto pt-8"
         rowClassName="flex flex-col items-center"
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
-        <h2 className="uppercase font-aspira-bold text-accent text-5xl">
+        {/* <h2 className="uppercase font-aspira-bold text-accent text-5xl">
           Our Team
-        </h2>
+        </h2> */}
         <p className="text-gray-700 text-2xl pt-8 mb-20 font-aspira-bold">
           {Company}, is dedicated to quality painting. We have experienced and
           professional painters that specialize in residential and commercial
@@ -290,14 +274,14 @@ export default function OurTeam() {
           <div className="divider !mt-20 !mb-10"></div>
         </div>
       </ContentBlock>
-
-      <Image
+      <div className="spacer"></div>
+      {/* <Image
         src="/assets/five-star-reviews.png"
         alt="Five Stars"
         className="mx-auto my-8"
         width={150}
         height={150}
-      />
+      /> */}
 
       <ContentBlock
         sectionClassName="bg-gray-dark pt-[100px] pb-[65px]"

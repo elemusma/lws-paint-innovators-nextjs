@@ -1,46 +1,14 @@
-// import ContactForm from "../components/contactForm";
-// import ContactFormPainterDrywallFinisher from "@/app/components/forms/ContactFormPainterDrywallFinisher";
-"use client";
-// import CareerSpanish from "@/app/components/forms/CareerSpanish";
-import CareerEnglish from "@/app/components/forms/CareerEnglish";
-import ContentBlock from "../../components/content-block";
+import SwiperCarouselProjects from "../../components/swiperCarouselProjects";
+import ContentBlock from "../content-block";
 import {
   CommercialProjectsImages,
   IndustrialProjectsImages,
   ResidentialProjectsImages,
-} from "../../components/globals";
-import SwiperCarouselNewService from "../../components/swiperCarouselNewService";
-import SwiperCarouselProjects from "../../components/swiperCarouselProjects";
+} from "../globals";
 
-export default function Contact() {
+export default function CompletedProjects() {
   return (
     <>
-      <ContentBlock
-        sectionClassName="relative py-[35px]"
-        containerClassName="max-w-screen-lg mx-auto"
-        rowClassName="flex flex-col items-center"
-        columnClassName="w-full relative pt-10 px-5"
-      >
-        <div className="text-center md:w-3/4 w-full mx-auto pb-[50px]">
-          <h1 className="mt-6 text-3xl font-extrabold text-gray-900">
-            Pinto / Masero
-          </h1>
-          <h2 className="text-xl">Solicitud de empleo</h2>
-          <p className="my-2 text-sm">
-            Los pintores trabajan en obras diariamente. Están directamente
-            involucrados en proyectos de pintura tanto residenciales como
-            comerciales. Son detallistas, se enorgullecen de su trabajo y
-            brindan experiencias extraordinarias a los clientes. Los
-            instaladores de paneles de yeso fijan paneles prefabricados en el
-            interior de las habitaciones, terminando o encintando las juntas
-            para preparar las superficies para el acabado final.
-          </p>
-        </div>
-        <CareerEnglish />
-      </ContentBlock>
-      <div className="spacer"></div>
-      <SwiperCarouselNewService />
-      <div className="spacer"></div>
       <ContentBlock
         sectionClassName="bg-black text-white completed-projects py-[30px]"
         containerClassName="max-w-screen-lg mx-auto py-8"
@@ -76,7 +44,6 @@ export default function Contact() {
           </h2>
         </div>
       </ContentBlock>
-      <div className="spacer"></div>
     </>
   );
 }
