@@ -15,23 +15,25 @@ export default function PrivacyPolicyContent() {
 
           <h2 className="text-2xl font-bold mt-8 mb-4">INTRODUCTION</h2>
           <p className="mb-4">
-            Paint Innovators, Inc. ("we" or "us" or "our") respects the privacy
-            of our users ("user" or "you"). This Privacy Policy explains how we
-            collect, use, disclose, and safeguard your information when you
-            visit our website paintinnovators.com, including any other media
-            form, media channel, or mobile website related or connected thereto
-            (collectively, the "Site"). Please read this privacy policy
-            carefully. If you do not agree with the terms of this privacy
+            Paint Innovators, Inc. (&quot;we&quot; or &quot;us&quot; or
+            &quot;our&quot;) respects the privacy of our users (&quot;user&quot;
+            or &quot;you&quot;). This Privacy Policy explains how we collect,
+            use, disclose, and safeguard your information when you visit our
+            website paintinnovators.com, including any other media form, media
+            channel, or mobile website related or connected thereto
+            (collectively, the &quot;Site&quot;). Please read this privacy
+            policy carefully. If you do not agree with the terms of this privacy
             policy, please do not access the site.
           </p>
 
           <p className="mb-4">
             We reserve the right to make changes to this Privacy Policy at any
             time and for any reason. We will alert you about any changes by
-            updating the "Last Updated" date of this Privacy Policy. Any changes
-            or modifications will be effective immediately upon posting the
-            updated Privacy Policy on the Site, and you waive the right to
-            receive specific notice of each such change or modification.
+            updating the &quot;Last Updated&quot; date of this Privacy Policy.
+            Any changes or modifications will be effective immediately upon
+            posting the updated Privacy Policy on the Site, and you waive the
+            right to receive specific notice of each such change or
+            modification.
           </p>
           <p className="mb-4">
             You are encouraged to periodically review this Privacy Policy to
@@ -326,9 +328,9 @@ export default function PrivacyPolicyContent() {
             or reject cookies but be aware that such action could affect the
             availability and functionality of the Site. You may not decline web
             beacons. However, they can be rendered ineffective by declining all
-            cookies or by modifying your web browser's settings to notify you
-            each time a cookie is tendered, permitting you to accept or decline
-            cookies on an individual basis.
+            cookies or by modifying your web browser&apos;s settings to notify
+            you each time a cookie is tendered, permitting you to accept or
+            decline cookies on an individual basis.
           </p>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">
@@ -364,7 +366,7 @@ export default function PrivacyPolicyContent() {
             We may also partner with selected third-party vendors to allow
             tracking technologies and remarketing services on the Site through
             the use of first party cookies and third-party cookies, to analyze
-            and track users' use of the Site, determine the popularity of
+            and track users&apos; use of the Site, determine the popularity of
             certain content, and better understand online activity. By accessing
             the Site, you consent to the collection and use of your information
             by these third-party vendors. You are encouraged to review their
@@ -400,10 +402,10 @@ export default function PrivacyPolicyContent() {
           </h2>
           <p className="mb-4">
             Most web browsers and some mobile operating systems include a
-            Do-Not-Track ("DNT") feature or setting you can activate to signal
-            your privacy preference not to have data about your online browsing
-            activities monitored and collected. If you set the DNT signal on
-            your browser, we will respond to such DNT browser signals.
+            Do-Not-Track (&quot;DNT&quot;) feature or setting you can activate
+            to signal your privacy preference not to have data about your online
+            browsing activities monitored and collected. If you set the DNT
+            signal on your browser, we will respond to such DNT browser signals.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">
@@ -449,9 +451,9 @@ export default function PrivacyPolicyContent() {
             CALIFORNIA PRIVACY RIGHTS
           </h2>
           <p className="mb-4">
-            California Civil Code Section 1798.83, also known as the "Shine The
-            Light" law, permits our users who are California residents to
-            request and obtain from us, once a year and free of charge,
+            California Civil Code Section 1798.83, also known as the &quot;Shine
+            The Light&quot; law, permits our users who are California residents
+            to request and obtain from us, once a year and free of charge,
             information about categories of personal information (if any) we
             disclosed to third parties for direct marketing purposes and the
             names and addresses of all third parties with which we shared

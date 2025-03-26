@@ -87,8 +87,8 @@ export default function ColorConsultationCustomPainting() {
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
           {Company} offers expert color consultation services that transform
           your vision into reality. Our design professionals provide
-          personalized recommendations that harmonize with your space's unique
-          characteristics and design potential.
+          personalized recommendations that harmonize with your space&apos;s
+          unique characteristics and design potential.
         </p>
       </ContentBlock>
 

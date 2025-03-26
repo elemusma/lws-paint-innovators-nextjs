@@ -86,7 +86,7 @@ export default function CommercialPainting() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          Protect and beautify your property with Paint Innovators'
+          Protect and beautify your property with Paint Innovators&apos;
           comprehensive exterior painting services. We understand the harsh
           environmental challenges specific to our service regions, delivering
           solutions that withstand extreme weather conditions.
