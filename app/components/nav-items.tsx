@@ -139,7 +139,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
+                  <Link href="/services/popcorn-ceiling-removal">
                     Popcorn Ceiling Removal
                   </Link>
                 </li>

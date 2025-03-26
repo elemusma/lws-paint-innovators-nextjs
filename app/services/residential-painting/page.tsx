@@ -6,6 +6,8 @@ import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
+import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Company } from "../../components/globals";
@@ -62,7 +64,9 @@ export default function ResidentialPainting() {
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
             Residential Painting
           </h1>
-          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
+          <h2 className="font-aspira-bold text-2xl">
+            We Get the Job Done Right!
+          </h2>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
@@ -115,20 +119,26 @@ export default function ResidentialPainting() {
         imageAlt="Wallpaper"
         overlayText="Professional Painter"
         heading="Transform a Room"
-        content="Paint Innovators is your professional painter in Arkansas and Oklahoma - we help residential clients with house painting, interior painting, exterior painting, trim and siding painting, gutter painting, and more!"
+        content="Our skilled painters bring precision and craftsmanship to every project, meticulously preparing surfaces and using premium, eco-friendly materials. We ensure flawless finishes that provide long-lasting protection against wear and environmental factors."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/get-estimate"
+      />
+      <ImageContentBlock
+        sectionClassName="even"
+        imageSrc="/services/wall-paper-removal/02-The-History-of-Wall-Paper.jpg"
+        imageAlt="Wallpaper"
+        overlayText="Professional Painter"
+        heading="Transform a Room"
+        content="We pride ourselves on minimal disruption and maximum results. Our professional painters work efficiently and cleanly, delivering a seamless painting experience that transforms your living spaces across Arkansas, Oklahoma, and Colorado."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
 
-      <ContentBlock
-        sectionClassName="bg-white text-black pt-7 pb-8"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="lg:w-11/12 w-full text-center px-4"
-      >
-        <div className="divider"></div>
-      </ContentBlock>
-
+      <div className="spacer"></div>
+      <SwiperCarouselNewService />
+      <div className="spacer"></div>
+      <CompletedProjects />
+      <div className="spacer"></div>
       <CTA />
       <div className="spacer"></div>
     </>

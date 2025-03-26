@@ -6,10 +6,10 @@ import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
+import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { Company } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
@@ -35,14 +35,14 @@ export default function CommercialPainting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px]"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Epoxy-Floors-Concrete-Staining.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
         background={
           // Optional background element; can be omitted if not needed.
           <>
-            <Image
+            {/* <Image
               src={
                 "/services/Services-Covid-19-Sanitation-Paint-Innvovators.jpg"
               }
@@ -50,7 +50,7 @@ export default function CommercialPainting() {
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
               fill
-            />
+            /> */}
             <div
               className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"
               style={{
@@ -63,10 +63,12 @@ export default function CommercialPainting() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            COVID 19 Sanitation
+            EPOXY FLOORS
           </h1>
-          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <h2 className="font-aspira-bold text-2xl text-shadow">
+            We Get the Job Done Right!
+          </h2>
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -84,10 +86,9 @@ export default function CommercialPainting() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          Paint Innovators use long-lasting, high quality, durable products that
+          protect, and beautify interior and exterior concrete: including
+          garages, basements, sidewalks, and patios.
         </p>
       </ContentBlock>
 
@@ -100,66 +101,58 @@ export default function CommercialPainting() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">DID YOU KNOW?</h2>
+        <h2 className="text-4xl font-aspira-light pt-4">
+          EPOXY FLOORS SERVICES
+        </h2>
       </ContentBlock>
 
-      {/* <motion.div
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      > */}
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/01-Transform-a-Room.jpg"
+        imageSrc="/gallery/Industrial-39.jpg"
         imageAlt="Wallpaper"
-        overlayText="TRANSFORM A ROOM"
+        overlayText="GLOSSY FINISH LOOK"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="Protect your home investment and transform your space with epoxy floor coating. Epoxy floors are safe for home application like garages, laundry rooms, basements, sidewalks, and patios. Floor coatings are very useful for preserving concrete surfaces while giving them a glossy finish look."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
       {/* </motion.div> */}
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/02-The-History-of-Wall-Paper.jpg"
+        imageSrc="/gallery/Industrial-45.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="The History of Wall Paper"
+        overlayText="COST EFFECTIVE"
         heading="Transform a Room"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
+        content="There are many advantages of epoxy floors; cost effective, long lasting, eco-friendly, strength, light maintenance, jut to name a few. Epoxy floor coating is made from epoxide resin, additives, and polyamine hardener. It seals and cures the surface where it is applied."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/03-Smooth-Clean.jpg"
+        imageSrc="/gallery/Industrial-84.jpg"
         imageAlt="Smooth &amp; Clean"
-        overlayText="Smooth &amp; Clean"
+        overlayText="EASE OF MAINTENANCE"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="Mica or decorative chips may be used to add a speckled look and traction. Ease of maintenance on epoxy floors make this application popular, you can use a broom or map, or even a vacuum to clean epoxy floors."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/04-We-Make-It-Easy.jpg"
+        imageSrc="/gallery/Industrial-83.jpg"
         imageAlt="We Make It Easy"
-        overlayText="We Make It Easy"
+        overlayText="COMMERCIAL APPLICATIONS"
         heading="Transform a Room"
-        content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts. Request your free estimate."
+        content="Epoxy floors are also a great choice for your commercial applications since there are many color options. Epoxy floors are very durable, do not peel or tear, they hold out in high traffic areas and are very cost effective. Paint Innovators use long-lasting, high quality, durable products that protect, and beautify interior and exterior concrete."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
 
-      <ContentBlock
-        sectionClassName="bg-white text-black pt-7 pb-8"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="lg:w-11/12 w-full text-center px-4"
-      >
-        <div className="divider"></div>
-      </ContentBlock>
-
+      <div className="spacer"></div>
+      <SwiperCarouselNewService />
+      <div className="spacer"></div>
+      <CompletedProjects />
+      <div className="spacer"></div>
       <CTA />
       <div className="spacer"></div>
     </>

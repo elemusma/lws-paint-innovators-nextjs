@@ -6,10 +6,10 @@ import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
+import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { Company } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
@@ -35,14 +35,14 @@ export default function CommercialPainting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px]"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Industrial-Coating-Paint-Innovators.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
         background={
           // Optional background element; can be omitted if not needed.
           <>
-            <Image
+            {/* <Image
               src={
                 "/services/Services-Covid-19-Sanitation-Paint-Innvovators.jpg"
               }
@@ -50,7 +50,7 @@ export default function CommercialPainting() {
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
               fill
-            />
+            /> */}
             <div
               className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"
               style={{
@@ -63,10 +63,12 @@ export default function CommercialPainting() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            COVID 19 Sanitation
+            Industrial Coating
           </h1>
-          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <h2 className="font-aspira-bold text-2xl text-shadow">
+            We Get the Job Done Right!
+          </h2>
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -84,10 +86,10 @@ export default function CommercialPainting() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          Paint Innovators use protective coatings to solve corrosion problems
+          in a variety of applications including commercial heating, cooling,
+          refrigeration, or other industrial components that are regularly
+          exposed to corrosive conditions.
         </p>
       </ContentBlock>
 
@@ -100,66 +102,58 @@ export default function CommercialPainting() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">DID YOU KNOW?</h2>
+        <h2 className="text-4xl font-aspira-light pt-4">
+          INDUSTRIAL COATING SERVICES
+        </h2>
       </ContentBlock>
 
-      {/* <motion.div
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      > */}
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/01-Transform-a-Room.jpg"
+        imageSrc="/gallery/Industrial-36.jpg"
         imageAlt="Wallpaper"
-        overlayText="TRANSFORM A ROOM"
+        overlayText="SOLVE CORROSION PROBLEMS"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="Industrial coatings are types of paint, applied on several settings like metals, plastics, wood, glass, leather, rubber and many more, to solve corrosion problems in a variety of applications including commercial heating, cooling, refrigeration, or other industrial components that are regularly exposed to corrosive conditions."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
       {/* </motion.div> */}
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/02-The-History-of-Wall-Paper.jpg"
+        imageSrc="/gallery/Industrial-40.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="The History of Wall Paper"
+        overlayText="PROTECTION FROM FIRE"
         heading="Transform a Room"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
+        content="Industrial coatings are also used to protect materials from fire or moisture. Polymers are often used as an industrial coating like epoxy, urethane, polyurethane, and fluoropolymer. Aesthetics are also very important and should not be overlooked."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/03-Smooth-Clean.jpg"
+        imageSrc="/gallery/Industrial-50.jpg"
         imageAlt="Smooth &amp; Clean"
-        overlayText="Smooth &amp; Clean"
+        overlayText="FRESH LOOK"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="We can apply a coat on any equipment and besides giving it a fresh look, it can also prevent corrosion and wear which can lead to equipment failure. There are also environment friendly coatings we can use like organic coatings that just include basic paint and varnish."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/04-We-Make-It-Easy.jpg"
+        imageSrc="/gallery/Industrial-56.jpg"
         imageAlt="We Make It Easy"
-        overlayText="We Make It Easy"
+        overlayText="CHEMICAL RESISTANCE"
         heading="Transform a Room"
-        content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts. Request your free estimate."
+        content="Other types of coatings include inorganic and metallic. Protect your valuable assets and prevent costly repairs by coating them. Many applications of coatings are based on your specific need for example friction control, extreme temperatures, high pressure loads, impact, abrasion, or chemical resistance."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
 
-      <ContentBlock
-        sectionClassName="bg-white text-black pt-7 pb-8"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="lg:w-11/12 w-full text-center px-4"
-      >
-        <div className="divider"></div>
-      </ContentBlock>
-
+      <div className="spacer"></div>
+      <SwiperCarouselNewService />
+      <div className="spacer"></div>
+      <CompletedProjects />
+      <div className="spacer"></div>
       <CTA />
       <div className="spacer"></div>
     </>

@@ -231,7 +231,7 @@ export default function Footer() {
                   <Link href="/locations/oklahoma">Oklahoma Location</Link>
                 </li>
                 <li>
-                  <Link href="locations/colorado">Colorado Location</Link>
+                  <Link href="/locations/colorado">Colorado Location</Link>
                 </li>
               </ul>
             </div>
@@ -394,7 +394,7 @@ export default function Footer() {
                   </strong>
                 </a>
                 <br></br>
-                <a href="#">Privacy Policy</a> / <a href="#">Disclaimer</a>
+                <a href="/privacy-policy">Privacy Policy</a>
               </p>
             </div>
           </div>

@@ -6,10 +6,10 @@ import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
+import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { Company } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
@@ -35,22 +35,20 @@ export default function CommercialPainting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px]"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Drywall-Repair.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
         background={
           // Optional background element; can be omitted if not needed.
           <>
-            <Image
-              src={
-                "/services/Services-Covid-19-Sanitation-Paint-Innvovators.jpg"
-              }
+            {/* <Image
+              src={"/services/Services-Wallpaper-Removal.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
               fill
-            />
+            /> */}
             <div
               className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"
               style={{
@@ -63,10 +61,12 @@ export default function CommercialPainting() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
-            COVID 19 Sanitation
+            DRYWALL REPAIR
           </h1>
-          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <h2 className="font-aspira-bold text-2xl text-shadow">
+            We Get the Job Done Right!
+          </h2>
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -84,10 +84,10 @@ export default function CommercialPainting() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          Paint Innovators can perform multiple drywall repairs and drywall
+          finishing services at your home or business. Cracks from settling,
+          wear and tear, moisture damage, just to name a few. We can repair just
+          about everything.
         </p>
       </ContentBlock>
 
@@ -100,66 +100,88 @@ export default function CommercialPainting() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">DID YOU KNOW?</h2>
+        <h2 className="text-4xl font-aspira-light pt-4">
+          DRYWALL REPAIR SERVICES
+        </h2>
       </ContentBlock>
 
-      {/* <motion.div
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      > */}
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/01-Transform-a-Room.jpg"
+        imageSrc="/gallery/Commercial-Painting-01.jpg"
         imageAlt="Wallpaper"
-        overlayText="TRANSFORM A ROOM"
+        overlayText="LEVEL 0"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="Drywall level 0 is known for no taping, accessories, or finishing.  Level 0 may be used in temporary types of construction where the final decoration has not been determined yet."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
       {/* </motion.div> */}
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/02-The-History-of-Wall-Paper.jpg"
+        imageSrc="/gallery/Commercial-Painting-03.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="The History of Wall Paper"
+        overlayText="LEVEL 1"
         heading="Transform a Room"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
+        content="Drywall level 1 is a single coat of plaster or mud with taping set in a joint compound on both interior and exterior angles.  Normally level 1 is used on ceilings, attics, or any areas where you need to conceal structure elements or on any areas that are not open to public view in commercial buildings."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/03-Smooth-Clean.jpg"
+        imageSrc="/gallery/Commercial-Painting-04.jpg"
         imageAlt="Smooth &amp; Clean"
-        overlayText="Smooth &amp; Clean"
+        overlayText="LEVEL 2"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="Drywall level 2 is a double coating of joint compound for areas like garages, warehouses."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/04-We-Make-It-Easy.jpg"
+        imageSrc="/gallery/Commercial-Painting-07.jpg"
         imageAlt="We Make It Easy"
-        overlayText="We Make It Easy"
+        overlayText="LEVEL 3"
         heading="Transform a Room"
-        content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts. Request your free estimate."
+        content="Drywall level 3 is a tape embedded joint compound with an additional coat of joint compound.  Level 3 is normally found in residential interiors where medium texture is applied by hand or sprayed and followed by the final coat of paint. Drywall level 4 has two separate coats of joint compound with three separate coats of mud."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
+      />
+      <ImageContentBlock
+        sectionClassName=""
+        imageSrc="/gallery/Commercial-Painting-20.jpg"
+        imageAlt="We Make It Easy"
+        overlayText="LEVEL 4"
+        heading="Transform a Room"
+        content="Drywall level 4 is ideal for flat paint, wall coverings, and light textures."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/get-estimate"
+      />
+      <ImageContentBlock
+        sectionClassName="even"
+        imageSrc="/gallery/Interior-Exterior-Painting-01.jpg"
+        imageAlt="We Make It Easy"
+        overlayText="LEVEL 5"
+        heading="Transform a Room"
+        content="Drywall level 5 involves three separate coats of mud or joint compound. This level of finish is highly recommended where semi-gloss, enamel, gloss, or flat paints are to be used."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/get-estimate"
+      />
+      <ImageContentBlock
+        sectionClassName=""
+        imageSrc="/gallery/Interior-Exterior-Painting-04.jpg"
+        imageAlt="We Make It Easy"
+        overlayText="SKILLED FINISHERS"
+        heading="Transform a Room"
+        content="Our finishers also prepare unfinished interior drywall panels for painting by taping, filling, and sanding joints and correcting imperfections. Paint Innovators has skilled finishers that are capable of working with the client to meet their expectations."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/get-estimate"
       />
 
-      <ContentBlock
-        sectionClassName="bg-white text-black pt-7 pb-8"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="lg:w-11/12 w-full text-center px-4"
-      >
-        <div className="divider"></div>
-      </ContentBlock>
-
+      <div className="spacer"></div>
+      <SwiperCarouselNewService />
+      <div className="spacer"></div>
+      <CompletedProjects />
+      <div className="spacer"></div>
       <CTA />
       <div className="spacer"></div>
     </>

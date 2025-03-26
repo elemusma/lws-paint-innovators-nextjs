@@ -6,8 +6,9 @@ import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
+import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Company } from "../../components/globals";
 // import Navigation from "./components/navigation";
@@ -35,20 +36,20 @@ export default function ColorConsultationCustomPainting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px]"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Color-Consultation-Custom-Painting.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
         background={
           // Optional background element; can be omitted if not needed.
           <>
-            <Image
-              src={"/services/Services-Color-Consultation-Custom-Painting.jpg"}
-              alt="Wall paper removal"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              style={{ objectFit: "cover", objectPosition: "right" }}
-              fill
-            />
+            {/* <Image
+                          src={"/services/Services-Residential-Painting.jpg"}
+                          alt="Wall paper removal"
+                          className="absolute top-0 left-0 w-full h-full object-cover"
+                          style={{ objectFit: "cover", objectPosition: "right" }}
+                          fill
+                        /> */}
             <div
               className="absolute bg-black opacity-[0.5] top-0 left-0 w-full h-full"
               style={{
@@ -63,8 +64,10 @@ export default function ColorConsultationCustomPainting() {
           <h1 className="text-6xl uppercase font-aspira-light text-shadow">
             Color Consultation Custom Painting
           </h1>
-          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <h2 className="font-aspira-bold text-2xl text-shadow">
+            We Get the Job Done Right!
+          </h2>
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -82,10 +85,10 @@ export default function ColorConsultationCustomPainting() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          {Company} offers expert color consultation services that transform
+          your vision into reality. Our design professionals provide
+          personalized recommendations that harmonize with your space's unique
+          characteristics and design potential.
         </p>
       </ContentBlock>
 
@@ -98,66 +101,37 @@ export default function ColorConsultationCustomPainting() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">DID YOU KNOW?</h2>
+        <h2 className="text-4xl font-aspira-light pt-4">
+          COLOR CONSULTATION &amp; CUSTOM PAINTING
+        </h2>
       </ContentBlock>
 
-      {/* <motion.div
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      > */}
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/wall-paper-removal/01-Transform-a-Room.jpg"
+        imageSrc="/gallery/Commercial-Painting-08-Rectangular.jpg"
         imageAlt="Wallpaper"
-        overlayText="TRANSFORM A ROOM"
+        overlayText="COLOR PSYCHOLOGY"
         heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
+        content="We dive deep into color psychology, lighting considerations, and architectural nuances to create truly customized painting solutions. Our experts guide you through color selection, ensuring a perfect match for your aesthetic and functional needs."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
-      {/* </motion.div> */}
+
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/02-The-History-of-Wall-Paper.jpg"
+        imageSrc="/gallery/Commercial-Painting-15-Rectangular.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="The History of Wall Paper"
+        overlayText="UNIQUE FINISHES"
         heading="Transform a Room"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
+        content="Our custom painting services go beyond standard applications, offering unique finishes and precise color mixing. We deliver one-of-a-kind environments that reflect your individual style across Arkansas, Oklahoma, and Colorado."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
-      <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/services/wall-paper-removal/03-Smooth-Clean.jpg"
-        imageAlt="Smooth &amp; Clean"
-        overlayText="Smooth &amp; Clean"
-        heading="Transform a Room"
-        content="New wall covering can transform a room, going from boring to beautiful. But before you can determine the best approach to removing wallpaper, you need to know the type of wallcovering and the type of wall surface under the wallpaper."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
-      />
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/services/wall-paper-removal/04-We-Make-It-Easy.jpg"
-        imageAlt="We Make It Easy"
-        overlayText="We Make It Easy"
-        heading="Transform a Room"
-        content="Paint Innovators has crew of experienced wallpaper removers and is fully armed with all the tools to remove that old wallpaper fast and effectively. We will steam the area with water, scrape the first layer of wallpaper and steam the wallpaper again until all the wallpaper peels off making sure your walls have no trace of adhesive and aged wallpaper remains. We effectively remove all kinds of wallpaper including vinyl wallpaper. We are fully licensed and insured and offer competitive rates on all jobs. Save the time and hassle and call the experts. Request your free estimate."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
-      />
-
-      <ContentBlock
-        sectionClassName="bg-white text-black pt-7 pb-8"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="lg:w-11/12 w-full text-center px-4"
-      >
-        <div className="divider"></div>
-      </ContentBlock>
-
+      <div className="spacer"></div>
+      <SwiperCarouselNewService />
+      <div className="spacer"></div>
+      <CompletedProjects />
+      <div className="spacer"></div>
       <CTA />
       <div className="spacer"></div>
     </>
