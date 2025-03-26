@@ -379,7 +379,7 @@ function ContactFormPermission() {
                   htmlFor="contact_fname"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Contact Person's First Name{" "}
+                  Contact Person&apos;s First Name{" "}
                   <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -396,7 +396,7 @@ function ContactFormPermission() {
                   htmlFor="contact_lname"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Contact Person's Last Name{" "}
+                  Contact Person&apos;s Last Name{" "}
                   <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -414,7 +414,8 @@ function ContactFormPermission() {
                 htmlFor="contact_email"
                 className="block text-sm font-medium text-gray-700"
               >
-                Contact Person's Email <span className="text-red-500">*</span>
+                Contact Person&apos;s Email{" "}
+                <span className="text-red-500">*</span>
               </label>
               <p className="text-sm text-gray-500">
                 Enter the contact email you have for your contact person.
