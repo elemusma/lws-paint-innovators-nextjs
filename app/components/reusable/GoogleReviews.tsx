@@ -110,8 +110,8 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
   }
 
   return (
-    <div className="flex flex-col flex-row md:flex-row gap-2">
-      <div className="w-1/5 text-center">
+    <div className="flex flex-col flex-row md:flex-row gap-2 px-4">
+      <div className="md:w-1/5 w-full text-center">
         <Logo />
         <div className="flex justify-center my-4">
           {Array.from({ length: 6 }).map((_, i) => (
@@ -130,10 +130,15 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
         </a>
       </div>
 
-      <div className="w-4/5">
+      <div className="md:w-4/5 w-full">
         <Swiper
           loop={true}
-          slidesPerView={3}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 },
+          }}
           spaceBetween={30}
           autoplay={true}
           modules={[Navigation, Pagination, Autoplay]}

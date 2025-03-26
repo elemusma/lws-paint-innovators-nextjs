@@ -6,6 +6,7 @@ interface ButtonSquareProps {
   id?: string; // For setting an ID
   href: string; // For dynamic href value
   children?: React.ReactNode; // For dynamic content inside the button
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void; // Add onClick prop
 }
 
 const ButtonSquare: React.FC<ButtonSquareProps> = ({
@@ -14,6 +15,7 @@ const ButtonSquare: React.FC<ButtonSquareProps> = ({
   id,
   href,
   children,
+  onClick,
 }) => {
   return (
     <a
@@ -26,6 +28,7 @@ const ButtonSquare: React.FC<ButtonSquareProps> = ({
       }} // Merge the inline styles
       href={href}
       id={id} // Assign the ID if provided
+      onClick={onClick} // Attach onClick event
     >
       {children}
     </a>

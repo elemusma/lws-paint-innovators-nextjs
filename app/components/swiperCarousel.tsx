@@ -38,7 +38,7 @@ const SwiperCarousel = () => {
                 "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7049413515406162) 82%)",
             }}
           ></div>
-          <div className="relative flex lg:w-1/2 w-5/6 text-white">
+          <div className="relative flex lg:w-1/2 w-5/6 text-white z-10">
             <div
               style={{ background: "red", minWidth: "5px" }}
               className="w-[5px] h-[100px] mr-[10px]"
@@ -76,7 +76,7 @@ const SwiperCarousel = () => {
                 "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7049413515406162) 82%)",
             }}
           ></div>
-          <div className="relative flex lg:w-1/2 w-5/6 text-white">
+          <div className="relative flex lg:w-1/2 w-5/6 text-white z-10">
             <div
               style={{ background: "red", minWidth: "5px" }}
               className="w-[5px] h-[100px] mr-[10px]"
@@ -113,7 +113,7 @@ const SwiperCarousel = () => {
                 "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7049413515406162) 82%)",
             }}
           ></div>
-          <div className="relative flex lg:w-1/2 w-5/6 text-white">
+          <div className="relative flex lg:w-1/2 w-5/6 text-white z-10">
             <div
               style={{ background: "red", minWidth: "5px" }}
               className="w-[5px] h-[100px] mr-[10px]"

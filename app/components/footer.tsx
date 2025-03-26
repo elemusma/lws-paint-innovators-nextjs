@@ -407,7 +407,7 @@ export default function Footer() {
           </div>
         </div>
         <div
-          className="text-center bg-neutral-green px-10"
+          className="text-center bg-neutral-green px-[70px]"
           style={{ paddingTop: "10px", paddingBottom: "10px", color: "gray" }}
         >
           <div className="d-flex justify-content-center align-items-center">
