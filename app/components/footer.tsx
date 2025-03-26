@@ -331,7 +331,11 @@ export default function Footer() {
         <div className="max-w-screen-lg mx-auto pt-10 pb-10">
           <div className="flex flex-wrap items-center justify-center">
             <div className="w-full lg:w-1/3 text-right flex lg:justify-start justify-center lg:pb-0 pb-10">
-              <a href="#" className="block">
+              <a
+                href="https://www.facebook.com/PaintInnovators/"
+                target="_blank"
+                className="block"
+              >
                 <div style={{}} className="social-icons">
                   <svg
                     id="Layer_2"
@@ -351,7 +355,10 @@ export default function Footer() {
                 </div>{" "}
               </a>
               {/* end of social icon */}
-              <a href="#">
+              <a
+                href="https://www.instagram.com/paintinnovators/"
+                target="_blank"
+              >
                 <div style={{}} className="social-icons">
                   <svg
                     id="Layer_2"
