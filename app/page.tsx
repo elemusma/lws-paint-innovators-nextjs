@@ -8,7 +8,7 @@ import {
 } from "./components/globals.js"; // Adjust path as needed
 import CoreValues from "./components/reusable/core-values";
 import CTA from "./components/reusable/cta";
-import SwiperCarousel from "./components/swiperCarousel";
+import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
 import SwiperCarouselNewService from "./components/swiperCarouselNewService";
 import SwiperCarouselProjects, {
   Slide,
@@ -31,7 +31,8 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <SwiperCarousel />
+        <SwiperCarouselCommercial />
+        {/* <SwiperCarousel /> */}
       </div>
       <ContentBlock
         sectionClassName="bg-accent text-white"

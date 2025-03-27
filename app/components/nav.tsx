@@ -78,7 +78,7 @@ export default function Navigation() {
               </div>
               <div className="lg:w-1/4 w-1/3">
                 <ButtonSquare
-                  className="block md:hidden text-sm" // Adding additional class
+                  className="block md:hidden text-sm text-center" // Adding additional class
                   style={{
                     padding: "10px 10px",
                     top: "50%",
@@ -92,14 +92,14 @@ export default function Navigation() {
               </div>
             </div>
           </div>
-          <ButtonSquare
+          {/* <ButtonSquare
             className="absolute hidden md:block hover:bg-[var(--neutral-dark)]" // Adding additional class
             style={{ top: "50%", right: 0, transform: "translate(0, -50%)" }} // Adding inline style
             id="" // Adding an ID
             href="/get-estimate" // Dynamic href
           >
             Free Estimate!
-          </ButtonSquare>
+          </ButtonSquare> */}
         </nav>
       </header>
     </>

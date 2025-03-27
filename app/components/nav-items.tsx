@@ -19,39 +19,40 @@ export default function NavItems({ logoContainerClassName = "" }) {
       menuItems.forEach((item) => {
         const subMenu = item.querySelector(".sub-menu") as HTMLElement;
 
-        if (window.matchMedia("(min-width: 1200px)").matches) {
-          // Remove any existing listeners first
-          const mouseoverHandler = () => {
-            if (subMenu && !subMenu.classList.contains("active-sub-menu")) {
-              subMenu.classList.add("active-sub-menu");
+        // if (window.matchMedia("(min-width: 1200px)").matches) {
+        // Remove any existing listeners first
+        const mouseoverHandler = () => {
+          console.log("Mouseover triggered"); // Debugging
+          if (subMenu && !subMenu.classList.contains("active-sub-menu")) {
+            subMenu.classList.add("active-sub-menu");
 
-              // Calculate dynamic height based on children
-              let totalHeight = 0;
-              const children = subMenu.querySelectorAll("li");
-              children.forEach((child) => {
-                totalHeight += (child as HTMLElement).offsetHeight;
-              });
+            // Calculate dynamic height based on children
+            let totalHeight = 0;
+            const children = subMenu.querySelectorAll("li");
+            children.forEach((child) => {
+              totalHeight += (child as HTMLElement).offsetHeight;
+            });
 
-              subMenu.style.height = `${totalHeight}px`;
-            }
-          };
+            subMenu.style.height = `${totalHeight}px`;
+          }
+        };
 
-          const mouseoutHandler = () => {
-            if (subMenu?.classList.contains("active-sub-menu")) {
-              subMenu.classList.remove("active-sub-menu");
-              subMenu.style.height = "0px";
-            }
-          };
+        const mouseoutHandler = () => {
+          if (subMenu?.classList.contains("active-sub-menu")) {
+            subMenu.classList.remove("active-sub-menu");
+            subMenu.style.height = "0px";
+          }
+        };
 
-          item.addEventListener("mouseover", mouseoverHandler);
-          item.addEventListener("mouseout", mouseoutHandler);
+        item.addEventListener("mouseover", mouseoverHandler);
+        item.addEventListener("mouseout", mouseoutHandler);
 
-          // Cleanup function to remove event listeners
-          return () => {
-            item.removeEventListener("mouseover", mouseoverHandler);
-            item.removeEventListener("mouseout", mouseoutHandler);
-          };
-        }
+        // Cleanup function to remove event listeners
+        return () => {
+          item.removeEventListener("mouseover", mouseoverHandler);
+          item.removeEventListener("mouseout", mouseoutHandler);
+        };
+        // }
       });
     };
 
@@ -70,24 +71,17 @@ export default function NavItems({ logoContainerClassName = "" }) {
   return (
     <>
       <div className="flex flex-wrap items-center justify-center">
-        <div className="lg:w-1/3 w-7/12 lg:text-right lg:order-1 order-2">
-          <ul className="flex lg:justify-end items-center justify-center main-menu">
-            <li className="relative">
-              <Link href="/about/team">Our Team</Link>
-              <div
-                className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
-                style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div>
-            </li>
-            <li className="menu-item-has-children relative text-left">
+        <div className="lg:w-5/12 w-7/12 lg:text-right lg:order-1 order-2">
+          <ul className="flex justify-end items-center main-menu m-0">
+            <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/services"
                 className="flex items-center gap-1"
-                style={{ padding: "40px 10px" }}
+                style={{}}
               >
-                Services
+                SERVICES
                 <svg
-                  className="w-4 h-4"
+                  className="w-2 h-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -174,28 +168,155 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 </li>
               </ul>
             </li>
+            <li className="menu-item-has-children main-title relative text-left">
+              <Link href="/industries" className="flex items-center gap-1">
+                INDUSTRIES
+                <svg
+                  className="w-2 h-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </Link>
+              {/* <div
+                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
+                style={{ backgroundColor: "var(--accent-primary)" }}
+              ></div> */}
+              <ul
+                className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
+                style={{
+                  height: "0px",
+                  backgroundColor: "var(--neutral-dark)",
+                  width: "150px",
+                }}
+              >
+                <li>
+                  <Link href="/services/residential-painting">Commercial</Link>
+                </li>
+                <li>
+                  <Link href="/services/commercial-painting">Industrial</Link>
+                </li>
+                <li>
+                  <Link href="/services/commercial-painting">Residential</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item-has-children main-title relative text-left">
+              <Link href="/about" className="flex items-center gap-1">
+                ABOUT
+                <svg
+                  className="w-2 h-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </Link>
+              {/* <div
+                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
+                style={{ backgroundColor: "var(--accent-primary)" }}
+              ></div> */}
+              <ul
+                className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
+                style={{
+                  height: "0px",
+                  backgroundColor: "var(--neutral-dark)",
+                  width: "150px",
+                }}
+              >
+                <li>
+                  <Link href="/services/residential-painting">Our Story</Link>
+                </li>
+                <li>
+                  <Link href="/services/commercial-painting">Our Team</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item-has-children main-title relative text-left">
+              <Link href="/locations" className="flex items-center gap-1">
+                LOCATIONS
+                <svg
+                  className="w-2 h-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </Link>
+              {/* <div
+                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
+                style={{ backgroundColor: "var(--accent-primary)" }}
+              ></div> */}
+              <ul
+                className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
+                style={{
+                  height: "0px",
+                  backgroundColor: "var(--neutral-dark)",
+                  width: "150px",
+                }}
+              >
+                <li>
+                  <Link href="/services/residential-painting">Our Story</Link>
+                </li>
+                <li>
+                  <Link href="/services/commercial-painting">Our Team</Link>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
 
         <div
-          className={`w-3/4 md:w-2/3 lg:order-2 order-1 ${
+          className={`w-3/4 md:w-2/3 lg:order-2 order-1 relative ${
             logoContainerClassName || "lg:w-1/6"
           }`}
         >
-          <Logo />
+          <Logo className="lg:absolute relative lg:-top-[32px] px-4" />
         </div>
 
-        <div className="lg:w-1/3 w-7/12 lg:order-3 order-3">
-          <ul className="flex lg:justify-start items-center justify-center main-menu">
-            <li className="menu-item-has-children relative text-left">
+        <div className="lg:w-5/12 w-7/12 lg:order-3 order-3">
+          <ul className="flex lg:justify-start items-center justify-center main-menu m-0">
+            <li className="main-title relative text-left">
               <Link
                 href="/projects"
-                className="flex items-center gap-1"
-                style={{ padding: "40px 10px" }}
+                className="flex items-center gap-1 uppercase"
+                style={{}}
               >
-                Our Work
+                News/Blog
+              </Link>
+            </li>
+            <li className="menu-item-has-children main-title relative text-left">
+              {/* <div
+                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
+                style={{ backgroundColor: "var(--accent-primary)" }}
+              ></div> */}
+              <Link
+                href="/projects"
+                className="flex items-center gap-1 uppercase"
+                style={{}}
+              >
+                Projects
                 <svg
-                  className="w-4 h-4"
+                  className="w-2 h-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -217,11 +338,6 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 }}
               >
                 <li>
-                  <Link href="/projects/residential-painting">
-                    Residential Painting Projects
-                  </Link>
-                </li>
-                <li>
                   <Link href="/projects/commercial-painting">
                     Commercial Painting Projects
                   </Link>
@@ -236,14 +352,79 @@ export default function NavItems({ logoContainerClassName = "" }) {
                     Other Contractor Services
                   </Link>
                 </li>
+                <li>
+                  <Link href="/projects/residential-painting">
+                    Residential Painting Projects
+                  </Link>
+                </li>
               </ul>
             </li>
-            <li className="relative">
-              <Link href="/contact">Contact Us</Link>
-              <div
+            <li className="menu-item-has-children main-title relative text-left">
+              {/* <div
                 className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
                 style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div>
+              ></div> */}
+              <Link
+                href="/projects"
+                className="flex items-center gap-1 uppercase"
+                style={{}}
+              >
+                Careers
+                <svg
+                  className="w-2 h-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </Link>
+              <ul
+                className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
+                style={{
+                  height: "0px",
+                  backgroundColor: "var(--neutral-dark)",
+                  width: "300px",
+                }}
+              >
+                <li>
+                  <Link href="/careers/painter-drywall-finisher">
+                    Painter / Drywall Finisher
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/careers/pintor-masero">El Pintor / Masero</Link>
+                </li>
+                <li>
+                  <Link href="/careers/office-associate">Office Associate</Link>
+                </li>
+                <li>
+                  <Link href="/careeers/project-estimator">
+                    Project Estimator
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/careers/project-manager">Project Manager</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="relative main-title">
+              <Link
+                href="/contact"
+                style={{ padding: "23px 10px" }}
+                className="uppercase"
+              >
+                Contact
+              </Link>
+              {/* <div
+                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
+                style={{ backgroundColor: "var(--accent-primary)" }}
+              ></div> */}
             </li>
           </ul>
         </div>
