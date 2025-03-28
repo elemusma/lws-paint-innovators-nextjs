@@ -303,7 +303,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
           <ul className="flex lg:justify-start items-center justify-center main-menu m-0">
             <li className="main-title relative text-left">
               <Link
-                href="/news-blog"
+                href="/news"
                 className="flex items-center gap-1 uppercase"
                 style={{}}
               >

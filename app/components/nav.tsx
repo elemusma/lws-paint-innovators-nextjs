@@ -56,7 +56,7 @@ export default function Navigation() {
       <div ref={blankSpaceRef} className="blank-space">
         {/* Blank space content */}
         <ButtonSquare
-          className="btn-free-estimate fixed lg:block hidden hover:bg-[var(--neutral-dark)] z-10 text-center leading-none top-1/4 right-[0.3px] -translate-y-1/2 text-sm shadow-md" // Adding additional class
+          className="btn-free-estimate fixed lg:block hidden hover:bg-[var(--neutral-dark)] z-10 text-center leading-none top-1/4 right-[0.3px] -translate-y-1/2 text-sm" // Adding additional class
           style={{ padding: 5 }}
           id="" // Adding an ID
           href="tel:+1479.347.7521" // Dynamic href
@@ -80,8 +80,12 @@ export default function Navigation() {
       </div>
       <header
         ref={headerRef}
-        className="bg-white relative w-full shadow-md"
-        style={{ top: 0, zIndex: 11 }}
+        className="bg-white relative w-full z-10"
+        style={{
+          top: 0,
+          zIndex: 11,
+          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.2)",
+        }}
       >
         <nav className="relative">
           <div className="hidden lg:block max-w-screen-lg mx-auto">

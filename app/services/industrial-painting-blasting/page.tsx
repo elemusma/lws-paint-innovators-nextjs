@@ -10,7 +10,7 @@ import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Company } from "../../components/globals";
+import { Company, Website } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
     description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    url: `${Website}/wallpaper-removal`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Wallpaper-Removal.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",
@@ -36,7 +36,7 @@ export default function IndustrialPaintingBlasting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/gallery/Industrial-36.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/gallery/Industrial-33.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
@@ -65,7 +65,7 @@ export default function IndustrialPaintingBlasting() {
             Industrial Painting &amp; Blasting
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
-            Get the Job Done Right!
+            We Get the Job Done Right!
           </h2>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate

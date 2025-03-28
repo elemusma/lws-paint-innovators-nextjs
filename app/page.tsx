@@ -1,18 +1,12 @@
 import ContentBlock from "@/app/components/content-block";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  CommercialProjectsImages,
-  IndustrialProjectsImages,
-  ResidentialProjectsImages,
-} from "./components/globals.js"; // Adjust path as needed
+import CompletedProjects from "./components/reusable/CompletedProjects";
 import CoreValues from "./components/reusable/core-values";
 import CTA from "./components/reusable/cta";
 import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
 import SwiperCarouselNewService from "./components/swiperCarouselNewService";
-import SwiperCarouselProjects, {
-  Slide,
-} from "./components/swiperCarouselProjects";
+import { Slide } from "./components/swiperCarouselProjects";
 
 export interface SwiperCarouselPropsResidentialProjects {
   ResidentialProjectsImages: Slide[];
@@ -148,7 +142,8 @@ export default function Home() {
       <SwiperCarouselNewService />
       <div className="spacer"></div>
 
-      <ContentBlock
+      <CompletedProjects />
+      {/* <ContentBlock
         sectionClassName="bg-black text-white completed-projects py-[30px]"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName="flex flex-col items-center"
@@ -182,7 +177,7 @@ export default function Home() {
             INDUSTRIAL
           </h2>
         </div>
-      </ContentBlock>
+      </ContentBlock> */}
       <div className="spacer"></div>
 
       {/* <Testimonials />

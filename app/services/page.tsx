@@ -130,7 +130,7 @@ export default function Services() {
             buttonAriaLabel="Learn more about commercial painting services"
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-11.jpg"
+            img="/home/Paint-Innovators-2025-04.jpg"
             name="Interior Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -321,8 +321,8 @@ export default function Services() {
             description={
               <p>
                 We can paint homes, storage sheds, tool sheds, fences, indoors
-                and outdoors, as well as trim, siding and gutters. We adjust to
-                your needs.
+                and outdoors, as well as trim, siding and gutters. Our skilled
+                painters can handle any painting project.
               </p>
             }
             buttonLink="/services/residential-painting"

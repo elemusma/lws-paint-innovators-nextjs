@@ -6,6 +6,7 @@ import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+import { Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
@@ -19,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
     description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    url: `${Website}/wallpaper-removal`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Wallpaper-Removal.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",

@@ -10,7 +10,7 @@ import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Company } from "../../components/globals";
+import { Company, Website } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
     description: "Professional painting.",
-    url: `{Website}/services/wallpaper-removal`, // Replace with actual URL
+    url: `${Website}/services/wallpaper-removal`, // Replace with actual URL
     type: "website",
     images: [
       {
@@ -36,7 +36,7 @@ export default function ResidentialPainting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Residential-Painting.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/home/Paint-Innovators-2025-09.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
