@@ -97,14 +97,14 @@ export default function Navigation() {
                 <Logo />
               </div>
               <div
-                className="md:w-6/12 w-1/4 flex flex-wrap"
+                className="md:w-6/12 w-1/6 flex flex-wrap"
                 style={{ justifyContent: "end" }}
               >
                 <MobileMenuToggle />
               </div>
-              <div className="lg:w-1/4 w-1/3 pl-4">
+              <div className="lg:w-1/4 w-5/12 md:pl-4">
                 <ButtonSquare
-                  className="hidden md:flex justify-center items-center text-sm text-center" // Adding additional class
+                  className="lg:hidden flex justify-center items-center text-sm text-center" // Adding additional class
                   style={{
                     padding: "10px 10px",
                   }} // Adding inline style
