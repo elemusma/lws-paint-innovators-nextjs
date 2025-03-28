@@ -1,7 +1,31 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../components/content-block";
+import { Website } from "../components/globals";
 import SocialIcons from "../components/reusable/socialIcons";
+
+// Define metadata specific to this page
+export const metadata: Metadata = {
+  title: "Latest Updates, Events & Announcements | Paint Innovators",
+  description:
+    "Stay up to date with the latest news from Paint Innovators! Read about upcoming events, special announcements, and celebrations, including holiday messages and social gatherings. Would you like any tweaks to emphasize something specific? 😊",
+  openGraph: {
+    title: "Latest Updates, Events & Announcements | Paint Innovators",
+    description:
+      "Stay up to date with the latest news from Paint Innovators! Read about upcoming events, special announcements, and celebrations, including holiday messages and social gatherings. Would you like any tweaks to emphasize something specific? 😊",
+    url: `${Website}/news`,
+    type: "article",
+    images: [
+      {
+        url: `${Website}/news/Patio-Socials-March-01.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Paint Innovators News",
+      },
+    ],
+  },
+};
 
 export default function NewsPage() {
   return (
@@ -54,7 +78,7 @@ export default function NewsPage() {
           {/* end of news blog post */}
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
-            <Link href="/news/patio-socials-march" className="flex flex-wrap">
+            <Link href="/news/happy-new-year-2023" className="flex flex-wrap">
               <div className="w-1/4">
                 <Image
                   src="/news/Happy-New-Year-2023.jpg"
@@ -80,7 +104,7 @@ export default function NewsPage() {
           {/* end of news blog post */}
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
-            <Link href="/news/patio-socials-march" className="flex flex-wrap">
+            <Link href="/news/merry-christmas-2022" className="flex flex-wrap">
               <div className="w-1/4">
                 <Image
                   src="/news/Merry-Christmas-2022.jpg"
@@ -106,7 +130,10 @@ export default function NewsPage() {
           {/* end of news blog post */}
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
-            <Link href="/news/patio-socials-march" className="flex flex-wrap">
+            <Link
+              href="/news/happy-thanksgiving-2022"
+              className="flex flex-wrap"
+            >
               <div className="w-1/4">
                 <Image
                   src="/news/Happy-Thanksgiving-2022.jpg"
@@ -132,7 +159,10 @@ export default function NewsPage() {
           {/* end of news blog post */}
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
-            <Link href="/news/patio-socials-march" className="flex flex-wrap">
+            <Link
+              href="/news/thank-you-veterans-2022"
+              className="flex flex-wrap"
+            >
               <div className="w-1/4">
                 <Image
                   src="/news/Thank-You-Veterans.jpg"
@@ -158,7 +188,7 @@ export default function NewsPage() {
           {/* end of news blog post */}
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group">
-            <Link href="/news/patio-socials-march" className="flex flex-wrap">
+            <Link href="/news/another-tailgate" className="flex flex-wrap">
               <div className="w-1/4">
                 <Image
                   src="/news/Tailgate-Time-01.jpg"

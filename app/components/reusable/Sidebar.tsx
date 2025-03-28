@@ -8,12 +8,12 @@ export default function Sidebar() {
         <p className="text-xl text-gray-700 m-0">Media Contact</p>
         <hr />
         <p className="mb-0">
-          Please send an email to{" "}
+          Please{" "}
           <Link
             href="mailto:marketing@paintinnovators.com"
             className="text-accent hover:text-accent-dark"
           >
-            marketing@paintinnovators.com
+            send us an email
           </Link>{" "}
           for any media inquiries.
         </p>

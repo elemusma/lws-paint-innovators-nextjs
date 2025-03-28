@@ -1,7 +1,31 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
 import Sidebar from "@/app/components/reusable/Sidebar";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+// Define metadata specific to this page
+export const metadata: Metadata = {
+  title: "Patio Socials March | Paint Innovators",
+  description:
+    "We loved connecting with our community, building relationships, and learning more about how we can support our community.",
+  openGraph: {
+    title: "Patio Socials March | Paint Innovators",
+    description:
+      "We loved connecting with our community, building relationships, and learning more about how we can support our community.",
+    url: `${Website}/news/patio-socials-march`,
+    type: "article",
+    images: [
+      {
+        url: `${Website}/news/Patio-Socials-March-01.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Happy New Year",
+      },
+    ],
+  },
+};
 
 export default function PatioSocialsMarch() {
   const images = [
@@ -15,7 +39,7 @@ export default function PatioSocialsMarch() {
     <>
       <ContentBlock
         sectionClassName="bg-white text-black"
-        containerClassName="max-w-screen-lg mx-auto p-10"
+        containerClassName="max-w-screen-lg mx-auto lg:px-0 p-10"
         rowClassName="flex flex-col items-center"
         columnClassName="flex flex-wrap"
       >
