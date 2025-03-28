@@ -19,7 +19,7 @@ export default function Industries() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/home/Paint-Innovators-2025-16.jpg"}
+              src={"/home/Paint-Innovators-2025-12.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -36,12 +36,12 @@ export default function Industries() {
         }
       >
         <div className="relative">
-          <h1 className="text-6xl uppercase font-aspira-light text-shadow">
+          <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
             Industries We Serve
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
-            Arkansas <span className="text-accent">&bull;</span> Oklahoma{" "}
-            <span className="text-accent">&bull;</span> Colorado
+            Commercial <span className="text-accent">&bull;</span> Industrial{" "}
+            <span className="text-accent">&bull;</span> Residential
           </h2>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
@@ -59,52 +59,52 @@ export default function Industries() {
         <div className="absolute bg-light w-full h-[85%] top-[15%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/photos/Arkansas.jpg"
-            name="Arkansas"
+            img="/gallery/Commercial-Painting-15-Rectangular.jpg"
+            name="Commercial"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
               <p className="text-sm text-accent">
-                See all the locations that we serve in our Arkansas location.
+                Learn more about our commercial projects.
               </p>
             }
-            buttonLink="/locations/arkansas"
-            buttonText="View Location"
-            buttonAriaLabel="View our Arkansas location"
+            buttonLink="/industries/commercial"
+            buttonText="View Industry"
+            buttonAriaLabel="View our Commercial industry"
           />
           <TeamCol
-            img="/photos/Oklahoma.jpg"
-            name="Oklahoma"
+            img="/gallery/Industrial-62.jpg"
+            name="Industrial"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
-              <p>
-                See all the locations that we serve in our Oklahoma location.
+              <p className="text-sm text-accent">
+                Learn more about our industrial projects.
               </p>
             }
-            buttonLink="/locations/oklahoma"
-            buttonText="View Location"
-            buttonAriaLabel="View our Oklahoma location"
+            buttonLink="/industries/industrial"
+            buttonText="View Industry"
+            buttonAriaLabel="View our Industrial industry"
           />
           <TeamCol
-            img="/photos/Colorado.jpg"
-            name="Colorado"
+            img="/home/Paint-Innovators-2025-09.jpg"
+            name="Residential"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
-              <p>
-                See all the locations that we serve in our Oklahoma location.
+              <p className="text-sm text-accent">
+                Learn more about our residential projects.
               </p>
             }
-            buttonLink="/locations/colorado"
-            buttonText="View Location"
-            buttonAriaLabel="View our Colorado location"
+            buttonLink="/industries/residential"
+            buttonText="View Industry"
+            buttonAriaLabel="View our Residential industry"
           />
           <div className="divider !mt-20 !mb-[4rem]"></div>
 

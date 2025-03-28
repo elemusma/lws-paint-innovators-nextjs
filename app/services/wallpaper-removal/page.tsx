@@ -60,7 +60,7 @@ export default function WallPaperRemoval() {
         }
       >
         <div className="relative">
-          <h1 className="text-6xl uppercase font-aspira-light text-shadow">
+          <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
             Wall Paper Removal
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">

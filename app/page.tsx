@@ -83,8 +83,8 @@ export default function Home() {
             course of our work, however we are assiduous when it comes to our
             values. Integrity is our highest priority.
           </p>{" "}
-          <Link href="/contact" className="btn-main mt-[20px]">
-            Learn More
+          <Link href="/about" className="btn-main mt-[20px]">
+            Read Our Story
           </Link>
         </div>
         <div className="w-full md:w-1/2 lg:text-right">

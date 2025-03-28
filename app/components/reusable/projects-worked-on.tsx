@@ -121,71 +121,10 @@ export default function ProjectsWorkedOn() {
         rowClassName=""
         columnClassName="flex flex-wrap"
       >
-        <div className="w-full text-center pb-10">
+        <div className="lg:w-3/4 w-full m-auto text-center pb-10">
           <h2 className="font-aspira-light text-5xl uppercase">
-            Projects We&apos;ve Worked On
+            Commercial &amp; Industrial Projects We&apos;ve Worked On
           </h2>
-        </div>
-        {/* Residential Projects */}
-        <div className="lg:w-1/3 md:w-1/2 w-full p-5">
-          <div className="box-shadow">
-            <div className="w-full">
-              <Swiper
-                loop={true}
-                slidesPerView={1}
-                spaceBetween={0}
-                autoplay={false}
-                // navigation
-                // pagination={{ clickable: true }}
-                modules={[Navigation, Pagination]}
-                onSwiper={(swiper) => (resSwiperRef.current = { swiper })}
-                className="mySwiper w-full overflow-hidden"
-              >
-                {ResidentialProjectsImages.map(
-                  (slide: Slide, index: number) => (
-                    <SwiperSlide key={index} className="w-full">
-                      <div
-                        className="relative cursor-pointer"
-                        onClick={() => openResidentialLightbox(index)}
-                        style={{ minWidth: "100%" }}
-                      >
-                        <Image
-                          src={slide.imageSrc}
-                          alt={slide.imageAlt || "Slide Image"}
-                          style={{ objectFit: "cover", height: "200px" }}
-                          className="w-full h-full"
-                          width={1000}
-                          height={1000}
-                        />
-                      </div>
-                    </SwiperSlide>
-                  )
-                )}
-              </Swiper>
-            </div>
-            {/* Residential Lightbox */}
-            <Lightbox
-              open={residentialLightbox}
-              close={() => setResidentialLightbox(false)}
-              slides={residentialLightboxSlides}
-              index={residentialIndex}
-            />
-
-            <div className="bg-accent text-white">
-              <h3 className="font-aspira-bold uppercase text-center text-2xl">
-                Residential
-              </h3>
-            </div>
-            <div className="bg-[#e5e5e5] p-5">
-              <p>
-                We also provide color consultation and custom painting to
-                perfectly match your style and personality. Beyond painting, we
-                offer services like drywall repair, popcorn ceiling removal,
-                wallpaper removal, and deck coating to ensure a flawless finish
-                for your home.
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Commercial Projects */}
@@ -301,6 +240,68 @@ export default function ProjectsWorkedOn() {
                 corrosion problems in various industrial applications, including
                 commercial heating, cooling, refrigeration, and other components
                 regularly exposed to corrosive conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Residential Projects */}
+        <div className="lg:w-1/3 md:w-1/2 w-full p-5">
+          <div className="box-shadow">
+            <div className="w-full">
+              <Swiper
+                loop={true}
+                slidesPerView={1}
+                spaceBetween={0}
+                autoplay={false}
+                // navigation
+                // pagination={{ clickable: true }}
+                modules={[Navigation, Pagination]}
+                onSwiper={(swiper) => (resSwiperRef.current = { swiper })}
+                className="mySwiper w-full overflow-hidden"
+              >
+                {ResidentialProjectsImages.map(
+                  (slide: Slide, index: number) => (
+                    <SwiperSlide key={index} className="w-full">
+                      <div
+                        className="relative cursor-pointer"
+                        onClick={() => openResidentialLightbox(index)}
+                        style={{ minWidth: "100%" }}
+                      >
+                        <Image
+                          src={slide.imageSrc}
+                          alt={slide.imageAlt || "Slide Image"}
+                          style={{ objectFit: "cover", height: "200px" }}
+                          className="w-full h-full"
+                          width={1000}
+                          height={1000}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  )
+                )}
+              </Swiper>
+            </div>
+            {/* Residential Lightbox */}
+            <Lightbox
+              open={residentialLightbox}
+              close={() => setResidentialLightbox(false)}
+              slides={residentialLightboxSlides}
+              index={residentialIndex}
+            />
+
+            <div className="bg-accent text-white">
+              <h3 className="font-aspira-bold uppercase text-center text-2xl">
+                Residential
+              </h3>
+            </div>
+            <div className="bg-[#e5e5e5] p-5">
+              <p>
+                We also provide color consultation and custom painting to
+                perfectly match your style and personality. Beyond painting, we
+                offer services like drywall repair, popcorn ceiling removal,
+                wallpaper removal, and deck coating to ensure a flawless finish
+                for your home.
               </p>
             </div>
           </div>

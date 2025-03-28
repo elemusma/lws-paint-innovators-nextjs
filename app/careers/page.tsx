@@ -19,7 +19,7 @@ export default function Locations() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/home/Paint-Innovators-2025-02.jpg"}
+              src={"/gallery/Industrial-64.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -36,7 +36,7 @@ export default function Locations() {
         }
       >
         <div className="relative">
-          <h1 className="text-6xl uppercase font-aspira-light text-shadow">
+          <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
             We&apos;re Hiring
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
@@ -58,7 +58,7 @@ export default function Locations() {
         <div className="absolute bg-light w-full h-[85%] top-[15%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/home/Paint-Innovators-2025-15.jpg"
+            img="/gallery/Commercial-Painting-07.jpg"
             name="Painter / Drywall Finisher"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -75,7 +75,7 @@ export default function Locations() {
             buttonAriaLabel="Apply to Painter / Drywall Finisher Job"
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-08.jpg"
+            img="/gallery/Commercial-Painting-05.jpg"
             name="El Pintor / Masero"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -93,7 +93,7 @@ export default function Locations() {
             buttonAriaLabel="Apply to El Pintor / Masero Job"
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-14.jpg"
+            img="/gallery/Commercial-Painting-03.jpg"
             name="Office Associate"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -129,7 +129,7 @@ export default function Locations() {
             buttonAriaLabel="Apply to Project Estimator Job"
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-09.jpg"
+            img="/gallery/Commercial-Painting-18.jpg"
             name="Project Manager"
             nameTag="h2"
             nameTagClassName="text-2xl"

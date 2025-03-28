@@ -25,7 +25,7 @@ const SwiperCarouselCommercial = () => {
           speed={1500} // Increased speed for slower transition
         >
           <SwiperSlide>
-            <div className="relative flex min-h-[81vh] w-full justify-center pt-[100px] overflow-hidden">
+            <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
               <Image
                 src="/home/Paint-Innovators-2025-12.jpg"
                 alt="Paint Innovators Industrial"
@@ -43,7 +43,7 @@ const SwiperCarouselCommercial = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="relative flex min-h-[81vh] w-full justify-center pt-[100px] overflow-hidden">
+            <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
               <Image
                 src="/home/Paint-Innovators-2025-07.jpg"
                 alt="Paint Innovators Industrial"
@@ -61,7 +61,7 @@ const SwiperCarouselCommercial = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="relative flex min-h-[81vh] w-full justify-center pt-[100px] overflow-hidden">
+            <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
               <Image
                 src="/home/Paint-Innovators-2025-01.jpg"
                 alt="Paint Innovators Industrial"
@@ -79,7 +79,7 @@ const SwiperCarouselCommercial = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="relative flex min-h-[81vh] w-full justify-center pt-[100px] overflow-hidden">
+            <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
               <Image
                 src="/home/Paint-Innovators-Commercial-02.jpg"
                 alt="Paint Innovators Industrial"
@@ -97,7 +97,7 @@ const SwiperCarouselCommercial = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="relative flex min-h-[81vh] w-full justify-center pt-[100px] overflow-hidden">
+            <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
               <Image
                 src="/home/Paint-Innovators-Commercial-01.jpg"
                 alt="Paint Innovators Industrial"
@@ -115,7 +115,7 @@ const SwiperCarouselCommercial = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="relative flex min-h-[81vh] w-full justify-center pt-[100px] overflow-hidden">
+            <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
               <Image
                 src="/home/Paint-Innovators-2025-06.jpg"
                 alt="Paint Innovators Industrial"
@@ -133,21 +133,21 @@ const SwiperCarouselCommercial = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 py-[250px] lg:w-3/4 w-full px-4">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 lg:w-3/4 w-full lg:px-4 px-[45px]">
           <div className="relative flex w-full text-white z-10">
             <div
               style={{ background: "red", minWidth: "5px" }}
               className="w-[5px] h-[100px] mr-[10px]"
             ></div>
             <div>
-              <h1 className="mb-[15px] text-shadow mt-[-8px] font-proxima-bold uppercase">
+              <h1 className="md:text-5xl text-2xl mb-[15px] text-shadow mt-[-8px] font-proxima-bold uppercase">
                 Your Preferred Painter for Commercial &amp; Industrial Projects
               </h1>
               {/* <h2 className="font-aspira-bold text-2xl text-shadow">
                 Arkansas <span className="text-accent">&bull;</span> Oklahoma{" "}
                 <span className="text-accent">&bull;</span> Colorado
               </h2> */}
-              <p className="text-shadow text-xl">
+              <p className="text-shadow md:text-xl">
                 <strong>
                   Whether it&apos;s new construction or renovations, our expert
                   team ensures a flawless finish that enhances durability,

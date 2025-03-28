@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     ],
   },
 };
-export default function CommercialPainting() {
+export default function IndustrialPaintingBlasting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/services/Services-Commercial-Exterior-Building-Painting.png')] bg-fixed-custom bg-cover bg-center overflow-hidden"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/gallery/Industrial-36.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
@@ -62,9 +62,11 @@ export default function CommercialPainting() {
       >
         <div className="relative">
           <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
-            Commercial Painting
+            Industrial Painting &amp; Blasting
           </h1>
-          <h2 className="font-aspira-bold text-2xl">Get the Job Done Right!</h2>
+          <h2 className="font-aspira-bold text-2xl text-shadow">
+            Get the Job Done Right!
+          </h2>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
@@ -83,10 +85,10 @@ export default function CommercialPainting() {
       >
         <div className="divider"></div>
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company} delivers specialized commercial painting solutions tailored
-          to diverse business needs. We assess each project individually,
-          developing customized strategies that align with your brand image and
-          operational requirements.
+          {Company} is a leading industrial painting and blasting company and
+          provides the best surface stripping, painting, and coating services.
+          Our wet and dry abrasive technologies lend themselves to a wide
+          variety of uses and applications.
         </p>
       </ContentBlock>
 
@@ -100,30 +102,74 @@ export default function CommercialPainting() {
       >
         <div className="divider"></div>
         <h2 className="text-4xl font-aspira-light pt-4">
-          COMMERCIAL PAINTING SERVICES
+          INDUSTRIAL PAINTING &amp; BLASTING SERVICES
         </h2>
       </ContentBlock>
 
       <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/services/Services-Commercial-Exterior-Building-Painting-01.jpg"
-        imageAlt="Wallpaper"
-        overlayText="PAINTING SPECIALISTS"
+        sectionClassName="even"
+        imageSrc="/gallery/Industrial-48.jpg"
+        imageAlt="The History of Wall Paper"
+        overlayText="OSHA, EPA, AND DEQ Compliant"
         heading="Transform a Room"
-        content="Our commercial painting specialists utilize advanced materials and techniques that withstand heavy traffic and harsh conditions. We work efficiently around your business schedule, ensuring minimal operational disruption while providing high-performance coating solutions."
+        content="BlastCraft is a wet abrasive blasting company that specializes in surface refinishing. We remove coatings, contaminants, corrosion, and residues without damaging your original surface. Our equipment is powerful enough to blast through steel and precise enough to use on antiques. Our system reduces airborne dust for a more efficient cleanup and also assists in compliance with OSHA, EPA, and DEQ regulations."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/wallpaper/transform-room"
+      />
+
+      <ImageContentBlock
+        sectionClassName=""
+        imageSrc="/gallery/Industrial-51.jpg"
+        imageAlt="Wallpaper"
+        overlayText="SOFTER SATIN-LIKE FINISH"
+        heading="Transform a Room"
+        content="Wet blasting is a natural choice for cleaning grease, rust, factory coatings, and contaminants from the old motorcycle, engine, or machine parts. The wet abrasive process is quicker leaving a softer satin-like finish on any aluminum, chrome, or steel surface."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
 
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/gallery/Commercial-Painting-02.jpg"
+        imageSrc="/gallery/Industrial-52.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="SAFETY &amp; EFFICIENCY"
+        overlayText="BETTER CHOICE FOR RESTORATIONS"
         heading="Transform a Room"
-        content="Safety, efficiency, and quality define our approach. We use eco-friendly, low-VOC paints and follow strict safety standards, delivering professional finishes that enhance your commercial space's appearance and protection."
+        content="The traditional dry blasting method causes frictional heat to the blasted surface which causes warping on aluminum or steel making our wet blasting a better choice on softer metals and making it a good choice for antique restoration, wood restoration, cleaning up fire damage, and removing graffiti."
         buttonLabel="Get Free Estimate"
         buttonLink="/wallpaper/transform-room"
+      />
+
+      <ImageContentBlock
+        sectionClassName=""
+        imageSrc="/gallery/Industrial-53.jpg"
+        imageAlt="Wallpaper"
+        overlayText="DECREASE OXIDATION"
+        heading="Transform a Room"
+        content="In the outdoor construction industry or urban setting wet blasting is your best choice making dust containment less of an issue. In the engineering industry, wet blasting is used to remove carbon deposits, oxidation, paint, and contaminants. It has also been used for cleaning and peening aerospace parts and surfaces."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/get-estimate"
+      />
+
+      <ImageContentBlock
+        sectionClassName="even"
+        imageSrc="/gallery/Industrial-54.jpg"
+        imageAlt="The History of Wall Paper"
+        overlayText="ECO-FRIENDLY"
+        heading="Transform a Room"
+        content="Our system is an eco-friendly, efficient, and safe way to clean or prepare surfaces. We can clean a wide range of surfaces without the use of harsh chemicals or toxins that does not leave any residue behind."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/wallpaper/transform-room"
+      />
+
+      <ImageContentBlock
+        sectionClassName=""
+        imageSrc="/gallery/Industrial-57.jpg"
+        imageAlt="Wallpaper"
+        overlayText="POWERFUL YET CAREFUL BLASTER"
+        heading="Transform a Room"
+        content="Our process is just as powerful as conventional dry sandblasting because we combine eco-friendly abrasives with water and adjustable pressure. Our blaster although powerful won&amp;t ruin any of your product or surface. It is gentle enough to use on a substrate like wood or vinyl without issue."
+        buttonLabel="Get Free Estimate"
+        buttonLink="/get-estimate"
       />
 
       <div className="spacer"></div>

@@ -8,6 +8,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import "../styles/industries.scss";
 import "../styles/swiper-projects.scss";
 import "../styles/swiper.scss";
 
@@ -21,7 +22,9 @@ export interface SwiperCarouselProps {
   sliderId?: string;
 }
 
-const SwiperCarouselProjects: React.FC<SwiperCarouselProps> = ({ slides }) => {
+const SwiperCarouselProjectsIndustries: React.FC<SwiperCarouselProps> = ({
+  slides,
+}) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
@@ -40,18 +43,18 @@ const SwiperCarouselProjects: React.FC<SwiperCarouselProps> = ({ slides }) => {
     <>
       <Swiper
         loop={true}
-        spaceBetween={30}
+        spaceBetween={0}
         navigation
         breakpoints={{
           640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
+          768: { slidesPerView: 1 },
+          1024: { slidesPerView: 1 },
+          1280: { slidesPerView: 1 },
         }}
         // Uncomment autoplay if needed:
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 3000 }}
         modules={[Navigation, Pagination, Autoplay]}
-        className="mySwiper !static overflow-hidden !mx-[50px]"
+        className="mySwiper !static overflow-hidden"
         wrapperClass="hello-there-again"
       >
         {slides.map((slide, index) => (
@@ -63,9 +66,9 @@ const SwiperCarouselProjects: React.FC<SwiperCarouselProps> = ({ slides }) => {
               <Image
                 src={slide.imageSrc}
                 alt={slide.imageAlt || "Slide Image"}
-                style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                width={300}
-                height={500}
+                style={{ width: "100%", height: "600px", objectFit: "cover" }}
+                width={1000}
+                height={1000}
               />
             </div>
           </SwiperSlide>
@@ -86,4 +89,4 @@ const SwiperCarouselProjects: React.FC<SwiperCarouselProps> = ({ slides }) => {
   );
 };
 
-export default SwiperCarouselProjects;
+export default SwiperCarouselProjectsIndustries;

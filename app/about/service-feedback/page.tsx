@@ -33,7 +33,7 @@ export default function ServiceFeedback() {
         }
       >
         <div className="relative">
-          <h1 className="text-6xl uppercase font-aspira-light text-shadow">
+          <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
             Service Feedback
           </h1>
           <p className="text-shadow">

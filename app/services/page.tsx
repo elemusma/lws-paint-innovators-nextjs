@@ -36,12 +36,12 @@ export default function Services() {
         }
       >
         <div className="relative">
-          <h1 className="text-6xl uppercase font-aspira-light text-shadow">
+          <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
             Professional Painter Services
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
-            Industrial <span className="text-accent">&bull;</span> Commercial{" "}
-            <span className="text-accent">&bull;</span> Government
+            Commercial <span className="text-accent">&bull;</span> Industrial{" "}
+            <span className="text-accent">&bull;</span> Residential
           </h2>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
@@ -59,24 +59,6 @@ export default function Services() {
         <div className="absolute bg-light w-full h-[96%] top-[4%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/home/Paint-Innovators-2025-09.jpg"
-            name="Residential Painting"
-            nameTag="h2"
-            nameTagClassName="text-2xl"
-            role=""
-            delay={0.1}
-            description={
-              <p>
-                We can paint homes, storage sheds, tool sheds, fences, indoors
-                and outdoors, as well as trim, siding and gutters. We adjust to
-                your needs.
-              </p>
-            }
-            buttonLink="/services/residential-painting"
-            buttonText="Learn More"
-            buttonAriaLabel="Learn more about residential painting services"
-          />
-          <TeamCol
             img="/home/Paint-Innovators-Commercial-02.jpg"
             name="Commercial Painting"
             nameTag="h2"
@@ -91,6 +73,23 @@ export default function Services() {
               </p>
             }
             buttonLink="/services/commercial-painting"
+            buttonText="Learn More"
+            buttonAriaLabel="Learn more about commercial painting services"
+          />
+          <TeamCol
+            img="/gallery/Industrial-33.jpg"
+            name="Industrial Painting &amp; Blasting"
+            nameTag="h2"
+            nameTagClassName="text-2xl"
+            role=""
+            delay={0.1}
+            description={
+              <p>
+                Our wet and dry abrasive technologies lend themselves to a wide
+                variety of uses and applications.
+              </p>
+            }
+            buttonLink="/services/industrial-painting-blasting"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />
@@ -311,6 +310,24 @@ export default function Services() {
             buttonLink="/services/covid19-sanitation"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
+          />
+          <TeamCol
+            img="/home/Paint-Innovators-2025-09.jpg"
+            name="Residential Painting"
+            nameTag="h2"
+            nameTagClassName="text-2xl"
+            role=""
+            delay={0.1}
+            description={
+              <p>
+                We can paint homes, storage sheds, tool sheds, fences, indoors
+                and outdoors, as well as trim, siding and gutters. We adjust to
+                your needs.
+              </p>
+            }
+            buttonLink="/services/residential-painting"
+            buttonText="Learn More"
+            buttonAriaLabel="Learn more about residential painting services"
           />
           {/* <div className="py-10 relative"> */}
           <div className="divider !mt-20 !mb-10"></div>

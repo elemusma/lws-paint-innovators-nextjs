@@ -155,7 +155,7 @@ export default function OtherContractingPaintingProjects() {
         }
       >
         <div className="relative">
-          <h1 className="md:text-6xl text-5xl uppercase font-aspira-light text-shadow">
+          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
             Other Contractor Services
           </h1>
           <h2 className="font-aspira-bold text-2xl">

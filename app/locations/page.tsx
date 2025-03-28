@@ -19,7 +19,7 @@ export default function Locations() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/home/Paint-Innovators-2025-16.jpg"}
+              src={"/gallery/Industrial-53.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -36,7 +36,7 @@ export default function Locations() {
         }
       >
         <div className="relative">
-          <h1 className="text-6xl uppercase font-aspira-light text-shadow">
+          <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
             Paint Innovators Locations
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
@@ -59,7 +59,7 @@ export default function Locations() {
         <div className="absolute bg-light w-full h-[85%] top-[15%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/photos/Arkansas.jpg"
+            img="/gallery/Interior-Exterior-Painting-02.jpg"
             name="Arkansas"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -75,7 +75,7 @@ export default function Locations() {
             buttonAriaLabel="View our Arkansas location"
           />
           <TeamCol
-            img="/photos/Oklahoma.jpg"
+            img="/gallery/Commercial-Painting-17.jpg"
             name="Oklahoma"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -91,7 +91,7 @@ export default function Locations() {
             buttonAriaLabel="View our Oklahoma location"
           />
           <TeamCol
-            img="/photos/Colorado.jpg"
+            img="/gallery/Industrial-58.jpg"
             name="Colorado"
             nameTag="h2"
             nameTagClassName="text-2xl"

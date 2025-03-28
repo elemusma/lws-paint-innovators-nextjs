@@ -24,7 +24,7 @@ const SwiperCarousel = () => {
         speed={2000} // Increased speed for slower transition
       >
         <SwiperSlide>
-          <div className="relative flex min-h-[76vh] w-full justify-center pt-[100px] overflow-hidden">
+          <div className="relative flex w-full justify-center pt-[100px] overflow-hidden">
             <Image
               src="/home/Paint-Innovators-2025-12.jpg"
               alt="Paint Innovators Industrial"
@@ -61,7 +61,7 @@ const SwiperCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative flex min-h-[76vh] w-full justify-center pt-[100px] overflow-hidden">
+          <div className="relative flex w-full justify-center pt-[100px] overflow-hidden">
             <Image
               src="/assets/Paint-Innovators-Industrial.jpg"
               alt="Paint Innovators Industrial"
@@ -98,7 +98,7 @@ const SwiperCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative flex min-h-[76vh] w-full justify-center pt-[100px] overflow-hidden">
+          <div className="relative flex w-full justify-center pt-[100px] overflow-hidden">
             <Image
               src="/home/Paint-Innovators-2025-03.jpg"
               alt="Paint Innovators Industrial"

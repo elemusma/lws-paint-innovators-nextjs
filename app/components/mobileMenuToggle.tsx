@@ -30,9 +30,9 @@ const MobileMenuToggle = () => {
         onClick={handleToggle}
       >
         <div style={{ padding: "10px 0px" }}>
-          <div className="line-1 bg-accent"></div>
-          <div className="line-2 bg-accent"></div>
-          <div className="line-3 bg-accent"></div>
+          <div className="line-1 bg-[var(--neutral-dark)]"></div>
+          <div className="line-2 bg-[var(--neutral-dark)]"></div>
+          <div className="line-3 bg-[var(--neutral-dark)]"></div>
         </div>
       </button>
 
