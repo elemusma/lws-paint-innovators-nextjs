@@ -128,13 +128,13 @@ export default function Footer() {
               <p className="text-xl font-proxima-bold mb-0">Services</p>
               <ul className="list-none text-sm mt-0">
                 <li>
-                  <Link href="/services/residential-painting">
-                    Residential Painting
+                  <Link href="/services/commercial-painting">
+                    Commercial Painting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/commercial-painting">
-                    Commercial Painting
+                  <Link href="/services/industrial-painting-blasting">
+                    Industrial Painting &amp; Blasting
                   </Link>
                 </li>
                 <li>
@@ -162,16 +162,16 @@ export default function Footer() {
                     Popcorn Ceiling Removal
                   </Link>
                 </li>
-              </ul>
-            </div>
-            <div className="w-full md:w-1/4 w-full pb-10 relative">
-              <div style={{ height: 28 }}></div>
-              <ul className="list-none text-sm">
                 <li>
                   <Link href="/services/wallpaper-removal">
                     Wallpaper Removal
                   </Link>
                 </li>
+              </ul>
+            </div>
+            <div className="w-full md:w-1/4 w-full pb-10 relative">
+              <div style={{ height: 28 }}></div>
+              <ul className="list-none text-sm">
                 <li>
                   <Link href="/services/drywall-repair">Drywall Repair</Link>
                 </li>
@@ -196,29 +196,31 @@ export default function Footer() {
                     COVID-19 Sanitation
                   </Link>
                 </li>
+                <li>
+                  <Link href="/services/residential-painting">
+                    Residential Painting
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="w-full md:w-1/4 pb-10">
+              <p className="text-xl font-proxima-bold mb-0">Industries</p>
+              <ul className="list-none text-sm mt-0">
+                <li>
+                  <Link href="/industries">All Industries</Link>
+                </li>
+                <li>
+                  <Link href="/industries/commercial">Commercial</Link>
+                </li>
+                <li>
+                  <Link href="/industries/industrial">Industrial</Link>
+                </li>
+                <li>
+                  <Link href="/industries/residential">Residential</Link>
+                </li>
               </ul>
             </div>
 
-            <div className="w-full md:w-1/4 w-full pb-10">
-              <p className="text-xl font-proxima-bold mb-0">About</p>
-              <ul className="list-none text-sm mt-0">
-                <li>
-                  <Link href="/about">Our Story</Link>
-                </li>
-                <li>
-                  <Link href="/about/team">Our Team</Link>
-                </li>
-                <li>
-                  <Link href="/about/brandresources">Brand Resources</Link>
-                </li>
-                <li>
-                  <Link href="/about/website-feedback">Website Feedback</Link>
-                </li>
-                <li>
-                  <Link href="/about/service-feedback">Service Feedback</Link>
-                </li>
-              </ul>
-            </div>
             <div className="w-full md:w-1/4 pb-10">
               <p className="text-xl font-proxima-bold mb-0">Locations</p>
               <ul className="list-none text-sm mt-0">
@@ -236,8 +238,9 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="relative w-full md:w-1/4 w-full pt-10 pb-10">
-              <p className="text-xl font-proxima-bold mb-0">Our Work</p>
+
+            <div className="relative w-full md:w-1/4 w-full pb-10">
+              <p className="text-xl font-proxima-bold mb-0">Projects</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
                   <ul className="list-none text-sm mt-0">
@@ -268,7 +271,30 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="relative w-full md:w-1/4 w-full pt-10 pb-10">
+            <div className="w-full md:w-1/4 w-full pb-10">
+              <p className="text-xl font-proxima-bold mb-0">About</p>
+              <ul className="list-none text-sm mt-0">
+                <li>
+                  <Link href="/about">Our Story</Link>
+                </li>
+                <li>
+                  <Link href="/about/team">Our Team</Link>
+                </li>
+                <li>
+                  <Link href="/news">News / Blog</Link>
+                </li>
+                <li>
+                  <Link href="/about/brandresources">Brand Resources</Link>
+                </li>
+                <li>
+                  <Link href="/about/website-feedback">Website Feedback</Link>
+                </li>
+                <li>
+                  <Link href="/about/service-feedback">Service Feedback</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="relative w-full md:w-1/4 w-full pb-10">
               <p className="text-xl font-proxima-bold mb-0">Careers</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
@@ -305,11 +331,14 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="relative w-full md:w-1/4 w-full pt-10 pb-10">
+            <div className="relative w-full md:w-1/4 w-full pb-10">
               <p className="text-xl font-proxima-bold mb-0">Helpful Links</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
                   <ul className="list-none text-sm mt-0">
+                    <li>
+                      <Link href="/get-estimate">Get Free Estimate</Link>
+                    </li>
                     <li>
                       <Link href="/contact">Contact</Link>
                     </li>
@@ -318,9 +347,6 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link href="/about/reviews">Reviews</Link>
-                    </li>
-                    <li>
-                      <Link href="/get-estimate">Get Free Estimate</Link>
                     </li>
                   </ul>
                 </div>

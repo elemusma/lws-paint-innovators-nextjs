@@ -61,7 +61,7 @@ export default function IndustrialPaintingBlasting() {
         }
       >
         <div className="relative">
-          <h1 className="text-6xl uppercase font-proxima-bold text-shadow">
+          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
             Industrial Painting &amp; Blasting
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">

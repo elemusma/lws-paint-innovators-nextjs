@@ -4,9 +4,19 @@ import { useEffect, useRef } from "react";
 import "../styles/nav-items.scss";
 import "../styles/nav.scss";
 import Logo from "./logo";
+// import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import AboutLinks from "./reusable/nav/aboutLinks";
+import IndustriesLinks from "./reusable/nav/industriesLinks";
+import LocationsLinks from "./reusable/nav/locationsLinks";
+import ProjectsLinks from "./reusable/nav/projectsLinks";
+import ServicesLinks from "./reusable/nav/servicesLinks";
 
 export default function NavItems({ logoContainerClassName = "" }) {
   const menuRef = useRef<boolean>(false);
+  // const router = useRouter();
+  // const currentPath = router.pathname;
+  const pathname = usePathname(); // Get the current route
 
   useEffect(() => {
     // Prevent multiple initializations
@@ -76,7 +86,11 @@ export default function NavItems({ logoContainerClassName = "" }) {
             <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/services"
-                className="flex items-center gap-1"
+                className={`flex items-center gap-1 ${
+                  pathname.startsWith("/services")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
                 style={{}}
               >
                 SERVICES
@@ -102,80 +116,18 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   width: "300px",
                 }}
               >
-                <li>
-                  <Link href="/services/commercial-painting">
-                    Commercial Painting
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/industrial-painting-blasting">
-                    Industrial Painting &amp; Blasting
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/services/color-consultation-custom-painting">
-                    Color Consultation &amp; Custom Painting
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/exterior-painting">
-                    Exterior Painting
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/interior-painting">
-                    Interior Painting
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/new-construction-painting">
-                    New Construction Painting
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/popcorn-ceiling-removal">
-                    Popcorn Ceiling Removal
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/wallpaper-removal">
-                    Wallpaper Removal
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/drywall-repair">Drywall Repair</Link>
-                </li>
-                <li>
-                  <Link href="/services/deck-coating">Deck Coating</Link>
-                </li>
-                <li>
-                  <Link href="/services/industrial-coating">
-                    Industrial Coating
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/epoxy-floors">Epoxy Floors</Link>
-                </li>
-                <li>
-                  <Link href="/services/pressure-washing">
-                    Pressure Washing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/covid19-sanitation">
-                    COVID-19 Sanitation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/residential-painting">
-                    Residential Painting
-                  </Link>
-                </li>
+                <ServicesLinks />
               </ul>
             </li>
             <li className="menu-item-has-children main-title relative text-left">
-              <Link href="/industries" className="flex items-center gap-1">
+              <Link
+                href="/industries"
+                className={`flex items-center gap-1 ${
+                  pathname.startsWith("/industries")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
+              >
                 INDUSTRIES
                 <svg
                   className="w-2 h-2"
@@ -191,10 +143,6 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   />
                 </svg>
               </Link>
-              {/* <div
-                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
-                style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div> */}
               <ul
                 className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
                 style={{
@@ -203,19 +151,18 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   width: "150px",
                 }}
               >
-                <li>
-                  <Link href="/industries/commercial">Commercial</Link>
-                </li>
-                <li>
-                  <Link href="/industries/industrial">Industrial</Link>
-                </li>
-                <li>
-                  <Link href="/industries/residential">Residential</Link>
-                </li>
+                <IndustriesLinks />
               </ul>
             </li>
             <li className="menu-item-has-children main-title relative text-left">
-              <Link href="/locations" className="flex items-center gap-1">
+              <Link
+                href="/locations"
+                className={`flex items-center gap-1 ${
+                  pathname.startsWith("/locations")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
+              >
                 LOCATIONS
                 <svg
                   className="w-2 h-2"
@@ -231,10 +178,6 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   />
                 </svg>
               </Link>
-              {/* <div
-                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
-                style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div> */}
               <ul
                 className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
                 style={{
@@ -243,20 +186,19 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   width: "150px",
                 }}
               >
-                <li>
-                  <Link href="/locations/arkansas">Arkansas</Link>
-                </li>
-                <li>
-                  <Link href="/locations/oklahoma">Oklahoma</Link>
-                </li>
-                <li>
-                  <Link href="/locations/colorado">Colorado</Link>
-                </li>
+                <LocationsLinks />
               </ul>
             </li>
             <li className="menu-item-has-children main-title relative text-left">
-              <Link href="/about" className="flex items-center gap-1">
-                ABOUT
+              <Link
+                href="/about"
+                className={`flex items-center gap-1 uppercase ${
+                  pathname.startsWith("/about")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
+              >
+                About
                 <svg
                   className="w-2 h-2"
                   fill="none"
@@ -271,10 +213,6 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   />
                 </svg>
               </Link>
-              {/* <div
-                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
-                style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div> */}
               <ul
                 className="sub-menu absolute left-0 shadow-lg overflow-hidden transition-all duration-300"
                 style={{
@@ -283,9 +221,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   width: "150px",
                 }}
               >
-                <li>
-                  <Link href="/about/team">Our Team</Link>
-                </li>
+                <AboutLinks />
               </ul>
             </li>
           </ul>
@@ -304,20 +240,24 @@ export default function NavItems({ logoContainerClassName = "" }) {
             <li className="main-title relative text-left">
               <Link
                 href="/news"
-                className="flex items-center gap-1 uppercase"
+                className={`flex items-center gap-1 uppercase ${
+                  pathname.startsWith("/news")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
                 style={{}}
               >
                 News/Blog
               </Link>
             </li>
             <li className="menu-item-has-children main-title relative text-left">
-              {/* <div
-                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
-                style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div> */}
               <Link
                 href="/projects"
-                className="flex items-center gap-1 uppercase"
+                className={`flex items-center gap-1 uppercase ${
+                  pathname.startsWith("/projects")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
                 style={{}}
               >
                 Projects
@@ -343,39 +283,17 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   width: "300px",
                 }}
               >
-                <li>
-                  <Link href="/projects/commercial-painting">
-                    Commercial Painting Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects/industrial">Industrial Projects</Link>
-                </li>
-                <li>
-                  <Link href="/projects/interior-exterior-painting">
-                    Interior &amp; Exterior Painting Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects/other-contractor-services">
-                    Other Contractor Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects/residential-painting">
-                    Residential Painting Projects
-                  </Link>
-                </li>
+                <ProjectsLinks />
               </ul>
             </li>
             <li className="menu-item-has-children main-title relative text-left">
-              {/* <div
-                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
-                style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div> */}
               <Link
                 href="/careers"
-                className="flex items-center gap-1 uppercase"
+                className={`flex items-center gap-1 uppercase ${
+                  pathname.startsWith("/careers")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
                 style={{}}
               >
                 Careers
@@ -430,10 +348,6 @@ export default function NavItems({ logoContainerClassName = "" }) {
               >
                 Contact
               </Link>
-              {/* <div
-                className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-[25px]"
-                style={{ backgroundColor: "var(--accent-primary)" }}
-              ></div> */}
             </li>
           </ul>
         </div>

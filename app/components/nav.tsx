@@ -61,10 +61,6 @@ export default function Navigation() {
           id="" // Adding an ID
           href="tel:+1479.347.7521" // Dynamic href
         >
-          {/* <div className="relative hover-text">
-            <div className="absolute"></div>
-            Get A
-          </div> */}
           <div>
             <svg
               className="w-4 h-4 m-auto mb-2"

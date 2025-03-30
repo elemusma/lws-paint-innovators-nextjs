@@ -3,6 +3,12 @@ import { useState } from "react";
 import ButtonSquare from "./buttons/btn-square";
 import { Company } from "./globals";
 import Logo from "./logo";
+import AboutLinks from "./reusable/nav/aboutLinks";
+import CareersLinks from "./reusable/nav/careersLinks";
+import IndustriesLinks from "./reusable/nav/industriesLinks";
+import LocationsLinks from "./reusable/nav/locationsLinks";
+import ProjectsLinks from "./reusable/nav/projectsLinks";
+import ServicesLinks from "./reusable/nav/servicesLinks";
 import SocialIcons from "./reusable/socialIcons";
 
 const MobileMenuToggle = () => {
@@ -10,10 +16,6 @@ const MobileMenuToggle = () => {
   const handleToggle = () => {
     setIsModalOpen((prevState) => !prevState);
   };
-  //   const handleToggle = () => {
-  //     modalPopup();
-  //     // setupModals("mobileMenu");
-  //   };
 
   const handleClose = () => {
     setIsModalOpen(false);
@@ -84,241 +86,85 @@ const MobileMenuToggle = () => {
             {/* Navigation Menu */}
             <p className="text-xl font-proxima-bold mb-0">Services</p>
             <ul className="list-none text-sm mt-0">
-              <li>
-                <Link
-                  href="/services/residential-painting"
-                  onClick={handleClose}
-                >
-                  Residential Painting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/commercial-painting"
-                  onClick={handleClose}
-                >
-                  Commercial Painting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/color-consultation-custom-painting"
-                  onClick={handleClose}
-                >
-                  Color Consultation &amp; Custom Painting
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/exterior-painting" onClick={handleClose}>
-                  Exterior Painting
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/interior-painting" onClick={handleClose}>
-                  Interior Painting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/new-construction-painting"
-                  onClick={handleClose}
-                >
-                  New Construction Painting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/popcorn-ceiling-removal"
-                  onClick={handleClose}
-                >
-                  Popcorn Ceiling Removal
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/wallpaper-removal" onClick={handleClose}>
-                  Wallpaper Removal
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/drywall-repair" onClick={handleClose}>
-                  Drywall Repair
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/deck-coating" onClick={handleClose}>
-                  Deck Coating
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/industrial-coating" onClick={handleClose}>
-                  Industrial Coating
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/epoxy-floors" onClick={handleClose}>
-                  Epoxy Floors
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/pressure-washing" onClick={handleClose}>
-                  Pressure Washing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/covid-19-sanitation"
-                  onClick={handleClose}
-                >
-                  COVID-19 Sanitation
-                </Link>
-              </li>
+              <ServicesLinks onClick={handleClose} />
             </ul>
-            <p className="text-xl font-proxima-bold mb-0">About</p>
+            <p className="text-xl font-proxima-bold mb-0">Industries</p>
             <ul className="list-none text-sm mt-0">
-              <li>
-                <Link href="/about" onClick={handleClose}>
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link href="/about/team" onClick={handleClose}>
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link href="/about/brandresources" onClick={handleClose}>
-                  Brand Resources
-                </Link>
-              </li>
-              <li>
-                <Link href="/about/website-feedback" onClick={handleClose}>
-                  Website Feedback
-                </Link>
-              </li>
-              <li>
-                <Link href="/about/service-feedback" onClick={handleClose}>
-                  Service Feedback
-                </Link>
-              </li>
+              <IndustriesLinks onClick={handleClose} />
             </ul>
             <p className="text-xl font-proxima-bold mb-0">Locations</p>
             <ul className="list-none text-sm mt-0">
-              <li>
-                <Link href="/locations" onClick={handleClose}>
-                  All Locations
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/arkansas" onClick={handleClose}>
-                  Arkansas Location
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/oklahoma" onClick={handleClose}>
-                  Oklahoma Location
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/colorado" onClick={handleClose}>
-                  Colorado Location
-                </Link>
-              </li>
+              <LocationsLinks onClick={handleClose} />
             </ul>
-            <p className="text-xl font-proxima-bold mb-0">Our Work</p>
+            <p className="text-xl font-proxima-bold mb-0">About</p>
+            <ul className="list-none text-sm mt-0">
+              <AboutLinks onClick={handleClose} />
+            </ul>
+
+            <Link
+              href="/news"
+              onClick={handleClose}
+              className="text-xl font-proxima-bold mb-0"
+            >
+              News / Blog
+            </Link>
             <ul className="list-none text-sm mt-0">
               <li>
-                <Link href="/projects" onClick={handleClose}>
-                  All Projects
-                </Link>
-              </li>
-              <li>
                 <Link
-                  href="/projects/residential-painting"
+                  href="/news"
+                  className="block px-4 py-2"
                   onClick={handleClose}
                 >
-                  Residential Painting Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects/commercial-painting"
-                  onClick={handleClose}
-                >
-                  Commercial Painting Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects/interior-exterior-painting"
-                  onClick={handleClose}
-                >
-                  Interior Painting and Exterior Painting
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects/other-contractor-services"
-                  onClick={handleClose}
-                >
-                  Other Contractor Services
+                  News / Blog
                 </Link>
               </li>
             </ul>
+
+            <p className="text-xl font-proxima-bold mb-0">Projects</p>
+            <ul className="list-none text-sm mt-0">
+              <ProjectsLinks onClick={handleClose} />
+            </ul>
+
             <p className="text-xl font-proxima-bold mb-0">Careers</p>
             <ul className="list-none text-sm mt-0">
-              <li>
-                <Link href="/careers" onClick={handleClose}>
-                  All Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers/painter-drywall-finisher"
-                  onClick={handleClose}
-                >
-                  Painter / Drywall Finisher
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers/pintor-masero" onClick={handleClose}>
-                  El Pintor / Masero
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers/office-associate" onClick={handleClose}>
-                  Office Associate
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers/project-estimator" onClick={handleClose}>
-                  Project Estimator
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers/project-manager" onClick={handleClose}>
-                  Project Manager
-                </Link>
-              </li>
+              <CareersLinks onClick={handleClose} />
             </ul>
+
             <p className="text-xl font-proxima-bold mb-0">Helpful Links</p>
             <ul className="list-none text-sm mt-0">
               <li>
-                <Link href="/contact" onClick={handleClose}>
+                <Link
+                  href="/contact"
+                  className="block px-4 py-2"
+                  onClick={handleClose}
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/faqs" onClick={handleClose}>
+                <Link
+                  href="/faqs"
+                  className="block px-4 py-2"
+                  onClick={handleClose}
+                >
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link href="/about/reviews" onClick={handleClose}>
+                <Link
+                  href="/about/reviews"
+                  className="block px-4 py-2"
+                  onClick={handleClose}
+                >
                   Reviews
                 </Link>
               </li>
               <li>
-                <Link href="/get-estimate" onClick={handleClose}>
+                <Link
+                  href="/get-estimate"
+                  className="block px-4 py-2"
+                  onClick={handleClose}
+                >
                   Get Free Estimate
                 </Link>
               </li>
@@ -330,13 +176,15 @@ const MobileMenuToggle = () => {
             {/* CTA Button */}
             <ButtonSquare
               className="" // Adding additional class
-              style={{ top: "50%", right: 0, transform: "translate(0, -50%)" }} // Adding inline style
+              style={{}} // Adding inline style
               id="" // Adding an ID
               href="/contact" // Dynamic href
               onClick={handleClose}
             >
               Free Estimate!
             </ButtonSquare>
+
+            <div style={{ height: "25px" }}></div>
           </div>
         </div>
       )}

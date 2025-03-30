@@ -9,6 +9,7 @@ import Navigation from "./components/nav";
 //   ssr: false, // Disable server-side rendering
 // });
 
+import { Website } from "./components/globals";
 import "./fonts/font-aspira/font-aspira.css";
 import "./fonts/font-pontiac/font-pontiac.css";
 import "./fonts/font-poppins/font-poppins.css";
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
       "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
     images: [
       {
-        url: `/home/Paint-Innovators-2025-01.jpg`,
+        url: `${Website}/home/Paint-Innovators-2025-01.jpg`,
         width: 1200,
         height: 630,
         alt: "Paint Innovators - Arkansas, Oklahoma and Colorado",
