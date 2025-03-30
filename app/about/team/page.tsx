@@ -42,7 +42,7 @@ export default function OurTeam() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/team/Team.jpg"}
+              src={"/home/Paint-Innovators-2025-07.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -122,9 +122,9 @@ export default function OurTeam() {
         </h2> */}
         <p className="text-gray-700 text-2xl pt-8 mb-20 font-aspira-bold">
           {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          professional painters that specialize in commercial, industrial and
+          residential painting and blasting - including interior painting and
+          exterior painting for homes and offices.
         </p>
         <div className="divider"></div>
       </ContentBlock>

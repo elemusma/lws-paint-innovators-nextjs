@@ -10,24 +10,28 @@ import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Company } from "../../components/globals";
+import { Company, Website } from "../../components/globals";
 // import Navigation from "./components/navigation";
 // import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+  description:
+    "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+    description:
+      "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
+    url: `${Website}/services/commercial-painting`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/home/Paint-Innovators-Commercial-02.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Commercial Painting Services",
       },
     ],
   },

@@ -11,20 +11,18 @@ import ValueColumn from "../components/reusable/ValueColumn";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 
 export const metadata: Metadata = {
-  title:
-    "About - Professional Painters in Oklahoma, Arkansas and Colorado - Paint Innovators",
+  title: "About Us - Trusted Painting Experts for Homes & Businesses",
   description:
-    "Founded by Rodney Barnes in 2014. Victor Caldera and Allen Wootten are our Project Managers.",
+    "Discover our story and commitment to excellence in commercial, industrial and residential painting. We take pride in delivering quality craftsmanship and outstanding customer service.",
   openGraph: {
-    title:
-      "About - Professional Painters in Oklahoma, Arkansas and Colorado - Paint Innovators",
+    title: "About Us - Trusted Painting Experts for Homes & Businesses",
     description:
-      "Founded by Rodney Barnes in 2014. Victor Caldera and Allen Wootten are our Project Managers.",
+      "Discover our story and commitment to excellence in commercial, industrial and residential painting. We take pride in delivering quality craftsmanship and outstanding customer service.",
     url: `${Website}/about`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/team/Team.jpg`, // Replace with the actual image path
+        url: `${Website}/Our-Story-Rodney-Barnes.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",
@@ -94,7 +92,7 @@ export default function OurTeam() {
         overlayTextSubtitle=""
         contentBorderOff={true}
         heading="Transform a Room"
-        content="Founded in 2014 by Rodney Barnes, Paint Innovators was born out of the idea that quality should be at the forefront of every project regardless of being residential or commercial. For six years, we have been committed to delivering excellent customer service that is unmatched. Each day we are faced with difficult decisions in the course of our work, however we are assiduous when it comes to our values. Integrity is our highest priority."
+        content="Founded in 2014 by Rodney Barnes, Paint Innovators was born out of the idea that quality should be at the forefront of every project regardless of being commercial, industrial or residential. For six years, we have been committed to delivering excellent customer service that is unmatched. Each day we are faced with difficult decisions in the course of our work, however we are assiduous when it comes to our values. Integrity is our highest priority."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
@@ -124,9 +122,9 @@ export default function OurTeam() {
         </h2> */}
         <p className="text-gray-700 text-2xl mb-20 font-aspira-bold">
           {Company}, is dedicated to quality painting. We have experienced and
-          professional painters that specialize in residential and commercial
-          painting - including interior painting and exterior painting for homes
-          and offices.
+          professional painters that specialize in commercial, industrial and
+          residential painting and blasting - including interior painting and
+          exterior painting for homes and offices.
         </p>
         <div className="divider"></div>
       </ContentBlock>

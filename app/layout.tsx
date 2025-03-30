@@ -32,20 +32,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title:
-    "Experienced Professional Painter in Arkansas, Oklahoma & Colorado | Commercial and Residential Painting",
+    "Experienced Professional Painter in Arkansas, Oklahoma & Colorado - Commercial and Residential Painting",
   description:
     "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
   openGraph: {
     title:
-      "Experienced Professional Painter in Arkansas, Oklahoma & Oklahoma | Commercial and Residential Painting",
+      "Experienced Professional Painter in Arkansas, Oklahoma & Colorado - Commercial and Residential Painting",
     description:
       "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
+    url: `${Website}/`, // Replace with actual URL
     images: [
       {
         url: `${Website}/home/Paint-Innovators-2025-01.jpg`,
         width: 1200,
         height: 630,
-        alt: "Paint Innovators - Arkansas, Oklahoma and Colorado",
+        alt: "Paint Innovators - Commercial and Industrial Painting Services in Arkansas, Oklahoma and Colorado",
       },
     ],
   },

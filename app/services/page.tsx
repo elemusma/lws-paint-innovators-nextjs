@@ -1,11 +1,36 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../components/content-block";
+import { Website } from "../components/globals";
 import CTA from "../components/reusable/cta";
 import ProjectsWorkedOn from "../components/reusable/projects-worked-on";
 import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
+
+export const metadata: Metadata = {
+  title:
+    "Painting Services - Commercial, Industrial & Residential - Paint Innovators",
+  description:
+    "Expert painting services for commercial, industrial, and residential properties. We offer interior & exterior painting, color consultation, drywall repair, wallpaper removal, and more.",
+  openGraph: {
+    title:
+      "Painting Services - Commercial, Industrial & Residential - Paint Innovators",
+    description:
+      "Expert painting services for commercial, industrial, and residential properties. We offer interior & exterior painting, color consultation, drywall repair, wallpaper removal, and more.",
+    url: `${Website}/services`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-05.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Commercial, Industrial & Residential Painting Services",
+      },
+    ],
+  },
+};
 
 export default function Services() {
   return (

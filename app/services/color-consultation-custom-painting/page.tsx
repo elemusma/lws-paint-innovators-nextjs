@@ -1,33 +1,33 @@
 import ContentBlock from "@/app/components/content-block";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import IndustriesServed from "@/app/components/reusable/core-values";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
-import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Company, Website } from "../../components/globals";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Color Consultation & Custom Painting – Transform Your Space – Paint Innovators",
+  description:
+    "Get expert color consultation and custom painting services tailored to your style. We ensure the perfect color match for homes and businesses. Serving Arkansas, Oklahoma, and Colorado.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `${Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Color Consultation & Custom Painting – Transform Your Space – Paint Innovators",
+    description:
+      "Get expert color consultation and custom painting services tailored to your style. We ensure the perfect color match for homes and businesses. Serving Arkansas, Oklahoma, and Colorado.",
+    url: `${Website}/color-consultation-custom-painting`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/home/Paint-Innovators-2025-12.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Color Consultation & Custom Painting – Transform Your Space – Paint Innovators",
       },
     ],
   },
