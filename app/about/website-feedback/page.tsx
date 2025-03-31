@@ -1,9 +1,33 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactFormWebsiteFeedback from "../../components/forms/ContactFormWebsiteFeedback";
 
+export const metadata: Metadata = {
+  title:
+    "Website Feedback - Share Your Thoughts & Report Issues - Paint Innovators",
+  description:
+    "Have feedback about our website? Let us know your thoughts or report any issues you encountered. We value your input to improve your experience - Paint Innovators.",
+  openGraph: {
+    title:
+      "Website Feedback - Share Your Thoughts & Report Issues - Paint Innovators",
+    description:
+      "Have feedback about our website? Let us know your thoughts or report any issues you encountered. We value your input to improve your experience - Paint Innovators.",
+    url: `${Website}/about/website-feedback`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-Commercial-01.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Website Feedback - Share Your Thoughts & Report Issues - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function WebsiteFeedback() {
   return (
     <>

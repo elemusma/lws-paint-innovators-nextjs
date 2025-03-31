@@ -1,4 +1,5 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import IndustriesServed from "@/app/components/reusable/core-values";
 import CTA from "@/app/components/reusable/cta";
@@ -6,32 +7,32 @@ import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
 import type { Metadata } from "next";
 import Link from "next/link";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Deck Coating Services - Protect & Enhance Your Outdoor Space - Paint Innovators",
+  description:
+    "Enhance the longevity and safety of your deck with professional deck coating services from Paint Innovators. Prevent splinters, cracks, and UV damage while adding elegance and design. Get your free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Deck Coating Services - Protect & Enhance Your Outdoor Space - Paint Innovators",
+    description:
+      "Enhance the longevity and safety of your deck with professional deck coating services from Paint Innovators. Prevent splinters, cracks, and UV damage while adding elegance and design. Get your free estimate today.",
+    url: `${Website}/services/deck-coating`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Deck-Coating.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Deck Coating Services - Protect & Enhance Your Outdoor Space - Paint Innovators",
       },
     ],
   },
 };
-export default function CommercialPainting() {
+export default function DeckCoatingServices() {
   return (
     <>
       <ContentBlock

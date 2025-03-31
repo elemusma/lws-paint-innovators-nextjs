@@ -1,4 +1,5 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import IndustriesServed from "@/app/components/reusable/core-values";
 import CTA from "@/app/components/reusable/cta";
@@ -6,24 +7,24 @@ import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
 import type { Metadata } from "next";
 import Link from "next/link";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "COVID-19 Sanitation Services - Professional Painting & Cleaning - Paint Innovators",
+  description:
+    "Ensure a safe and clean environment with our expert COVID-19 sanitation services. We use EPA-approved products and professional-grade equipment for homes and businesses. Get your free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "COVID-19 Sanitation Services - Professional Painting & Cleaning - Paint Innovators",
+    description:
+      "Ensure a safe and clean environment with our expert COVID-19 sanitation services. We use EPA-approved products and professional-grade equipment for homes and businesses. Get your free estimate today.",
+    url: `${Website}/services/covid19-sanitation`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Covid-19-Sanitation-Paint-Innvovators.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Wallpaper Removal Services",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
 };
-export default function CommercialPainting() {
+export default function Covid19SanitationServices() {
   return (
     <>
       <ContentBlock

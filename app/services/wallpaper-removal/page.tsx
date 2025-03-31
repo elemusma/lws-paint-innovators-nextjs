@@ -6,6 +6,7 @@ import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 // import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
+import { Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
@@ -14,24 +15,28 @@ import Link from "next/link";
 // import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Wallpaper Removal Services - Professional & Efficient Wallpaper Removal - Paint Innovators",
+  description:
+    "Paint Innovators specializes in expert wallpaper removal services, offering fast and effective solutions for all types of wallpaper, including vinyl. Our experienced team ensures smooth, clean walls ready for your next design. Get a free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Wallpaper Removal Services - Professional & Efficient Wallpaper Removal - Paint Innovators",
+    description:
+      "Paint Innovators specializes in expert wallpaper removal services, offering fast and effective solutions for all types of wallpaper, including vinyl. Our experienced team ensures smooth, clean walls ready for your next design. Get a free estimate today.",
+    url: `${Website}/wallpaper-removal`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Wallpaper-Removal.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Wallpaper Removal Services - Professional & Efficient Wallpaper Removal - Paint Innovators",
       },
     ],
   },
 };
-export default function WallPaperRemoval() {
+export default function WallPaperRemovalServices() {
   return (
     <>
       <ContentBlock

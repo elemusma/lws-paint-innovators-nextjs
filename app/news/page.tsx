@@ -7,13 +7,13 @@ import SocialIcons from "../components/reusable/socialIcons";
 
 // Define metadata specific to this page
 export const metadata: Metadata = {
-  title: "Latest Updates, Events & Announcements | Paint Innovators",
+  title: "Latest Updates, Events & Announcements - Paint Innovators",
   description:
-    "Stay up to date with the latest news from Paint Innovators! Read about upcoming events, special announcements, and celebrations, including holiday messages and social gatherings. Would you like any tweaks to emphasize something specific? 😊",
+    "Stay up to date with the latest news from Paint Innovators! Read about upcoming events, special announcements, and celebrations, including holiday messages and social gatherings. Would you like any tweaks to emphasize something specific?",
   openGraph: {
-    title: "Latest Updates, Events & Announcements | Paint Innovators",
+    title: "Latest Updates, Events & Announcements - Paint Innovators",
     description:
-      "Stay up to date with the latest news from Paint Innovators! Read about upcoming events, special announcements, and celebrations, including holiday messages and social gatherings. Would you like any tweaks to emphasize something specific? 😊",
+      "Stay up to date with the latest news from Paint Innovators! Read about upcoming events, special announcements, and celebrations, including holiday messages and social gatherings. Would you like any tweaks to emphasize something specific?",
     url: `${Website}/news`,
     type: "article",
     images: [

@@ -1,37 +1,38 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import IndustriesServed from "@/app/components/reusable/core-values";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
-import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Popcorn Ceiling Removal Services - Safe & Efficient Removal Process - Modernize Your Home - Paint Innovators",
+  description:
+    "Paint Innovators specializes in professional popcorn ceiling removal services, offering safe and efficient techniques to modernize your home. Our skilled technicians ensure minimal disruption while transforming outdated ceilings into sleek, contemporary surfaces.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Popcorn Ceiling Removal Services - Safe & Efficient Removal Process - Modernize Your Home - Paint Innovators",
+    description:
+      "Paint Innovators specializes in professional popcorn ceiling removal services, offering safe and efficient techniques to modernize your home. Our skilled technicians ensure minimal disruption while transforming outdated ceilings into sleek, contemporary surfaces.",
+    url: `${Website}/services/popcorn-ceiling-removal`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Popcorn-Ceiling-Removal-Paint-Innovators.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Popcorn Ceiling Removal Services - Safe & Efficient Removal Process - Modernize Your Home - Paint Innovators",
       },
     ],
   },
 };
-export default function CommercialPainting() {
+export default function PopcornCeilingRemovalServices() {
   return (
     <>
       <ContentBlock

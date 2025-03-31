@@ -1,4 +1,5 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import IndustriesServed from "@/app/components/reusable/core-values";
 import CTA from "@/app/components/reusable/cta";
@@ -14,24 +15,26 @@ import Link from "next/link";
 // import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
+  title:
+    "Pressure Washing Services - Professional Outdoor Cleaning for Homes & Businesses - Paint Innovators",
   description: "Professional painting.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
+    title:
+      "Pressure Washing Services - Professional Outdoor Cleaning for Homes & Businesses - Paint Innovators",
     description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    url: `${Website}/services/pressure-washing`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Pressure-Washing-Paint-Innovators-in-Arkansas-and-Oklahoma.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Pressure Washing Services - Professional Outdoor Cleaning for Homes & Businesses - Paint Innovators",
       },
     ],
   },
 };
-export default function CommercialPainting() {
+export default function PressureWashingServices() {
   return (
     <>
       <ContentBlock

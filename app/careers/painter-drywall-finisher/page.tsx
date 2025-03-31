@@ -1,16 +1,32 @@
-// import ContactForm from "../components/contactForm";
-"use client";
 import CareerOfficeAssociate from "@/app/components/forms/CareerEnglish";
+import { Website } from "@/app/components/globals";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import ContentBlock from "../../components/content-block";
-import {
-  CommercialProjectsImages,
-  IndustrialProjectsImages,
-  ResidentialProjectsImages,
-} from "../../components/globals";
 import SwiperCarouselNewService from "../../components/swiperCarouselNewService";
-import SwiperCarouselProjects from "../../components/swiperCarouselProjects";
-
-export default function Contact() {
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title:
+    "Drywall Finisher - Fastening Pre-Made Panels & Finishing Joints - Paint Innovators",
+  description:
+    "Drywall finishers fasten pre-made drywall panels and finish or tape joints to prepare surfaces for final finishes.",
+  openGraph: {
+    title:
+      "Drywall Finisher - Fastening Pre-Made Panels & Finishing Joints - Paint Innovators",
+    description:
+      "Drywall finishers fasten pre-made drywall panels and finish or tape joints to prepare surfaces for final finishes.",
+    url: `${Website}/careers/painter-drywall-finisher`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-01.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Drywall Finisher - Fastening Pre-Made Panels & Finishing Joints - Paint Innovators",
+      },
+    ],
+  },
+};
+export default function PainterDrywallFinisher() {
   return (
     <>
       <ContentBlock
@@ -39,7 +55,8 @@ export default function Contact() {
       <div className="spacer"></div>
       <SwiperCarouselNewService />
       <div className="spacer"></div>
-      <ContentBlock
+      <CompletedProjects />
+      {/* <ContentBlock
         sectionClassName="bg-black text-white completed-projects py-[30px]"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName="flex flex-col items-center"
@@ -73,7 +90,7 @@ export default function Contact() {
             INDUSTRIAL
           </h2>
         </div>
-      </ContentBlock>
+      </ContentBlock> */}
       <div className="spacer"></div>
     </>
   );

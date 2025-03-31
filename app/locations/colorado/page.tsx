@@ -1,13 +1,35 @@
 import ContentBlock from "@/app/components/content-block";
-import { Company } from "@/app/components/globals";
+import { Company, Website } from "@/app/components/globals";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 import ValueColumn from "@/app/components/reusable/ValueColumn";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+  title:
+    "Professional Painter and Media Blasting in Colorado - Get Free Estimate - Paint Innovators",
+  description:
+    "Discover expert painting and media blasting services in Colorado. Offering wet and dry abrasive technologies for surface stripping, restoration, and more. Get your free estimate today.",
+  openGraph: {
+    title:
+      "Professional Painter and Media Blasting in Colorado - Get Free Estimate - Paint Innovators",
+    description:
+      "Discover expert painting and media blasting services in Colorado. Offering wet and dry abrasive technologies for surface stripping, restoration, and more. Get your free estimate today.",
+    url: `${Website}/locations/colorado`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/photos/Colorado.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Professional Painter and Media Blasting in Colorado - Get Free Estimate - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function ColoradoLocation() {
   return (
     <>

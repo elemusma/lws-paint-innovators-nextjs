@@ -15,24 +15,28 @@ import Link from "next/link";
 // import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Industrial Coating Services - Solve Corrosion & Protect Your Equipment - Paint Innovators",
+  description:
+    "Protect your equipment from corrosion, fire, and moisture with Paint Innovators' industrial coating services. We offer durable, environment-friendly solutions to extend the lifespan of your assets. Get a free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `${Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Industrial Coating Services - Solve Corrosion & Protect Your Equipment - Paint Innovators",
+    description:
+      "Protect your equipment from corrosion, fire, and moisture with Paint Innovators' industrial coating services. We offer durable, environment-friendly solutions to extend the lifespan of your assets. Get a free estimate today.",
+    url: `${Website}/services-industrial-coating`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/services/Services-Wallpaper-Removal.jpg`, // Replace with the actual image path
+        url: `${Website}/services/Services-Industrial-Coating-Paint-Innovators.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Industrial Coating Services - Solve Corrosion & Protect Your Equipment - Paint Innovators",
       },
     ],
   },
 };
-export default function CommercialPainting() {
+export default function IndustrialCoatingServices() {
   return (
     <>
       <ContentBlock

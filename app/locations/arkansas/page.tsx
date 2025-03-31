@@ -1,13 +1,35 @@
 import ContentBlock from "@/app/components/content-block";
-import { Company } from "@/app/components/globals";
+import { Company, Website } from "@/app/components/globals";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 import ValueColumn from "@/app/components/reusable/ValueColumn";
 import ArkansasLocationMap from "@/app/map/ArkansasLocation";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+  title:
+    "Professional Painters in Arkansas - Locations, Services & Free Estimate - Paint Innovators",
+  description:
+    "Explore our Arkansas location in Springdale offering residential and commercial painting services. Get a free estimate today for custom, interior, exterior painting & more.",
+  openGraph: {
+    title:
+      "Professional Painters in Arkansas - Locations, Services & Free Estimate - Paint Innovators",
+    description:
+      "Explore our Arkansas location in Springdale offering residential and commercial painting services. Get a free estimate today for custom, interior, exterior painting & more.",
+    url: `${Website}/locations/arkansas`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/photos/Arkansas.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Professional Painters in Arkansas - Locations, Services & Free Estimate - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function ArkansasLocation() {
   return (
     <>

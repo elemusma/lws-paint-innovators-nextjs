@@ -1,13 +1,35 @@
 import ContentBlock from "@/app/components/content-block";
-import { Company } from "@/app/components/globals";
+import { Company, Website } from "@/app/components/globals";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
 import ValueColumn from "@/app/components/reusable/ValueColumn";
 import OklahomaLocationMap from "@/app/map/OklahomaLocation";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+  title:
+    "Professional Painter in Oklahoma - Serving Tulsa, Oklahoma City, and More - Paint Innovators",
+  description:
+    "Transform your space with expert painting services in Oklahoma. Serving Tulsa, Broken Arrow, OKC, and surrounding areas. Get a free estimate today with Paint Innovators.",
+  openGraph: {
+    title:
+      "Professional Painter in Oklahoma - Serving Tulsa, Oklahoma City, and More - Paint Innovators",
+    description:
+      "Transform your space with expert painting services in Oklahoma. Serving Tulsa, Broken Arrow, OKC, and surrounding areas. Get a free estimate today with Paint Innovators.",
+    url: `${Website}/locations/oklahoma`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/photos/Oklahoma.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Professional Painter in Oklahoma - Serving Tulsa, Oklahoma City, and More - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function OklahomaLocation() {
   return (
     <>

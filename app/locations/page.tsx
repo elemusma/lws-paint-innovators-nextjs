@@ -1,13 +1,35 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../components/content-block";
+import { Website } from "../components/globals";
 import CTA from "../components/reusable/cta";
 import ProjectsWorkedOn from "../components/reusable/projects-worked-on";
 import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
-
-export default function Locations() {
+export const metadata: Metadata = {
+  title: "Locations We Serve - Arkansas, Oklahoma, Colorado - Paint Innovators",
+  description:
+    "Explore the locations we serve including Arkansas, Oklahoma, and Colorado. Find out more about our painting services and get a free estimate today.",
+  openGraph: {
+    title:
+      "Locations We Serve - Arkansas, Oklahoma, Colorado - Paint Innovators",
+    description:
+      "Explore the locations we serve including Arkansas, Oklahoma, and Colorado. Find out more about our painting services and get a free estimate today.",
+    url: `${Website}/locations`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/gallery/Industrial-53.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Locations We Serve - Arkansas, Oklahoma, Colorado - Paint Innovators",
+      },
+    ],
+  },
+};
+export default function LocationsPage() {
   return (
     <>
       <ContentBlock

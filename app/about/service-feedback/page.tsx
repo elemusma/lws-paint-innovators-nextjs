@@ -1,9 +1,32 @@
 import ContentBlock from "@/app/components/content-block";
 import ContactFormServiceFeedback from "@/app/components/forms/ContactFormServiceFeedback";
+import { Website } from "@/app/components/globals";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+  title:
+    "Service Feedback - Share Your Experience & Suggestions - Paint Innovators",
+  description:
+    "We value your feedback! Share your experience with Paint Innovators and help us improve. Submit your comments and suggestions about our services today - Paint Innovators.",
+  openGraph: {
+    title:
+      "Service Feedback - Share Your Experience & Suggestions - Paint Innovators",
+    description:
+      "We value your feedback! Share your experience with Paint Innovators and help us improve. Submit your comments and suggestions about our services today - Paint Innovators.",
+    url: `${Website}/about/service-feedback`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-06.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Service Feedback - Share Your Experience & Suggestions - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function ServiceFeedback() {
   return (
     <>
@@ -56,18 +79,7 @@ export default function ServiceFeedback() {
         rowClassName="flex flex-col items-center"
         columnClassName="w-full relative px-5"
       >
-        <div className="text-center md:w-3/4 w-full mx-auto pb-[50px]">
-          {/* <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-            Fill Out Form Below
-          </h2> */}
-
-          {/* <p className="my-2 text-sm">
-            Use the form below to send us your comments or suggestions regarding
-            the work we completed for you or the process leading up to the
-            project. We read all feedback carefully, but please note that we
-            cannot respond to the comments you submit.
-          </p> */}
-        </div>
+        <div className="text-center md:w-3/4 w-full mx-auto pb-[50px]"></div>
         <ContactFormServiceFeedback />
       </ContentBlock>
       <div className="spacer"></div>

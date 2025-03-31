@@ -4,7 +4,30 @@ import ContentBlock from "../../components/content-block";
 import ContactFormPermission from "../../components/forms/ContactFormPermission";
 import Logo from "../../components/logo";
 import CTA from "../../components/reusable/cta";
-
+import type { Metadata } from "next";
+import { Website } from "@/app/components/globals";
+export const metadata: Metadata = {
+  title:
+    "Brand Resources - Guidelines, Assets, and Permission Requests - Paint Innovators",
+  description:
+    "Access Paint Innovators' brand guidelines, download logos, wordmarks, and other assets, and submit permission requests for usage. Stay aligned with our branding standards.",
+  openGraph: {
+    title:
+      "Brand Resources - Guidelines, Assets, and Permission Requests - Paint Innovators",
+    description:
+      "Access Paint Innovators' brand guidelines, download logos, wordmarks, and other assets, and submit permission requests for usage. Stay aligned with our branding standards.",
+    url: `${Website}/about/brandresources`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-12.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Brand Resources - Guidelines, Assets, and Permission Requests - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function BrandResources() {
   return (
     <>

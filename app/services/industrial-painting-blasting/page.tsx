@@ -15,19 +15,23 @@ import { Company, Website } from "../../components/globals";
 // import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Industrial Painting & Blasting Services - Surface Refinishing - Wet & Dry Abrasive Blasting - Eco-Friendly & OSHA Compliant - Paint Innovators",
+  description:
+    "Discover top-notch industrial painting and blasting services with wet and dry abrasive technologies. We offer eco-friendly, OSHA-compliant surface refinishing for various applications. Get your free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `${Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Industrial Painting & Blasting Services - Surface Refinishing - Wet & Dry Abrasive Blasting - Eco-Friendly & OSHA Compliant - Paint Innovators",
+    description:
+      "Discover top-notch industrial painting and blasting services with wet and dry abrasive technologies. We offer eco-friendly, OSHA-compliant surface refinishing for various applications. Get your free estimate today.",
+    url: `${Website}/services/industrial-painting-blasting`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/services/Services-Wallpaper-Removal.jpg`, // Replace with the actual image path
+        url: `${Website}/gallery/Industrial-33.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Industrial Painting & Blasting Services - Surface Refinishing - Wet & Dry Abrasive Blasting - Eco-Friendly & OSHA Compliant - Paint Innovators",
       },
     ],
   },

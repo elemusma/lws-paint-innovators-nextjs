@@ -1,37 +1,38 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import IndustriesServed from "@/app/components/reusable/core-values";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
-import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Epoxy Floor Services - Durable Concrete Coatings for Home & Commercial Use - Paint Innovators",
+  description:
+    "Transform your space with high-quality epoxy floor coatings for garages, basements, patios, and commercial applications. Get a free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Epoxy Floor Services - Durable Concrete Coatings for Home & Commercial Use - Paint Innovators",
+    description:
+      "Transform your space with high-quality epoxy floor coatings for garages, basements, patios, and commercial applications. Get a free estimate today.",
+    url: `${Website}/services/epoxy-floors`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/services/Services-Epoxy-Floors-Concrete-Staining.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Epoxy Floor Services - Durable Concrete Coatings for Home & Commercial Use - Paint Innovators",
       },
     ],
   },
 };
-export default function CommercialPainting() {
+export default function EpoxyFloorsServices() {
   return (
     <>
       <ContentBlock

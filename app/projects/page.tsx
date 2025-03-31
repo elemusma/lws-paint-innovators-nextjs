@@ -1,13 +1,37 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../components/content-block";
+import { Website } from "../components/globals";
 import CompletedProjects from "../components/reusable/CompletedProjects";
 import CTA from "../components/reusable/cta";
 import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 
-export default function Work() {
+export const metadata: Metadata = {
+  title:
+    "Industrial & Commercial Painting Projects – Interior & Exterior – Blasting Services – Paint Innovators",
+  description:
+    "Explore our industrial and commercial painting projects, including interior, exterior, and blasting services. View our portfolio and get a free estimate today – Paint Innovators.",
+  openGraph: {
+    title:
+      "Industrial & Commercial Painting Projects – Interior & Exterior – Blasting Services – Paint Innovators",
+    description:
+      "Explore our industrial and commercial painting projects, including interior, exterior, and blasting services. View our portfolio and get a free estimate today – Paint Innovators.",
+    url: `${Website}/projects`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/work/Paint-Innovators-NWA-Homes.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Industrial & Commercial Painting Projects – Interior & Exterior – Blasting Services – Paint Innovators",
+      },
+    ],
+  },
+};
+export default function Projects() {
   return (
     <>
       <ContentBlock
@@ -37,11 +61,11 @@ export default function Work() {
       >
         <div className="relative">
           <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
-            Our Work
+            Industrial &amp; Commercial Painting Projects
           </h1>
-          <h2 className="font-aspira-bold text-2xl">
-            People <span className="text-accent">&bull;</span> Family{" "}
-            <span className="text-accent">&bull;</span> Community
+          <h2 className="font-aspira-bold text-2xl text-shadow">
+            Exterior <span className="text-accent">&bull;</span> Interior{" "}
+            <span className="text-accent">&bull;</span> Blasting
           </h2>
           <Link href="/contact" className="btn-main mt-[20px]">
             Get Free Estimate
@@ -59,26 +83,7 @@ export default function Work() {
         <div className="absolute bg-light w-full h-[85%] top-[15%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/home/Paint-Innovators-2025-15.jpg"
-            name="Residential Painting Projects"
-            nameTag="h2"
-            nameTagClassName="text-2xl"
-            role=""
-            delay={0.1}
-            description={
-              <p className="text-sm text-accent">
-                Paint Innovators has experience with all types of residential
-                projects including interior painting, exterior painting, home
-                painting, shed painting, trim, siding, and molding painting, and
-                more. Here are photos of a few of our recent projects.
-              </p>
-            }
-            buttonLink="/careers/painter-drywall-finisher"
-            buttonText="View Project Photos"
-            buttonAriaLabel="View Residential Painting Project Photos"
-          />
-          <TeamCol
-            img="/home/Paint-Innovators-2025-08.jpg"
+            img="/home/Paint-Innovators-2025-12.jpg"
             name="Commercial Painting Projects"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -92,12 +97,31 @@ export default function Work() {
                 building painting.
               </p>
             }
-            buttonLink="/careers/pintor-masero"
+            buttonLink="/projects/commercial-painting"
             buttonText="View Project Photos"
             buttonAriaLabel="View Commercial Painting Project Photos"
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-14.jpg"
+            img="/photos/Introducing-Our-Newest-Service-03.jpg"
+            name="Industrial Painting &amp; Blasting Projects"
+            nameTag="h2"
+            nameTagClassName="text-2xl"
+            role=""
+            delay={0.1}
+            description={
+              <p>
+                Paint Innovators has experience with all types of commercial
+                painting projects including interior painting, exterior
+                painting, office painting, rental property painting, and
+                building painting.
+              </p>
+            }
+            buttonLink="/projects/industrial"
+            buttonText="View Project Photos"
+            buttonAriaLabel="View Commercial Painting Project Photos"
+          />
+          <TeamCol
+            img="/website/Paint-Innovators-09.jpg"
             name="Interior &amp; Exterior Painting"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -112,7 +136,7 @@ export default function Work() {
                 painting, and more.
               </p>
             }
-            buttonLink="/careers/office-associate"
+            buttonLink="/projects/interior-exterior-painting"
             buttonText="View Project Photos"
             buttonAriaLabel="View Interior &amp; Exterior Project Photos"
           />
@@ -130,12 +154,31 @@ export default function Work() {
                 industrial coatings, deck coatings, and more.
               </p>
             }
-            buttonLink="/careers/project-estimator"
+            buttonLink="/projects/other-contractor-services"
             buttonText="View Project Photos"
             buttonAriaLabel="View Other Contractor Services Project Photos"
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-09.jpg"
+            img="/home/Paint-Innovators-2025-15.jpg"
+            name="Residential Painting Projects"
+            nameTag="h2"
+            nameTagClassName="text-2xl"
+            role=""
+            delay={0.1}
+            description={
+              <p className="text-sm text-accent">
+                Paint Innovators has experience with all types of residential
+                projects including interior painting, exterior painting, home
+                painting, shed painting, trim, siding, and molding painting, and
+                more. Here are photos of a few of our recent projects.
+              </p>
+            }
+            buttonLink="/projects/residential-painting"
+            buttonText="View Project Photos"
+            buttonAriaLabel="View Residential Painting Project Photos"
+          />
+          <TeamCol
+            img="/home/Paint-Innovators-2025-05.jpg"
             name="View All Our Painting Services"
             nameTag="h2"
             nameTagClassName="text-2xl"
@@ -143,12 +186,12 @@ export default function Work() {
             delay={0.1}
             description={
               <p>
-                Residential / Commercial / Interior / Exterior Painting, Color
+                Commercial / Industrial / Interior / Exterior Painting, Color
                 Consultation & Custom Painting, New Construction Painting,
                 Popcorn Ceiling Removal, Wallpaper Removal.
               </p>
             }
-            buttonLink="/careers/project-manager"
+            buttonLink="/services"
             buttonText="View All Services"
             buttonAriaLabel="View All Our Painting and Removal Services"
           />

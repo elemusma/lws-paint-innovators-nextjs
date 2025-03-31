@@ -1,11 +1,34 @@
 import ContentBlock from "@/app/components/content-block";
-import { CommercialProjectsImages } from "@/app/components/globals";
+import { CommercialProjectsImages, Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import CTA from "@/app/components/reusable/cta";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import SwiperCarouselProjectsIndustries from "@/app/components/swiperCarouselProjectsIndustries";
+import type { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title:
+    "Commercial Painting Services - Office, Exterior, Interior - Paint Innovators",
+  description:
+    "Discover Paint Innovators' expertise in commercial painting projects, including office, interior, exterior, and building painting. View completed projects and get a free estimate today.",
+  openGraph: {
+    title:
+      "Commercial Painting Services - Office, Exterior, Interior - Paint Innovators",
+    description:
+      "Discover Paint Innovators' expertise in commercial painting projects, including office, interior, exterior, and building painting. View completed projects and get a free estimate today.",
+    url: `${Website}/industries/commercial`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-01.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Commercial Painting Services - Office, Exterior, Interior - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function IndustriesCommercial() {
   return (
     <>
@@ -15,14 +38,16 @@ export default function IndustriesCommercial() {
         rowClassName=""
         columnClassName="flex flex-wrap items-center"
       >
-        <div className="md:w-1/2 w-full relative">
+        <div className="md:w-1/2 w-full relative md:order-1 order-2">
           <SwiperCarouselProjectsIndustries
             slides={CommercialProjectsImages}
             sliderId="completed-projects-commercial"
           />
         </div>
-        <div className="md:w-1/2 w-full px-10">
-          <h1>Commercial Buildings</h1>
+        <div className="md:w-1/2 w-full p-10 md:order-2 order-1">
+          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold">
+            Commercial Buildings
+          </h1>
           <p>
             Paint Innovators has experience with all types of commercial
             painting projects including interior painting, exterior painting,
@@ -35,7 +60,7 @@ export default function IndustriesCommercial() {
             href="/projects/commercial-painting"
             className="btn-main white ml-2"
           >
-            View Commercial Projects
+            Commercial Projects
           </Link>
         </div>
       </ContentBlock>

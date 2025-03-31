@@ -11,26 +11,28 @@ import ValueColumn from "../components/reusable/ValueColumn";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 
 export const metadata: Metadata = {
-  title: "About Us - Trusted Painting Experts for Homes & Businesses",
+  title:
+    "Our Story - How Paint Innovators Began - Quality Painting Services - Paint Innovators",
   description:
-    "Discover our story and commitment to excellence in commercial, industrial and residential painting. We take pride in delivering quality craftsmanship and outstanding customer service.",
+    "Discover the story behind Paint Innovators, founded by Rodney Barnes in 2014. Learn about our dedication to quality, integrity, and customer service in commercial, industrial, and residential painting.",
   openGraph: {
-    title: "About Us - Trusted Painting Experts for Homes & Businesses",
+    title:
+      "Our Story - How Paint Innovators Began - Quality Painting Services - Paint Innovators",
     description:
-      "Discover our story and commitment to excellence in commercial, industrial and residential painting. We take pride in delivering quality craftsmanship and outstanding customer service.",
+      "Discover the story behind Paint Innovators, founded by Rodney Barnes in 2014. Learn about our dedication to quality, integrity, and customer service in commercial, industrial, and residential painting.",
     url: `${Website}/about`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/Our-Story-Rodney-Barnes.jpg`, // Replace with the actual image path
+        url: `${Website}/team/Our-Story-Rodney-Barnes.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Our Story - How Paint Innovators Began - Quality Painting Services - Paint Innovators",
       },
     ],
   },
 };
-export default function OurTeam() {
+export default function AboutPage() {
   return (
     <>
       <ContentBlock

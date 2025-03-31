@@ -1,9 +1,6 @@
 import ContentBlock from "@/app/components/content-block";
 import CTA from "@/app/components/reusable/cta";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
-// import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,36 +14,24 @@ import {
   Website,
 } from "../components/globals";
 import ValueColumn from "../components/reusable/ValueColumn";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
-// Define your fade-up variant:
-// const fadeUpVariants = {
-//   hidden: { opacity: 0, y: 50 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.8, ease: "easeOut" },
-//   },
-// };
 export const metadata: Metadata = {
-  title:
-    "Frequently Asked Questions — Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
+  title: "Frequently Asked Questions - Get a Free Estimate - Paint Innovators",
   description:
-    "Founded by Rodney Barnes in 2014. Paint Innovators is your preferred choice for painting services in Arkansas and Oklahoma. We specialize in interior and exterior painting, wallpaper removal, and more. Contact us today!",
+    "Find answers to common questions about Paint Innovators' services, including our locations, painting process, and COVID-19 safety procedures. Get in touch for a free estimate today.",
   openGraph: {
     title:
-      "Frequently Asked Questions — Experienced Professional Painter in Arkansas and Oklahoma | Commercial and Residential Painting",
+      "Frequently Asked Questions - Get a Free Estimate - Paint Innovators",
     description:
-      "Founded by Rodney Barnes in 2014. Paint Innovators is your preferred choice for painting services in Arkansas and Oklahoma. We specialize in interior and exterior painting, wallpaper removal, and more. Contact us today!",
-    url: `${Website}/team`, // Replace with actual URL
+      "Find answers to common questions about Paint Innovators' services, including our locations, painting process, and COVID-19 safety procedures. Get in touch for a free estimate today.",
+    url: `${Website}/faqs`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/team/Team.jpg`, // Replace with the actual image path
+        url: `${Website}/home/Paint-Innovators-2025-16.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Frequently Asked Questions - Get a Free Estimate - Paint Innovators",
       },
     ],
   },

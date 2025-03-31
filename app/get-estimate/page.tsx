@@ -1,17 +1,33 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-// import ContactForm from "../components/contactForm";
 import ContentBlock from "../components/content-block";
 import ContactFormRequestQuote from "../components/forms/ContactFormRequestQuote";
-import {
-  CommercialProjectsImages,
-  IndustrialProjectsImages,
-  ResidentialProjectsImages,
-} from "../components/globals";
+import { Website } from "../components/globals";
+import CompletedProjects from "../components/reusable/CompletedProjects";
 import Testimonials from "../components/reusable/Testimonials";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
-import SwiperCarouselProjects from "../components/swiperCarouselProjects";
-
-export default function Contact() {
+export const metadata: Metadata = {
+  title: "Get a Free Estimate for Painting Services - Contact Paint Innovators",
+  description:
+    "Request a free estimate for your commercial or home painting project with Paint Innovators. Fill out the form to get in touch with a dedicated project estimator today.",
+  openGraph: {
+    title:
+      "Get a Free Estimate for Painting Services - Contact Paint Innovators",
+    description:
+      "Request a free estimate for your commercial or home painting project with Paint Innovators. Fill out the form to get in touch with a dedicated project estimator today.",
+    url: `${Website}/get-estimate`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-Commercial-01.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Get a Free Estimate for Painting Services - Contact Paint Innovators",
+      },
+    ],
+  },
+};
+export default function GetEstimate() {
   return (
     <>
       <ContentBlock
@@ -48,41 +64,7 @@ export default function Contact() {
       <div className="spacer"></div>
       <SwiperCarouselNewService />
       <div className="spacer"></div>
-      <ContentBlock
-        sectionClassName="bg-black text-white completed-projects py-[30px]"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="w-full text-center"
-      >
-        <h2 className="text-4xl font-aspira-thin mb-4">COMPLETED PROJECTS</h2>
-        <div className="relative swiper-carousel-container">
-          <SwiperCarouselProjects
-            slides={ResidentialProjectsImages}
-            sliderId="completed-projects-residential"
-          />
-          <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
-            RESIDENTIAL
-          </h2>
-        </div>
-        <div className="relative pt-[30px] swiper-carousel-container">
-          <SwiperCarouselProjects
-            slides={CommercialProjectsImages}
-            sliderId="completed-projects-commercial"
-          />
-          <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
-            COMMERCIAL
-          </h2>
-        </div>
-        <div className="relative pt-[30px] swiper-carousel-container">
-          <SwiperCarouselProjects
-            slides={IndustrialProjectsImages}
-            sliderId="completed-projects-industrial"
-          />
-          <h2 className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-shadow font-proxima-bold md:text-5xl text-3xl tracking-[0.2em] pointer-events-none">
-            INDUSTRIAL
-          </h2>
-        </div>
-      </ContentBlock>
+      <CompletedProjects />
       <div className="spacer"></div>
       <Testimonials />
       <div className="spacer"></div>

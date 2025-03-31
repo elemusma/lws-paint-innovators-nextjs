@@ -7,6 +7,7 @@ import Logo from "./logo";
 // import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import AboutLinks from "./reusable/nav/aboutLinks";
+import CareersLinks from "./reusable/nav/careersLinks";
 import IndustriesLinks from "./reusable/nav/industriesLinks";
 import LocationsLinks from "./reusable/nav/locationsLinks";
 import ProjectsLinks from "./reusable/nav/projectsLinks";
@@ -319,25 +320,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                   width: "300px",
                 }}
               >
-                <li>
-                  <Link href="/careers/painter-drywall-finisher">
-                    Painter / Drywall Finisher
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers/pintor-masero">El Pintor / Masero</Link>
-                </li>
-                <li>
-                  <Link href="/careers/office-associate">Office Associate</Link>
-                </li>
-                <li>
-                  <Link href="/careeers/project-estimator">
-                    Project Estimator
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers/project-manager">Project Manager</Link>
-                </li>
+                <CareersLinks />
               </ul>
             </li>
             <li className="relative main-title">

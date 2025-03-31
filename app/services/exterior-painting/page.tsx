@@ -1,37 +1,37 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import IndustriesServed from "@/app/components/reusable/core-values";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
-import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Exterior Painting Services - Protect & Beautify Your Property - Paint Innovators",
+  description:
+    "Enhance your property's curb appeal and protect it from harsh weather with Paint Innovators' exterior painting services. Get a free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `{Website}/wallpaper-removal`, // Replace with actual URL
+    title: "",
+    description:
+      "Enhance your property's curb appeal and protect it from harsh weather with Paint Innovators' exterior painting services. Get a free estimate today.",
+    url: `${Website}/services/exterior-painting`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/home/Paint-Innovators-Commercial-01.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Exterior Painting Services - Protect & Beautify Your Property - Paint Innovators",
       },
     ],
   },
 };
-export default function CommercialPainting() {
+export default function ExteriorPaintingServices() {
   return (
     <>
       <ContentBlock

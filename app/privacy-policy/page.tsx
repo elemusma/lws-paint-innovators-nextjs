@@ -1,5 +1,26 @@
+import type { Metadata } from "next";
 import ContentBlock from "../components/content-block";
-
+import { Website } from "../components/globals";
+export const metadata: Metadata = {
+  title: "Privacy Policy - Paint Innovators",
+  description:
+    "Read Paint Innovators' Privacy Policy to understand how we collect, use, and protect your personal information when you visit our website. Stay informed and secure while using our services.",
+  openGraph: {
+    title: "Privacy Policy - Paint Innovators",
+    description:
+      "Read Paint Innovators' Privacy Policy to understand how we collect, use, and protect your personal information when you visit our website. Stay informed and secure while using our services.",
+    url: `${Website}/privacy-policy`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-Commercial-01.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Privacy Policy - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function PrivacyPolicyContent() {
   return (
     <>

@@ -1,12 +1,35 @@
 import ContentBlock from "@/app/components/content-block";
-import { ResidentialProjectsImages } from "@/app/components/globals";
+import { ResidentialProjectsImages, Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import CTA from "@/app/components/reusable/cta";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import SwiperCarouselProjectsIndustries from "@/app/components/swiperCarouselProjectsIndustries";
+import type { Metadata } from "next";
 import Link from "next/link";
 
-export default function IndustriesCommercial() {
+export const metadata: Metadata = {
+  title:
+    "Residential Painting Services - Interior, Exterior, Trim, Siding & More - Paint Innovators",
+  description:
+    "Discover Paint Innovators' expertise in residential painting, including interior, exterior, home, trim, siding, and molding painting. Get a free estimate for your project today.",
+  openGraph: {
+    title:
+      "Residential Painting Services - Interior, Exterior, Trim, Siding & More - Paint Innovators",
+    description:
+      "Discover Paint Innovators' expertise in residential painting, including interior, exterior, home, trim, siding, and molding painting. Get a free estimate for your project today.",
+    url: `${Website}/industries/commercial`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-02.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Residential Painting Services - Interior, Exterior, Trim, Siding & More - Paint Innovators",
+      },
+    ],
+  },
+};
+export default function IndustriesResidential() {
   return (
     <>
       <ContentBlock
@@ -15,14 +38,16 @@ export default function IndustriesCommercial() {
         rowClassName=""
         columnClassName="flex flex-wrap items-center"
       >
-        <div className="md:w-1/2 w-full relative">
+        <div className="md:w-1/2 w-full relative md:order-1 order-2">
           <SwiperCarouselProjectsIndustries
             slides={ResidentialProjectsImages}
             sliderId="completed-projects-commercial"
           />
         </div>
-        <div className="md:w-1/2 w-full px-10">
-          <h1>Residential Homes</h1>
+        <div className="md:w-1/2 w-full p-10 md:order-2 order-1">
+          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold">
+            Residential Homes
+          </h1>
           <p>
             Paint Innovators has experience with all types of residential
             projects including interior painting, exterior painting, home
@@ -36,7 +61,7 @@ export default function IndustriesCommercial() {
             href="/projects/residential-painting"
             className="btn-main white ml-2"
           >
-            View Residential Projects
+            Residential Projects
           </Link>
         </div>
       </ContentBlock>

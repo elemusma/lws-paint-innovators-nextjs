@@ -1,10 +1,34 @@
 import ContentBlock from "@/app/components/content-block";
+import { Website } from "@/app/components/globals";
 import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import CTA from "@/app/components/reusable/cta";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title:
+    "Customer Reviews - Testimonials & Completed Projects - Paint Innovators",
+  description:
+    "See what our customers say about Paint Innovators! Read reviews, explore completed projects, and experience our commitment to quality and community - Paint Innovators.",
+  openGraph: {
+    title:
+      "Customer Reviews - Testimonials & Completed Projects - Paint Innovators",
+    description:
+      "See what our customers say about Paint Innovators! Read reviews, explore completed projects, and experience our commitment to quality and community - Paint Innovators.",
+    url: `${Website}/about/reviews`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-07.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Customer Reviews - Testimonials & Completed Projects - Paint Innovators",
+      },
+    ],
+  },
+};
 export default function Reviews() {
   return (
     <>

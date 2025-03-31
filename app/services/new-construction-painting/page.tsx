@@ -15,24 +15,28 @@ import Link from "next/link";
 // import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "New Construction Painting Services - High-Quality Materials & Impeccable Finishes - Expert Coordination with Contractors - Paint Innovators",
+  description:
+    "Paint Innovators specializes in new construction painting services across Arkansas, Oklahoma, and Colorado. We provide high-quality materials, impeccable finishes, and expert coordination with contractors to ensure optimal coverage and protection for residential and commercial buildings. Get your free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `${Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "New Construction Painting Services - High-Quality Materials & Impeccable Finishes - Expert Coordination with Contractors - Paint Innovators",
+    description:
+      "Paint Innovators specializes in new construction painting services across Arkansas, Oklahoma, and Colorado. We provide high-quality materials, impeccable finishes, and expert coordination with contractors to ensure optimal coverage and protection for residential and commercial buildings. Get your free estimate today.",
+    url: `${Website}/services/new-construction-painting`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/services/Services-Wallpaper-Removal.jpg`, // Replace with the actual image path
+        url: `${Website}/work/Paint-Innovators-NWA-Homes.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "New Construction Painting Services - High-Quality Materials & Impeccable Finishes - Expert Coordination with Contractors - Paint Innovators",
       },
     ],
   },
 };
-export default function NewConstructionPainting() {
+export default function NewConstructionPaintingServices() {
   return (
     <>
       <ContentBlock

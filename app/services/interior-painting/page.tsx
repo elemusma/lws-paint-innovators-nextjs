@@ -15,24 +15,28 @@ import Link from "next/link";
 // import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-  description: "Professional painting.",
+  title:
+    "Interior Painting Services - Transform Your Space with Precision & Artistry - Premium Materials & Techniques - Paint Innovators",
+  description:
+    "Paint Innovators offers expert interior painting services to transform your space with precision and attention to detail. We use premium materials and state-of-the-art techniques to create stunning, lasting results. Get your free estimate today.",
   openGraph: {
-    title: "Wall Paper Removal in Arkansas and Oklahoma - Professional Painter",
-    description: "Professional painting.",
-    url: `${Website}/wallpaper-removal`, // Replace with actual URL
+    title:
+      "Interior Painting Services - Transform Your Space with Precision & Artistry - Premium Materials & Techniques - Paint Innovators",
+    description:
+      "Paint Innovators offers expert interior painting services to transform your space with precision and attention to detail. We use premium materials and state-of-the-art techniques to create stunning, lasting results. Get your free estimate today.",
+    url: `${Website}/services/interior-painting`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: "/services/Services-Wallpaper-Removal.jpg", // Replace with the actual image path
+        url: `${Website}/home/Paint-Innovators-2025-04.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Wallpaper Removal Services",
+        alt: "Interior Painting Services - Transform Your Space with Precision & Artistry - Premium Materials & Techniques - Paint Innovators",
       },
     ],
   },
 };
-export default function InteriorPainting() {
+export default function InteriorPaintingServices() {
   return (
     <>
       <ContentBlock

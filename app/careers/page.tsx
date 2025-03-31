@@ -1,13 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../components/content-block";
+import { Website } from "../components/globals";
 import CTA from "../components/reusable/cta";
 import ProjectsWorkedOn from "../components/reusable/projects-worked-on";
 import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 
-export default function Locations() {
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title:
+    "Careers - Join Our Team - Painter, Drywall Finisher, Project Manager & More - Paint Innovators",
+  description:
+    "Explore exciting career opportunities at Paint Innovators. We’re hiring painters, drywall finishers, project managers, office associates, and more. Apply now to join our team.",
+  openGraph: {
+    title:
+      "Careers - Join Our Team - Painter, Drywall Finisher, Project Manager & More - Paint Innovators",
+    description:
+      "Explore exciting career opportunities at Paint Innovators. We’re hiring painters, drywall finishers, project managers, office associates, and more. Apply now to join our team.",
+    url: `${Website}/careers`, // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-01.jpg`, // Replace with the actual image path
+        width: 1200, // Standard OG image width
+        height: 630, // Standard OG image height
+        alt: "Careers - Join Our Team - Painter, Drywall Finisher, Project Manager & More - Paint Innovators",
+      },
+    ],
+  },
+};
+export default function CareersPage() {
   return (
     <>
       <ContentBlock
