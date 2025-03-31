@@ -70,7 +70,7 @@ export default function ArkansasLocation() {
             View our interactive map below to see all our areas of service in
             Arkansas.
           </p>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -87,7 +87,7 @@ export default function ArkansasLocation() {
         heading="Transform a Room"
         content="Paint Innovators is located in Springdale, AR, which is a part of Northwest Arkansas. Our office is located at the corner of Har-ber Avenue and S 48th Street in Springdale, AR.  Our office is located in Washington county.  Paint innovators was started in Springdale in 2014 at 133 South 40th Street, Springdale, AR and then moved to Har-ber in 2020.  To locals in Northwest Arkansas, we are located in the Har-ber side of Springdale - which originated from the presence of Har-ber High School in our area."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
 
       <ImageContentBlock
@@ -101,7 +101,7 @@ export default function ArkansasLocation() {
         overlayTextSubtitle="Commercial & Residential"
         content="At our Northwest Arkansas location, we have a team of experienced painters and technicians. Paint Innovators offers painting and contractor services to residential and commercial clients including custom painting, interior painting, exterior painting, drywall repair, cabinet & door staining or painting, concrete staining and epoxy floors, and deck coatings."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
       <ContentBlock
         sectionClassName="bg-white text-black pt-7"

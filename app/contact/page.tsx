@@ -7,11 +7,13 @@ import CompletedProjects from "../components/reusable/CompletedProjects";
 import Testimonials from "../components/reusable/Testimonials";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 export const metadata: Metadata = {
-  title: "Contact Us - Get in Touch - Paint Innovators",
+  title:
+    "Contact Us - Commercial, Industrial & Residential Painting Services - Paint Innovators",
   description:
     "Reach out to Paint Innovators by filling out the contact form. Our team will get back to you within 24-48 hours to assist with your needs.",
   openGraph: {
-    title: "Contact Us - Get in Touch - Paint Innovators",
+    title:
+      "Contact Us - Commercial, Industrial & Residential Painting Services - Paint Innovators",
     description:
       "Reach out to Paint Innovators by filling out the contact form. Our team will get back to you within 24-48 hours to assist with your needs.",
     url: `${Website}/contact`, // Replace with actual URL
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
         url: `${Website}/home/Paint-Innovators-2025-12.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Contact Us - Get in Touch - Paint Innovators",
+        alt: "Contact Us - Commercial, Industrial & Residential Painting Services - Paint Innovators",
       },
     ],
   },

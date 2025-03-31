@@ -71,7 +71,7 @@ export default function InteriorExteriorPaintingProjects() {
             <span className="text-accent">&bull;</span>{" "}
             <span className="text-shadow">Cabinets</span>
           </h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>

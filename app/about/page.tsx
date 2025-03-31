@@ -110,7 +110,7 @@ export default function AboutPage() {
         overlayTextSubtitle=""
         content="Our team aspires to represent each of our core values regardless of the circumstance.  At Paint Innovators, we diligently take responsibility, conduct ourselves with ethics and morals in order to achieve success, gain new customers, and expand relationships with existing customers."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
       {/* <IndustriesServed /> */}
       <ContentBlock

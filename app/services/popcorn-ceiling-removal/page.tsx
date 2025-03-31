@@ -69,7 +69,7 @@ export default function PopcornCeilingRemovalServices() {
           <h2 className="font-aspira-bold text-2xl text-shadow">
             We Get the Job Done Right!
           </h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -116,7 +116,7 @@ export default function PopcornCeilingRemovalServices() {
         heading="Transform a Room"
         content="We utilize specialized tools and techniques to safely remove textured surfaces without damaging underlying structures. Our process minimizes dust and disruption, preparing your space for a smooth, contemporary finish."
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
       {/* </motion.div> */}
       <ImageContentBlock

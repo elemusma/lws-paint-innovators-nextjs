@@ -62,15 +62,11 @@ export default function OklahomaLocation() {
           <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
             Professional Painter in Oklahoma
           </h1>
-          {/* <h2 className="font-aspira-bold text-2xl">
-            People <span className="text-accent">&bull;</span> Family{" "}
-            <span className="text-accent">&bull;</span> Community
-          </h2> */}
           <p className="text-shadow">
             View our interactive map below to see all our areas of service in
             Oklahoma.
           </p>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>
@@ -87,22 +83,8 @@ export default function OklahomaLocation() {
         heading="Transform a Room"
         content="Paint Innovators Oklahoma office is located in Tulsa, Oklahoma, which is in Northeast Oklahoma. Our office is located off of N 108th Avenue on E Newton Street - across the street from General Parts Group in Tulsa County. Paint innovators opened its Tulsa, OK location in October 2019 and is excited to serve the communities of Tulsa, Broken Arrow, and Oklahoma City to name just a few!"
         buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
+        buttonLink="/get-estimate"
       />
-
-      {/* <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/team/Our-Successful-Team.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="Painting & Contracting"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="Commercial & Residential"
-        content="At our Tulsa location, we have a team of painters, technicians, and project managers to serve the professional painting needs of business owners and homeowners in Oklahoma. Paint Innovators is a painting company that is dedicated to quality painting, staining, deck coating, finishes, and more! We offer painting solutions for both commercial and residential painting projects across the state of OK."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
-      /> */}
       <ContentBlock
         sectionClassName="bg-white text-black pt-7"
         containerClassName="max-w-screen-lg mx-auto pt-8"

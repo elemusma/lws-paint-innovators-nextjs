@@ -67,7 +67,7 @@ export default function Projects() {
             Exterior <span className="text-accent">&bull;</span> Interior{" "}
             <span className="text-accent">&bull;</span> Blasting
           </h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>

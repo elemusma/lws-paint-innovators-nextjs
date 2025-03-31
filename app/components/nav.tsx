@@ -105,7 +105,7 @@ export default function Navigation() {
                     padding: "10px 10px",
                   }} // Adding inline style
                   id="" // Adding an ID
-                  href="/contact" // Dynamic href
+                  href="/get-estimate" // Dynamic href
                 >
                   <div className="px-2">
                     <svg

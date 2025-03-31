@@ -74,7 +74,7 @@ const MobileMenuToggle = () => {
               className="" // Adding additional class
               style={{ top: "50%", right: 0, transform: "translate(0, -50%)" }} // Adding inline style
               id="" // Adding an ID
-              href="/contact" // Dynamic href
+              href="/get-estimate" // Dynamic href
               onClick={handleClose}
             >
               Free Estimate!
@@ -134,7 +134,7 @@ const MobileMenuToggle = () => {
             <ul className="list-none text-sm mt-0">
               <li>
                 <Link
-                  href="/contact"
+                  href="/get-estimate"
                   className="block px-4 py-2"
                   onClick={handleClose}
                 >
@@ -178,7 +178,7 @@ const MobileMenuToggle = () => {
               className="" // Adding additional class
               style={{}} // Adding inline style
               id="" // Adding an ID
-              href="/contact" // Dynamic href
+              href="/get-estimate" // Dynamic href
               onClick={handleClose}
             >
               Free Estimate!

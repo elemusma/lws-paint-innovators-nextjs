@@ -1,11 +1,11 @@
+import { Website } from "@/app/components/globals";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContentBlock from "../../components/content-block";
 import ContactFormPermission from "../../components/forms/ContactFormPermission";
 import Logo from "../../components/logo";
 import CTA from "../../components/reusable/cta";
-import type { Metadata } from "next";
-import { Website } from "@/app/components/globals";
 export const metadata: Metadata = {
   title:
     "Brand Resources - Guidelines, Assets, and Permission Requests - Paint Innovators",
@@ -63,7 +63,7 @@ export default function BrandResources() {
           <h2 className="font-aspira-bold text-2xl text-shadow">
             We Get the Job Done Right!
           </h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>

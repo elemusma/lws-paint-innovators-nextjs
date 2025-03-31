@@ -248,13 +248,13 @@ export default function Footer() {
                       <Link href="/projects">All Projects</Link>
                     </li>
                     <li>
-                      <Link href="/projects/residential-painting">
-                        Residential Painting Projects
+                      <Link href="/projects/commercial-painting">
+                        Commercial Painting Projects
                       </Link>
                     </li>
                     <li>
-                      <Link href="/projects/commercial-painting">
-                        Commercial Painting Projects
+                      <Link href="/projects/industrial">
+                        Industrial Projects
                       </Link>
                     </li>
                     <li>
@@ -265,6 +265,11 @@ export default function Footer() {
                     <li>
                       <Link href="/projects/other-contractor-services">
                         Other Contractor Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/projects/residential-painting">
+                        Residential Painting Projects
                       </Link>
                     </li>
                   </ul>
@@ -348,6 +353,9 @@ export default function Footer() {
                     <li>
                       <Link href="/about/reviews">Reviews</Link>
                     </li>
+                    <li>
+                      <Link href="/about/po-submittal">PO Submittal</Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -399,9 +407,9 @@ export default function Footer() {
                 href="https://latinowebstudio.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Full-Stack Web & Software Engineer & SEO done by Latino Web Studio in Denver, CO"
+                title="Web Design &amp; SEO based out of Denver, Colorado. Seven years of experience in the web design &smp; SEO industry. With a strong background in frontend development."
               >
-                Web Design &amp; SEO in Denver, CO
+                Web Design &amp; SEO
               </a>{" "}
               done by Latino Web Studio.
             </small>

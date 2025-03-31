@@ -70,7 +70,7 @@ export default function OtherContractingPaintingProjects() {
             <span className="text-shadow">Epoxy Floors</span> <br></br>
             <span className="text-shadow">Industrial &amp; Deck Coatings</span>
           </h2>
-          <Link href="/contact" className="btn-main mt-[20px]">
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
         </div>

@@ -10,12 +10,12 @@ import ValueColumn from "../../components/reusable/ValueColumn";
 
 export const metadata: Metadata = {
   title:
-    "Meet Our Team - Expert Painters & Project Managers - Paint Innovators",
+    "Meet Our Team - Commercial, Industrial & Residential - Paint Innovators",
   description:
     "Get to know the expert team behind Paint Innovators! Meet our experienced painters and project managers dedicated to delivering high-quality residential and commercial painting services.",
   openGraph: {
     title:
-      "Meet Our Team - Expert Painters & Project Managers - Paint Innovators",
+      "Meet Our Team - Commercial, Industrial & Residential - Paint Innovators",
     description:
       "Get to know the expert team behind Paint Innovators! Meet our experienced painters and project managers dedicated to delivering high-quality residential and commercial painting services.",
     url: `${Website}/about/team`, // Replace with actual URL
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: `${Website}/home/Paint-Innovators-2025-07.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Meet Our Team - Expert Painters & Project Managers - Paint Innovators",
+        alt: "Meet Our Team - Commercial, Industrial & Residential - Paint Innovators",
       },
     ],
   },
@@ -73,43 +73,6 @@ export default function OurTeam() {
       </ContentBlock>
       <ServingTagline />
 
-      {/* <ContentBlock
-        sectionClassName="bg-white text-black pb-8"
-        containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="lg:w-11/12 w-full text-center px-4"
-      >
-        <h2 className="text-4xl font-aspira-light pt-4">OUR VISION</h2>
-      </ContentBlock> */}
-
-      {/* <ImageContentBlock
-        sectionClassName=""
-        imageSrc="/home/Paint-Innovators-2025-06.jpg"
-        imageAlt="Wallpaper"
-        overlayText="Ensuring Quality & Safety"
-        borderSubtitle={true}
-        overlayTextSubtitle="Craftmanship and Inspection of Every Job"
-        contentBorderOff={true}
-        heading="Transform a Room"
-        content="Paint Innovators is dedicated to quality painting. We have experienced and professional painters that specialize in residential and commercial painting - including interior painting and exterior painting for homes and offices."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
-      />
-
-      <ImageContentBlock
-        sectionClassName="even"
-        imageSrc="/home/Paint-Innovators-2025-07.jpg"
-        imageAlt="The History of Wall Paper"
-        overlayText="It's Our Team That Makes Us Successful"
-        borderSubtitle={true}
-        heading="Transform a Room"
-        contentBorderOff={true}
-        overlayTextSubtitle="We Enjoy Where We Work"
-        content="Wallpaper use originated in the 16th century and it was used to decorate the inside of cupboards and small spaces in the grand houses of the aristocracy. So wallpaper was associated with wealth. There were printed in monochrome on small sheets. Through out the years the wallpaper industry advanced with variety of colors and designs, however late in the 1900 the wallpaper market declined, and the paint industry became popular."
-        buttonLabel="Get Free Estimate"
-        buttonLink="/contact"
-      /> */}
-
       {/* <IndustriesServed /> */}
       <ContentBlock
         sectionClassName="bg-white text-black pt-7"
@@ -117,9 +80,6 @@ export default function OurTeam() {
         rowClassName="flex flex-col items-center"
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
-        {/* <h2 className="uppercase font-aspira-bold text-accent text-5xl">
-          Our Team
-        </h2> */}
         <p className="text-gray-700 text-2xl pt-8 mb-20 font-aspira-bold">
           {Company}, is dedicated to quality painting. We have experienced and
           professional painters that specialize in commercial, industrial and
@@ -275,13 +235,6 @@ export default function OurTeam() {
         </div>
       </ContentBlock>
       <div className="spacer"></div>
-      {/* <Image
-        src="/assets/five-star-reviews.png"
-        alt="Five Stars"
-        className="mx-auto my-8"
-        width={150}
-        height={150}
-      /> */}
 
       <ContentBlock
         sectionClassName="bg-gray-dark pt-[100px] pb-[65px]"
