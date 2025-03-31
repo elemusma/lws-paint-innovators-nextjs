@@ -47,7 +47,7 @@ export default function AboutPage() {
               src={"/team/Our-Story-Rodney-Barnes.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
-              style={{ objectFit: "cover", objectPosition: "right" }}
+              style={{ objectFit: "cover" }}
               fill
             />
             <div
@@ -61,7 +61,7 @@ export default function AboutPage() {
         }
       >
         <div className="relative">
-          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
+          <h1 className="md:text-6xl text-4xl uppercase font-proxima-bold text-shadow">
             Our Story
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">

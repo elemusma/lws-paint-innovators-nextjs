@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import React, { useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/forms.scss";
@@ -10,6 +10,26 @@ const ContactFormServiceFeedback: React.FC = () => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+  const handleBeforeUnload = useCallback(
+    (e: BeforeUnloadEvent) => {
+      if (isDirty) {
+        e.preventDefault();
+        e.returnValue =
+          "Are you sure you want to leave? Changes you made may not be saved.";
+        return e.returnValue;
+      }
+    },
+    [isDirty]
+  ); // Add isDirty to dependency array if it's used inside
+  useEffect(() => {
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [isDirty, handleBeforeUnload]);
+
+  const handleInputChange = () => {
+    setIsDirty(true);
+  };
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -73,6 +93,7 @@ const ContactFormServiceFeedback: React.FC = () => {
         <form
           ref={formRef}
           onSubmit={sendEmail}
+          onChange={handleInputChange}
           className="space-y-6 bg-white/95 p-8 rounded-lg shadow-lg"
         >
           {/* Name Fields */}

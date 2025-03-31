@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "../styles/footer.scss";
 import "../styles/social-icons.scss";
 import {
@@ -17,6 +19,7 @@ import Logo from "./logo";
 import SocialIcons from "./reusable/socialIcons";
 
 export default function Footer() {
+  const pathname = usePathname(); // Get the current route
   return (
     <>
       <footer>
@@ -124,80 +127,152 @@ export default function Footer() {
         {/* columns */}
         <div className="max-w-screen-lg mx-auto pt-10 pb-10 lg:px-0 px-4">
           <div className="flex flex-wrap justify-start">
-            <div className="w-full md:w-1/4 w-full pb-10 relative">
+            <div className="w-full md:w-1/4 w-full pb-0 md:pb-10 relative">
               <p className="text-xl font-proxima-bold mb-0">Services</p>
-              <ul className="list-none text-sm mt-0">
+              <ul className="list-none text-sm m-0">
                 <li>
-                  <Link href="/services/commercial-painting">
+                  <Link
+                    href="/services/commercial-painting"
+                    className={`${
+                      pathname === "/services/commercial-painting"
+                        ? "active text-accent"
+                        : ""
+                    }`}
+                  >
                     Commercial Painting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/industrial-painting-blasting">
+                  <Link
+                    href="/services/industrial-painting-blasting"
+                    className={`${
+                      pathname === "/services/industrial-painting-blasting"
+                        ? "active text-accent"
+                        : ""
+                    }`}
+                  >
                     Industrial Painting &amp; Blasting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/color-consultation-custom-painting">
+                  <Link
+                    href="/services/color-consultation-custom-painting"
+                    className={`${
+                      pathname ===
+                      "/services/color-consultation-custom-painting"
+                        ? "active text-accent"
+                        : ""
+                    }`}
+                  >
                     Color Consultation &amp; Custom Painting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/exterior-painting">
+                  <Link
+                    href="/services/exterior-painting"
+                    className={`${
+                      pathname === "/services/exterior-painting"
+                        ? "active text-accent"
+                        : ""
+                    }`}
+                  >
                     Exterior Painting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/interior-painting">
+                  <Link
+                    href="/services/interior-painting"
+                    className={`${
+                      pathname === "/services/interior-painting"
+                        ? "active text-accent"
+                        : ""
+                    }`}
+                  >
                     Interior Painting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/new-construction-painting">
+                  <Link
+                    href="/services/new-construction-painting"
+                    className={`${pathname === "/services/new-construction-painting" ? "active text-accent" : ""}`}
+                  >
                     New Construction Painting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/popcorn-ceiling-removal">
+                  <Link
+                    href="/services/popcorn-ceiling-removal"
+                    className={`${pathname === "/services/popcorn-ceiling-removal" ? "active text-accent" : ""}`}
+                  >
                     Popcorn Ceiling Removal
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/wallpaper-removal">
+                  <Link
+                    href="/services/wallpaper-removal"
+                    className={`${pathname === "/services/wallpaper-removal" ? "active text-accent" : ""}`}
+                  >
                     Wallpaper Removal
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="w-full md:w-1/4 w-full pb-10 relative">
-              <div style={{ height: 28 }}></div>
-              <ul className="list-none text-sm">
+              <div className="hidden md:block" style={{ height: 28 }}></div>
+              <ul className="list-none text-sm mt-0 md:mt-[1rem]">
                 <li>
-                  <Link href="/services/drywall-repair">Drywall Repair</Link>
+                  <Link
+                    href="/services/drywall-repair"
+                    className={`${pathname === "/services/drywall-repair" ? "active text-accent" : ""}`}
+                  >
+                    Drywall Repair
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services/deck-coating">Deck Coating</Link>
+                  <Link
+                    href="/services/deck-coating"
+                    className={`${pathname === "/services/deck-coating" ? "active text-accent" : ""}`}
+                  >
+                    Deck Coating
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services/industrial-coating">
+                  <Link
+                    href="/services/industrial-coating"
+                    className={`${pathname === "/services/industrial-coating" ? "active text-accent" : ""}`}
+                  >
                     Industrial Coating
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/epoxy-floors">Epoxy Floors</Link>
+                  <Link
+                    href="/services/epoxy-floors"
+                    className={`${pathname === "/services/epoxy-floors" ? "active text-accent" : ""}`}
+                  >
+                    Epoxy Floors
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services/pressure-washing">
+                  <Link
+                    href="/services/pressure-washing"
+                    className={`${pathname === "/services/pressure-washing" ? "active text-accent" : ""}`}
+                  >
                     Pressure Washing
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/covid-19-sanitation">
+                  <Link
+                    href="/services/covid-19-sanitation"
+                    className={`${pathname === "/services/covid-19-sanitation" ? "active text-accent" : ""}`}
+                  >
                     COVID-19 Sanitation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/residential-painting">
+                  <Link
+                    href="/services/residential-painting"
+                    className={`${pathname === "/services/residential-painting" ? "active text-accent" : ""}`}
+                  >
                     Residential Painting
                   </Link>
                 </li>
@@ -207,16 +282,36 @@ export default function Footer() {
               <p className="text-xl font-proxima-bold mb-0">Industries</p>
               <ul className="list-none text-sm mt-0">
                 <li>
-                  <Link href="/industries">All Industries</Link>
+                  <Link
+                    href="/industries"
+                    className={`${pathname === "/industries" ? "active text-accent" : ""}`}
+                  >
+                    All Industries
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/industries/commercial">Commercial</Link>
+                  <Link
+                    href="/industries/commercial"
+                    className={`${pathname === "/industries/commercial" ? "active text-accent" : ""}`}
+                  >
+                    Commercial
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/industries/industrial">Industrial</Link>
+                  <Link
+                    href="/industries/industrial"
+                    className={`${pathname === "/industries/industrial" ? "active text-accent" : ""}`}
+                  >
+                    Industrial
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/industries/residential">Residential</Link>
+                  <Link
+                    href="/industries/residential"
+                    className={`${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                  >
+                    Residential
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -225,16 +320,36 @@ export default function Footer() {
               <p className="text-xl font-proxima-bold mb-0">Locations</p>
               <ul className="list-none text-sm mt-0">
                 <li>
-                  <Link href="/locations">All Locations</Link>
+                  <Link
+                    href="/locations"
+                    className={`${pathname === "/locations" ? "active text-accent" : ""}`}
+                  >
+                    All Locations
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/locations/arkansas">Arkansas Location</Link>
+                  <Link
+                    href="/locations/arkansas"
+                    className={`${pathname === "/locations/arkansas" ? "active text-accent" : ""}`}
+                  >
+                    Arkansas Location
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/locations/oklahoma">Oklahoma Location</Link>
+                  <Link
+                    href="/locations/oklahoma"
+                    className={`${pathname === "/locations/oklahoma" ? "active text-accent" : ""}`}
+                  >
+                    Oklahoma Location
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/locations/colorado">Colorado Location</Link>
+                  <Link
+                    href="/locations/colorado"
+                    className={`${pathname === "/locations/colorado" ? "active text-accent" : ""}`}
+                  >
+                    Colorado Location
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -245,30 +360,50 @@ export default function Footer() {
                 <div className="w-full">
                   <ul className="list-none text-sm mt-0">
                     <li>
-                      <Link href="/projects">All Projects</Link>
+                      <Link
+                        href="/projects"
+                        className={`${pathname === "/projects" ? "active text-accent" : ""}`}
+                      >
+                        All Projects
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/projects/commercial-painting">
+                      <Link
+                        href="/projects/commercial-painting"
+                        className={`${pathname === "/projects/commercial-painting" ? "active text-accent" : ""}`}
+                      >
                         Commercial Painting Projects
                       </Link>
                     </li>
                     <li>
-                      <Link href="/projects/industrial">
+                      <Link
+                        href="/projects/industrial"
+                        className={`${pathname === "/projects/industrial" ? "active text-accent" : ""}`}
+                      >
                         Industrial Projects
                       </Link>
                     </li>
                     <li>
-                      <Link href="/projects/interior-exterior-painting">
+                      <Link
+                        href="/projects/interior-exterior-painting"
+                        className={`${pathname === "/projects/interior-exterior-painting" ? "active text-accent" : ""}`}
+                      >
                         Interior Painting and Exterior Painting
                       </Link>
                     </li>
                     <li>
-                      <Link href="/projects/other-contractor-services">
+                      <Link
+                        href="/projects/other-contractor-services"
+                        className={`${pathname === "/projects/other-contractor-services" ? "active text-accent" : ""}`}
+                      >
                         Other Contractor Services
                       </Link>
                     </li>
                     <li>
-                      <Link href="/projects/residential-painting">
+                      <Link
+                        href="/projects/residential-painting"
+                        className={`${pathname === "/projects/residential-painting" ? "active text-accent" : ""}`}
+                      >
                         Residential Painting Projects
                       </Link>
                     </li>
@@ -280,22 +415,52 @@ export default function Footer() {
               <p className="text-xl font-proxima-bold mb-0">About</p>
               <ul className="list-none text-sm mt-0">
                 <li>
-                  <Link href="/about">Our Story</Link>
+                  <Link
+                    href="/about"
+                    className={`${pathname === "/about" ? "active text-accent" : ""}`}
+                  >
+                    Our Story
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about/team">Our Team</Link>
+                  <Link
+                    href="/about/team"
+                    className={`${pathname === "/about/team" ? "active text-accent" : ""}`}
+                  >
+                    Our Team
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/news">News / Blog</Link>
+                  <Link
+                    href="/news"
+                    className={`${pathname === "/news" ? "active text-accent" : ""}`}
+                  >
+                    News / Blog
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about/brandresources">Brand Resources</Link>
+                  <Link
+                    href="/about/brandresources"
+                    className={`${pathname === "/about/brandresources" ? "active text-accent" : ""}`}
+                  >
+                    Brand Resources
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about/website-feedback">Website Feedback</Link>
+                  <Link
+                    href="/about/website-feedback"
+                    className={`${pathname === "/about/website-feedback" ? "active text-accent" : ""}`}
+                  >
+                    Website Feedback
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about/service-feedback">Service Feedback</Link>
+                  <Link
+                    href="/about/service-feedback"
+                    className={`${pathname === "/about/service-feedback" ? "active text-accent" : ""}`}
+                  >
+                    Service Feedback
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -305,30 +470,50 @@ export default function Footer() {
                 <div className="w-full">
                   <ul className="list-none text-sm mt-0">
                     <li>
-                      <Link href="/careers">All Careers</Link>
+                      <Link
+                        href="/careers"
+                        className={`${pathname === "/careers" ? "active text-accent" : ""}`}
+                      >
+                        All Careers
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/careers/painter-drywall-finisher">
+                      <Link
+                        href="/careers/painter-drywall-finisher"
+                        className={`${pathname === "/careers/painter-drywall-finisher" ? "active text-accent" : ""}`}
+                      >
                         Painter / Drywall Finisher
                       </Link>
                     </li>
                     <li>
-                      <Link href="/careers/pintor-masero">
+                      <Link
+                        href="/careers/pintor-masero"
+                        className={`${pathname === "/careers/pintor-masero" ? "active text-accent" : ""}`}
+                      >
                         El Pintor / Masero
                       </Link>
                     </li>
                     <li>
-                      <Link href="/careers/office-associate">
+                      <Link
+                        href="/careers/office-associate"
+                        className={`${pathname === "/careers/office-associate" ? "active text-accent" : ""}`}
+                      >
                         Office Associate
                       </Link>
                     </li>
                     <li>
-                      <Link href="/careers/project-estimator">
+                      <Link
+                        href="/careers/project-estimator"
+                        className={`${pathname === "/careers/project-estimator" ? "active text-accent" : ""}`}
+                      >
                         Project Estimator
                       </Link>
                     </li>
                     <li>
-                      <Link href="/careers/project-manager">
+                      <Link
+                        href="/careers/project-manager"
+                        className={`${pathname === "/careers/project-manager" ? "active text-accent" : ""}`}
+                      >
                         Project Manager
                       </Link>
                     </li>
@@ -342,19 +527,44 @@ export default function Footer() {
                 <div className="w-full">
                   <ul className="list-none text-sm mt-0">
                     <li>
-                      <Link href="/get-estimate">Get Free Estimate</Link>
+                      <Link
+                        href="/get-estimate"
+                        className={`${pathname === "/get-estimate" ? "active text-accent" : ""}`}
+                      >
+                        Get Free Estimate
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/contact">Contact</Link>
+                      <Link
+                        href="/contact"
+                        className={`${pathname === "/contact" ? "active text-accent" : ""}`}
+                      >
+                        Contact
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/faqs">FAQs</Link>
+                      <Link
+                        href="/faqs"
+                        className={`${pathname === "/faqs" ? "active text-accent" : ""}`}
+                      >
+                        FAQs
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/about/reviews">Reviews</Link>
+                      <Link
+                        href="/about/reviews"
+                        className={`${pathname === "/about/reviews" ? "active text-accent" : ""}`}
+                      >
+                        Reviews
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/about/po-submittal">PO Submittal</Link>
+                      <Link
+                        href="/about/po-submittal"
+                        className={`${pathname === "/about/po-submittal" ? "active text-accent" : ""}`}
+                      >
+                        PO Submittal
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -392,7 +602,12 @@ export default function Footer() {
                   </strong>
                 </a>
                 <br></br>
-                <a href="/privacy-policy">Privacy Policy</a>
+                <a
+                  href="/privacy-policy"
+                  className={`${pathname === "/privacy-policy" ? "active text-accent" : ""}`}
+                >
+                  Privacy Policy
+                </a>
               </p>
             </div>
           </div>

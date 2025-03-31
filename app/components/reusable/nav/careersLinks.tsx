@@ -22,7 +22,7 @@ export default function CareersLinks({ onClick }: IndustriesLinksProps) {
         },
         {
           name: "Project Estimator",
-          path: "/careeers/project-estimator",
+          path: "/careers/project-estimator",
         },
         {
           name: "Project Manager",
@@ -33,8 +33,8 @@ export default function CareersLinks({ onClick }: IndustriesLinksProps) {
           <Link
             href={item.path}
             className={`block px-4 py-2 ${
-              pathname.startsWith(item.path)
-                ? "bg-white !text-[var(--neutral)]"
+              pathname === item.path
+                ? "bg-white !text-[var(--neutral)] active"
                 : ""
             }`}
             onClick={onClick}

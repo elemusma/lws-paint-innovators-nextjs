@@ -54,10 +54,13 @@ export default function IndustriesCommercial() {
             marine, concrete, wood, heavy equipment, fleet vehicles, antiques,
             fire restoration and etching.
           </p>
-          <Link href="/get-estimate" className="btn-main">
+          <Link href="/get-estimate" className="btn-main my-2">
             Get Free Estimate
           </Link>
-          <Link href="/projects/industrial" className="btn-main white ml-2">
+          <Link
+            href="/projects/industrial"
+            className="btn-main white lg:ml-2 my-2"
+          >
             Industrial Projects
           </Link>
         </div>

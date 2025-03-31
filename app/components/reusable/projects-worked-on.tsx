@@ -122,7 +122,7 @@ export default function ProjectsWorkedOn() {
         columnClassName="flex flex-wrap"
       >
         <div className="lg:w-3/4 w-full m-auto text-center pb-10">
-          <h2 className="font-aspira-light text-5xl uppercase">
+          <h2 className="font-aspira-light md:text-5xl text-4xl uppercase">
             Commercial &amp; Industrial Projects We&apos;ve Worked On
           </h2>
         </div>

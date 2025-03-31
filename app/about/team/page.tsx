@@ -59,7 +59,7 @@ export default function OurTeam() {
         }
       >
         <div className="relative">
-          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
+          <h1 className="md:text-6xl text-4xl uppercase font-proxima-bold text-shadow">
             Our Team
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">

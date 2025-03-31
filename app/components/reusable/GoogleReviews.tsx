@@ -124,7 +124,7 @@ function GoogleReviews({ placeId, apiKey, maxReviews }: GoogleReviewsProps) {
         <a
           href="https://www.google.com/search?q=PAINT+innovators+arkansas&oq=paint+inno&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgcIARAAGIAEMgYIAhBFGDkyBggDEEUYQDIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgyOTg2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x87c96e1a825d032b:0xbe511a9dff1f526b,3,,,,"
           target="_blank"
-          className="btn-main"
+          className="btn-main mb-4 md:mb-0"
         >
           Leave a Review
         </a>

@@ -54,12 +54,12 @@ export default function IndustriesResidential() {
             painting, shed painting, trim, siding, and molding painting, and
             more.
           </p>
-          <Link href="/get-estimate" className="btn-main">
+          <Link href="/get-estimate" className="btn-main my-2">
             Get Free Estimate
           </Link>
           <Link
             href="/projects/residential-painting"
-            className="btn-main white ml-2"
+            className="btn-main white lg:ml-2 my-2"
           >
             Residential Projects
           </Link>

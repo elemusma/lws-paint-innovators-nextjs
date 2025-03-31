@@ -53,7 +53,7 @@ export default function NewsPage() {
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
             <Link href="/news/patio-socials-march" className="flex flex-wrap">
-              <div className="w-1/4">
+              <div className="md:w-1/4 w-full">
                 <Image
                   src="/news/Patio-Socials-March-01.jpg"
                   alt="Wallpaper"
@@ -62,7 +62,7 @@ export default function NewsPage() {
                   height={1000}
                 />
               </div>
-              <div className="w-3/4 px-4 py-10">
+              <div className="md:w-3/4 w-full px-4 py-10">
                 <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
                   March 21, 2025
                 </p>
@@ -79,7 +79,7 @@ export default function NewsPage() {
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
             <Link href="/news/happy-new-year-2023" className="flex flex-wrap">
-              <div className="w-1/4">
+              <div className="md:w-1/4 w-full">
                 <Image
                   src="/news/Happy-New-Year-2023.jpg"
                   alt="Wallpaper"
@@ -88,7 +88,7 @@ export default function NewsPage() {
                   height={1000}
                 />
               </div>
-              <div className="w-3/4 px-4 py-10">
+              <div className="md:w-3/4 w-full px-4 py-10">
                 <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
                   December 31, 2022
                 </p>
@@ -105,7 +105,7 @@ export default function NewsPage() {
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
             <Link href="/news/merry-christmas-2022" className="flex flex-wrap">
-              <div className="w-1/4">
+              <div className="md:w-1/4 w-full">
                 <Image
                   src="/news/Merry-Christmas-2022.jpg"
                   alt="Wallpaper"
@@ -114,7 +114,7 @@ export default function NewsPage() {
                   height={1000}
                 />
               </div>
-              <div className="w-3/4 px-4 py-10">
+              <div className="md:w-3/4 w-full px-4 py-10">
                 <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
                   December 24, 2022
                 </p>
@@ -134,7 +134,7 @@ export default function NewsPage() {
               href="/news/happy-thanksgiving-2022"
               className="flex flex-wrap"
             >
-              <div className="w-1/4">
+              <div className="md:w-1/4 w-full">
                 <Image
                   src="/news/Happy-Thanksgiving-2022.jpg"
                   alt="Wallpaper"
@@ -143,7 +143,7 @@ export default function NewsPage() {
                   height={1000}
                 />
               </div>
-              <div className="w-3/4 px-4 py-10">
+              <div className="md:w-3/4 w-full px-4 py-10">
                 <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
                   November 24, 2022
                 </p>
@@ -163,7 +163,7 @@ export default function NewsPage() {
               href="/news/thank-you-veterans-2022"
               className="flex flex-wrap"
             >
-              <div className="w-1/4">
+              <div className="md:w-1/4 w-full">
                 <Image
                   src="/news/Thank-You-Veterans.jpg"
                   alt="Wallpaper"
@@ -172,7 +172,7 @@ export default function NewsPage() {
                   height={1000}
                 />
               </div>
-              <div className="w-3/4 px-4 py-10">
+              <div className="md:w-3/4 w-full px-4 py-10">
                 <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
                   November 11, 2022
                 </p>
@@ -189,7 +189,7 @@ export default function NewsPage() {
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group">
             <Link href="/news/another-tailgate" className="flex flex-wrap">
-              <div className="w-1/4">
+              <div className="md:w-1/4 w-full">
                 <Image
                   src="/news/Tailgate-Time-01.jpg"
                   alt="Wallpaper"
@@ -198,7 +198,7 @@ export default function NewsPage() {
                   height={1000}
                 />
               </div>
-              <div className="w-3/4 px-4 py-10">
+              <div className="md:w-3/4 w-full px-4 py-10">
                 <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
                   October 01, 2022
                 </p>

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${Website}/home/Paint-Innovators-2025-16.jpg`, // Replace with the actual image path
+        url: `${Website}/home/Paint-Innovators-2025-05.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Frequently Asked Questions - Get a Free Estimate - Paint Innovators",
@@ -48,7 +48,7 @@ export default function FrequentlyAskedQuestions() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/home/Paint-Innovators-2025-16.jpg"}
+              src={"/home/Paint-Innovators-2025-05.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}
@@ -65,7 +65,7 @@ export default function FrequentlyAskedQuestions() {
         }
       >
         <div className="relative">
-          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
+          <h1 className="md:text-6xl text-4xl uppercase font-proxima-bold text-shadow">
             Frequently Asked Questions
           </h1>
           <Link href="/get-estimate" className="btn-main mt-[20px]">

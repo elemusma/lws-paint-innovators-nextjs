@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation"; // Import useRouter
-import React, { useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/forms.scss";
@@ -11,6 +11,26 @@ const ContactForm: React.FC = () => {
   const router = useRouter(); // Initialize Next.js router
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+  const handleBeforeUnload = useCallback(
+    (e: BeforeUnloadEvent) => {
+      if (isDirty) {
+        e.preventDefault();
+        e.returnValue =
+          "Are you sure you want to leave? Changes you made may not be saved.";
+        return e.returnValue;
+      }
+    },
+    [isDirty]
+  ); // Add isDirty to dependency array if it's used inside
+  useEffect(() => {
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [isDirty, handleBeforeUnload]);
+
+  const handleInputChange = () => {
+    setIsDirty(true);
+  };
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -57,7 +77,12 @@ const ContactForm: React.FC = () => {
   return (
     <div className="relative flex items-center justify-center min-h-[60vh] bg-cover bg-center">
       <div className="relative lg:p-10 max-w-lg w-full">
-        <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          onChange={handleInputChange}
+          className="space-y-4"
+        >
           {/* Name Field */}
           <div className="relative">
             <label

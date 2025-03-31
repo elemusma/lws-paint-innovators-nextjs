@@ -53,12 +53,12 @@ export default function IndustriesCommercial() {
             painting projects including interior painting, exterior painting,
             office painting, rental property painting, and building painting.
           </p>
-          <Link href="/get-estimate" className="btn-main">
+          <Link href="/get-estimate" className="btn-main my-2">
             Get Free Estimate
           </Link>
           <Link
             href="/projects/commercial-painting"
-            className="btn-main white ml-2"
+            className="btn-main white lg:ml-2 my-2"
           >
             Commercial Projects
           </Link>

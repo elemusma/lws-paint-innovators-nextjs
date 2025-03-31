@@ -56,7 +56,7 @@ export default function ServiceFeedback() {
         }
       >
         <div className="relative">
-          <h1 className="md:text-6xl text-5xl uppercase font-proxima-bold text-shadow">
+          <h1 className="md:text-6xl text-4xl uppercase font-proxima-bold text-shadow">
             Service Feedback
           </h1>
           <p className="text-shadow">

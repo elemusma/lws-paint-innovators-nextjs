@@ -1,10 +1,10 @@
 import Image from "next/image";
 // import ContactForm from "../components/contactForm";
 import type { Metadata } from "next";
-import ContentBlock from "../components/content-block";
-import { Website } from "../components/globals";
-import CompletedProjects from "../components/reusable/CompletedProjects";
-import SwiperCarouselNewService from "../components/swiperCarouselNewService";
+import ContentBlock from "../../components/content-block";
+import { Website } from "../../components/globals";
+import CompletedProjects from "../../components/reusable/CompletedProjects";
+import SwiperCarouselNewService from "../../components/swiperCarouselNewService";
 
 export const metadata: Metadata = {
   title:
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
       "Thank You - Commercial, Industrial & Residential Painting Services - Paint Innovators",
     description:
       "Thank you for choosing Paint Innovators. We will get back to you in no time.",
-    url: `${Website}/thank-you`, // Replace with actual URL
+    url: `${Website}/thank-you/po-submittal`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/gallery/Industrial-50.jpg`, // Replace with the actual image path
+        url: `${Website}/gallery/Industrial-73.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Thank You - Commercial, Industrial & Residential Painting Services - Paint Innovators",
@@ -40,7 +40,7 @@ export default function ThankYou() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/gallery/Industrial-50.jpg"}
+              src={"/gallery/Industrial-73.jpg"}
               alt="Contact Paint Innovators"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "center" }}
@@ -52,8 +52,10 @@ export default function ThankYou() {
         }
       >
         <h1 className="text-4xl font-aspira-thin uppercase">Thank You</h1>
-        <p className="px-[50px]">
-          We will reach back out to you within 24 - 48 hours.
+        <p className="px-[50px] lg:w-3/4 w-full m-auto">
+          Thank you for taking time to fill out a PO Submission form. You will
+          be emailed a corresponding PO# shortly and will see the reflected job
+          and PO# on the PO list.
         </p>
       </ContentBlock>
       <div className="spacer"></div>

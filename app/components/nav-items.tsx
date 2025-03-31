@@ -219,7 +219,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 style={{
                   height: "0px",
                   backgroundColor: "var(--neutral-dark)",
-                  width: "150px",
+                  width: "200px",
                 }}
               >
                 <AboutLinks />

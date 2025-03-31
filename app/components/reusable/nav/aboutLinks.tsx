@@ -11,6 +11,10 @@ export default function AboutLinks({ onClick }: IndustriesLinksProps) {
     <>
       {[
         {
+          name: "Our Story",
+          path: "/about",
+        },
+        {
           name: "Our Team",
           path: "/about/team",
         },
@@ -31,8 +35,8 @@ export default function AboutLinks({ onClick }: IndustriesLinksProps) {
           <Link
             href={item.path}
             className={`block px-4 py-2 ${
-              pathname.startsWith(item.path)
-                ? "bg-white !text-[var(--neutral)]"
+              pathname === item.path
+                ? "bg-white !text-[var(--neutral)] active"
                 : ""
             }`}
             onClick={onClick}

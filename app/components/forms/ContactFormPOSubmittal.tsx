@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
         toast.success("Message sent successfully!");
         formRef.current.reset();
         // Redirect to thank-you page after success
-        router.push("/thank-you/");
+        router.push("/thank-you/po-submittal");
       } else {
         toast.error(result.error || "Failed to send message.");
       }

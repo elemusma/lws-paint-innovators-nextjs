@@ -28,8 +28,8 @@ export default function IndustriesLinks({ onClick }: IndustriesLinksProps) {
           <Link
             href={item.path}
             className={`block px-4 py-2 ${
-              pathname.startsWith(item.path)
-                ? "bg-white !text-[var(--neutral)]"
+              pathname === item.path
+                ? "bg-white !text-[var(--neutral)] active"
                 : ""
             }`}
             onClick={onClick}
