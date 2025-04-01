@@ -36,7 +36,7 @@ const nextConfig = {
       { source: "/oklahoma-location", destination: "/locations/oklahoma", permanent: false },
       { source: "/industrial-coating", destination: "/services/industrial-coating", permanent: false },
       { source: "/el-pintor-masero", destination: "/careers/pintor-masero", permanent: false },
-      { source: "/meet-the-team", destination: "/about/team", permanent: false },
+      { source: "/meet-the-team", destination: "/about", permanent: false },
       { source: "/office-associate-job", destination: "/careers/office-associate", permanent: false },
       { source: "/completed-po-feedback", destination: "/thank-you/po-submittal", permanent: false },
       { source: "/new-construction-painting", destination: "/services/new-construction-painting", permanent: false },

@@ -422,14 +422,14 @@ export default function Footer() {
                     Our Story
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/about/team"
                     className={`${pathname === "/about/team" ? "active text-accent" : ""}`}
                   >
                     Our Team
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="/news"

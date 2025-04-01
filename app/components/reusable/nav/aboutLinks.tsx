@@ -14,10 +14,10 @@ export default function AboutLinks({ onClick }: IndustriesLinksProps) {
           name: "Our Story",
           path: "/about",
         },
-        {
-          name: "Our Team",
-          path: "/about/team",
-        },
+        // {
+        //   name: "Our Team",
+        //   path: "/about/team",
+        // },
         {
           name: "Brand Resources",
           path: "/about/brandresources",

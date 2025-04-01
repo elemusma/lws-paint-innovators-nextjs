@@ -10,6 +10,7 @@ import React, {
 } from "react";
 
 interface TeamColProps {
+  colClassName?: string;
   img: string;
   name: string;
   nameTag?: string; // String for dynamic element type
@@ -46,6 +47,7 @@ function extractTextFromJSX(node: ReactNode): string {
 }
 
 export default function TeamCol({
+  colClassName,
   img,
   name,
   nameTag = "h3", // Default to 'h3'
@@ -111,7 +113,7 @@ export default function TeamCol({
 
   return (
     <>
-      <div className="lg:w-1/3 md:w-1/2 w-full px-4">
+      <div className={`lg:w-1/3 md:w-1/2 w-full px-4 ${colClassName}`}>
         <motion.div
           variants={fadeUpVariants}
           initial="hidden"
@@ -150,7 +152,16 @@ export default function TeamCol({
             <p className="team-col__text text-center">{role}</p>
 
             <div className="mt-4 mb-4">
-              <p className="text-gray-700">{truncatedText}</p>
+              <div className="text-gray-700">
+                {shouldTruncate ? (
+                  <>
+                    {description && <span>{description}</span>}
+                    <span>...</span>
+                  </>
+                ) : (
+                  description
+                )}
+              </div>
             </div>
 
             {/* Conditional button rendering */}
