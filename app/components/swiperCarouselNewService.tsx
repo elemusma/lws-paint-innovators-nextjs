@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "../styles/swiper-hero.scss";
 import "../styles/swiper.scss";
 
 const SwiperCarouselNewService = () => {
@@ -78,7 +77,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -112,7 +111,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -146,7 +145,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -180,7 +179,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -214,7 +213,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -248,7 +247,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -282,7 +281,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -316,7 +315,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
@@ -350,7 +349,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
