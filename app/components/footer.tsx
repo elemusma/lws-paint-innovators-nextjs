@@ -135,7 +135,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/projects"
-                        className={`${pathname === "/projects" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/projects" ? "active text-accent" : ""}`}
                       >
                         All Projects
                       </Link>
@@ -143,7 +143,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/projects/commercial-painting"
-                        className={`${pathname === "/projects/commercial-painting" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/projects/commercial-painting" ? "active text-accent" : ""}`}
                       >
                         Commercial Painting Projects
                       </Link>
@@ -151,7 +151,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/projects/industrial"
-                        className={`${pathname === "/projects/industrial" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/projects/industrial" ? "active text-accent" : ""}`}
                       >
                         Industrial Projects
                       </Link>
@@ -159,7 +159,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/projects/interior-exterior-painting"
-                        className={`${pathname === "/projects/interior-exterior-painting" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/projects/interior-exterior-painting" ? "active text-accent" : ""}`}
                       >
                         Interior Painting and Exterior Painting
                       </Link>
@@ -167,7 +167,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/projects/other-contractor-services"
-                        className={`${pathname === "/projects/other-contractor-services" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/projects/other-contractor-services" ? "active text-accent" : ""}`}
                       >
                         Other Contractor Services
                       </Link>
@@ -175,7 +175,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/projects/residential-painting"
-                        className={`${pathname === "/projects/residential-painting" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/projects/residential-painting" ? "active text-accent" : ""}`}
                       >
                         Residential Painting Projects
                       </Link>
@@ -190,7 +190,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/commercial-paint"
-                    className={`${
+                    className={`py-1 block ${
                       pathname === "/services/commercial-paint"
                         ? "active text-accent"
                         : ""
@@ -202,7 +202,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/maintenance-coatings"
-                    className={`${
+                    className={`py-1 block ${
                       pathname === "/services/maintenance-coatings"
                         ? "active text-accent"
                         : ""
@@ -214,7 +214,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/sandblasting"
-                    className={`${
+                    className={`py-1 block ${
                       pathname === "/services/sandblasting"
                         ? "active text-accent"
                         : ""
@@ -226,7 +226,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/residential-coatings"
-                    className={`${
+                    className={`py-1 block ${
                       pathname === "/services/residential-coatings"
                         ? "active text-accent"
                         : ""
@@ -238,7 +238,7 @@ export default function Footer() {
                 {/* <li>
                   <Link
                     href="/services/interior-painting"
-                    className={`${
+                    className={`py-1 block ${
                       pathname === "/services/interior-painting"
                         ? "active text-accent"
                         : ""
@@ -250,7 +250,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/new-construction-painting"
-                    className={`${pathname === "/services/new-construction-painting" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/new-construction-painting" ? "active text-accent" : ""}`}
                   >
                     New Construction Painting
                   </Link>
@@ -258,7 +258,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/popcorn-ceiling-removal"
-                    className={`${pathname === "/services/popcorn-ceiling-removal" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/popcorn-ceiling-removal" ? "active text-accent" : ""}`}
                   >
                     Popcorn Ceiling Removal
                   </Link>
@@ -266,7 +266,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/wallpaper-removal"
-                    className={`${pathname === "/services/wallpaper-removal" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/wallpaper-removal" ? "active text-accent" : ""}`}
                   >
                     Wallpaper Removal
                   </Link>
@@ -279,7 +279,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/drywall-repair"
-                    className={`${pathname === "/services/drywall-repair" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/drywall-repair" ? "active text-accent" : ""}`}
                   >
                     Drywall Repair
                   </Link>
@@ -287,7 +287,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/deck-coating"
-                    className={`${pathname === "/services/deck-coating" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/deck-coating" ? "active text-accent" : ""}`}
                   >
                     Deck Coating
                   </Link>
@@ -295,7 +295,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/industrial-coating"
-                    className={`${pathname === "/services/industrial-coating" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/industrial-coating" ? "active text-accent" : ""}`}
                   >
                     Industrial Coating
                   </Link>
@@ -303,7 +303,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/epoxy-floors"
-                    className={`${pathname === "/services/epoxy-floors" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/epoxy-floors" ? "active text-accent" : ""}`}
                   >
                     Epoxy Floors
                   </Link>
@@ -311,7 +311,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/pressure-washing"
-                    className={`${pathname === "/services/pressure-washing" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/pressure-washing" ? "active text-accent" : ""}`}
                   >
                     Pressure Washing
                   </Link>
@@ -319,7 +319,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/covid-19-sanitation"
-                    className={`${pathname === "/services/covid-19-sanitation" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/covid-19-sanitation" ? "active text-accent" : ""}`}
                   >
                     COVID-19 Sanitation
                   </Link>
@@ -327,7 +327,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/residential-painting"
-                    className={`${pathname === "/services/residential-painting" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/services/residential-painting" ? "active text-accent" : ""}`}
                   >
                     Residential Painting
                   </Link>
@@ -340,7 +340,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/industries"
-                    className={`${pathname === "/industries" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/industries" ? "active text-accent" : ""}`}
                   >
                     All Industries
                   </Link>
@@ -348,7 +348,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/industries/commercial"
-                    className={`${pathname === "/industries/commercial" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/industries/commercial" ? "active text-accent" : ""}`}
                   >
                     Commercial
                   </Link>
@@ -356,7 +356,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/industries/industrial"
-                    className={`${pathname === "/industries/industrial" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/industries/industrial" ? "active text-accent" : ""}`}
                   >
                     Industrial
                   </Link>
@@ -364,7 +364,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/industries/residential"
-                    className={`${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
                   >
                     Residential
                   </Link>
@@ -378,7 +378,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/locations"
-                    className={`${pathname === "/locations" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/locations" ? "active text-accent" : ""}`}
                   >
                     All Locations
                   </Link>
@@ -386,7 +386,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/locations/arkansas"
-                    className={`${pathname === "/locations/arkansas" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/locations/arkansas" ? "active text-accent" : ""}`}
                   >
                     Arkansas Location
                   </Link>
@@ -394,7 +394,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/locations/oklahoma"
-                    className={`${pathname === "/locations/oklahoma" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/locations/oklahoma" ? "active text-accent" : ""}`}
                   >
                     Oklahoma Location
                   </Link>
@@ -402,7 +402,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/locations/colorado"
-                    className={`${pathname === "/locations/colorado" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/locations/colorado" ? "active text-accent" : ""}`}
                   >
                     Colorado Location
                   </Link>
@@ -416,7 +416,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className={`${pathname === "/about" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/about" ? "active text-accent" : ""}`}
                   >
                     Our Story
                   </Link>
@@ -424,7 +424,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/news"
-                    className={`${pathname === "/news" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/news" ? "active text-accent" : ""}`}
                   >
                     News / Blog
                   </Link>
@@ -432,7 +432,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about/brandresources"
-                    className={`${pathname === "/about/brandresources" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/about/brandresources" ? "active text-accent" : ""}`}
                   >
                     Brand Resources
                   </Link>
@@ -440,7 +440,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about/website-feedback"
-                    className={`${pathname === "/about/website-feedback" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/about/website-feedback" ? "active text-accent" : ""}`}
                   >
                     Website Feedback
                   </Link>
@@ -448,7 +448,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about/service-feedback"
-                    className={`${pathname === "/about/service-feedback" ? "active text-accent" : ""}`}
+                    className={`py-1 block ${pathname === "/about/service-feedback" ? "active text-accent" : ""}`}
                   >
                     Service Feedback
                   </Link>
@@ -463,7 +463,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/careers"
-                        className={`${pathname === "/careers" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/careers" ? "active text-accent" : ""}`}
                       >
                         All Careers
                       </Link>
@@ -471,7 +471,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/careers/painter-drywall-finisher"
-                        className={`${pathname === "/careers/painter-drywall-finisher" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/careers/painter-drywall-finisher" ? "active text-accent" : ""}`}
                       >
                         Painter / Drywall Finisher
                       </Link>
@@ -479,7 +479,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/careers/pintor-masero"
-                        className={`${pathname === "/careers/pintor-masero" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/careers/pintor-masero" ? "active text-accent" : ""}`}
                       >
                         El Pintor / Masero
                       </Link>
@@ -487,7 +487,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/careers/office-associate"
-                        className={`${pathname === "/careers/office-associate" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/careers/office-associate" ? "active text-accent" : ""}`}
                       >
                         Office Associate
                       </Link>
@@ -495,7 +495,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/careers/project-estimator"
-                        className={`${pathname === "/careers/project-estimator" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/careers/project-estimator" ? "active text-accent" : ""}`}
                       >
                         Project Estimator
                       </Link>
@@ -503,7 +503,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/careers/project-manager"
-                        className={`${pathname === "/careers/project-manager" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/careers/project-manager" ? "active text-accent" : ""}`}
                       >
                         Project Manager
                       </Link>
@@ -520,7 +520,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/get-estimate"
-                        className={`${pathname === "/get-estimate" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/get-estimate" ? "active text-accent" : ""}`}
                       >
                         Get Free Estimate
                       </Link>
@@ -528,7 +528,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/contact"
-                        className={`${pathname === "/contact" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/contact" ? "active text-accent" : ""}`}
                       >
                         Contact
                       </Link>
@@ -536,7 +536,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/faqs"
-                        className={`${pathname === "/faqs" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/faqs" ? "active text-accent" : ""}`}
                       >
                         FAQs
                       </Link>
@@ -544,7 +544,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/about/reviews"
-                        className={`${pathname === "/about/reviews" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/about/reviews" ? "active text-accent" : ""}`}
                       >
                         Reviews
                       </Link>
@@ -552,7 +552,7 @@ export default function Footer() {
                     <li>
                       <Link
                         href="/about/po-submittal"
-                        className={`${pathname === "/about/po-submittal" ? "active text-accent" : ""}`}
+                        className={`py-1 block ${pathname === "/about/po-submittal" ? "active text-accent" : ""}`}
                       >
                         PO Submittal
                       </Link>

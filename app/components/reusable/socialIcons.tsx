@@ -5,6 +5,8 @@ export default function SocialIcons() {
         href="https://www.linkedin.com/company/paint-innovators-inc/"
         target="_blank"
         className="block"
+        title="LinkedIn Social Link"
+        aria-label="LinkedIn Social Link"
       >
         <div style={{}} className="social-icons">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -16,6 +18,8 @@ export default function SocialIcons() {
         href="https://www.facebook.com/PaintInnovators/"
         target="_blank"
         className="block"
+        title="Facebook Social Link"
+        aria-label="Facebook Social Link"
       >
         <div style={{}} className="social-icons">
           <svg
@@ -36,7 +40,12 @@ export default function SocialIcons() {
         </div>{" "}
       </a>
       {/* end of social icon */}
-      <a href="https://www.instagram.com/paintinnovators/" target="_blank">
+      <a
+        href="https://www.instagram.com/paintinnovators/"
+        target="_blank"
+        title="Instagram Social Link"
+        aria-label="Instagram Social Link"
+      >
         <div style={{}} className="social-icons">
           <svg
             id="Layer_2"

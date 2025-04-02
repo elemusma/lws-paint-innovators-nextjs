@@ -100,6 +100,7 @@ export default function Home() {
             frameBorder="0"
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Bringing this school back to life - Paint Innovators - Commercial and Industrial Painting"
           ></iframe>
           <iframe
             src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FPaintInnovators%2Fvideos%2F1098726621971511%2F&show_text=false&width=267&t=0"
@@ -113,6 +114,7 @@ export default function Home() {
             scrolling="no"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Job proximity - Paint Innovators - Commercial and Industrial Painting"
             allowFullScreen
           ></iframe>
         </div>
