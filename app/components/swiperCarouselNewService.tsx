@@ -44,7 +44,7 @@ const SwiperCarouselNewService = () => {
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
               <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.PNG"
+                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
