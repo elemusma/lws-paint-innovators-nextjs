@@ -114,7 +114,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 style={{
                   height: "0px",
                   backgroundColor: "var(--neutral-dark)",
-                  width: "300px",
+                  width: "215px",
                 }}
               >
                 <ServicesLinks />
@@ -219,7 +219,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 style={{
                   height: "0px",
                   backgroundColor: "var(--neutral-dark)",
-                  width: "200px",
+                  width: "175px",
                 }}
               >
                 <AboutLinks />
@@ -317,7 +317,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 style={{
                   height: "0px",
                   backgroundColor: "var(--neutral-dark)",
-                  width: "300px",
+                  width: "225px",
                 }}
               >
                 <CareersLinks />

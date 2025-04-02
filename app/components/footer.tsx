@@ -127,59 +127,115 @@ export default function Footer() {
         {/* columns */}
         <div className="max-w-screen-lg mx-auto pt-10 pb-10 lg:px-0 px-4">
           <div className="flex flex-wrap justify-start">
+            <div className="relative w-full md:w-1/4 w-full pb-10">
+              <p className="text-xl font-proxima-bold mb-0">Projects</p>
+              <div className="flex flex-wrap pr-10">
+                <div className="w-full">
+                  <ul className="list-none text-sm mt-0">
+                    <li>
+                      <Link
+                        href="/projects"
+                        className={`${pathname === "/projects" ? "active text-accent" : ""}`}
+                      >
+                        All Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/projects/commercial-painting"
+                        className={`${pathname === "/projects/commercial-painting" ? "active text-accent" : ""}`}
+                      >
+                        Commercial Painting Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/projects/industrial"
+                        className={`${pathname === "/projects/industrial" ? "active text-accent" : ""}`}
+                      >
+                        Industrial Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/projects/interior-exterior-painting"
+                        className={`${pathname === "/projects/interior-exterior-painting" ? "active text-accent" : ""}`}
+                      >
+                        Interior Painting and Exterior Painting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/projects/other-contractor-services"
+                        className={`${pathname === "/projects/other-contractor-services" ? "active text-accent" : ""}`}
+                      >
+                        Other Contractor Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/projects/residential-painting"
+                        className={`${pathname === "/projects/residential-painting" ? "active text-accent" : ""}`}
+                      >
+                        Residential Painting Projects
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div className="w-full md:w-1/4 w-full pb-0 md:pb-10 relative">
               <p className="text-xl font-proxima-bold mb-0">Services</p>
               <ul className="list-none text-sm m-0">
                 <li>
                   <Link
-                    href="/services/commercial-painting"
+                    href="/services/commercial-paint"
                     className={`${
-                      pathname === "/services/commercial-painting"
+                      pathname === "/services/commercial-paint"
                         ? "active text-accent"
                         : ""
                     }`}
                   >
-                    Commercial Painting
+                    Architectural Coatings
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/industrial-painting-blasting"
+                    href="/services/maintenance-coatings"
                     className={`${
-                      pathname === "/services/industrial-painting-blasting"
+                      pathname === "/services/maintenance-coatings"
                         ? "active text-accent"
                         : ""
                     }`}
                   >
-                    Industrial Painting &amp; Blasting
+                    Maintenance Coatings
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/color-consultation-custom-painting"
+                    href="/services/sandblasting"
                     className={`${
-                      pathname ===
-                      "/services/color-consultation-custom-painting"
+                      pathname === "/services/sandblasting"
                         ? "active text-accent"
                         : ""
                     }`}
                   >
-                    Color Consultation &amp; Custom Painting
+                    Sandblasting
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/exterior-painting"
+                    href="/services/residential-coatings"
                     className={`${
-                      pathname === "/services/exterior-painting"
+                      pathname === "/services/residential-coatings"
                         ? "active text-accent"
                         : ""
                     }`}
                   >
-                    Exterior Painting
+                    Residential Coatings
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/services/interior-painting"
                     className={`${
@@ -214,10 +270,10 @@ export default function Footer() {
                   >
                     Wallpaper Removal
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
-            <div className="w-full md:w-1/4 w-full pb-10 relative">
+            {/* <div className="w-full md:w-1/4 w-full pb-10 relative">
               <div className="hidden md:block" style={{ height: 28 }}></div>
               <ul className="list-none text-sm mt-0 md:mt-[1rem]">
                 <li>
@@ -277,7 +333,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div className="w-full md:w-1/4 pb-10">
               <p className="text-xl font-proxima-bold mb-0">Industries</p>
               <ul className="list-none text-sm mt-0">
@@ -354,63 +410,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="relative w-full md:w-1/4 w-full pb-10">
-              <p className="text-xl font-proxima-bold mb-0">Projects</p>
-              <div className="flex flex-wrap pr-10">
-                <div className="w-full">
-                  <ul className="list-none text-sm mt-0">
-                    <li>
-                      <Link
-                        href="/projects"
-                        className={`${pathname === "/projects" ? "active text-accent" : ""}`}
-                      >
-                        All Projects
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/projects/commercial-painting"
-                        className={`${pathname === "/projects/commercial-painting" ? "active text-accent" : ""}`}
-                      >
-                        Commercial Painting Projects
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/projects/industrial"
-                        className={`${pathname === "/projects/industrial" ? "active text-accent" : ""}`}
-                      >
-                        Industrial Projects
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/projects/interior-exterior-painting"
-                        className={`${pathname === "/projects/interior-exterior-painting" ? "active text-accent" : ""}`}
-                      >
-                        Interior Painting and Exterior Painting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/projects/other-contractor-services"
-                        className={`${pathname === "/projects/other-contractor-services" ? "active text-accent" : ""}`}
-                      >
-                        Other Contractor Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/projects/residential-painting"
-                        className={`${pathname === "/projects/residential-painting" ? "active text-accent" : ""}`}
-                      >
-                        Residential Painting Projects
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
             <div className="w-full md:w-1/4 w-full pb-10">
               <p className="text-xl font-proxima-bold mb-0">About</p>
               <ul className="list-none text-sm mt-0">
@@ -422,14 +421,6 @@ export default function Footer() {
                     Our Story
                   </Link>
                 </li>
-                {/* <li>
-                  <Link
-                    href="/about/team"
-                    className={`${pathname === "/about/team" ? "active text-accent" : ""}`}
-                  >
-                    Our Team
-                  </Link>
-                </li> */}
                 <li>
                   <Link
                     href="/news"

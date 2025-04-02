@@ -16,15 +16,15 @@ import { Company, Website } from "../../components/globals";
 
 export const metadata: Metadata = {
   title:
-    "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+    "Commercial Paint & Architectural Coatings – Performance Coatings – Paint Innovators",
   description:
     "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
   openGraph: {
     title:
-      "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+      "Commercial Paint & Architectural Coatings – Professional & Durable Finishes – Paint Innovators",
     description:
       "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
-    url: `${Website}/services/commercial-painting`, // Replace with actual URL
+    url: `${Website}/services/commercial-paint`, // Replace with actual URL
     type: "website",
     images: [
       {
@@ -87,18 +87,19 @@ export default function CommercialPaint() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company} delivers specialized commercial painting solutions tailored
-          to diverse business needs. We assess each project individually,
-          developing customized strategies that align with your brand image and
-          operational requirements.
+          {Company} we offer a comprehensive range of commercial paint and
+          architectural coating services designed to enhance the aesthetic
+          appeal, durability, and performance of your building. Whether
+          it&apos;s a commercial office, retail space, or industrial facility,
+          our expert team delivers results tailored to your specific needs.
         </p>
       </ContentBlock>
 
       <ContentBlock
         sectionClassName="bg-white text-black pb-8"
         containerClassName="max-w-screen-lg mx-auto py-8"
-        rowClassName="flex flex-col items-center"
-        columnClassName="w-full relative px-4"
+        rowClassName="flex flex-col items-center relative"
+        columnClassName=""
       >
         <div className="absolute bg-light w-full h-[90%] top-[10%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
@@ -111,9 +112,11 @@ export default function CommercialPaint() {
             delay={0.1}
             description={
               <>
-                <p className="text-center text-leading-relaxed text-lg">
-                  Tape & Bed levels 1-5<br></br>Gypsum Board finishes<br></br>
-                  Accent Walls<br></br>Doors and Trim<br></br>Caulking
+                <p className="text-center leading-loose">
+                  Seamless Drywall<br></br>Tape &amp; Bed Levels 1-5<br></br>
+                  Decorative Walls<br></br>Gypsum Board Finishes<br></br>
+                  Accent Walls<br></br>Doors, Trim &amp; Finishes<br></br>
+                  Caulking
                 </p>
               </>
             }
@@ -127,73 +130,87 @@ export default function CommercialPaint() {
             delay={0.2}
             description={
               <>
-                <p className="text-center text-leading-relaxed text-lg">
-                  Elastomeric & Texture Coatings<br></br>Exterior Latex &
-                  Acrylic<br></br>Metal Coatings
+                <p className="text-center leading-loose">
+                  Protective Coatings for Stucco<br></br>Elastomeric &amp;
+                  Texture Coatings<br></br>Wood & Metal<br></br>Exterior Latex
+                  &amp; Acrylic<br></br>
+                  Metal Coatings<br></br>Weatherproofing Sealants<br></br>Stucco
+                  & Masonry Finishes
                 </p>
               </>
             }
           />
           <TeamCol
             img="/home/Paint-Innovators-2025-04.jpg"
-            name="Performance Coatings"
+            name="High-Performance Coatings"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
             delay={0.3}
             description={
               <>
-                <p className="text-center text-leading-relaxed text-lg">
-                  Intumescents<br></br>CMU Coatings<br></br>Metal Coatings
+                <p className="text-center leading-loose pb-[3px]">
+                  Fireproofing (Intumescents)<br></br>Concrete Masonry Unit
+                  (CMU) Coatings<br></br>Metal Coatings
+                  <br></br>High-Performance Epoxies<br></br>Anti-Graffiti
+                  Coatings
                 </p>
               </>
             }
           />
-          {/* <div className="py-10 relative"> */}
           <div className="divider !mt-20 !mb-10"></div>
-          {/* </div> */}
+
           <TeamCol
             img="/home/Paint-Innovators-2025-01.jpg"
-            name="Specialty Finishes"
+            name="Finishes"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
             delay={0.1}
             description={
               <>
-                <p className="text-center text-leading-relaxed text-lg">
-                  Wallcovering<br></br>Digital Wallcovering
+                <p className="text-center leading-loose">
+                  Traditional Wallcovering<br></br>Digital Wallcovering<br></br>
+                  Venetian Plaster<br></br>Dry Erase & Chalkboard Paints
                 </p>
+                <div className="h-[15px] hidden lg:block"></div>
               </>
             }
           />
+
           <TeamCol
             img="/services/Services-Epoxy-Floors-Concrete-Staining.jpg"
-            name="Core & Shell"
+            name="Structural Foundation &amp; Shell"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
             delay={0.2}
             description={
               <>
-                <p className="text-center text-leading-relaxed text-lg">
-                  A clean, blank canvas for future tenants.
+                <p className="text-center leading-loose pb-[5px]">
+                  Priming and Base Coatings<br></br>Durable Industrial-Grade
+                  Paints<br></br>
+                  Fireproofing Applications
+                  <br></br>Exposed Structure Finishes
                 </p>
               </>
             }
           />
           <TeamCol
             img="/home/Paint-Innovators-2025-12.jpg"
-            name="Tenant Improvement"
+            name="Tenant Space Enhancements"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
-            delay={0.2}
+            delay={0.3}
             description={
               <>
-                <p className="text-center text-leading-relaxed text-lg">
-                  Helping commercial space feel unique.
+                <p className="text-center leading-loose">
+                  Inviting Commercial Environments<br></br>
+                  High-Traffic Wear-Resistant Finishes<br></br>Acoustic &
+                  Soundproofing Coatings
                 </p>
+                <div className="h-[20px] hidden lg:block"></div>
               </>
             }
           />
@@ -210,31 +227,31 @@ export default function CommercialPaint() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">
-          COMMERCIAL PAINTING SERVICES
+        <h2 className="md:text-5xl text-4xl font-aspira-light pt-4">
+          COMMERCIAL PAINT &amp; ARCHITECTURAL COATINGS SERVICES
         </h2>
       </ContentBlock>
 
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/Services-Commercial-Exterior-Building-Painting-01.jpg"
+        imageSrc="/home/Paint-Innovators-2025-07.jpg"
         imageAlt="Wallpaper"
-        overlayText="PAINTING SPECIALISTS"
+        overlayText="SEAMLESS DRYWALL"
         heading="Transform a Room"
-        content="Our commercial painting specialists utilize advanced materials and techniques that withstand heavy traffic and harsh conditions. We work efficiently around your business schedule, ensuring minimal operational disruption while providing high-performance coating solutions."
+        content="Our interior services cover seamless drywall, tape and bed levels 1-5, and decorative wall finishes like accent walls, gypsum board finishes, and doors, trim, and caulking. For exteriors, we specialize in protective coatings for stucco, elastomeric and texture coatings, wood and metal finishes, as well as weatherproofing sealants to protect your building from the elements. Our performance coatings include fireproofing, concrete masonry unit (CMU) coatings, high-performance epoxies, and anti-graffiti coatings, providing added protection and longevity for your facility."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
 
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/gallery/Commercial-Painting-02.jpg"
+        imageSrc="/gallery/Commercial-Painting-01.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="SAFETY &amp; EFFICIENCY"
+        overlayText="DIGITAL WALLCOVERING"
         heading="Transform a Room"
-        content="Safety, efficiency, and quality define our approach. We use eco-friendly, low-VOC paints and follow strict safety standards, delivering professional finishes that enhance your commercial space's appearance and protection."
+        content="Additionally, we offer a variety of specialty finishes to suit unique design preferences, including traditional and digital wallcovering, Venetian plaster, decorative faux finishes, and dry erase or chalkboard paints. Our core and shell services ensure your building's foundation is secure with durable industrial-grade paints, priming, and fireproofing applications. For tenant improvements, we focus on creating inviting commercial environments with high-traffic wear-resistant finishes and acoustic or soundproofing coatings to meet the diverse needs of your business. At Paint Innovators, we are committed to providing premium coatings and finishes that enhance the value, functionality, and safety of your commercial space."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
 
       <div className="spacer"></div>

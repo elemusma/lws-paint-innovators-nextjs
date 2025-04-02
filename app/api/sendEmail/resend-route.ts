@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: senderEmail, // Must be a verified domain in Resend
-      to: "info@latinowebstudio.com,paintinnovators@outlook.com", // Replace with your recipient email
+      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com", // Replace with your recipient email
       subject: `Latino Web Studio "${user_name}"`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>

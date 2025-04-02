@@ -16,19 +16,19 @@ import { Company, Website } from "../../components/globals";
 
 export const metadata: Metadata = {
   title:
-    "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+    "Blasting & Painting – Automotive, Graffiti, Marine – Paint Innovators",
   description:
     "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
   openGraph: {
     title:
-      "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+      "Blasting & Painting – Automotive, Graffiti, Marine – Paint Innovators",
     description:
       "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
-    url: `${Website}/services/commercial-painting`, // Replace with actual URL
+    url: `${Website}/services/sandblasting`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/home/Paint-Innovators-Commercial-02.jpg`, // Replace with the actual image path
+        url: `${Website}/gallery/Industrial-53.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Commercial Painting Services",
@@ -40,7 +40,7 @@ export default function Sandblasting() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/home/Paint-Innovators-Commercial-02.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/gallery/Industrial-53.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
@@ -103,7 +103,7 @@ export default function Sandblasting() {
         <div className="absolute bg-light w-full h-[90%] top-[10%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/home/Paint-Innovators-Commercial-02.jpg"
+            img="/gallery/Industrial-42.jpg"
             name="Automotive"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
@@ -119,7 +119,7 @@ export default function Sandblasting() {
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-Commercial-01.jpg"
+            img="/gallery/Industrial-28.jpg"
             name="Graffiti"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
@@ -131,11 +131,12 @@ export default function Sandblasting() {
                   Elastomeric & Texture Coatings<br></br>Exterior Latex &
                   Acrylic<br></br>Metal Coatings
                 </p>
+                <div className="h-[40px]"></div>
               </>
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-04.jpg"
+            img="/gallery/Industrial-Applications-Marine.jpg"
             name="Marine"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
@@ -146,6 +147,7 @@ export default function Sandblasting() {
                 <p className="text-center text-leading-relaxed text-lg">
                   Intumescents<br></br>CMU Coatings<br></br>Metal Coatings
                 </p>
+                <div className="h-[40px]"></div>
               </>
             }
           />
@@ -153,7 +155,7 @@ export default function Sandblasting() {
           <div className="divider !mt-20 !mb-10"></div>
           {/* </div> */}
           <TeamCol
-            img="/home/Paint-Innovators-2025-01.jpg"
+            img="/gallery/Industrial-76.jpg"
             name="Concrete"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
@@ -168,7 +170,7 @@ export default function Sandblasting() {
             }
           />
           <TeamCol
-            img="/services/Services-Epoxy-Floors-Concrete-Staining.jpg"
+            img="/gallery/Industrial-82.jpg"
             name="Wood"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
@@ -183,12 +185,12 @@ export default function Sandblasting() {
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-12.jpg"
+            img="/gallery/Industrial-19.jpg"
             name="Heavy Equipment"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
-            delay={0.2}
+            delay={0.3}
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
@@ -197,13 +199,15 @@ export default function Sandblasting() {
               </>
             }
           />
+          <div className="divider !mt-20 !mb-10"></div>
           <TeamCol
-            img="/home/Paint-Innovators-2025-12.jpg"
+            colClassName="lg:!w-1/2"
+            img="/gallery/Industrial-06.jpg"
             name="Fleet Vehicles"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
-            delay={0.2}
+            delay={0.1}
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
@@ -213,7 +217,8 @@ export default function Sandblasting() {
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-12.jpg"
+            colClassName="lg:!w-1/2"
+            img="/gallery/Industrial-42-Antiques.jpg"
             name="Antiques"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
@@ -227,13 +232,15 @@ export default function Sandblasting() {
               </>
             }
           />
+          <div className="divider !mt-20 !mb-10"></div>
           <TeamCol
-            img="/home/Paint-Innovators-2025-12.jpg"
+            colClassName="lg:!w-1/2"
+            img="/gallery/Industrial-26.jpg"
             name="Fire Restorations"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
-            delay={0.2}
+            delay={0.1}
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
@@ -243,7 +250,8 @@ export default function Sandblasting() {
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-12.jpg"
+            colClassName="lg:!w-1/2"
+            img="/gallery/Industrial-18-Door-Etching.jpg"
             name="Etching"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
@@ -270,31 +278,31 @@ export default function Sandblasting() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">
-          COMMERCIAL PAINTING SERVICES
+        <h2 className="md:text-5xl text-4xl font-aspira-light pt-4">
+          SANDBLASTING SERVICES
         </h2>
       </ContentBlock>
 
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/Services-Commercial-Exterior-Building-Painting-01.jpg"
+        imageSrc="/gallery/Industrial-21.jpg"
         imageAlt="Wallpaper"
-        overlayText="PAINTING SPECIALISTS"
+        overlayText="GRAFFITI-RESISTANT COATINGS"
         heading="Transform a Room"
-        content="Our commercial painting specialists utilize advanced materials and techniques that withstand heavy traffic and harsh conditions. We work efficiently around your business schedule, ensuring minimal operational disruption while providing high-performance coating solutions."
+        content="Whether it's restoring the beauty of antiques, creating unique finishes for commercial spaces, or ensuring durability through graffiti-resistant coatings, we have the expertise and technology to deliver exceptional results."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
 
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/gallery/Commercial-Painting-02.jpg"
+        imageSrc="/gallery/Industrial-33.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="SAFETY &amp; EFFICIENCY"
+        overlayText="BUILT TO LAST"
         heading="Transform a Room"
-        content="Safety, efficiency, and quality define our approach. We use eco-friendly, low-VOC paints and follow strict safety standards, delivering professional finishes that enhance your commercial space's appearance and protection."
+        content="Our team is committed to offering solutions tailored to your specific needs, helping to preserve and enhance the surfaces we treat. With Paint Innovators, you can trust us to provide high-quality blasting and painting services that stand the test of time."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
 
       <div className="spacer"></div>

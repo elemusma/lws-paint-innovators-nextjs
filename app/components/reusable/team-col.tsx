@@ -104,9 +104,9 @@ export default function TeamCol({
 
   const fullText = description ? extractTextFromJSX(description) : "";
   const shouldTruncate = fullText.length > maxDescriptionLength;
-  const truncatedText = shouldTruncate
-    ? `${fullText.substring(0, maxDescriptionLength)}...`
-    : fullText;
+  // const truncatedText = shouldTruncate
+  //   ? `${fullText.substring(0, maxDescriptionLength)}...`
+  //   : fullText;
 
   // Dynamically creating the nameTag element
   const NameTag = nameTag;
@@ -120,7 +120,7 @@ export default function TeamCol({
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="team-col__img relative z-10 transform translate-y-[35px] overflow-hidden rounded-lg w-[80%] mx-auto">
+          <div className="team-col__img relative z-10 transform translate-y-[35px] overflow-hidden rounded-lg w-[90%] mx-auto">
             <Image
               src={img}
               alt={`${name} Headshot`}
@@ -135,7 +135,7 @@ export default function TeamCol({
             />
           </div>
           <div
-            className="team-col__content rounded-lg p-8 pt-[50px] box-shadow"
+            className="team-col__content rounded-lg pb-8 px-4 pt-[50px] box-shadow"
             style={{
               background:
                 "linear-gradient(0deg, rgba(219,219,219,1) 0%, rgba(255,255,255,1) 80%)",

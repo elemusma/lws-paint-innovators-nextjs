@@ -1,34 +1,30 @@
 import ContentBlock from "@/app/components/content-block";
+import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ProjectsWorkedOn from "@/app/components/reusable/projects-worked-on";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
-// import { motion } from "framer-motion";
-// import { motion } from "framer-motion";
-import CompletedProjects from "@/app/components/reusable/CompletedProjects";
 import TeamCol from "@/app/components/reusable/team-col";
 import SwiperCarouselNewService from "@/app/components/swiperCarouselNewService";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Company, Website } from "../../components/globals";
-// import Navigation from "./components/navigation";
-// import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title:
-    "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+    "Maintenance Coatings – Professional Finishes & Minimal Disruption – Paint Innovators",
   description:
-    "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
+    "We offer high-performance coatings, eco-friendly solutions, and minimal disruption during installation. Serving Arkansas, Oklahoma, and Colorado.",
   openGraph: {
     title:
-      "Commercial Painting – Professional & Durable Finishes – Paint Innovators",
+      "Maintenance Coatings – Professional Finishes & Minimal Disruption – Paint Innovators",
     description:
-      "Expert commercial painting services tailored to your business needs. We provide high-performance coatings with minimal disruption. Serving Arkansas, Oklahoma, and Colorado.",
-    url: `${Website}/services/commercial-painting`, // Replace with actual URL
+      "We offer high-performance coatings, eco-friendly solutions, and minimal disruption during installation. Serving Arkansas, Oklahoma, and Colorado.",
+    url: `${Website}/services/maintenance-coatings`, // Replace with actual URL
     type: "website",
     images: [
       {
-        url: `${Website}/home/Paint-Innovators-Commercial-02.jpg`, // Replace with the actual image path
+        url: `${Website}/home/Paint-Innovators-2025-06.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Commercial Painting Services",
@@ -40,7 +36,7 @@ export default function MaintenanceCoatings() {
   return (
     <>
       <ContentBlock
-        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/website/Paint-Innovators-09.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
+        sectionClassName="bg-[var(--neutral-dark)] text-white relative py-[150px] bg-[url('/home/Paint-Innovators-2025-06.jpg')] bg-fixed-custom bg-cover bg-center overflow-hidden"
         containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
@@ -87,9 +83,9 @@ export default function MaintenanceCoatings() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <p className="text-gray-700 text-2xl pt-8 mb-4 font-aspira-bold">
-          {Company} use long-lasting, high quality, durable products that
-          protect, and beautify interior and exterior concrete: including
-          garages, basements, sidewalks, and patios.
+          At {Company} we understand the importance of maintaining your
+          commercial space with minimal disruption to your operations and a
+          seamless fit with your schedule.
         </p>
       </ContentBlock>
 
@@ -102,8 +98,8 @@ export default function MaintenanceCoatings() {
         <div className="absolute bg-light w-full h-[90%] top-[10%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
-            img="/home/Paint-Innovators-Commercial-02.jpg"
-            name="Minimal Disruptions"
+            img="/home/Paint-Innovators-2025-01.jpg"
+            name="Disruption-Free Service"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
@@ -111,15 +107,16 @@ export default function MaintenanceCoatings() {
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
-                  Flexible manpower and after-hours schedules for no
-                  disruptions.
+                  Adaptable workforce and after-hours scheduling to ensure
+                  uninterrupted operations.
                 </p>
+                <div className="h-[12px] hidden lg:block"></div>
               </>
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-Commercial-01.jpg"
-            name="Product Performance"
+            img="/home/Paint-Innovators-2025-07.jpg"
+            name="Optimized Coating Performance"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
@@ -127,23 +124,23 @@ export default function MaintenanceCoatings() {
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
-                  Prep and mockups ensure coatings perform their intended
-                  functions.
+                  Thorough prep and testing ensure coatings meet performance
+                  standards.
                 </p>
               </>
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-04.jpg"
-            name="Environmental Control"
+            img="/gallery/Commercial-Painting-14-Rectangular.jpg"
+            name="Eco-Friendly Protection"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
-            delay={0.3}
+            delay={0.2}
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
-                  Zero-VOC products and regular maintenance ensure optimal air
+                  Routine maintenance and zero-VOC products promote healthy air
                   quality.
                 </p>
               </>
@@ -153,8 +150,8 @@ export default function MaintenanceCoatings() {
           <div className="divider !mt-20 !mb-10"></div>
           {/* </div> */}
           <TeamCol
-            img="/home/Paint-Innovators-2025-01.jpg"
-            name="Safety &amp; Security"
+            img="/gallery/Commercial-Painting-20.jpg"
+            name="Safe &amp; Secure Spaces"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
@@ -162,15 +159,15 @@ export default function MaintenanceCoatings() {
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
-                  High-visibility and non-slip coatings keep staff, equipment,
-                  and visitors safe.
+                  Visitors, staff and equipment are safe with anti-slip and
+                  high-visibility solutions.
                 </p>
               </>
             }
           />
           <TeamCol
-            img="/services/Services-Epoxy-Floors-Concrete-Staining.jpg"
-            name="Durability"
+            img="/gallery/Commercial-Painting-17.jpg"
+            name="Built to Last"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
@@ -178,25 +175,25 @@ export default function MaintenanceCoatings() {
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
-                  Proper application helps extend the life of coatings and
-                  surfaces.
+                  Precision application enhances coating durability and surface
+                  longevity.
                 </p>
               </>
             }
           />
           <TeamCol
-            img="/home/Paint-Innovators-2025-12.jpg"
-            name="Cleanliness"
+            img="/gallery/Interior-Exterior-Painting-14.jpg"
+            name="Hygienic &amp; Safe"
             nameTag="h2"
             nameTagClassName="text-xl text-accent font-proxima-bold uppercase"
             role=""
-            delay={0.2}
+            delay={0.3}
             description={
               <>
                 <p className="text-center text-leading-relaxed text-lg">
-                  Keep your facility clean and visitors safe with specialty
-                  coatings.
+                  Coatings designed to keep your facility spotless and secure.
                 </p>
+                <div className="hidden lg:block h-[12px]"></div>
               </>
             }
           />
@@ -213,31 +210,31 @@ export default function MaintenanceCoatings() {
         columnClassName="lg:w-11/12 w-full text-center px-4"
       >
         <div className="divider"></div>
-        <h2 className="text-4xl font-aspira-light pt-4">
-          COMMERCIAL PAINTING SERVICES
+        <h2 className="md:text-5xl text-4xl font-aspira-light pt-4">
+          MAINTENANCE COATINGS SERVICES
         </h2>
       </ContentBlock>
 
       <ImageContentBlock
         sectionClassName=""
-        imageSrc="/services/Services-Commercial-Exterior-Building-Painting-01.jpg"
+        imageSrc="/gallery/Commercial-Painting-02.jpg"
         imageAlt="Wallpaper"
-        overlayText="PAINTING SPECIALISTS"
+        overlayText="ZERO-VOC PRODUCTS"
         heading="Transform a Room"
-        content="Our commercial painting specialists utilize advanced materials and techniques that withstand heavy traffic and harsh conditions. We work efficiently around your business schedule, ensuring minimal operational disruption while providing high-performance coating solutions."
+        content="We focus on optimizing coating performance through thorough preparation and testing to guarantee that our coatings meet the highest standards. Our eco-friendly protection methods, including routine maintenance and the use of zero-VOC products, contribute to a healthier environment and improved air quality."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
 
       <ImageContentBlock
         sectionClassName="even"
-        imageSrc="/gallery/Commercial-Painting-02.jpg"
+        imageSrc="/gallery/Commercial-Painting-12.jpg"
         imageAlt="The History of Wall Paper"
-        overlayText="SAFETY &amp; EFFICIENCY"
+        overlayText="PRECISION &amp; DURABILITY"
         heading="Transform a Room"
-        content="Safety, efficiency, and quality define our approach. We use eco-friendly, low-VOC paints and follow strict safety standards, delivering professional finishes that enhance your commercial space's appearance and protection."
+        content="Built to last, our coatings are applied with precision to improve durability and extend the longevity of your surfaces. We also offer hygienic and safe coatings that ensure your facility stays spotless while protecting your staff and visitors."
         buttonLabel="Get Free Estimate"
-        buttonLink="/wallpaper/transform-room"
+        buttonLink="/get-estimate"
       />
 
       <div className="spacer"></div>
