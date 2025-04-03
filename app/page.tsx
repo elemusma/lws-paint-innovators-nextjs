@@ -50,14 +50,12 @@ export default function Home() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/home/Paint-Innovators-2025-06.webp"}
+              src={"/home/Paint-Innovators-2025-06.jpg"}
               alt="Paint Innovators Industrial"
               className="absolute top-0 right-0 w-7/12 h-full object-cover opacity-[.25]"
               style={{ objectPosition: "right" }}
               width={1000}
               height={1000}
-              loading="eager"
-              priority={true}
             />
           </>
         }
