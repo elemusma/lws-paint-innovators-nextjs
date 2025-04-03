@@ -57,7 +57,7 @@ const SwiperCarouselNewService = () => {
       <SwiperSlide>
         <div className="relative flex lg:min-h-[76vh] md:min-h-[50vh] min-h-[10vh] w-full justify-center md:pt-[100px] pt-[25px] overflow-hidden">
           <Image
-            src="/gallery/Industrial-06.jpg"
+            src="/photos/Introducing-Our-Newest-Service-04-Sandblasting.jpg"
             alt="Paint Innovators Industrial"
             style={{ objectFit: "cover" }}
             className="absolute top-0 left-0 w-full h-full kenburns"
@@ -91,7 +91,7 @@ const SwiperCarouselNewService = () => {
       <SwiperSlide>
         <div className="relative flex lg:min-h-[76vh] md:min-h-[50vh] min-h-[10vh] w-full justify-center md:pt-[100px] pt-[25px] overflow-hidden">
           <Image
-            src="/photos/Introducing-Our-Newest-Service-03.jpg"
+            src="/photos/Introducing-Our-Newest-Service-03-Sandblasting.jpg"
             alt="Paint Innovators Industrial"
             style={{ objectFit: "cover" }}
             className="absolute top-0 left-0 w-full h-full kenburns"
