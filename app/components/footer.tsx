@@ -10,7 +10,6 @@ import {
   ColoradoAddress,
   ColoradoPhone,
   Company,
-  Email,
   OklahomaAddress,
   OklahomaPhone,
   Phone,
@@ -587,12 +586,12 @@ export default function Footer() {
               <p>
                 &copy;{new Date().getFullYear()} {Company}
                 <br></br>
-                <a href={`mailto:${Email}`}>
+                {/* <a href={`mailto:${Email}`}>
                   <strong>
                     <em>{Email}</em>
                   </strong>
                 </a>
-                <br></br>
+                <br></br> */}
                 <a
                   href="/privacy-policy"
                   className={`${pathname === "/privacy-policy" ? "active text-accent" : ""}`}
