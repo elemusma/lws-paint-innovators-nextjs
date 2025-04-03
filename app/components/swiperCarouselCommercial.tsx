@@ -19,10 +19,10 @@ const SwiperCarouselCommercial = () => {
           spaceBetween={0}
           navigation
           // pagination={{ clickable: true }}
-          autoplay={{ delay: 2500 }}
+          autoplay={{ delay: 3000 }}
           modules={[Navigation, Pagination, Autoplay]}
           className="mySwiper"
-          speed={1500} // Increased speed for slower transition
+          speed={2000} // Increased speed for slower transition
         >
           <SwiperSlide>
             <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
