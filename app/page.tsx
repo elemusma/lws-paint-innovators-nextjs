@@ -4,7 +4,7 @@ import Link from "next/link";
 import CompletedProjects from "./components/reusable/CompletedProjects";
 import CoreValues from "./components/reusable/core-values";
 import CTA from "./components/reusable/cta";
-// import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
+import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
 // import dynamic from "next/dynamic";
 import ServingTagline from "./components/reusable/serving-tagline";
 import SwiperCarouselNewService from "./components/swiperCarouselNewService";
@@ -18,7 +18,7 @@ import { Slide } from "./components/swiperCarouselProjects";
 //     loading: () => <div className="min-h-[611px] bg-gray-100" />, // Placeholder while it loads
 //   }
 // );
-import ClientSwiperWrapper from "./components/reusable/ClientSwiperCommercial";
+// import ClientSwiperWrapper from "./components/reusable/ClientSwiperCommercial";
 
 export interface SwiperCarouselPropsResidentialProjects {
   ResidentialProjectsImages: Slide[];
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <ClientSwiperWrapper />
+        <SwiperCarouselCommercial />
       </div>
       <ServingTagline />
       <div className="spacer"></div>
