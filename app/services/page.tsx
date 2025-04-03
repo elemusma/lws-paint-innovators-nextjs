@@ -85,7 +85,7 @@ export default function Services() {
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
             colClassName="lg:!w-1/2"
-            img="/home/Paint-Innovators-Commercial-02.jpg"
+            img="/home/Paint-Innovators-2025-01.jpg"
             name="Architectural Coatings"
             nameTag="h2"
             nameTagClassName="text-2xl text-accent"
