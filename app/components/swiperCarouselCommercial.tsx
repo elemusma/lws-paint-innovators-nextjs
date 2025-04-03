@@ -70,7 +70,6 @@ const SwiperCarouselCommercial = () => {
               style={{ objectFit: "cover" }}
               className="absolute top-0 left-0 w-full h-full"
               fill
-              sizes="100vw"
               loading="eager"
               priority={true}
             />
