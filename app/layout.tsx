@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "./components/footer";
 import { Website } from "./components/globals";
 import Navigation from "./components/nav";
+import Analytics from "./components/reusable/GoogleAnalytics";
 import "./fonts/font-aspira/font-aspira.css";
 import "./fonts/font-pontiac/font-pontiac.css";
 import "./fonts/font-poppins/font-poppins.css";
@@ -62,11 +63,12 @@ export default function RootLayout({
         </header>
         {children}
         <Footer />
+        <Analytics />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8E7G8J49WF"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="beforeInteractive">
           {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
