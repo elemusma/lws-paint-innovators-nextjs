@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "./components/footer";
-import Navigation from "./components/nav";
-// import OwlCarouselComponent from "./components/owlCarousel";
-// import { default as Carousel } from "./components/reactCarousel";
-// const OwlCarousel = dynamic(() => import("./components/owlCarousel"), {
-//   ssr: false, // Disable server-side rendering
-// });
-
 import { Website } from "./components/globals";
+import Navigation from "./components/nav";
 import "./fonts/font-aspira/font-aspira.css";
 import "./fonts/font-pontiac/font-pontiac.css";
 import "./fonts/font-poppins/font-poppins.css";
@@ -65,22 +60,20 @@ export default function RootLayout({
         <header>
           <Navigation />
         </header>
-        {/* <p>hello app/layout.tsx/64</p> */}
-        {/* <div>
-          <OwlCarouselHeader />
-        </div> */}
-        <div>{/* <OwlCarouselComponent /> */}</div>
-        <div>{/* <Carousel /> */}</div>
         {children}
         <Footer />
-        {/* <Script
-          src="https://code.jquery.com/jquery-3.6.0.min.js"
-          strategy="beforeInteractive"
-        />
         <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+          src="https://www.googletagmanager.com/gtag/js?id=G-8E7G8J49WF"
           strategy="afterInteractive"
-        /> */}
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8E7G8J49WF');
+  `}
+        </Script>
       </body>
     </html>
   );
