@@ -65,10 +65,10 @@ const SwiperCarouselCommercial = () => {
         <SwiperSlide>
           <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
             <Image
-              src="/home/Paint-Innovators-2025-12.jpg"
+              src="/home/Paint-Innovators-2025-12.webp"
               alt="Paint Innovators Industrial"
               style={{ objectFit: "cover" }}
-              className="absolute top-0 left-0 w-full h-full kenburns"
+              className="absolute top-0 left-0 w-full h-full"
               fill
               sizes="100vw"
               loading="eager"
