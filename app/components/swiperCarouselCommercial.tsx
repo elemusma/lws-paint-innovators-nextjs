@@ -19,7 +19,7 @@ const SwiperCarouselCommercial = () => {
           spaceBetween={0}
           navigation
           // pagination={{ clickable: true }}
-          // autoplay={{ delay: 2500 }}
+          autoplay={{ delay: 2500 }}
           modules={[Navigation, Pagination, Autoplay]}
           className="mySwiper"
           speed={1500} // Increased speed for slower transition
@@ -32,6 +32,7 @@ const SwiperCarouselCommercial = () => {
                 style={{ objectFit: "cover" }}
                 className="absolute top-0 left-0 w-full h-full kenburns"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 loading="eager" // <-- disables lazy loading
                 priority={true} // <-- preloads the image for faster LCP (Largest Contentful Paint)
               />
