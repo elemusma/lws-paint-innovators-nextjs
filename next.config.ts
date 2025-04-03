@@ -51,7 +51,22 @@ const nextConfig = {
       { source: "/painter-drywall-finisher-job", destination: "/careers/painter-drywall-finisher", permanent: false },
       { source: "/color-consultation-custom-paint", destination: "/services/residential-coatings", permanent: false },
       { source: "/other-contractor-services-projects", destination: "/projects/other-contractor-services", permanent: false },
-      { source: "/thank-you-for-contacting-us", destination: "/thank-you", permanent: false }
+      { source: "/thank-you-for-contacting-us", destination: "/thank-you", permanent: false },
+      { source: "/services/color-consultation-custom-painting", destination: "/services/residential-coatings", permanent: false },
+{ source: "/services/commercial-painting", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/covid19-sanitation", destination: "/services/maintenance-coatings", permanent: false },
+{ source: "/services/deck-coating", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/drywall-repair", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/epoxy-floors", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/exterior-painting", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/industrial-coating", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/industrial-painting-blasting", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/interior-painting", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/new-construction-painting", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/popcorn-ceiling-removal", destination: "/services/residential-coatings", permanent: false },
+{ source: "/services/pressure-washing", destination: "/services/maintenance-coatings", permanent: false },
+{ source: "/services/residential-painting", destination: "/services/residential-coatings", permanent: false },
+{ source: "/services/wallpaper-removal", destination: "/services/residential-coatings", permanent: false },
   ];  
   },
 };
