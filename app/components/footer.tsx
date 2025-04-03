@@ -549,14 +549,14 @@ export default function Footer() {
                         Reviews
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href="/about/po-submittal"
                         className={`py-1 block ${pathname === "/about/po-submittal" ? "active text-accent" : ""}`}
                       >
                         PO Submittal
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -605,7 +605,11 @@ export default function Footer() {
         </div>
         <div
           className="text-center bg-neutral-green px-[70px]"
-          style={{ paddingTop: "10px", paddingBottom: "10px", color: "gray" }}
+          style={{
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            color: "#BDBDBD",
+          }}
         >
           <div className="d-flex justify-content-center align-items-center">
             <small>
