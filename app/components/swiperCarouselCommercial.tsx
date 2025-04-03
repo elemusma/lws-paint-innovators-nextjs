@@ -53,6 +53,9 @@ const SwiperCarouselCommercial = () => {
                 style={{ objectFit: "cover" }}
                 className="absolute top-0 left-0 w-full h-full kenburns"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="eager" // <-- disables lazy loading
+                priority={true} // <-- preloads the image for faster LCP (Largest Contentful Paint)
               />
               <div
                 className="absolute top-0 left-0 w-full h-full"
@@ -71,6 +74,9 @@ const SwiperCarouselCommercial = () => {
                 style={{ objectFit: "cover" }}
                 className="absolute top-0 left-0 w-full h-full kenburns"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="eager" // <-- disables lazy loading
+                priority={true} // <-- preloads the image for faster LCP (Largest Contentful Paint)
               />
               <div
                 className="absolute top-0 left-0 w-full h-full"
@@ -89,6 +95,9 @@ const SwiperCarouselCommercial = () => {
                 style={{ objectFit: "cover" }}
                 className="absolute top-0 left-0 w-full h-full kenburns"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="eager" // <-- disables lazy loading
+                priority={true} // <-- preloads the image for faster LCP (Largest Contentful Paint)
               />
               <div
                 className="absolute top-0 left-0 w-full h-full"
@@ -107,6 +116,9 @@ const SwiperCarouselCommercial = () => {
                 style={{ objectFit: "cover" }}
                 className="absolute top-0 left-0 w-full h-full kenburns"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="eager" // <-- disables lazy loading
+                priority={true} // <-- preloads the image for faster LCP (Largest Contentful Paint)
               />
               <div
                 className="absolute top-0 left-0 w-full h-full"
@@ -125,6 +137,9 @@ const SwiperCarouselCommercial = () => {
                 style={{ objectFit: "cover" }}
                 className="absolute top-0 left-0 w-full h-full kenburns"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="eager" // <-- disables lazy loading
+                priority={true} // <-- preloads the image for faster LCP (Largest Contentful Paint)
               />
               <div
                 className="absolute top-0 left-0 w-full h-full"
