@@ -4,9 +4,21 @@ import Link from "next/link";
 import CompletedProjects from "./components/reusable/CompletedProjects";
 import CoreValues from "./components/reusable/core-values";
 import CTA from "./components/reusable/cta";
-import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
+// import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
+// import dynamic from "next/dynamic";
+import ServingTagline from "./components/reusable/serving-tagline";
 import SwiperCarouselNewService from "./components/swiperCarouselNewService";
 import { Slide } from "./components/swiperCarouselProjects";
+
+// Lazy load the component with no SSR to reduce render-blocking JS
+// const SwiperCarouselCommercial = dynamic(
+//   () => import("./components/swiperCarouselCommercial"),
+//   {
+//     ssr: false,
+//     loading: () => <div className="min-h-[611px] bg-gray-100" />, // Placeholder while it loads
+//   }
+// );
+import ClientSwiperWrapper from "./components/reusable/ClientSwiperCommercial";
 
 export interface SwiperCarouselPropsResidentialProjects {
   ResidentialProjectsImages: Slide[];
@@ -25,18 +37,9 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <SwiperCarouselCommercial />
+        <ClientSwiperWrapper />
       </div>
-      <ContentBlock
-        sectionClassName="bg-accent text-white"
-        containerClassName="max-w-screen-lg mx-auto py-3"
-        rowClassName="flex flex-col items-center"
-        columnClassName="w-full text-center"
-      >
-        <h2 className="text-3xl font-proxima-bold">
-          SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
-        </h2>
-      </ContentBlock>
+      <ServingTagline />
       <div className="spacer"></div>
       <ContentBlock
         sectionClassName="relative py-[100px]"

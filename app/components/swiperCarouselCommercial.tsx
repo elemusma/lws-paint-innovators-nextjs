@@ -31,10 +31,16 @@ const SwiperCarouselCommercial = () => {
   // Delay autoplay start on mobile
   useEffect(() => {
     if (isMobile && swiperRef.current) {
-      const timeout = setTimeout(() => {
-        swiperRef.current?.autoplay?.start();
-      }, 4000); // Adjust delay as needed
-      return () => clearTimeout(timeout);
+      if ("requestIdleCallback" in window) {
+        (window as any).requestIdleCallback(() => {
+          swiperRef.current?.autoplay?.start();
+        });
+      } else {
+        // fallback for older browsers
+        setTimeout(() => {
+          swiperRef.current?.autoplay?.start();
+        }, 5000);
+      }
     }
   }, [isMobile]);
 
@@ -55,12 +61,12 @@ const SwiperCarouselCommercial = () => {
       >
         {/* First Slide – eager & priority */}
         <SwiperSlide>
-          <div className="relative flex min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
+          <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
             <Image
               src="/home/Paint-Innovators-2025-12.webp"
               alt="Paint Innovators Industrial"
               style={{ objectFit: "cover" }}
-              className="absolute top-0 left-0 w-full h-full"
+              className="absolute top-0 left-0 w-full h-full kenburns"
               fill
               sizes="100vw"
               loading="eager"
@@ -85,7 +91,7 @@ const SwiperCarouselCommercial = () => {
           "/home/Paint-Innovators-2025-06.jpg",
         ].map((src, i) => (
           <SwiperSlide key={i}>
-            <div className="relative flex min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
+            <div className="relative flex lg:min-h-[530px] md:min-h-[629px] min-h-[611px] w-full justify-center pt-[100px] overflow-hidden">
               <Image
                 src={src}
                 alt="Paint Innovators Industrial"
