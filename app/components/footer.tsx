@@ -212,14 +212,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/services/sandblasting"
+                    href="/services/abrasive-blasting"
                     className={`py-1 block ${
-                      pathname === "/services/sandblasting"
+                      pathname === "/services/abrasive-blasting"
                         ? "active text-accent"
                         : ""
                     }`}
                   >
-                    Sandblasting
+                    Abrasive Blasting
                   </Link>
                 </li>
                 <li>
@@ -234,105 +234,9 @@ export default function Footer() {
                     Residential Coatings
                   </Link>
                 </li>
-                {/* <li>
-                  <Link
-                    href="/services/interior-painting"
-                    className={`py-1 block ${
-                      pathname === "/services/interior-painting"
-                        ? "active text-accent"
-                        : ""
-                    }`}
-                  >
-                    Interior Painting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/new-construction-painting"
-                    className={`py-1 block ${pathname === "/services/new-construction-painting" ? "active text-accent" : ""}`}
-                  >
-                    New Construction Painting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/popcorn-ceiling-removal"
-                    className={`py-1 block ${pathname === "/services/popcorn-ceiling-removal" ? "active text-accent" : ""}`}
-                  >
-                    Popcorn Ceiling Removal
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/wallpaper-removal"
-                    className={`py-1 block ${pathname === "/services/wallpaper-removal" ? "active text-accent" : ""}`}
-                  >
-                    Wallpaper Removal
-                  </Link>
-                </li> */}
               </ul>
             </div>
-            {/* <div className="w-full md:w-1/4 w-full pb-10 relative">
-              <div className="hidden md:block" style={{ height: 28 }}></div>
-              <ul className="list-none text-sm mt-0 md:mt-[1rem]">
-                <li>
-                  <Link
-                    href="/services/drywall-repair"
-                    className={`py-1 block ${pathname === "/services/drywall-repair" ? "active text-accent" : ""}`}
-                  >
-                    Drywall Repair
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/deck-coating"
-                    className={`py-1 block ${pathname === "/services/deck-coating" ? "active text-accent" : ""}`}
-                  >
-                    Deck Coating
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/industrial-coating"
-                    className={`py-1 block ${pathname === "/services/industrial-coating" ? "active text-accent" : ""}`}
-                  >
-                    Industrial Coating
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/epoxy-floors"
-                    className={`py-1 block ${pathname === "/services/epoxy-floors" ? "active text-accent" : ""}`}
-                  >
-                    Epoxy Floors
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/pressure-washing"
-                    className={`py-1 block ${pathname === "/services/pressure-washing" ? "active text-accent" : ""}`}
-                  >
-                    Pressure Washing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/covid-19-sanitation"
-                    className={`py-1 block ${pathname === "/services/covid-19-sanitation" ? "active text-accent" : ""}`}
-                  >
-                    COVID-19 Sanitation
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/residential-painting"
-                    className={`py-1 block ${pathname === "/services/residential-painting" ? "active text-accent" : ""}`}
-                  >
-                    Residential Painting
-                  </Link>
-                </li>
-              </ul>
-            </div> */}
+
             <div className="w-full md:w-1/4 pb-10">
               <p className="text-xl font-proxima-bold mb-0">Industries</p>
               <ul className="list-none text-sm mt-0">

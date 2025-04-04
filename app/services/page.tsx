@@ -123,7 +123,7 @@ export default function Services() {
           <TeamCol
             colClassName="lg:!w-1/2"
             img="/gallery/Industrial-53.jpg"
-            name="Sandblasting"
+            name="Abrasive Blasting"
             nameTag="h2"
             nameTagClassName="text-2xl text-accent"
             role=""
@@ -134,7 +134,7 @@ export default function Services() {
                 optimal surface preparation for a variety of applications.
               </p>
             }
-            buttonLink="/services/sandblasting"
+            buttonLink="/services/abrasive-blasting"
             buttonText="Learn More"
             buttonAriaLabel="Learn more about commercial painting services"
           />

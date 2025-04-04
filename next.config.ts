@@ -57,6 +57,7 @@ const nextConfig = {
 { source: "/services/covid19-sanitation", destination: "/services/maintenance-coatings", permanent: false },
 { source: "/services/deck-coating", destination: "/services/commercial-paint", permanent: false },
 { source: "/services/drywall-repair", destination: "/services/commercial-paint", permanent: false },
+{ source: "/services/sandblasting", destination: "/services/abrasive-blasting", permanent: false },
 { source: "/services/epoxy-floors", destination: "/services/commercial-paint", permanent: false },
 { source: "/services/exterior-painting", destination: "/services/commercial-paint", permanent: false },
 { source: "/services/industrial-coating", destination: "/services/commercial-paint", permanent: false },

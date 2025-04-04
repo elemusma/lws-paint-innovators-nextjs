@@ -20,8 +20,8 @@ export default function ServicesLinks({ onClick }: IndustriesLinksProps) {
           path: "/services/maintenance-coatings",
         },
         {
-          name: "Sandblasting",
-          path: "/services/sandblasting",
+          name: "Abrasive Blasting",
+          path: "/services/abrasive-blasting",
         },
         {
           name: "Residential Coatings",

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
 };
-export default function Sandblasting() {
+export default function AbrasiveBlasting() {
   return (
     <>
       <ContentBlock
@@ -66,7 +66,7 @@ export default function Sandblasting() {
       >
         <div className="relative">
           <h1 className="md:text-6xl text-4xl uppercase font-proxima-bold text-shadow">
-            Sandblasting
+            Abrasive Blasting
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
             We Get the Job Done Right!
@@ -279,7 +279,7 @@ export default function Sandblasting() {
       >
         <div className="divider"></div>
         <h2 className="md:text-5xl text-4xl font-aspira-light pt-4">
-          SANDBLASTING SERVICES
+          ABRASIVE BLASTING SERVICES
         </h2>
       </ContentBlock>
 

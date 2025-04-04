@@ -78,6 +78,35 @@ export default function NewsPage() {
           {/* end of news blog post */}
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
+            <Link
+              href="/news/acquired-blastcraft"
+              className="flex flex-wrap items-stretch"
+            >
+              <div className="md:w-1/4 w-full">
+                <Image
+                  src="/news/Blastcraft-Rodney-Barnes-Tadeo.jpg"
+                  alt="Wallpaper"
+                  className="h-[225px] w-full object-cover"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
+              <div className="md:w-3/4 w-full px-4 py-10">
+                <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
+                  August 07, 2024
+                </p>
+                <h2 className="text-3xl font-proxima-bold uppercase group-hover:text-white">
+                  Paint Innovators Acquired Blastcraft
+                </h2>
+                <p className="mt-0 text-gray-700 text-sm group-hover:text-white">
+                  READ MORE
+                </p>
+              </div>
+            </Link>
+          </div>
+          {/* end of news blog post */}
+          {/* start of news blog post */}
+          <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
             <Link href="/news/happy-new-year-2023" className="flex flex-wrap">
               <div className="md:w-1/4 w-full">
                 <Image
