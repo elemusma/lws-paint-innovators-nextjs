@@ -1,4 +1,5 @@
 "use client";
+// declare const grecaptcha: any;
 import Image from "next/image";
 import { useRouter } from "next/navigation"; // Import useRouter
 import React, { useCallback, useEffect, useRef, useState } from "react";
@@ -6,6 +7,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/forms.scss";
 import { formatPhoneNumber } from "./phoneFormatting";
+import { getRecaptchaToken } from "./Recaptcha";
 
 const ContactForm: React.FC = () => {
   const router = useRouter(); // Initialize Next.js router
@@ -50,10 +52,15 @@ const ContactForm: React.FC = () => {
     setLoading(true);
 
     try {
+      const token = await getRecaptchaToken("submit");
+
       const response = await fetch("/api/sendEmailForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          token, // 👈 now the token is included in the request payload
+        }),
       });
 
       const result = await response.json();

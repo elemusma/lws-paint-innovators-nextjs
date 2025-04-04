@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/owlCarouselHeader.tsx", "app/components/owlCarousel.js", "app/components/forms/ContactForm.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/owlCarouselHeader.tsx", "app/components/owlCarousel.js", "app/components/forms/ContactForm.tsx", "types.d.ts"],
   "exclude": ["node_modules"]
 }

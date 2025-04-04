@@ -5,6 +5,7 @@ const CLIENT_ID = process.env.GOOGLE_CLIENT_ID!;
 const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!;
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN = process.env.GOOGLE_REFRESH_TOKEN!;
+const RECAPTCHA_SECRET = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
@@ -12,15 +13,35 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { user_name, user_email, user_phone,user_subject, message, embed_url } = body;
+    const { user_name, user_email, user_phone, user_subject, message, embed_url, token } = body;
 
+    // ✅ 1. Verify the reCAPTCHA token with Google
+    const captchaRes = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: RECAPTCHA_SECRET,
+        response: token,
+      }),
+    });
+
+    const captchaData = await captchaRes.json();
+
+    if (!captchaData.success || captchaData.score < 0.5) {
+      return new Response(JSON.stringify({ error: "reCAPTCHA verification failed." }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    // ✅ 2. Proceed with sending the email
     const accessToken = await oAuth2Client.getAccessToken();
 
     const transport = nodemailer.createTransport({
       service: "gmail",
       auth: {
         type: "OAuth2",
-        user: process.env.GMAIL_USER, // Your Gmail address
+        user: process.env.GMAIL_USER,
         clientId: CLIENT_ID,
         clientSecret: CLIENT_SECRET,
         refreshToken: REFRESH_TOKEN,
@@ -75,6 +96,7 @@ Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@
     };
 
     const result = await transport.sendMail(mailOptions);
+
     return new Response(JSON.stringify({ success: "Email sent successfully!", data: result }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
