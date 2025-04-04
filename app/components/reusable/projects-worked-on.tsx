@@ -170,7 +170,7 @@ export default function ProjectsWorkedOn() {
               index={commercialIndex}
             />
 
-            <div className="bg-accent text-white">
+            <div className="bg-accent-primary text-white">
               <h3 className="font-aspira-bold uppercase text-center text-2xl">
                 Commercial
               </h3>
@@ -229,7 +229,7 @@ export default function ProjectsWorkedOn() {
               index={industrialIndex}
             />
 
-            <div className="bg-accent text-white">
+            <div className="bg-accent-primary text-white">
               <h3 className="font-aspira-bold uppercase text-center text-2xl">
                 Industrial
               </h3>
@@ -290,7 +290,7 @@ export default function ProjectsWorkedOn() {
               index={residentialIndex}
             />
 
-            <div className="bg-accent text-white">
+            <div className="bg-accent-primary text-white">
               <h3 className="font-aspira-bold uppercase text-center text-2xl">
                 Residential
               </h3>

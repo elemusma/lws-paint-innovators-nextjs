@@ -123,7 +123,7 @@ const ContactForm: React.FC = () => {
           <div className="text-center !mb-[-60px]">
             <button
               type="submit"
-              className="bg-accent text-white py-3 px-6 rounded-md shadow-md hover:bg-[var(--neutral-dark)] transition-all border border-white font-proxima-bold shadow-[inset_0px_2px_6px_rgba(0,0,0,0.5)]"
+              className="bg-accent-primary text-white py-3 px-6 rounded-md shadow-md hover:bg-[var(--neutral-dark)] transition-all border border-white font-proxima-bold shadow-[inset_0px_2px_6px_rgba(0,0,0,0.5)]"
             >
               Send us a Message
             </button>

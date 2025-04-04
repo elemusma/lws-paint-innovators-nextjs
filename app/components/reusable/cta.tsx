@@ -27,7 +27,7 @@ export default function CTA() {
       <Testimonials />
       <div className="spacer"></div>
       <ContentBlock
-        sectionClassName="bg-accent text-white"
+        sectionClassName="bg-[var(--accent-primary)] text-white"
         containerClassName="max-w-screen-lg mx-auto py-8"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"

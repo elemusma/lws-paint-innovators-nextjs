@@ -19,7 +19,7 @@ const ButtonSquare: React.FC<ButtonSquareProps> = ({
 }) => {
   return (
     <a
-      className={`btn square bg-accent ${className}`} // Merge the additional classNames
+      className={`btn square bg-accent-primary ${className}`} // Merge the additional classNames
       style={{
         padding: "10px 25px",
         color: "white",

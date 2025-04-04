@@ -35,7 +35,7 @@ export default function ValueColumn({
       transition={{ delay }}
     >
       <div className="value-column__number flex-shrink-0">
-        <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center">
+        <div className="w-16 h-16 rounded-full bg-accent-primary flex items-center justify-center">
           <span className="text-3xl font-bold text-white">{number}</span>
         </div>
       </div>

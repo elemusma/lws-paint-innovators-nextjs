@@ -3,7 +3,7 @@ import ContentBlock from "../content-block";
 export default function ServingTagline() {
   return (
     <ContentBlock
-      sectionClassName="bg-accent text-white"
+      sectionClassName="bg-[var(--accent-primary)] text-white"
       containerClassName="max-w-screen-lg mx-auto py-3"
       rowClassName="flex flex-col items-center"
       columnClassName="w-full text-center"
