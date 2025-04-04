@@ -14,6 +14,16 @@ const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
+  const [operandA, setOperandA] = useState(0);
+  const [operandB, setOperandB] = useState(0);
+
+  useEffect(() => {
+    const a = Math.floor(Math.random() * 5) + 1;
+    const b = Math.floor(Math.random() * 5) + 1;
+    setOperandA(a);
+    setOperandB(b);
+  }, []);
+
   const handleBeforeUnload = useCallback(
     (e: BeforeUnloadEvent) => {
       if (isDirty) {
@@ -46,6 +56,10 @@ const ContactForm: React.FC = () => {
       user_phone: formData.get("user_phone") as string,
       user_subject: formData.get("user_subject") as string,
       message: formData.get("message") as string,
+      job_title: formData.get("job_title") as string,
+      operand_a: formData.get("operand_a") as string,
+      operand_b: formData.get("operand_b") as string,
+      additional_info_1: formData.get("additional_info_1") as string,
       embed_url: window.location.href, // Capture the current page URL
     };
 
@@ -224,6 +238,34 @@ const ContactForm: React.FC = () => {
                 required
               ></textarea>
             </div>
+          </div>
+
+          <div className="relative">
+            <label
+              htmlFor="additional_info_1"
+              className="block text-sm font-medium text-white"
+            >
+              What is {operandA} + {operandB}?
+            </label>
+            <input
+              type="number"
+              name="additional_info_1"
+              className="w-full"
+              required
+            />
+            <input type="hidden" name="operand_a" value={operandA} />
+            <input type="hidden" name="operand_b" value={operandB} />
+          </div>
+
+          {/* Honeypot field - should remain empty */}
+          <div style={{ display: "none" }} aria-hidden="true">
+            <label htmlFor="job_title">Job Title</label>
+            <input
+              type="text"
+              name="job_title"
+              tabIndex={-1}
+              autoComplete="off"
+            />
           </div>
 
           {/* Submit Button */}

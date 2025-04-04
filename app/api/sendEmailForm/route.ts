@@ -12,8 +12,13 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
 export async function POST(req: Request) {
   try {
+
     const body = await req.json();
-    const { user_name, user_email, user_phone, user_subject, message, embed_url, token } = body;
+    // console.log("Form submission received:", body);
+    const { user_name, user_email, user_phone, user_subject, message, embed_url, token,additional_info_1, operand_a, operand_b } = body;
+    const operandA = parseInt(operand_a, 10);
+    const operandB = parseInt(operand_b, 10);
+    const expected = operandA + operandB;
 
     // ✅ 1. Verify the reCAPTCHA token with Google
     const captchaRes = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
@@ -27,12 +32,28 @@ export async function POST(req: Request) {
 
     const captchaData = await captchaRes.json();
 
-    if (!captchaData.success || captchaData.score < 0.5) {
-      return new Response(JSON.stringify({ error: "reCAPTCHA verification failed." }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      });
-    }
+// 1. Math question validation
+if (!additional_info_1 || parseInt(additional_info_1, 10) !== expected) {
+  return new Response(JSON.stringify({ error: "Validation check failed." }), {
+    status: 400,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
+if (body.job_title && body.job_title.trim() !== "") {
+  return new Response(JSON.stringify({ error: "Bot detected." }), {
+    status: 400,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
+// 2. reCAPTCHA validation
+if (!captchaData.success || captchaData.score < 0.5) {
+  return new Response(JSON.stringify({ error: "reCAPTCHA verification failed." }), {
+    status: 400,
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
     // ✅ 2. Proceed with sending the email
     const accessToken = await oAuth2Client.getAccessToken();
@@ -68,7 +89,7 @@ export async function POST(req: Request) {
 <tbody>
 <tr>
 <td style="padding: 20px 20px;">
-<p>Hello Paint Innovators! Tadeo here, someone filled the contact form. See details below:</p>
+<p>Hi Paint Innovators! Someone filled the contact form. See details below:</p>
 <p><strong>Name:</strong> ${user_name}</p>
 <p><strong>Email:</strong> ${user_email}</p>
 <p><strong>Phone:</strong> ${user_phone}</p>
