@@ -115,7 +115,7 @@ export async function POST(req: Request) {
     if (referer.includes("/get-estimate")) {
       // Quote Request Form
       emailSubject = `Quote Request from ${first_name} ${last_name}`;
-      emailIntro = `<p>Tadeo here! Quote Request from ${first_name} ${last_name}:</p>`;
+      emailIntro = `<p>Quote Request from ${first_name} ${last_name}:</p>`;
       emailHtml = `
         <p><strong>Name:</strong> ${first_name} ${last_name}</p>
         <p><strong>Email:</strong> ${user_email}</p>
@@ -127,7 +127,7 @@ export async function POST(req: Request) {
     } else if (referer.includes("/contact")) {
       // Contact Form
       emailSubject = `Contact: "${user_name}"`;
-      emailIntro = `<p>Tadeo here! Someone submitted a form. See their details below:</p>`;
+      emailIntro = `<p>Someone submitted the contact form. See their details below:</p>`;
       emailHtml = `
         <p><strong>Name:</strong> ${user_name}</p>
         <p><strong>Email:</strong> ${user_email}</p>
@@ -138,7 +138,7 @@ export async function POST(req: Request) {
     } else if (referer.includes("/careers")) {
       // Careers Form (for any career submission)
       emailSubject = `Careers: ${position} - ${first_name}`;
-      emailIntro = `<p>Tadeo here! Congrats, there is a new job application for <strong>${position}</strong>:</p>`;
+      emailIntro = `<p>There is a new job application for <strong>${position}</strong>:</p>`;
       emailHtml = `
   <h2>Personal Information</h2>
   <p><strong>Name:</strong> ${first_name} ${last_name}</p>
@@ -209,7 +209,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `"Latino Web Studio" <${GMAIL_USER}>`,
-      to: "info@latinowebstudio.com",
+      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
       subject: emailSubject,
       html: `
         <table style="background-color: #f7f7f7; width: 100%;">

@@ -30,7 +30,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `"Latino Web Studio" <${process.env.GMAIL_USER}>`,
-      to: "info@latinowebstudio.com",
+      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
       subject: `PO Submittal: "${first_name}"`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
 <tbody>
 <tr>
 <td style="padding: 20px 20px;">
-<p>Hello Paint Innovators! Tadeo here, someone filled the PO# Submittal form. See details below:</p>
+<p>Hi Paint Innovators! Someone filled the PO# Submittal form. See details below:</p>
 <p><strong>Name:</strong> ${first_name} ${last_name}</p>
 <p><strong>Job Name:</strong> ${job_name}</p>
 <p><strong>Address 1:</strong> ${job_address_line1}</p>
