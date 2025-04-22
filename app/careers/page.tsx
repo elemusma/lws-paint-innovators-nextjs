@@ -89,7 +89,7 @@ export default function CareersPage() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
+              <p className="">
                 Painters work on job sites on a daily basis. They are directly
                 involved in both residential and commercial painting projects.
               </p>
@@ -142,10 +142,9 @@ export default function CareersPage() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
+              <p className="">
                 Project Estimators interact with commercial customers, prepare
-                proposals, answer customer questions, and ensure customer
-                satisfaction.
+                proposals, answer questions, and ensure customer satisfaction.
               </p>
             }
             buttonLink="/careers/project-estimator"

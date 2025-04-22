@@ -55,7 +55,7 @@ export default function TeamCol({
   description,
   role,
   delay,
-  maxDescriptionLength = 175,
+  maxDescriptionLength = 195,
   buttonLink,
   buttonText = "Learn More",
   buttonTarget = "_self",

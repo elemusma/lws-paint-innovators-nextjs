@@ -90,9 +90,7 @@ export default function IndustriesPage() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
-                Learn more about our commercial projects.
-              </p>
+              <p className="">Learn more about our commercial projects.</p>
             }
             buttonLink="/industries/commercial"
             buttonText="View Industry"
@@ -106,9 +104,7 @@ export default function IndustriesPage() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
-                Learn more about our industrial projects.
-              </p>
+              <p className="">Learn more about our industrial projects.</p>
             }
             buttonLink="/industries/industrial"
             buttonText="View Industry"
@@ -122,9 +118,7 @@ export default function IndustriesPage() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
-                Learn more about our residential projects.
-              </p>
+              <p className="">Learn more about our residential projects.</p>
             }
             buttonLink="/industries/residential"
             buttonText="View Industry"

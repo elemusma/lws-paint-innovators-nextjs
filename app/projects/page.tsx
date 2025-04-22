@@ -73,10 +73,20 @@ export default function Projects() {
         </div>
       </ContentBlock>
       <ServingTagline />
-      <div className="pt-[50px]"></div>
+      {/* <div className="pt-[50px]"></div> */}
       <ContentBlock
         sectionClassName="bg-white text-black pb-8"
         containerClassName="max-w-screen-lg mx-auto py-8"
+        rowClassName="flex flex-col items-center"
+        columnClassName="lg:w-11/12 w-full text-center px-4"
+      >
+        <h2 className="text-4xl font-aspira-light pt-4 uppercase">
+          100 Years of Combined Painting Experience
+        </h2>
+      </ContentBlock>
+      <ContentBlock
+        sectionClassName="bg-white text-black pb-8"
+        containerClassName="max-w-screen-lg mx-auto"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full relative px-4"
       >
@@ -91,10 +101,9 @@ export default function Projects() {
             delay={0.1}
             description={
               <p>
-                Paint Innovators has experience with all types of commercial
-                painting projects including interior painting, exterior
-                painting, office painting, rental property painting, and
-                building painting.
+                Paint Innovators&apos; experience with commercial painting
+                projects includes interior painting, exterior painting, office
+                painting, rental property painting, and building painting.
               </p>
             }
             buttonLink="/projects/commercial-painting"
@@ -110,10 +119,9 @@ export default function Projects() {
             delay={0.1}
             description={
               <p>
-                Paint Innovators has experience with all types of commercial
-                painting projects including interior painting, exterior
-                painting, office painting, rental property painting, and
-                building painting.
+                Paint Innovators&apos; experience with commercial painting
+                projects includes interior painting, exterior painting, office
+                painting, rental property painting, and building painting.
               </p>
             }
             buttonLink="/projects/industrial"
@@ -129,11 +137,10 @@ export default function Projects() {
             delay={0.1}
             description={
               <p>
-                Paint Innovators has over 100 years of combined painting
-                experience. Our team is trained and committed to quality and
-                accuracy. We help residential and commercial clients with
-                interior painting, exterior painting, door painting, cabinet
-                painting, and more.
+                Paint Innovators&apos; trained team delivers quality interior,
+                exterior, door, and cabinet painting for residential and
+                commercial clients, with accuracy, care, and a commitment to
+                excellence.
               </p>
             }
             buttonLink="/projects/interior-exterior-painting"
@@ -148,7 +155,7 @@ export default function Projects() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
+              <p className="">
                 Paint Innovators has experience with all types of painting and
                 staining including wood cabinets and tables, Epoxy Floors,
                 industrial coatings, deck coatings, and more.
@@ -166,11 +173,10 @@ export default function Projects() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
-                Paint Innovators has experience with all types of residential
-                projects including interior painting, exterior painting, home
-                painting, shed painting, trim, siding, and molding painting, and
-                more. Here are photos of a few of our recent projects.
+              <p className="">
+                Paint Innovators&apos; experience with residential projects
+                includes interior painting, exterior painting, home painting,
+                shed painting, trim, siding, and molding painting.
               </p>
             }
             buttonLink="/projects/residential-painting"

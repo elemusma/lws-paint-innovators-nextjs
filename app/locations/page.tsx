@@ -88,7 +88,7 @@ export default function LocationsPage() {
             role=""
             delay={0.1}
             description={
-              <p className="text-sm text-accent">
+              <p className="">
                 See all the locations that we serve in our Arkansas location.
               </p>
             }
