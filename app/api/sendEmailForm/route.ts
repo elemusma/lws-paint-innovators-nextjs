@@ -86,7 +86,7 @@ if (!captchaData.success || captchaData.score < 0.5) {
 
     const mailOptions = {
       from: `"Latino Web Studio" <${process.env.GMAIL_USER}>`,
-      to: "info@latinowebstudio.com",
+      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
       subject: `Contact: "${user_name}"`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
