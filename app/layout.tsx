@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import { Website } from "./components/globals";
 import Navigation from "./components/nav";
 import Analytics from "./components/reusable/GoogleAnalytics";
+import HiringBanner from "./components/reusable/HiringBanner";
 import "./fonts/font-aspira/font-aspira.css";
 import "./fonts/font-pontiac/font-pontiac.css";
 import "./fonts/font-poppins/font-poppins.css";
@@ -58,6 +59,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <HiringBanner />
         <header>
           <Navigation />
         </header>

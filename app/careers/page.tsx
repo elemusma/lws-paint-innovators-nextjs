@@ -64,7 +64,7 @@ export default function CareersPage() {
             We&apos;re Hiring
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
-            We Get the Job Done Right!
+            Career Growth, Great Benefits, &amp; Competitive Pay
           </h2>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
@@ -72,7 +72,17 @@ export default function CareersPage() {
         </div>
       </ContentBlock>
       <ServingTagline />
-
+      <ContentBlock
+        sectionClassName="bg-white text-black pb-8"
+        containerClassName="max-w-screen-lg mx-auto py-8"
+        rowClassName="flex flex-col items-center"
+        columnClassName="lg:w-11/12 w-full text-center px-4"
+      >
+        <h2 className="text-4xl font-aspira-light pt-4 uppercase pb-2">
+          We&apos;re looking for Drywall Finishers and Painters to join our team
+        </h2>
+        <div className="divider"></div>
+      </ContentBlock>
       <ContentBlock
         sectionClassName="bg-white text-black pb-8"
         containerClassName="max-w-screen-lg mx-auto py-8"

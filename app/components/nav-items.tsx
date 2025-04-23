@@ -290,7 +290,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
             <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/careers"
-                className={`flex items-center gap-1 uppercase ${
+                className={`flex items-center gap-1 uppercase careers-tab ${
                   pathname.startsWith("/careers")
                     ? "text-accent font-bold active-with-children"
                     : ""
