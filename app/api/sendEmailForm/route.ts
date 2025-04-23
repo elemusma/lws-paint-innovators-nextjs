@@ -10,6 +10,14 @@ const RECAPTCHA_SECRET = process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY!;
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
+// console.log("🌍 ENV CHECK:", {
+//   CLIENT_ID,
+//   CLIENT_SECRET,
+//   REFRESH_TOKEN,
+//   GMAIL_USER: process.env.GMAIL_USER,
+//   RECAPTCHA_SECRET,
+// });
+
 export async function POST(req: Request) {
   try {
 
@@ -57,22 +65,28 @@ if (!captchaData.success || captchaData.score < 0.5) {
 
     // ✅ 2. Proceed with sending the email
     const accessToken = await oAuth2Client.getAccessToken();
+    console.log("🔑 Access Token:", accessToken?.token);
 
     const transport = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        type: "OAuth2",
+        // type: "OAuth2",
         user: process.env.GMAIL_USER,
-        clientId: CLIENT_ID,
-        clientSecret: CLIENT_SECRET,
-        refreshToken: REFRESH_TOKEN,
-        accessToken: accessToken.token || "",
+        pass: process.env.NEXT_PUBLIC_EMAIL_APP_PASSWORD,
+        // clientId: CLIENT_ID,
+        // clientSecret: CLIENT_SECRET,
+        // refreshToken: REFRESH_TOKEN,
+        // accessToken: accessToken.token || "",
       },
     });
+    await transport.verify()
+  .then(() => console.log("✅ Nodemailer is ready to send emails."))
+  .catch((err) => console.error("❌ Nodemailer verify failed:", err));
+
 
     const mailOptions = {
       from: `"Latino Web Studio" <${process.env.GMAIL_USER}>`,
-      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
+      to: "info@latinowebstudio.com",
       subject: `Contact: "${user_name}"`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
@@ -123,10 +137,11 @@ Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Email send error:", error);
+    console.error("🔥 Email send error:", error instanceof Error ? error.stack : JSON.stringify(error));
     return new Response(JSON.stringify({ error: "Email failed to send." }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
   }
+  
 }

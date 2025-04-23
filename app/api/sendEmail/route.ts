@@ -98,12 +98,13 @@ export async function POST(req: Request) {
     const transport = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        type: "OAuth2",
+        // type: "OAuth2",
         user: GMAIL_USER,
-        clientId: CLIENT_ID,
-        clientSecret: CLIENT_SECRET,
-        refreshToken: REFRESH_TOKEN,
-        accessToken: accessToken.token || "",
+        pass: process.env.NEXT_PUBLIC_EMAIL_APP_PASSWORD,
+        // clientId: CLIENT_ID,
+        // clientSecret: CLIENT_SECRET,
+        // refreshToken: REFRESH_TOKEN,
+        // accessToken: accessToken.token || "",
       },
     });
 
@@ -209,7 +210,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `"Latino Web Studio" <${GMAIL_USER}>`,
-      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
+      to: "info@latinowebstudio.com",
       subject: emailSubject,
       html: `
         <table style="background-color: #f7f7f7; width: 100%;">
@@ -257,7 +258,8 @@ Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Email send error:", error);
+    console.error("Email send error:", error instanceof Error ? error.stack : JSON.stringify(error));
+
     return new Response(JSON.stringify({ error: "Email failed to send." }), {
       status: 500,
       headers: { "Content-Type": "application/json" },

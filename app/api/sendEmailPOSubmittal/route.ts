@@ -19,18 +19,19 @@ export async function POST(req: Request) {
     const transport = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        type: "OAuth2",
+        // type: "OAuth2",
         user: process.env.GMAIL_USER, // Your Gmail address
-        clientId: CLIENT_ID,
-        clientSecret: CLIENT_SECRET,
-        refreshToken: REFRESH_TOKEN,
-        accessToken: accessToken.token || "",
+        pass: process.env.NEXT_PUBLIC_EMAIL_APP_PASSWORD,
+        // clientId: CLIENT_ID,
+        // clientSecret: CLIENT_SECRET,
+        // refreshToken: REFRESH_TOKEN,
+        // accessToken: accessToken.token || "",
       },
     });
 
     const mailOptions = {
       from: `"Latino Web Studio" <${process.env.GMAIL_USER}>`,
-      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
+      to: "info@latinowebstudio.com",
       subject: `PO Submittal: "${first_name}"`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
