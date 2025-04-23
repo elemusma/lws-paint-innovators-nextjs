@@ -64,8 +64,8 @@ if (!captchaData.success || captchaData.score < 0.5) {
 }
 
     // ✅ 2. Proceed with sending the email
-    const accessToken = await oAuth2Client.getAccessToken();
-    console.log("🔑 Access Token:", accessToken?.token);
+    // const accessToken = await oAuth2Client.getAccessToken();
+    // console.log("🔑 Access Token:", accessToken?.token);
 
     const transport = nodemailer.createTransport({
       service: "gmail",

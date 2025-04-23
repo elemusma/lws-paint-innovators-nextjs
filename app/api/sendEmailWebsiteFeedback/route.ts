@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { first_name, last_name,user_email, user_subject,user_page_url, embed_url,message } = body;
 
-    const accessToken = await oAuth2Client.getAccessToken();
+    // const accessToken = await oAuth2Client.getAccessToken();
 
     const transport = nodemailer.createTransport({
       service: "gmail",

@@ -93,7 +93,7 @@ export async function POST(req: Request) {
       certification_agreement
     } = body;
 
-    const accessToken = await oAuth2Client.getAccessToken();
+    // const accessToken = await oAuth2Client.getAccessToken();
 
     const transport = nodemailer.createTransport({
       service: "gmail",

@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { first_name, last_name, user_email, subject, featured_product, detailed_summary, campaign_start_date, campaign_end_date, audience_reach, media_value, target_locations, country, has_contact, contact_first_name, contact_last_name, contact_email, selected_assets, file_link, agreement, embed_url } = body;
 
-    const accessToken = await oAuth2Client.getAccessToken();
+    // const accessToken = await oAuth2Client.getAccessToken();
 
     const transport = nodemailer.createTransport({
       service: "gmail",
