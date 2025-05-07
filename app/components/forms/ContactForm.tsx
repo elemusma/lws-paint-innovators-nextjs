@@ -81,6 +81,27 @@ const ContactForm: React.FC = () => {
       console.log(result);
       if (response.ok) {
         toast.success("Message sent successfully!");
+
+        // 🔽 SUBMIT TO HUBSPOT
+  await fetch("https://api.hsforms.com/submissions/v3/integration/submit/242670289/b407e2b0-f9d0-4c3e-8f88-e13d84ffa4fc", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      fields: [
+        { name: "firstname", value: data.user_name },
+        { name: "email", value: data.user_email },
+        { name: "phone", value: data.user_phone },
+        { name: "jobtitle", value: data.job_title }, // custom property in HubSpot
+      ],
+      context: {
+        pageUri: window.location.href,
+        pageName: document.title,
+      },
+    }),
+  });
+
         formRef.current.reset();
         // Redirect to thank-you page after success
         router.push("/thank-you/");
