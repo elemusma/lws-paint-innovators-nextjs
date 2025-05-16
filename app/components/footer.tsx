@@ -126,7 +126,7 @@ export default function Footer() {
         {/* columns */}
         <div className="max-w-screen-lg mx-auto pt-10 pb-10 lg:px-0 px-4">
           <div className="flex flex-wrap justify-start">
-            <div className="relative w-full md:w-1/4 w-full pb-10">
+            {/* <div className="relative w-full md:w-1/4 w-full pb-10">
               <p className="text-xl font-proxima-bold mb-0">Projects</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
@@ -182,9 +182,9 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-            </div>
-            <div className="w-full md:w-1/4 w-full pb-0 md:pb-10 relative">
-              <p className="text-xl font-proxima-bold mb-0">Services</p>
+            </div> */}
+            <div className="w-full md:w-1/6 w-full pb-0 md:pb-10 relative">
+              <p className="text-xl font-proxima-bold mb-0 uppercase">Services</p>
               <ul className="list-none text-sm m-0">
                 <li>
                   <Link
@@ -237,45 +237,93 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="w-full md:w-1/4 pb-10">
-              <p className="text-xl font-proxima-bold mb-0">Industries</p>
+            <div className="w-full md:w-1/6 pb-10">
+              <p className="text-xl font-proxima-bold mb-0 uppercase">Industries</p>
               <ul className="list-none text-sm mt-0">
-                <li>
+                {/* <li>
                   <Link
                     href="/industries"
                     className={`py-1 block ${pathname === "/industries" ? "active text-accent" : ""}`}
                   >
                     All Industries
                   </Link>
-                </li>
-                <li>
-                  <Link
+                </li> */}
+                <li className="py-1 block">
+                  {/* <Link
                     href="/industries/commercial"
                     className={`py-1 block ${pathname === "/industries/commercial" ? "active text-accent" : ""}`}
-                  >
-                    Commercial
-                  </Link>
+                  > */}
+                    Data Centers
+                  {/* </Link> */}
                 </li>
-                <li>
-                  <Link
+                <li className="py-1 block">
+                  {/* <Link
                     href="/industries/industrial"
                     className={`py-1 block ${pathname === "/industries/industrial" ? "active text-accent" : ""}`}
-                  >
-                    Industrial
-                  </Link>
+                  > */}
+                    Education
+                  {/* </Link> */}
                 </li>
-                <li>
-                  <Link
+                <li className="py-1 block">
+                  {/* <Link
                     href="/industries/residential"
                     className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
-                  >
-                    Residential
-                  </Link>
+                  > */}
+                    Entertainment
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/industries/residential"
+                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                  > */}
+                    Healthcare / Sr. Living
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/industries/residential"
+                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                  > */}
+                    Hospitality
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/industries/residential"
+                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                  > */}
+                    Industrial
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/industries/residential"
+                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                  > */}
+                    Institutional
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/industries/residential"
+                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                  > */}
+                    Multifamily
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/industries/residential"
+                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
+                  > */}
+                    Office / Retail / Mixed-use
+                  {/* </Link> */}
                 </li>
               </ul>
             </div>
 
-            <div className="w-full md:w-1/4 pb-10">
+            {/* <div className="w-full md:w-1/4 pb-10">
               <p className="text-xl font-proxima-bold mb-0">Locations</p>
               <ul className="list-none text-sm mt-0">
                 <li>
@@ -311,67 +359,91 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
-            <div className="w-full md:w-1/4 w-full pb-10">
-              <p className="text-xl font-proxima-bold mb-0">About</p>
+            <div className="w-full md:w-1/6 w-full pb-10">
+              <p className="text-xl font-proxima-bold mb-0 uppercase">About Us</p>
               <ul className="list-none text-sm mt-0">
-                <li>
+                <li className="">
                   <Link
                     href="/about"
                     className={`py-1 block ${pathname === "/about" ? "active text-accent" : ""}`}
                   >
-                    Our Story
+                    About
                   </Link>
                 </li>
-                <li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/about"
+                    className={`py-1 block ${pathname === "/about" ? "active text-accent" : ""}`}
+                  > */}
+                    Culture
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/about"
+                    className={`py-1 block ${pathname === "/about" ? "active text-accent" : ""}`}
+                  > */}
+                    Safety
+                  {/* </Link> */}
+                </li>
+                <li className="py-1 block">
+                  {/* <Link
+                    href="/about"
+                    className={`py-1 block ${pathname === "/about" ? "active text-accent" : ""}`}
+                  > */}
+                    Community
+                  {/* </Link> */}
+                </li>
+                {/* <li>
                   <Link
                     href="/news"
                     className={`py-1 block ${pathname === "/news" ? "active text-accent" : ""}`}
                   >
                     News / Blog
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     href="/about/brandresources"
                     className={`py-1 block ${pathname === "/about/brandresources" ? "active text-accent" : ""}`}
                   >
                     Brand Resources
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     href="/about/website-feedback"
                     className={`py-1 block ${pathname === "/about/website-feedback" ? "active text-accent" : ""}`}
                   >
                     Website Feedback
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     href="/about/service-feedback"
                     className={`py-1 block ${pathname === "/about/service-feedback" ? "active text-accent" : ""}`}
                   >
                     Service Feedback
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
-            <div className="relative w-full md:w-1/4 w-full pb-10">
-              <p className="text-xl font-proxima-bold mb-0">Careers</p>
+            <div className="relative w-full md:w-1/6 w-full pb-10">
+              <p className="text-xl font-proxima-bold mb-0 uppercase">News / Blog</p>
               <div className="flex flex-wrap pr-10">
                 <div className="w-full">
                   <ul className="list-none text-sm mt-0">
                     <li>
                       <Link
-                        href="/careers"
+                        href="/news"
                         className={`py-1 block ${pathname === "/careers" ? "active text-accent" : ""}`}
                       >
-                        All Careers
+                        News / Blog
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href="/careers/painter-drywall-finisher"
                         className={`py-1 block ${pathname === "/careers/painter-drywall-finisher" ? "active text-accent" : ""}`}
@@ -410,14 +482,73 @@ export default function Footer() {
                       >
                         Project Manager
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="relative w-full md:w-1/4 w-full pb-10">
-              <p className="text-xl font-proxima-bold mb-0">Helpful Links</p>
+            <div className="relative w-full md:w-1/6 w-full pb-10">
+              <p className="text-xl font-proxima-bold mb-0 uppercase">Careers</p>
               <div className="flex flex-wrap pr-10">
+                <div className="w-full">
+                  <ul className="list-none text-sm mt-0">
+                    <li>
+                      <Link
+                        href="/careers"
+                        className={`py-1 block ${pathname === "/careers" ? "active text-accent" : ""}`}
+                      >
+                        All Careers
+                      </Link>
+                    </li>
+                    {/* <li>
+                      <Link
+                        href="/careers/painter-drywall-finisher"
+                        className={`py-1 block ${pathname === "/careers/painter-drywall-finisher" ? "active text-accent" : ""}`}
+                      >
+                        Painter / Drywall Finisher
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/careers/pintor-masero"
+                        className={`py-1 block ${pathname === "/careers/pintor-masero" ? "active text-accent" : ""}`}
+                      >
+                        El Pintor / Masero
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/careers/office-associate"
+                        className={`py-1 block ${pathname === "/careers/office-associate" ? "active text-accent" : ""}`}
+                      >
+                        Office Associate
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/careers/project-estimator"
+                        className={`py-1 block ${pathname === "/careers/project-estimator" ? "active text-accent" : ""}`}
+                      >
+                        Project Estimator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/careers/project-manager"
+                        className={`py-1 block ${pathname === "/careers/project-manager" ? "active text-accent" : ""}`}
+                      >
+                        Project Manager
+                      </Link>
+                    </li> */}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full md:w-1/6 w-full pb-10">
+              <p className="text-xl font-proxima-bold mb-0 uppercase">Safety</p>
+              <Link href="/about/brandresources" className="text-xl font-proxima-bold mb-0 uppercase block">Resources</Link>
+              <Link href="/contact" className="text-xl font-proxima-bold mb-0 uppercase block">Contact</Link>
+              {/* <div className="flex flex-wrap pr-10">
                 <div className="w-full">
                   <ul className="list-none text-sm mt-0">
                     <li>
@@ -452,17 +583,9 @@ export default function Footer() {
                         Reviews
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link
-                        href="/about/po-submittal"
-                        className={`py-1 block ${pathname === "/about/po-submittal" ? "active text-accent" : ""}`}
-                      >
-                        PO Submittal
-                      </Link>
-                    </li> */}
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
