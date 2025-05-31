@@ -28,6 +28,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://paintinnovators.com"),
   title:
     "Trusted Commercial, Industrial, & Residential Painting Experts - Paint Innovators",
   description:

@@ -1,7 +1,9 @@
 import ContentBlock from "../content-block";
+import Image from "next/image";
 
 export default function ServingTagline() {
   return (
+    <>
     <ContentBlock
       sectionClassName="bg-[var(--accent-primary)] text-white"
       containerClassName="max-w-screen-lg mx-auto py-3"
@@ -12,5 +14,6 @@ export default function ServingTagline() {
         SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
       </h2>
     </ContentBlock>
+    </>
   );
 }

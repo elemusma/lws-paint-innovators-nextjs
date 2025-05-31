@@ -22,6 +22,31 @@ export default function Footer() {
   return (
     <>
       <footer>
+         <section>
+<div className="max-w-screen-lg mx-auto pb-3">
+  <div className="flex flex-wrap items-center">
+    <div className="lg:w-1/2 w-full text-center">
+ <Image
+              src="/organizations-certificates/ABC-National.png"
+              alt={`Paint Innovators ABC National Organization`}
+              className="hover:scale-105 mx-auto w-full object-contain transition-transform duration-300 ease-in-out"
+              width={1000}
+              height={1000}
+            />
+    </div>
+    <div className="lg:w-1/2 w-full text-center">
+ <Image
+              src="/organizations-certificates/OSHA-Certificate.png"
+              alt={`Paint Innovators OSHA Certificate`}
+              className="hover:scale-105 h-[100px] mx-auto w-auto object-contain transition-transform duration-300 ease-in-out"
+              width={1000}
+              height={1000}
+            />
+            <p>Certified</p>
+    </div>
+  </div>
+</div>
+    </section>
         <div
           className="w-full relative font-aspira-black italic"
           style={{ marginBottom: "-50px" }}
@@ -115,6 +140,7 @@ export default function Footer() {
           </div>
         </div>
         {/* navigation */}
+       
         <div className="max-w-screen-lg mx-auto relative">
           <div className="flex flex-wrap items-center justify-center">
             <div className="md:w-1/3 w-full">
