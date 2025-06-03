@@ -1,5 +1,4 @@
 import ContentBlock from "../content-block";
-import Image from "next/image";
 
 export default function ServingTagline() {
   return (
