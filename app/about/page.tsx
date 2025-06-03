@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import ContentBlock from "@/app/components/content-block";
 import CTA from "@/app/components/reusable/cta";
 import ServingTagline from "@/app/components/reusable/serving-tagline";

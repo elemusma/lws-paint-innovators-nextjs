@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import ContentBlock from "@/app/components/content-block";
 import Image from "next/image";
 import Link from "next/link";
