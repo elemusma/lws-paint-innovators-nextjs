@@ -72,10 +72,10 @@ export default function Home() {
           <p>
             Founded in 2014 by Rodney Barnes, Paint Innovators was born out of
             the idea that quality should be at the forefront of every project
-            regardless of being residential or commercial. For six years, we
+            regardless of being residential or commercial. For eleven years, we
             have been committed to delivering excellent customer service that is
             unmatched. Each day we are faced with difficult decisions in the
-            course of our work, however we are assiduous when it comes to our
+            course of our work, however we are committed when it comes to our
             values. Integrity is our highest priority.
           </p>{" "}
           <Link href="/about" className="btn-main mt-[20px]">
