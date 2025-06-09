@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${Website}/blog/industrial-durability-01.png`, // Replace with actual image if different
+        url: `${Website}/gallery/Industrial-23.jpg`, // Replace with actual image if different
         width: 1200,
         height: 630,
         alt:
