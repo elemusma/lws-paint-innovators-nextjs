@@ -52,6 +52,32 @@ export default function NewsPage() {
         <div className="lg:w-3/4 w-full lg:pr-10 mb-10">
           {/* start of news blog post */}
           <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
+            <Link href="/news/industrial-coating-standards" className="flex flex-wrap">
+              <div className="md:w-1/4 w-full">
+                <Image
+                  src="/gallery/Industrial-23.jpg"
+                  alt="Wallpaper"
+                  className="h-[200px] w-full object-cover"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
+              <div className="md:w-3/4 w-full px-4 py-10">
+                <p className="mb-0 text-gray-700 text-sm group-hover:text-white">
+                  June 09, 2025
+                </p>
+                <h2 className="text-3xl font-proxima-bold uppercase group-hover:text-white">
+                  Ensuring Industrial Durability
+                </h2>
+                <p className="mt-0 text-gray-700 text-sm group-hover:text-white">
+                  READ MORE
+                </p>
+              </div>
+            </Link>
+          </div>
+          {/* end of news blog post */}
+          {/* start of news blog post */}
+          <div className="news-blog-post bg-[#f7f7f7] hover:bg-[var(--accent-primary)] transition-all duration-300 ease-in-out group mb-4">
             <Link href="/news/patio-socials-march" className="flex flex-wrap">
               <div className="md:w-1/4 w-full">
                 <Image
