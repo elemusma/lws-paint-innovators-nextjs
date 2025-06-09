@@ -1,0 +1,15 @@
+.single-post {
+  a,
+  #previous a,
+  #next a {
+    color: black;
+    padding: 5px;
+    box-shadow: inset 0 -5px 0 0 var(--accent-primary);
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: inset 0 -55px 0 0 var(--accent-primary);
+    }
+  }
+}
