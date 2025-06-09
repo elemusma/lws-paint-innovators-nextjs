@@ -132,7 +132,7 @@ export default function IndustrialDurabilityArticle() {
             Every project is supported by our SSPC-PA 2-based QA protocols—ensuring coating thickness, consistency, and performance meet long-term expectations.
           </p>
 
-          <h2 className="text-2xl font-semibold">Paint Innovators' Approach to Coating Longevity</h2>
+          <h2 className="text-2xl font-semibold">Paint Innovators&apos; Approach to Coating Longevity</h2>
           <p>
             Our team integrates the full spectrum of coating best practices—surface prep, material selection, and verification—so clients get more than a coating; they get a long-term protection strategy.
           </p>
