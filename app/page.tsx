@@ -5,7 +5,7 @@ import Link from "next/link";
 import CompletedProjects from "./components/reusable/CompletedProjects";
 import CoreValues from "./components/reusable/core-values";
 import CTA from "./components/reusable/cta";
-import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
+// import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
 // import dynamic from "next/dynamic";
 import ServingTagline from "./components/reusable/serving-tagline";
 import SwiperCarouselNewService from "./components/swiperCarouselNewService";
@@ -38,8 +38,58 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <SwiperCarouselCommercial />
+        <ContentBlock
+        sectionClassName="relative py-[100px]"
+        containerClassName="max-w-screen-lg mx-auto py-3 px-4"
+        rowClassName=""
+        columnClassName="flex flex-col md:flex-row items-center relative"
+        background={
+          // Optional background element; can be omitted if not needed.
+          <>
+            <video
+      playsInline
+      autoPlay
+      muted
+      loop
+      className="absolute top-0 left-0 w-full h-full object-cover"
+    >
+      <source
+        src="https://resources.latinowebstudio.com/wp-content/themes/latinowebstudio/assets/Paint-Innovators.mp4#t=0.5"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+          </>
+        }
+      >
+        <div className="relative flex w-full text-white z-10">
+          <div
+            className="w-[5px] h-[100px] mr-[10px]"
+            style={{ background: "red" }}
+          ></div>
+       <div>
+          <h1 className="md:text-5xl text-2xl mb-[15px] text-shadow mt-[-8px] font-proxima-bold uppercase">
+            Your Preferred Painter for Commercial &amp; Industrial Projects
+          </h1>
+          <p className="text-shadow md:text-xl">
+            <strong>
+              Whether it&apos;s new construction or renovations, our expert
+              team ensures a flawless finish that enhances durability, boosts
+              property value, and leaves a lasting impression.
+            </strong>
+          </p>
+          <Link href="/get-estimate" className="btn-main mt-[20px]">
+            Get Free Estimate
+          </Link>
+          <div className="spacer"></div>
+        </div> 
+        </div> 
+      </ContentBlock>
+        
       </div>
+      {/* <div className="hero">
+        <SwiperCarouselCommercial />
+      </div> */}
       <ServingTagline />
       <div className="spacer"></div>
       <ContentBlock
