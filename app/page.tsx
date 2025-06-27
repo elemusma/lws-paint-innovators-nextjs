@@ -71,7 +71,7 @@ export default function Home() {
           <h1 className="md:text-5xl text-2xl mb-[15px] text-shadow mt-[-8px] font-proxima-bold uppercase">
             Your Preferred Painter for Commercial &amp; Industrial Projects
           </h1>
-          <p className="text-shadow md:text-xl">
+          <p className="text-shadow text-xl">
             <strong>
               Whether it&apos;s new construction or renovations, our expert
               team ensures a flawless finish that enhances durability, boosts
