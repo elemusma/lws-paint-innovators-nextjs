@@ -1,5 +1,5 @@
 import ContentBlock from "@/app/components/content-block";
-import { ArkansasAddress, Company, Website } from "@/app/components/globals";
+import { Company, Website } from "@/app/components/globals";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
