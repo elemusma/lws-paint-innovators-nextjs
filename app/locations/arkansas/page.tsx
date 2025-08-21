@@ -1,5 +1,5 @@
 import ContentBlock from "@/app/components/content-block";
-import { Company, Website } from "@/app/components/globals";
+import { ArkansasAddress, Company, Website } from "@/app/components/globals";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
@@ -85,7 +85,7 @@ export default function ArkansasLocation() {
         overlayTextSubtitle="Springdale, AR"
         contentBorderOff={true}
         heading="Transform a Room"
-        content="Paint Innovators is located in Springdale, AR, which is a part of Northwest Arkansas. Our office is located at the corner of Har-ber Avenue and S 48th Street in Springdale, AR.  Our office is located in Washington county.  Paint innovators was started in Springdale in 2014 at 133 South 40th Street, Springdale, AR and then moved to Har-ber in 2020.  To locals in Northwest Arkansas, we are located in the Har-ber side of Springdale - which originated from the presence of Har-ber High School in our area."
+        content={`Paint innovators was started in Springdale in 2014 and then moved locations in 2020. We are currently located in 3885 Elm Springs Rd, Springdale, AR 72762.`}
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
