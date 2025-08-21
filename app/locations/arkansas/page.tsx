@@ -85,7 +85,7 @@ export default function ArkansasLocation() {
         overlayTextSubtitle="Springdale, AR"
         contentBorderOff={true}
         heading="Transform a Room"
-        content={`Paint innovators was started in Springdale in 2014 and then moved locations in 2020. We are currently located in 3885 Elm Springs Rd, Springdale, AR 72762.`}
+        content={`Paint innovators was started in Springdale in 2014 in a different part of Arkansas and moved to our current location in 2020. We are currently located in 3885 Elm Springs Rd, Springdale, AR 72762.`}
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
       />
