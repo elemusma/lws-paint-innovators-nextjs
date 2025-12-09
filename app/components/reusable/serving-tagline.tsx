@@ -10,7 +10,7 @@ export default function ServingTagline() {
       columnClassName="w-full text-center"
     >
       <h2 className="text-3xl font-proxima-bold">
-        SERVING ARKANSAS, OKLAHOMA &amp; COLORADO
+        SERVING ARKANSAS, OKLAHOMA, COLORADO, KANSAS &amp; MISSOURI
       </h2>
     </ContentBlock>
     </>

@@ -12,6 +12,8 @@ export const OklahomaAddress = '10840 East Newton Place<br>Tulsa, OK 74116';
 export const OklahomaPhone = '918.576.8021';
 export const ColoradoAddress = '6025 E 76th Ave Unit C<br>Commerce City, CO 80022';
 export const ColoradoPhone = '720.909.9974';
+export const KansasAddress = '1301 Oak St Unit 709<br>Kansas City, MO 64106';
+export const KansasPhone = '816.935.3000';
 
 export const ResidentialProjectsImages = [
     {

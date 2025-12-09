@@ -32,19 +32,19 @@ export const metadata: Metadata = {
   title:
     "Trusted Commercial, Industrial, & Residential Painting Experts - Paint Innovators",
   description:
-    "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
+    "Professional painting services for residential and commercial properties in Arkansas, Oklahoma, Colorado, Kansas and Missouri.",
   openGraph: {
     title:
       "Trusted Commercial, Industrial, & Residential Painting Experts - Paint Innovators",
     description:
-      "Professional painting services for residential and commercial properties in Arkansas, Oklahoma and Colorado.",
+      "Professional painting services for residential and commercial properties in Arkansas, Oklahoma, Colorado, Kansas and Missouri.",
     url: `${Website}/`, // Replace with actual URL
     images: [
       {
         url: `${Website}/home/Paint-Innovators-2025-01.jpg`,
         width: 1200,
         height: 630,
-        alt: "Paint Innovators - Commercial and Industrial Painting Services in Arkansas, Oklahoma and Colorado",
+        alt: "Paint Innovators - Commercial and Industrial Painting Services in Arkansas, Oklahoma, Colorado, Kansas and Missouri",
       },
     ],
   },

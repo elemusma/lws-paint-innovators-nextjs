@@ -9,12 +9,12 @@ import ServingTagline from "../components/reusable/serving-tagline";
 import TeamCol from "../components/reusable/team-col";
 import SwiperCarouselNewService from "../components/swiperCarouselNewService";
 export const metadata: Metadata = {
-  title: "Locations We Serve - Arkansas, Oklahoma, Colorado - Paint Innovators",
+  title: "Locations We Serve - Arkansas, Oklahoma, Colorado, Kansas and Missouri - Paint Innovators",
   description:
     "Explore the locations we serve including Arkansas, Oklahoma, and Colorado. Find out more about our painting services and get a free estimate today.",
   openGraph: {
     title:
-      "Locations We Serve - Arkansas, Oklahoma, Colorado - Paint Innovators",
+      "Locations We Serve - Arkansas, Oklahoma, Colorado, Kansas and Missouri - Paint Innovators",
     description:
       "Explore the locations we serve including Arkansas, Oklahoma, and Colorado. Find out more about our painting services and get a free estimate today.",
     url: `${Website}/locations`, // Replace with actual URL
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: `${Website}/gallery/Industrial-53.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
-        alt: "Locations We Serve - Arkansas, Oklahoma, Colorado - Paint Innovators",
+        alt: "Locations We Serve - Arkansas, Oklahoma, Colorado, Kansas and Missouri - Paint Innovators",
       },
     ],
   },
@@ -63,7 +63,7 @@ export default function LocationsPage() {
           </h1>
           <h2 className="font-aspira-bold text-2xl text-shadow">
             Arkansas <span className="text-accent">&bull;</span> Oklahoma{" "}
-            <span className="text-accent">&bull;</span> Colorado
+            <span className="text-accent">&bull;</span> Colorado <span className="text-accent">&bull;</span> Kansas City
           </h2>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
@@ -81,6 +81,7 @@ export default function LocationsPage() {
         <div className="absolute bg-light w-full h-[85%] top-[15%] left-0"></div>
         <div className="relative flex flex-wrap justify-center">
           <TeamCol
+            colClassName="lg:!w-1/2"
             img="/gallery/Interior-Exterior-Painting-02.jpg"
             name="Arkansas"
             nameTag="h2"
@@ -97,6 +98,7 @@ export default function LocationsPage() {
             buttonAriaLabel="View our Arkansas location"
           />
           <TeamCol
+            colClassName="lg:!w-1/2"
             img="/gallery/Commercial-Painting-17.jpg"
             name="Oklahoma"
             nameTag="h2"
@@ -113,6 +115,7 @@ export default function LocationsPage() {
             buttonAriaLabel="View our Oklahoma location"
           />
           <TeamCol
+            colClassName="lg:!w-1/2"
             img="/gallery/Industrial-58.jpg"
             name="Colorado"
             nameTag="h2"
@@ -121,12 +124,29 @@ export default function LocationsPage() {
             delay={0.1}
             description={
               <p>
-                See all the locations that we serve in our Oklahoma location.
+                See all the locations that we serve in our Colorado location.
               </p>
             }
             buttonLink="/locations/colorado"
             buttonText="View Location"
             buttonAriaLabel="View our Colorado location"
+          />
+          <TeamCol
+            colClassName="lg:!w-1/2"
+            img="/locations/Kansas-City.jpg"
+            name="Missouri"
+            nameTag="h2"
+            nameTagClassName="text-2xl"
+            role=""
+            delay={0.1}
+            description={
+              <p>
+                See all the locations that we serve in our Kansas &amp; Missouri location.
+              </p>
+            }
+            buttonLink="/locations/kansas-missouri"
+            buttonText="View Location"
+            buttonAriaLabel="View our Missouri location"
           />
           <div className="divider !mt-20 !mb-[4rem]"></div>
 

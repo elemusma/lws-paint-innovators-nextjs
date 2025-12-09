@@ -9,6 +9,8 @@ import {
   ArkansasPhone,
   ColoradoAddress,
   ColoradoPhone,
+  KansasAddress,
+  KansasPhone,
   Company,
   OklahomaAddress,
   OklahomaPhone,
@@ -52,7 +54,7 @@ export default function Footer() {
           style={{ marginBottom: "-50px" }}
         >
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/3">
+            <div className="w-full lg:w-1/4">
               <div
                 className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10 flex justify-center items-center"
                 style={{}}
@@ -80,7 +82,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-1/3 text-right">
+            <div className="w-full lg:w-1/4 text-right">
               <div
                 className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10 flex justify-center items-center"
                 style={{}}
@@ -108,7 +110,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-1/3 text-right">
+            <div className="w-full lg:w-1/4 text-right">
               <div
                 className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10"
                 style={{}}
@@ -133,6 +135,35 @@ export default function Footer() {
                   ></p>
                   <a href={`tel:+${ColoradoPhone}`} className="text-3xl">
                     {ColoradoPhone}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/4 text-right">
+              <div
+                className="location h-full py-20 relative lg:mr-2 overflow-hidden px-10"
+                style={{}}
+              >
+                <Image
+                  src="/locations/Kansas-City.jpg"
+                  className="w-full absolute h-full"
+                  style={{ objectFit: "cover", top: 0, left: 0 }}
+                  alt="Kansas City Professional Painters. Get Free Estimate"
+                  fill
+                />
+
+                <div className="absolute w-full h-full bg-black top-0 left-0 opacity-50"></div>
+                <div
+                  className="relative text-center text-white text-shadow"
+                  style={{}}
+                >
+                  <h2 className="uppercase text-3xl">Missouri</h2>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: KansasAddress }}
+                    className="text:sm"
+                  ></p>
+                  <a href={`tel:+${KansasPhone}`} className="text-3xl">
+                    {KansasPhone}
                   </a>
                 </div>
               </div>
@@ -448,6 +479,14 @@ export default function Footer() {
                     className={`py-1 block ${pathname === "/locations/colorado" ? "active text-accent" : ""}`}
                   >
                     Colorado Location
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/locations/missouri"
+                    className={`py-1 block ${pathname === "/locations/missouri" ? "active text-accent" : ""}`}
+                  >
+                    Kansas-Missouri Location
                   </Link>
                 </li>
               </ul>

@@ -301,7 +301,7 @@ export default function FrequentlyAskedQuestions() {
           What areas does Paint Innovators serve?
         </h2>
         <p>
-          Arkansas, Oklahoma, Colorado and other states across the country. For
+          Arkansas, Oklahoma, Colorado, Kansas and Missouri. For
           more information on our service areas, call us at{" "}
           <Link href={`tel:${ArkansasPhone}`} className="text-accent">
             {ArkansasPhone}

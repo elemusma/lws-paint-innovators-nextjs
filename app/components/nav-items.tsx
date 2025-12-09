@@ -149,7 +149,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 style={{
                   height: "0px",
                   backgroundColor: "var(--neutral-dark)",
-                  width: "150px",
+                  width: "175px",
                 }}
               >
                 <IndustriesLinks />
@@ -184,7 +184,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 style={{
                   height: "0px",
                   backgroundColor: "var(--neutral-dark)",
-                  width: "150px",
+                  width: "175px",
                 }}
               >
                 <LocationsLinks />

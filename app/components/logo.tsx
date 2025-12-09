@@ -13,7 +13,7 @@ export default function Logo({ className }: LogoProps) {
           src="/assets/Logo-Paint-Innovators.png"
           style={{ margin: "auto" }}
           className={`max-w-full ${className}`}
-          alt="Paint Innovators Arkansas, Oklahoma and now in Colorado"
+          alt="Paint Innovators Arkansas, Oklahoma, Colorado, Kansas and Missouri"
           width={1000}
           height={1000}
         />
