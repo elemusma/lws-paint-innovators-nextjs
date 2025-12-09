@@ -22,8 +22,8 @@ export default function LocationsLinks({ onClick }: IndustriesLinksProps) {
           path: "/locations/colorado",
         },
         {
-          name: "Kansas-Missouri",
-          path: "/locations/kansas-missouri",
+          name: "Kansas City",
+          path: "/locations/kansas-city",
         }
       ].map((item) => (
         <li key={item.path}>

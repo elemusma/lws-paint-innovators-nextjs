@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${Website}/photos/KansasCity.jpg`, // Replace with the actual image path
+        url: `${Website}/locations/Kansas-City.jpg`, // Replace with the actual image path
         width: 1200, // Standard OG image width
         height: 630, // Standard OG image height
         alt: "Professional Painters in Kansas City - Locations, Services & Free Estimate - Paint Innovators",
@@ -63,7 +63,7 @@ export default function KansasCityLocation() {
       >
         <div className="relative">
           <h1 className="md:text-6xl text-4xl uppercase font-proxima-bold text-shadow">
-            Industrial and Commercial Painting in Kansas &amp; Missouri
+            Industrial and Commercial Painting in Kansas City
           </h1>
           <p className="text-shadow">
             View our interactive map below to see all our areas of service in Kansas City and the surrounding region.

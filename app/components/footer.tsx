@@ -157,7 +157,7 @@ export default function Footer() {
                   className="relative text-center text-white text-shadow"
                   style={{}}
                 >
-                  <h2 className="uppercase text-3xl">Missouri</h2>
+                  <h2 className="uppercase text-3xl">Kansas City</h2>
                   <p
                     dangerouslySetInnerHTML={{ __html: KansasAddress }}
                     className="text:sm"
@@ -483,10 +483,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/locations/missouri"
+                    href="/locations/kansas-city"
                     className={`py-1 block ${pathname === "/locations/missouri" ? "active text-accent" : ""}`}
                   >
-                    Kansas-Missouri Location
+                    Kansas City Location
                   </Link>
                 </li>
               </ul>

@@ -134,17 +134,17 @@ export default function LocationsPage() {
           <TeamCol
             colClassName="lg:!w-1/2"
             img="/locations/Kansas-City.jpg"
-            name="Missouri"
+            name="Kansas City"
             nameTag="h2"
             nameTagClassName="text-2xl"
             role=""
             delay={0.1}
             description={
               <p>
-                See all the locations that we serve in our Kansas &amp; Missouri location.
+                See all the locations that we serve in our Kansas City location.
               </p>
             }
-            buttonLink="/locations/kansas-missouri"
+            buttonLink="/locations/kansas-city"
             buttonText="View Location"
             buttonAriaLabel="View our Missouri location"
           />
