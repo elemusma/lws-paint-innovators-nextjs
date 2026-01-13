@@ -1,5 +1,5 @@
 import ContentBlock from "@/app/components/content-block";
-import { Company, Website } from "@/app/components/globals";
+import { Company, Website, ColoradoAddress } from "@/app/components/globals";
 import CTA from "@/app/components/reusable/cta";
 import ImageContentBlock from "@/app/components/reusable/ImageContentBlock";
 import ServingTagline from "@/app/components/reusable/serving-tagline";
@@ -66,7 +66,11 @@ export default function ColoradoLocation() {
             People <span className="text-accent">&bull;</span> Family{" "}
             <span className="text-accent">&bull;</span> Community
           </h2> */}
-          <p className="text-shadow">Introducing our brand new service.</p>
+          {/* <p className="text-shadow">Introducing our brand new service.</p>  */}
+          <p
+            dangerouslySetInnerHTML={{ __html: ColoradoAddress }}
+            className="text:sm"
+          ></p>
           <Link href="/get-estimate" className="btn-main mt-[20px]">
             Get Free Estimate
           </Link>
