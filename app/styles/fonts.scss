@@ -50,10 +50,13 @@ h1,.h1 {
     font-family: 'poppinsblack';
 }
 .font-proxima-light {
-    font-family: 'proxima_nova_altlight';
+  font-family: var(--font-proxima);
+  font-weight: var(--weight-light);
 }
+
 .font-proxima-bold {
-    font-family: 'proxima_novabold';
+  font-family: var(--font-proxima);
+  font-weight: var(--weight-bold);
 }
 .font-pontiac-black {
     font-family: 'pontiacblack';
