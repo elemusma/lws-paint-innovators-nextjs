@@ -42,14 +42,14 @@ const SwiperCarouselNewService = () => {
                 INTRODUCING OUR NEWEST SERVICE
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -76,14 +76,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -110,14 +110,14 @@ const SwiperCarouselNewService = () => {
                 Wet &amp; Dry Abrasive Technologies
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -144,14 +144,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -178,14 +178,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -212,14 +212,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -246,14 +246,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -280,14 +280,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -314,14 +314,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -348,14 +348,14 @@ const SwiperCarouselNewService = () => {
                 Sandblasting &amp; Painting in Colorado
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              <Image
+              {/* <Image
                 src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
                 alt="Paint Innovators Industrial"
                 style={{ objectFit: "cover" }}
                 className="relative mx-auto"
                 width={400}
                 height={400}
-              />
+              /> */}
             </div>
           </div>
         </div>
