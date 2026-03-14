@@ -110,14 +110,6 @@ const SwiperCarouselNewService = () => {
                 Wet &amp; Dry Abrasive Technologies
               </h2>
               <div className="lg:h-[290px] md:h-[250px] h-[100px]"></div>
-              {/* <Image
-                src="/photos/BlastCraft-Sandblasting-Paint-Logo.png"
-                alt="Paint Innovators Industrial"
-                style={{ objectFit: "cover" }}
-                className="relative mx-auto"
-                width={400}
-                height={400}
-              /> */}
             </div>
           </div>
         </div>
