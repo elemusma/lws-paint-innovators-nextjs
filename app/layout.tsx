@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
-        <Script id="gtm-script" strategy="beforeInteractive">
+        {/* <Script id="gtm-script" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -68,19 +68,19 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-PTHJ4NT6');
           `}
-        </Script>
+        </Script> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <noscript>
+      {/* <noscript>
     <iframe
       src="https://www.googletagmanager.com/ns.html?id=GTM-PTHJ4NT6"
       height="0"
       width="0"
       style={{ display: "none", visibility: "hidden" }}
     ></iframe>
-  </noscript>
+  </noscript> */}
         <HiringBanner />
         <header>
           <Navigation />
