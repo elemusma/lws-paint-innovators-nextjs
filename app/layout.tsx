@@ -60,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
-        {/* <Script id="gtm-script" strategy="beforeInteractive">
+        <Script id="gtm-script" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -68,19 +68,19 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-PTHJ4NT6');
           `}
-        </Script> */}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      {/* <noscript>
+      <noscript>
     <iframe
       src="https://www.googletagmanager.com/ns.html?id=GTM-PTHJ4NT6"
       height="0"
       width="0"
       style={{ display: "none", visibility: "hidden" }}
     ></iframe>
-  </noscript> */}
+  </noscript>
         <HiringBanner />
         <header>
           <Navigation />
@@ -88,7 +88,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8E7G8J49WF"
           strategy="beforeInteractive"
         />
@@ -99,7 +99,7 @@ export default function RootLayout({
     gtag('js', new Date());
     gtag('config', 'G-8E7G8J49WF');
   `}
-        </Script>
+        </Script> */}
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           strategy="afterInteractive"
