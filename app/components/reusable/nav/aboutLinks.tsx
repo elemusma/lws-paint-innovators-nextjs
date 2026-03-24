@@ -18,14 +18,14 @@ export default function AboutLinks({ onClick }: IndustriesLinksProps) {
         //   name: "Our Team",
         //   path: "/about/team",
         // },
-        {
-          name: "Brand Resources",
-          path: "/about/brandresources",
-        },
-        {
-          name: "Website Feedback",
-          path: "/about/website-feedback",
-        },
+        // {
+        //   name: "Brand Resources",
+        //   path: "/about/brandresources",
+        // },
+        // {
+        //   name: "Website Feedback",
+        //   path: "/about/website-feedback",
+        // },
         {
           name: "Service Feedback",
           path: "/about/service-feedback",

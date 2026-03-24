@@ -84,6 +84,19 @@ export default function NavItems({ logoContainerClassName = "" }) {
       <div className="flex flex-wrap items-center justify-center">
         <div className="lg:w-5/12 w-7/12 lg:text-right lg:order-1 order-2">
           <ul className="flex justify-end items-center main-menu m-0">
+            <li className="main-title relative text-left">
+              <Link
+                href="/"
+                className={`flex items-center gap-1 ${
+                  pathname.startsWith("/")
+                    ? "text-accent font-bold"
+                    : ""
+                }`}
+                style={{}}
+              >
+                HOME                
+              </Link>
+            </li>
             <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/services"
@@ -120,7 +133,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 <ServicesLinks />
               </ul>
             </li>
-            <li className="menu-item-has-children main-title relative text-left">
+            {/* <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/industries"
                 className={`flex items-center gap-1 ${
@@ -154,7 +167,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
               >
                 <IndustriesLinks />
               </ul>
-            </li>
+            </li> */}
             <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/locations"
