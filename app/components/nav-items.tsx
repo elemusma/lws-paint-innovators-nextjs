@@ -8,7 +8,7 @@ import Logo from "./logo";
 import { usePathname } from "next/navigation";
 import AboutLinks from "./reusable/nav/aboutLinks";
 import CareersLinks from "./reusable/nav/careersLinks";
-import IndustriesLinks from "./reusable/nav/industriesLinks";
+// import IndustriesLinks from "./reusable/nav/industriesLinks";
 import LocationsLinks from "./reusable/nav/locationsLinks";
 import ProjectsLinks from "./reusable/nav/projectsLinks";
 import ServicesLinks from "./reusable/nav/servicesLinks";
