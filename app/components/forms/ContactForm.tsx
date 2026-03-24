@@ -54,6 +54,7 @@ const ContactForm: React.FC = () => {
       user_name: formData.get("user_name") as string,
       user_email: formData.get("user_email") as string,
       user_phone: formData.get("user_phone") as string,
+      location: formData.get("location") as string,
       user_subject: formData.get("user_subject") as string,
       message: formData.get("message") as string,
       job_title: formData.get("job_title") as string,
@@ -93,6 +94,7 @@ const ContactForm: React.FC = () => {
         { name: "firstname", value: data.user_name },
         { name: "email", value: data.user_email },
         { name: "phone", value: data.user_phone },
+        { name: "location", value: data.location },
         { name: "jobtitle", value: data.job_title }, // custom property in HubSpot
       ],
       context: {
@@ -207,6 +209,35 @@ const ContactForm: React.FC = () => {
               />
             </div>
           </div>
+
+          {/* location field */}
+          <div className="relative">
+  <label className="block text-sm font-medium text-white">
+    Select Location <span className="text-red-500">*</span>
+  </label>
+
+  <div className="space-y-2 mt-2 bg-white/90 p-3">
+    <label className="flex items-center space-x-2">
+      <input type="radio" name="location" value="Arkansas" required />
+      <span>Arkansas</span>
+    </label>
+
+    <label className="flex items-center space-x-2">
+      <input type="radio" name="location" value="Oklahoma" />
+      <span>Oklahoma</span>
+    </label>
+
+    <label className="flex items-center space-x-2">
+      <input type="radio" name="location" value="Colorado" />
+      <span>Colorado</span>
+    </label>
+
+    <label className="flex items-center space-x-2">
+      <input type="radio" name="location" value="Kansas City" />
+      <span>Kansas City</span>
+    </label>
+  </div>
+</div>
 
           {/* Email Field */}
           <div className="relative">
