@@ -381,22 +381,22 @@ export default function Footer() {
                     News / Blog
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/about/brandresources"
                     className={`py-1 block ${pathname === "/about/brandresources" ? "active text-accent" : ""}`}
                   >
                     Brand Resources
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     href="/about/website-feedback"
                     className={`py-1 block ${pathname === "/about/website-feedback" ? "active text-accent" : ""}`}
                   >
                     Website Feedback
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="/about/service-feedback"
@@ -407,7 +407,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="w-full md:w-1/6 pb-10">
+            {/* <div className="w-full md:w-1/6 pb-10">
               <p className="text-xl font-proxima-bold mb-0">Industries</p>
               <ul className="list-none text-sm mt-0">
                 <li>
@@ -443,7 +443,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
             
 
             <div className="w-full md:w-1/6 pb-10">
