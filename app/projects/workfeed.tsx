@@ -206,9 +206,9 @@ const PROJECT_TYPES = [
 const ITEMS_PER_PAGE = 9;
 
 // ─── Chevron SVG ──────────────────────────────────────────────────────────────
-function ChevronDown({ className = "" }: { className?: string }) {
+function ChevronDown({ className = "", style }: { className?: string; style?: React.CSSProperties }) {
   return (
-    <svg width="12" height="7" viewBox="0 0 13 7" fill="none" className={className}>
+    <svg width="12" height="7" viewBox="0 0 13 7" fill="none" className={className} style={style}>
       <path d="M11.8545 1.23413L6.70742 6.2488L1.53037 1.26508" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
