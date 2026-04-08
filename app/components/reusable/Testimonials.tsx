@@ -18,10 +18,7 @@ export default function Testimonials() {
         rowClassName="flex flex-col items-center"
         columnClassName="w-full"
       >
-        <GoogleReviews
-          placeId="ChIJKwNdghpuyYcRa1If_50aUb4"
-          apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
-        />
+        <GoogleReviews />
         {/* <div className="text-center pt-20">
           <a
             href="https://www.google.com/search?q=PAINT+innovators+arkansas&oq=paint+inno&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgcIARAAGIAEMgYIAhBFGDkyBggDEEUYQDIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgyNzUyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x87c96e1a825d032b:0xbe511a9dff1f526b,3,,,,"
