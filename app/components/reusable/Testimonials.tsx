@@ -6,7 +6,7 @@ export default function Testimonials() {
     <>
       <ContentBlock
         sectionClassName=""
-        containerClassName="max-w-screen-lg mx-auto py-8"
+        containerClassName="max-w-screen-xl mx-auto py-8"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full text-center"
       >
@@ -14,7 +14,7 @@ export default function Testimonials() {
       </ContentBlock>
       <ContentBlock
         sectionClassName="bg-[#555555] border-t-[5px] border-b-[5px] border-[#c2c2c2]"
-        containerClassName="max-w-screen-lg mx-auto py-8"
+        containerClassName="max-w-screen-xl mx-auto py-8"
         rowClassName="flex flex-col items-center"
         columnClassName="w-full"
       >

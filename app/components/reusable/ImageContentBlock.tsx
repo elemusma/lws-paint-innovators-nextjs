@@ -2,7 +2,7 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
-import "../../styles/ImageContentBlock.scss";
+import "@/app/styles/ImageContentBlock.scss";
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -18,6 +18,7 @@ interface ImageContentBlockProps {
   sectionClassName?: string;
   /** The URL of the image (e.g., "/photos/wallpaper.jpg") */
   imageSrc: string;
+  contentColClassName?: string;
   /** The alt text for the image */
   borderSubtitle?: boolean;
   overlayTextSubtitle?: string;
@@ -31,7 +32,8 @@ interface ImageContentBlockProps {
   /** Heading text to display in the right column */
   heading: string;
   /** Main paragraph/content text in the right column */
-  content: string;
+  // content: string;
+  content: React.ReactNode;
   /** The text for the "Learn More" or CTA button */
   buttonLabel: string;
   /** The link/URL for the CTA button */
@@ -46,12 +48,13 @@ interface ImageContentBlockProps {
 export default function ImageContentBlock({
   sectionClassName,
   imageSrc,
+  contentColClassName,
   imageAlt = "",
   imageClass,
   imageObjectPosition,
   overlayText,
   // contentCol,
-  // heading,
+  heading,
   borderSubtitle,
   overlayTextSubtitle,
   contentBorderOff,
@@ -107,7 +110,7 @@ export default function ImageContentBlock({
             </div>
 
             {/* Right Column: Heading, Content, and Button */}
-            <div className="image-content-block-col md:w-1/2 w-full p-6 flex flex-col justify-center bg-[var(--gray)] lg:px-[100px] md:px-[50px] sm:px-[25px] md:py-[150px] py-[50px]">
+            <div className={`image-content-block-col md:w-1/2 w-full p-6 flex flex-col justify-center bg-[var(--gray)] ${contentColClassName || "lg:px-[100px] md:px-[50px] sm:px-[25px] md:py-[150px] py-[50px]"}`}>
               {/* {contentCol} */}
               <div
                 className={`${
@@ -116,6 +119,7 @@ export default function ImageContentBlock({
                     : "border-on border-l-4 border-[var(--accent-primary)] pl-4"
                 }`}
               >
+                <h2 className="text-3xl font-bold mb-4">{heading}</h2>
                 <p className="">{content}</p>
               </div>
               <div

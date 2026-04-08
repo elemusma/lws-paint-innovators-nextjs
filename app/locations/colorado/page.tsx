@@ -85,7 +85,7 @@ export default function ColoradoLocation() {
         borderSubtitle={true}
         overlayTextSubtitle="Denver, CO"
         contentBorderOff={true}
-        heading="Transform a Room"
+        heading=""
         content="Our wet and dry abrasive technologies lend themselves to a wide variety of uses and applications. Wet blasting is a natural choice for cleaning grease, rust, factory coatings, and contaminants from the old motorcycle, engine, or machine parts. The wet abrasive process is quicker leaving a softer satin-like finish on any aluminum, chrome, or steel surface."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
@@ -97,7 +97,7 @@ export default function ColoradoLocation() {
         imageAlt="The History of Wall Paper"
         overlayText="BETTER FOR METALS"
         borderSubtitle={true}
-        heading="Transform a Room"
+        heading=""
         contentBorderOff={true}
         overlayTextSubtitle="Good for Restoration"
         content="The traditional dry blasting method causes frictional heat to the blasted surface which causes warping on aluminum or steel making our wet blasting a better choice on softer metals and making it a good choice for antique restoration, wood restoration, cleaning up fire damage, and removing graffiti."

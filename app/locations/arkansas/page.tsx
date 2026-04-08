@@ -84,7 +84,7 @@ export default function ArkansasLocation() {
         borderSubtitle={true}
         overlayTextSubtitle="Springdale, AR"
         contentBorderOff={true}
-        heading="Transform a Room"
+        heading=""
         content={`Paint innovators was started in Springdale in 2014 in a different part of Arkansas and moved to our current location in 2020. We are currently located at 3885 Elm Springs Rd, Springdale, AR 72762.`}
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
@@ -96,7 +96,7 @@ export default function ArkansasLocation() {
         imageAlt="The History of Wall Paper"
         overlayText="Painting & Contracting"
         borderSubtitle={true}
-        heading="Transform a Room"
+        heading=""
         contentBorderOff={true}
         overlayTextSubtitle="Commercial & Residential"
         content="At our Northwest Arkansas location, we have a team of experienced painters and technicians. Paint Innovators offers painting and contractor services to residential and commercial clients including custom painting, interior painting, exterior painting, drywall repair, cabinet & door staining or painting, concrete staining and epoxy floors, and deck coatings."

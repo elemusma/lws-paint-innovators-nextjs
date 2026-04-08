@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import "../styles/nav-items.scss";
-import "../styles/nav.scss";
+import "@/app/styles/nav-items.scss";
+import "@/app/styles/nav.scss";
 import Logo from "./logo";
 // import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
@@ -10,7 +10,7 @@ import AboutLinks from "./reusable/nav/aboutLinks";
 import CareersLinks from "./reusable/nav/careersLinks";
 // import IndustriesLinks from "./reusable/nav/industriesLinks";
 import LocationsLinks from "./reusable/nav/locationsLinks";
-import ProjectsLinks from "./reusable/nav/projectsLinks";
+// import ProjectsLinks from "./reusable/nav/projectsLinks";
 import ServicesLinks from "./reusable/nav/servicesLinks";
 
 export default function NavItems({ logoContainerClassName = "" }) {
@@ -264,7 +264,20 @@ export default function NavItems({ logoContainerClassName = "" }) {
                 News/Blog
               </Link>
             </li>
-            <li className="menu-item-has-children main-title relative text-left">
+            <li className="main-title relative text-left">
+              <Link
+                href="/projects"
+                className={`flex items-center gap-1 uppercase ${
+                  pathname.startsWith("/projects")
+                    ? "text-accent font-bold active-with-children"
+                    : ""
+                }`}
+                style={{}}
+              >
+                Projects
+              </Link>
+            </li>
+            {/* <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/projects"
                 className={`flex items-center gap-1 uppercase ${
@@ -299,7 +312,7 @@ export default function NavItems({ logoContainerClassName = "" }) {
               >
                 <ProjectsLinks />
               </ul>
-            </li>
+            </li> */}
             <li className="menu-item-has-children main-title relative text-left">
               <Link
                 href="/careers"

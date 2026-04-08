@@ -94,7 +94,7 @@ export default function AboutPage() {
         borderSubtitle={true}
         overlayTextSubtitle=""
         contentBorderOff={true}
-        heading="Transform a Room"
+        heading=""
         content="Founded in 2014 by Rodney Barnes, Paint Innovators was born out of the idea that quality should be at the forefront of every project regardless of being commercial, industrial or residential. For eleven years, we have been committed to delivering excellent customer service that is unmatched. Each day we are faced with difficult decisions in the course of our work, however we are committed when it comes to our values. Integrity is our highest priority."
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"
@@ -106,7 +106,7 @@ export default function AboutPage() {
         imageObjectPosition="50% 30%"
         overlayText=""
         borderSubtitle={true}
-        heading="Transform a Room"
+        heading=""
         contentBorderOff={true}
         overlayTextSubtitle=""
         content="Our team aspires to represent each of our core values regardless of the circumstance.  At Paint Innovators, we diligently take responsibility, conduct ourselves with ethics and morals in order to achieve success, gain new customers, and expand relationships with existing customers."

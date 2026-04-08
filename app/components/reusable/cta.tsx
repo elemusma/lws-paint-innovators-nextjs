@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   ArkansasPhone,
   ColoradoPhone,
+  KansasPhone,
   OklahomaPhone,
 } from "../../components/globals.js";
 import ContentBlock from "../content-block";
@@ -72,22 +73,29 @@ export default function CTA() {
       >
         <h2 className="text-4xl font-bold uppercase">Call Us Today</h2>
         <Link
-          href={`tel:1${ArkansasPhone}`}
-          className="btn-main mt-[20px] mx-2"
-        >
-          Oklahoma
-        </Link>
-        <Link
           href={`tel:1${OklahomaPhone}`}
           className="btn-main mt-[20px] mx-2"
         >
           Arkansas
         </Link>
         <Link
+          href={`tel:1${ArkansasPhone}`}
+          className="btn-main mt-[20px] mx-2"
+        >
+          Oklahoma
+        </Link>
+        
+        <Link
           href={`tel:1${ColoradoPhone}`}
           className="btn-main mt-[20px] mx-2"
         >
           Colorado
+        </Link>
+        <Link
+          href={`tel:1${KansasPhone}`}
+          className="btn-main mt-[20px] mx-2"
+        >
+          Kansas City
         </Link>
       </ContentBlock>
     </>

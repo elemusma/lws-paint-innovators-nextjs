@@ -5,6 +5,7 @@
 
 :root {
   --accent-primary:#e41836;
+  --accent-primary-rgb:228, 24, 54;
   --accent-secondary:#e7c075;
   --neutral-dark:#252525;
   --neutral-green:#2b322a;

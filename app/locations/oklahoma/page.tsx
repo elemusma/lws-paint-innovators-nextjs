@@ -80,7 +80,7 @@ export default function OklahomaLocation() {
         borderSubtitle={true}
         overlayTextSubtitle="Opened in 2019"
         contentBorderOff={true}
-        heading="Transform a Room"
+        heading=""
         content="Paint Innovators Oklahoma office is located in Tulsa, Oklahoma, which is in Northeast Oklahoma. Our office is located off of N 108th Avenue on E Newton Street - across the street from General Parts Group in Tulsa County. Paint innovators opened its Tulsa, OK location in October 2019 and is excited to serve the communities of Tulsa, Broken Arrow, and Oklahoma City to name just a few!"
         buttonLabel="Get Free Estimate"
         buttonLink="/get-estimate"

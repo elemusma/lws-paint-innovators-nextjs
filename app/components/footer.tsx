@@ -2,8 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "../styles/footer.scss";
-import "../styles/social-icons.scss";
+import "@/app/styles/footer.scss";
+import "@/app/styles/social-icons.scss";
 import {
   ArkansasAddress,
   ArkansasPhone,
@@ -18,6 +18,7 @@ import {
 } from "./globals.js";
 import Logo from "./logo";
 import SocialIcons from "./reusable/socialIcons";
+import PreciseWolfBacklink from "./reusable/PreciseWolfBacklink";
 
 export default function Footer() {
   const pathname = usePathname(); // Get the current route
@@ -381,22 +382,6 @@ export default function Footer() {
                     News / Blog
                   </Link>
                 </li>
-                {/* <li>
-                  <Link
-                    href="/about/brandresources"
-                    className={`py-1 block ${pathname === "/about/brandresources" ? "active text-accent" : ""}`}
-                  >
-                    Brand Resources
-                  </Link>
-                </li> */}
-                {/* <li>
-                  <Link
-                    href="/about/website-feedback"
-                    className={`py-1 block ${pathname === "/about/website-feedback" ? "active text-accent" : ""}`}
-                  >
-                    Website Feedback
-                  </Link>
-                </li> */}
                 <li>
                   <Link
                     href="/about/service-feedback"
@@ -407,45 +392,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            {/* <div className="w-full md:w-1/6 pb-10">
-              <p className="text-xl font-proxima-bold mb-0">Industries</p>
-              <ul className="list-none text-sm mt-0">
-                <li>
-                  <Link
-                    href="/industries"
-                    className={`py-1 block ${pathname === "/industries" ? "active text-accent" : ""}`}
-                  >
-                    All Industries
-                  </Link>
-                </li>
-                <li className="">
-                  <Link
-                    href="/industries/commercial"
-                    className={`py-1 block ${pathname === "/industries/commercial" ? "active text-accent" : ""}`}
-                  >
-                    Commercial
-                  </Link>
-                </li>
-                <li className="">
-                  <Link
-                    href="/industries/industrial"
-                    className={`py-1 block ${pathname === "/industries/industrial" ? "active text-accent" : ""}`}
-                  >
-                    Industrial
-                  </Link>
-                </li>
-                <li className="">
-                  <Link
-                    href="/industries/residential"
-                    className={`py-1 block ${pathname === "/industries/residential" ? "active text-accent" : ""}`}
-                  >
-                    Residential
-                  </Link>
-                </li>
-              </ul>
-            </div> */}
-            
-
             <div className="w-full md:w-1/6 pb-10">
               <p className="text-xl font-proxima-bold mb-0">Locations</p>
               <ul className="list-none text-sm mt-0">
@@ -491,26 +437,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
-            
-            {/* <div className="relative w-full md:w-1/6 w-full pb-10">
-              <p className="text-xl font-proxima-bold mb-0 uppercase">News / Blog</p>
-              <div className="flex flex-wrap pr-10">
-                <div className="w-full">
-                  <ul className="list-none text-sm mt-0">
-                    <li>
-                      <Link
-                        href="/news"
-                        className={`py-1 block ${pathname === "/careers" ? "active text-accent" : ""}`}
-                      >
-                        News / Blog
-                      </Link>
-                    </li>
-                    
-                  </ul>
-                </div>
-              </div>
-            </div> */}
             <div className="relative w-full md:w-1/6 w-full pb-10">
               <p className="text-xl font-proxima-bold mb-0">Resources</p>
               <div className="flex flex-wrap pr-10">
@@ -594,28 +520,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div
-          className="text-center bg-neutral-green px-[70px]"
-          style={{
-            paddingTop: "10px",
-            paddingBottom: "10px",
-            color: "#BDBDBD",
-          }}
-        >
-          <div className="d-flex justify-content-center align-items-center">
-            <small>
-              <a
-                href="https://latinowebstudio.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Web Design &amp; SEO based out of Denver, Colorado. Seven years of experience in the web design &smp; SEO industry. With a strong background in frontend development."
-              >
-                Web Design &amp; SEO
-              </a>{" "}
-              done by Latino Web Studio.
-            </small>
-          </div>
-        </div>
+        <PreciseWolfBacklink />
+
       </footer>
     </>
   );
