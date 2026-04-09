@@ -9,11 +9,13 @@ import "../../styles/forms.scss";
 import { formatPhoneNumber } from "./phoneFormatting";
 import { getRecaptchaToken } from "./Recaptcha";
 
+
 const ContactForm: React.FC = () => {
   const router = useRouter(); // Initialize Next.js router
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
   const [operandA, setOperandA] = useState(0);
   const [operandB, setOperandB] = useState(0);
 
@@ -47,6 +49,13 @@ const ContactForm: React.FC = () => {
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
+
+    // 🤖 Bot check — bail out early, fake success
+  if (!isFocused) {
+    toast.success("Message sent successfully!");
+    router.push("/thank-you/");
+    return;
+  }
 
     const formData = new FormData(formRef.current);
 
@@ -125,6 +134,7 @@ const ContactForm: React.FC = () => {
           ref={formRef}
           onSubmit={sendEmail}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
           className="space-y-4"
         >
           {/* Name Field */}

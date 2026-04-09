@@ -72,7 +72,7 @@ if (!captchaData.success || captchaData.score < 0.5) {
       auth: {
         // type: "OAuth2",
         user: process.env.GMAIL_USER,
-        pass: process.env.NEXT_PUBLIC_EMAIL_APP_PASSWORD,
+        pass: process.env.EMAIL_APP_PASSWORD,
         // clientId: CLIENT_ID,
         // clientSecret: CLIENT_SECRET,
         // refreshToken: REFRESH_TOKEN,
@@ -85,8 +85,8 @@ if (!captchaData.success || captchaData.score < 0.5) {
 
 
     const mailOptions = {
-      from: `"Latino Web Studio" <${process.env.GMAIL_USER}>`,
-      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
+      from: `"Precise Wolf Digital" <${process.env.GMAIL_USER}>`,
+      to: "ted@precisewolf.com",
       subject: `Contact: "${user_name}"`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
@@ -95,7 +95,7 @@ if (!captchaData.success || captchaData.score < 0.5) {
 <table style="margin: auto; padding-top:20px;padding-bottom: 20px;">
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="250px" height="auto" /></td>
+<td style="text-align: center;"><img src="https://paintinnovators.com/assets/Logo-Paint-Innovators.png" alt="Logo" width="200px" height="auto" /></td>
 </tr>
 </tbody>
 </table>
@@ -120,8 +120,8 @@ if (!captchaData.success || captchaData.score < 0.5) {
 <td><em><small><p><strong>Submitted from:</strong> <a href="${embed_url}" target="_blank">${embed_url}</a></p></small></em></td>
 </tr>
 <tr>
-<td>Have questions about the form submission or the website?
-Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@latinowebstudio.com</a></td>
+<td style="padding:20px;"><p>Have questions about the form submission or the website?
+Reach out to your web support at <a href="mailto:ted@precisewolf.com">ted@precisewolf.com</a></p></td>
 </tr>
 </tbody>
 </table>

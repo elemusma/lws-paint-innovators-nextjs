@@ -8,6 +8,7 @@ function ContactFormPermission() {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleBeforeUnload = useCallback(
     (e: BeforeUnloadEvent) => {
@@ -34,12 +35,20 @@ function ContactFormPermission() {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Bot check: bail out early with a fake success state.
+    if (!isFocused) {
+      toast.success("Form submitted successfully!");
+      window.location.href = "/thank-you";
+      return;
+    }
+
     const formData = new FormData(formRef.current);
 
     const data = {
       first_name: formData.get("fname") as string,
       last_name: formData.get("lname") as string,
       user_email: formData.get("email") as string,
+      location: formData.get("location") as string,
       subject: formData.get("subject") as string,
       featured_product: formData.get("featured_product") as string,
       detailed_summary: formData.get("detailed_summary") as string,
@@ -95,6 +104,7 @@ function ContactFormPermission() {
           ref={formRef}
           onSubmit={sendEmail}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
           className="mt-8 space-y-6 bg-white p-8 rounded-xl shadow-lg"
           autoComplete="on"
         >
@@ -168,6 +178,30 @@ function ContactFormPermission() {
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Select Location <span className="text-red-500">*</span>
+              </label>
+              <div className="space-y-2 mt-2 border border-gray-300 rounded-md p-3">
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Arkansas" required />
+                  <span>Arkansas</span>
+                </label>
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Oklahoma" />
+                  <span>Oklahoma</span>
+                </label>
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Colorado" />
+                  <span>Colorado</span>
+                </label>
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Kansas City" />
+                  <span>Kansas City</span>
+                </label>
+              </div>
             </div>
 
             <div>

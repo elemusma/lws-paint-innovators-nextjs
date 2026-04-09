@@ -11,10 +11,18 @@ const ContactFormPainterDrywallFinisher: React.FC = () => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
+
+    // Bot check: bail out early with a fake success state.
+    if (!isFocused) {
+      toast.success("Application submitted successfully!");
+      router.push("/thank-you/");
+      return;
+    }
 
     const formData = new FormData(formRef.current);
 
@@ -23,6 +31,7 @@ const ContactFormPainterDrywallFinisher: React.FC = () => {
       last_name: formData.get("lname") as string,
       user_email: formData.get("email") as string,
       user_phone: formData.get("phone") as string,
+      location: formData.get("location") as string,
       alt_phone: formData.get("alt_phone") as string,
       position: formData.get("position") as string,
       referral_source: formData.get("referral_source") as string,
@@ -141,6 +150,7 @@ const ContactFormPainterDrywallFinisher: React.FC = () => {
           ref={formRef}
           onChange={handleInputChange}
           onSubmit={sendEmail}
+          onFocus={() => setIsFocused(true)}
           className="space-y-6 bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-xl"
         >
           {/* Personal Information */}
@@ -213,6 +223,29 @@ const ContactFormPainterDrywallFinisher: React.FC = () => {
                 required
                 className="w-full p-3 rounded-md"
               />
+            </div>
+            <div>
+              <label className="block">
+                Select Location <span className="text-red-500">*</span>
+              </label>
+              <div className="space-y-2 mt-2 bg-white/90 p-3 rounded-md">
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Arkansas" required />
+                  <span>Arkansas</span>
+                </label>
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Oklahoma" />
+                  <span>Oklahoma</span>
+                </label>
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Colorado" />
+                  <span>Colorado</span>
+                </label>
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Kansas City" />
+                  <span>Kansas City</span>
+                </label>
+              </div>
             </div>
           </div>
 

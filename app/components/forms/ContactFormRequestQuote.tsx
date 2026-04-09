@@ -14,6 +14,7 @@ const ContactFormRequestQuote: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
   const handleBeforeUnload = useCallback(
     (e: BeforeUnloadEvent) => {
       if (isDirty) {
@@ -37,6 +38,13 @@ const ContactFormRequestQuote: React.FC = () => {
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
+
+    // Bot check: bail out early with a fake success state.
+    if (!isFocused) {
+      toast.success("Quote request sent successfully!");
+      router.push("/thank-you/");
+      return;
+    }
 
     const formData = new FormData(formRef.current);
 
@@ -83,6 +91,7 @@ const ContactFormRequestQuote: React.FC = () => {
           ref={formRef}
           onSubmit={sendEmail}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
           className="space-y-4"
         >
           <div className="flex flex-wrap justify-around">
@@ -143,7 +152,7 @@ const ContactFormRequestQuote: React.FC = () => {
             </div>
           </div>
           <div className="flex flex-wrap justify-around">
-            <div className="w-1/2 pr-2">
+            <div className="w-full">
               <label htmlFor="project_type" className="block text-white">
                 Project Type <span className="text-red-500">*</span>
               </label>
@@ -161,24 +170,28 @@ const ContactFormRequestQuote: React.FC = () => {
                 <option value="Residential">Residential</option>
               </select>
             </div>
-            <div className="w-1/2 pl-2">
-              <label htmlFor="location" className="block text-white">
-                Location <span className="text-red-500">*</span>
+          </div>
+          <div className="relative">
+            <label className="block text-sm font-medium text-white">
+              Select Location <span className="text-red-500">*</span>
+            </label>
+            <div className="space-y-2 mt-2 bg-white/90 p-3 rounded-md">
+              <label className="flex items-center space-x-2 text-black">
+                <input type="radio" name="location" value="Arkansas" required />
+                <span>Arkansas</span>
               </label>
-              <select
-                id="location"
-                name="location"
-                required
-                className="w-full p-3 rounded-md"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select Location
-                </option>
-                <option value="Arkansas">Arkansas</option>
-                <option value="Oklahoma">Oklahoma</option>
-                <option value="Denver">Denver</option>
-              </select>
+              <label className="flex items-center space-x-2 text-black">
+                <input type="radio" name="location" value="Oklahoma" />
+                <span>Oklahoma</span>
+              </label>
+              <label className="flex items-center space-x-2 text-black">
+                <input type="radio" name="location" value="Colorado" />
+                <span>Colorado</span>
+              </label>
+              <label className="flex items-center space-x-2 text-black">
+                <input type="radio" name="location" value="Kansas City" />
+                <span>Kansas City</span>
+              </label>
             </div>
           </div>
           <label htmlFor="message" className="block text-white">

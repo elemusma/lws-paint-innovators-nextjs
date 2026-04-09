@@ -9,12 +9,12 @@ import "@/app/styles/blog.scss";
 
 export const metadata: Metadata = {
   title:
-    "Ensuring Industrial Durability – Advanced Coating Systems & Compliance - Latino Web Studio",
+    "Ensuring Industrial Durability – Advanced Coating Systems & Compliance - Paint Innovators",
   description:
     "Learn how Paint Innovators applies industry-leading standards like SSPC, ISO, ASTM, and NACE to maximize coating life and protect industrial assets long-term.",
   openGraph: {
     title:
-      "Ensuring Industrial Durability – Advanced Coating Systems & Compliance - Latino Web Studio",
+      "Ensuring Industrial Durability – Advanced Coating Systems & Compliance - Paint Innovators",
     description:
       "Learn how Paint Innovators applies industry-leading standards like SSPC, ISO, ASTM, and NACE to maximize coating life and protect industrial assets long-term.",
     url: `${Website}/news/industrial-coating-standards`,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt:
-          "Ensuring Industrial Durability – Advanced Coating Systems & Compliance - Latino Web Studio",
+          "Ensuring Industrial Durability – Advanced Coating Systems & Compliance - Paint Innovators",
       },
     ],
   },

@@ -35,6 +35,7 @@ function CareerSpanish() {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
   const handleBeforeUnload = useCallback(
     (e: BeforeUnloadEvent) => {
       if (isDirty) {
@@ -67,6 +68,13 @@ function CareerSpanish() {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Bot check: bail out early with a fake success state.
+    if (!isFocused) {
+      toast.success("¡Solicitud enviada con éxito!");
+      window.location.href = "/thank-you";
+      return;
+    }
+
     const formData = new FormData(formRef.current);
 
     const data = {
@@ -74,6 +82,7 @@ function CareerSpanish() {
       last_name: formData.get("lname") as string,
       user_email: formData.get("email") as string,
       user_phone: formData.get("phone") as string,
+      location: formData.get("location") as string,
       alt_phone: formData.get("alt_phone") as string,
       position: formData.get("position_desired") as string,
       referral_source: formData.get("referral_source") as string,
@@ -205,6 +214,7 @@ function CareerSpanish() {
           ref={formRef}
           onSubmit={sendEmail}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
           className="mt-8 space-y-6 bg-white p-8 rounded-xl shadow-lg"
           autoComplete="on"
         >
@@ -297,6 +307,29 @@ function CareerSpanish() {
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
               />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Seleccione Ubicacion <span className="text-red-500">*</span>
+              </label>
+              <div className="space-y-2 mt-2 border border-gray-300 rounded-md p-3">
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Arkansas" required />
+                  <span>Arkansas</span>
+                </label>
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Oklahoma" />
+                  <span>Oklahoma</span>
+                </label>
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Colorado" />
+                  <span>Colorado</span>
+                </label>
+                <label className="flex items-center space-x-2 text-gray-700">
+                  <input type="radio" name="location" value="Kansas City" />
+                  <span>Kansas City</span>
+                </label>
+              </div>
             </div>
             <div>
               {pathname === "/careers/pintor-masero" && (

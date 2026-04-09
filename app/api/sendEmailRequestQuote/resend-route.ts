@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: senderEmail,
-      to: "info@latinowebstudio.com,paintinnovators.it@outlook.com",
+      to: "ted@precisewolf.com",
       subject: `Quote Request from ${first_name} ${last_name}`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 <table style="margin: auto; padding-top:20px;padding-bottom: 20px;">
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="https://resources.latinowebstudio.com/wp-content/uploads/2025/01/Logo.png" alt="Logo" width="200px" height="auto" /></td>
+<td style="text-align: center;"><img src="https://paintinnovators.com/assets/Logo-Paint-Innovators.png" alt="Logo" width="200px" height="auto" /></td>
 </tr>
 </tbody>
 </table>
@@ -56,8 +56,8 @@ export async function POST(req: Request) {
 <td><em><small><p><strong>Submitted from:</strong> <a href="${embed_url}" target="_blank">${embed_url}</a></p></small></em></td>
 </tr>
 <tr>
-<td>Have questions about the form submission or the website?
-Reach out to your web support at <a href="mailto:info@latinowebstudio.com">info@latinowebstudio.com</a></td>
+<td style="padding:20px;"><p>Have questions about the form submission or the website?
+Reach out to your web support at <a href="mailto:ted@precisewolf.com">ted@precisewolf.com</a></p></td>
 </tr>
 </tbody>
 </table>

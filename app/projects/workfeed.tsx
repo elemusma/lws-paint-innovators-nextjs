@@ -638,7 +638,7 @@ export default function WorkFeed() {
           // Optional background element; can be omitted if not needed.
           <>
             <Image
-              src={"/photos/Arkansas.jpg"}
+              src={"/home/Paint-Innovators-2025-12.jpg"}
               alt="Wall paper removal"
               className="absolute top-0 left-0 w-full h-full object-cover"
               style={{ objectFit: "cover", objectPosition: "right" }}

@@ -25,6 +25,7 @@ const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
   const handleBeforeUnload = useCallback(
     (e: BeforeUnloadEvent) => {
       if (isDirty) {
@@ -49,11 +50,19 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Bot check: bail out early with a fake success state.
+    if (!isFocused) {
+      toast.success("Message sent successfully!");
+      router.push("/thank-you/po-submittal");
+      return;
+    }
+
     const formData = new FormData(formRef.current);
 
     const data = {
       first_name: formData.get("first_name") as string,
       last_name: formData.get("last_name") as string,
+      location: formData.get("location") as string,
       job_name: formData.get("job_name") as string,
       job_address_line1: formData.get("job_address_line1") as string,
       job_address_line2: formData.get("job_address_line2") as string,
@@ -104,6 +113,7 @@ const ContactForm: React.FC = () => {
           ref={formRef}
           onSubmit={sendEmail}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
           className="space-y-4"
         >
           <p className="text-xl font-bold mb-6 border-b pb-2">
@@ -260,6 +270,30 @@ const ContactForm: React.FC = () => {
                 name="user_email"
                 className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
               />
+            </div>
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Select Location <span className="text-red-500">*</span>
+            </label>
+            <div className="space-y-2 mt-2 border border-gray-300 rounded-md p-3">
+              <label className="flex items-center space-x-2 text-gray-700">
+                <input type="radio" name="location" value="Arkansas" required />
+                <span>Arkansas</span>
+              </label>
+              <label className="flex items-center space-x-2 text-gray-700">
+                <input type="radio" name="location" value="Oklahoma" />
+                <span>Oklahoma</span>
+              </label>
+              <label className="flex items-center space-x-2 text-gray-700">
+                <input type="radio" name="location" value="Colorado" />
+                <span>Colorado</span>
+              </label>
+              <label className="flex items-center space-x-2 text-gray-700">
+                <input type="radio" name="location" value="Kansas City" />
+                <span>Kansas City</span>
+              </label>
             </div>
           </div>
 

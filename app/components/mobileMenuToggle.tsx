@@ -8,7 +8,7 @@ import AboutLinks from "./reusable/nav/aboutLinks";
 import CareersLinks from "./reusable/nav/careersLinks";
 import IndustriesLinks from "./reusable/nav/industriesLinks";
 import LocationsLinks from "./reusable/nav/locationsLinks";
-import ProjectsLinks from "./reusable/nav/projectsLinks";
+// import ProjectsLinks from "./reusable/nav/projectsLinks";
 import ServicesLinks from "./reusable/nav/servicesLinks";
 import SocialIcons from "./reusable/socialIcons";
 
@@ -155,8 +155,19 @@ const MobileMenuToggle = () => {
               Projects
             </Link>
             <ul className="list-none text-sm mt-0">
-              <ProjectsLinks onClick={handleClose} />
+              <li>
+                <Link
+                  href="/projects"
+                  className="block px-4 py-2"
+                  onClick={handleClose}
+                >
+                  Projects
+                </Link>
+              </li>
             </ul>
+            {/* <ul className="list-none text-sm mt-0">
+              <ProjectsLinks onClick={handleClose} />
+            </ul> */}
 
             <Link
               href="/careers"

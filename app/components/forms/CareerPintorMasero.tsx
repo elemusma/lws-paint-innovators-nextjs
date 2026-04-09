@@ -7,6 +7,7 @@ function CareerPintorMasero() {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
@@ -33,6 +34,13 @@ function CareerPintorMasero() {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Bot check: bail out early with a fake success state.
+    if (!isFocused) {
+      toast.success("¡Solicitud enviada con éxito!");
+      window.location.href = "/completed-job-application-spanish";
+      return;
+    }
+
     const formData = new FormData(formRef.current);
 
     const data = {
@@ -40,6 +48,7 @@ function CareerPintorMasero() {
       last_name: formData.get("lname") as string,
       user_email: formData.get("email") as string,
       user_phone: formData.get("phone") as string,
+      location: formData.get("location") as string,
       alt_phone: formData.get("alt_phone") as string,
       position: formData.get("position") as string,
       referral_source: formData.get("referral_source") as string,
@@ -138,6 +147,7 @@ function CareerPintorMasero() {
           ref={formRef}
           onSubmit={sendEmail}
           onChange={handleInputChange}
+          onFocus={() => setIsFocused(true)}
           className="space-y-6 bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-xl"
           autoComplete="on"
           noValidate
@@ -217,6 +227,29 @@ function CareerPintorMasero() {
                 className="w-full p-3 rounded-md"
                 autoComplete="email"
               />
+            </div>
+            <div>
+              <label className="block">
+                Seleccione Ubicacion <span className="text-red-500">*</span>
+              </label>
+              <div className="space-y-2 mt-2 bg-white/90 p-3 rounded-md">
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Arkansas" required />
+                  <span>Arkansas</span>
+                </label>
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Oklahoma" />
+                  <span>Oklahoma</span>
+                </label>
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Colorado" />
+                  <span>Colorado</span>
+                </label>
+                <label className="flex items-center space-x-2 text-black">
+                  <input type="radio" name="location" value="Kansas City" />
+                  <span>Kansas City</span>
+                </label>
+              </div>
             </div>
           </div>
 
