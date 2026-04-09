@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: senderEmail,
-      to: "ted@precisewolf.com",
+      to: "ted@precisewolf.com,paintinnovators.it@outlook.com",
       subject: `Quote Request from ${first_name} ${last_name}`,
       html: `<table style="background-color: #f7f7f7; width: 100%;">
 <tbody>

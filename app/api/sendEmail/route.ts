@@ -212,7 +212,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: `"Precise Wolf Digital" <${GMAIL_USER}>`,
-      to: "ted@precisewolf.com",
+      to: "ted@precisewolf.com,paintinnovators.it@outlook.com",
       subject: emailSubject,
       html: `
         <table style="background-color: #f7f7f7; width: 100%;">
