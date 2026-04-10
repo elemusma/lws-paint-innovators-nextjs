@@ -16,15 +16,15 @@ const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
-  const [operandA, setOperandA] = useState(0);
-  const [operandB, setOperandB] = useState(0);
+  // const [operandA, setOperandA] = useState(0);
+  // const [operandB, setOperandB] = useState(0);
 
-  useEffect(() => {
-    const a = Math.floor(Math.random() * 5) + 1;
-    const b = Math.floor(Math.random() * 5) + 1;
-    setOperandA(a);
-    setOperandB(b);
-  }, []);
+  // useEffect(() => {
+  //   const a = Math.floor(Math.random() * 5) + 1;
+  //   const b = Math.floor(Math.random() * 5) + 1;
+  //   setOperandA(a);
+  //   setOperandB(b);
+  // }, []);
 
   const handleBeforeUnload = useCallback(
     (e: BeforeUnloadEvent) => {
@@ -67,9 +67,9 @@ const ContactForm: React.FC = () => {
       user_subject: formData.get("user_subject") as string,
       message: formData.get("message") as string,
       job_title: formData.get("job_title") as string,
-      operand_a: formData.get("operand_a") as string,
-      operand_b: formData.get("operand_b") as string,
-      additional_info_1: formData.get("additional_info_1") as string,
+      // operand_a: formData.get("operand_a") as string,
+      // operand_b: formData.get("operand_b") as string,
+      // additional_info_1: formData.get("additional_info_1") as string,
       embed_url: window.location.href, // Capture the current page URL
     };
 
@@ -302,7 +302,7 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative">
+          {/* <div className="relative">
             <label
               htmlFor="additional_info_1"
               className="block text-sm font-medium text-white"
@@ -317,7 +317,7 @@ const ContactForm: React.FC = () => {
             />
             <input type="hidden" name="operand_a" value={operandA} />
             <input type="hidden" name="operand_b" value={operandB} />
-          </div>
+          </div> */}
 
           {/* Honeypot field - should remain empty */}
           <div style={{ display: "none" }} aria-hidden="true">
