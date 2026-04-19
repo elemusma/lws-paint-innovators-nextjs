@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/privacy-policy` },
 };
 export default function PrivacyPolicyContent() {
   return (

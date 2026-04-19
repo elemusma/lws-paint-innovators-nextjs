@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/careers/painter-drywall-finisher` },
 };
 export default function PainterDrywallFinisher() {
   return (

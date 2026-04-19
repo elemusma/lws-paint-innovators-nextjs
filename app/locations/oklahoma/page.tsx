@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/locations/oklahoma` },
 };
 export default function OklahomaLocation() {
   return (

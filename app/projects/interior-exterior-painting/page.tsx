@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/projects/interior-exterior-painting` },
 };
 export default function InteriorExteriorPaintingProjects() {
   return (

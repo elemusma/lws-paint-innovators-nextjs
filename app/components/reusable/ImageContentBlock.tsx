@@ -35,9 +35,9 @@ interface ImageContentBlockProps {
   // content: string;
   content: React.ReactNode;
   /** The text for the "Learn More" or CTA button */
-  buttonLabel: string;
+  buttonLabel?: string;
   /** The link/URL for the CTA button */
-  buttonLink: string;
+  buttonLink?: string;
 }
 
 /**
@@ -122,15 +122,17 @@ export default function ImageContentBlock({
                 <h2 className="text-3xl font-bold mb-4">{heading}</h2>
                 <p className="">{content}</p>
               </div>
-              <div
-                className={`pt-8 ${
-                  contentBorderOff ? "border-off" : "border-off pl-4"
-                }`}
-              >
-                <Link href={buttonLink} className="btn-main">
-                  {buttonLabel}
-                </Link>
-              </div>
+              {buttonLabel && buttonLink ? (
+                <div
+                  className={`pt-8 ${
+                    contentBorderOff ? "border-off" : "border-off pl-4"
+                  }`}
+                >
+                  <Link href={buttonLink} className="btn-main">
+                    {buttonLabel}
+                  </Link>
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/careers/pintor-masero` },
 };
 export default function CareersPintorMasero() {
   return (

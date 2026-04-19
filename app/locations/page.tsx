@@ -28,6 +28,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/locations` },
 };
 export default function LocationsPage() {
   return (

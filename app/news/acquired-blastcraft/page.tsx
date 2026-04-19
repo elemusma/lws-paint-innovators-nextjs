@@ -27,6 +27,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/news/acquired-blastcraft` },
 };
 
 export default function PatioSocialsMarch() {

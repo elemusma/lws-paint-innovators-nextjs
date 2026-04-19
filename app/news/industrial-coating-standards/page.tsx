@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/news/industrial-coating-standards` },
 };
 
 export default function IndustrialDurabilityArticle() {

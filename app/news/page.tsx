@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/news` },
 };
 
 export default function NewsPage() {

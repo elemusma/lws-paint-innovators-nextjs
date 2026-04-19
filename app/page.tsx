@@ -2,9 +2,11 @@ export const dynamic = 'force-dynamic';
 import ContentBlock from "@/app/components/content-block";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import CompletedProjects from "./components/reusable/CompletedProjects";
 import CoreValues from "./components/reusable/core-values";
 import CTA from "./components/reusable/cta";
+import { Website } from "./components/globals";
 // import SwiperCarouselCommercial from "./components/swiperCarouselCommercial";
 // import dynamic from "next/dynamic";
 import ServingTagline from "./components/reusable/serving-tagline";
@@ -33,6 +35,28 @@ export interface SwiperCarouselPropsIndustrialProjects {
   IndustrialProjectsImages: Slide[];
   sliderId?: string;
 }
+
+export const metadata: Metadata = {
+  title: "Commercial & Industrial Painting Services - Paint Innovators",
+  description:
+    "Paint Innovators provides commercial and industrial painting services, coatings, renovations, and finish work with a focus on quality, durability, and reliability.",
+  openGraph: {
+    title: "Commercial & Industrial Painting Services - Paint Innovators",
+    description:
+      "Paint Innovators provides commercial and industrial painting services, coatings, renovations, and finish work with a focus on quality, durability, and reliability.",
+    url: `${Website}`,
+    type: "website",
+    images: [
+      {
+        url: `${Website}/home/Paint-Innovators-2025-06.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Paint Innovators home page",
+      },
+    ],
+  },
+  alternates: { canonical: `${Website}` },
+};
 
 export default function Home() {
   return (

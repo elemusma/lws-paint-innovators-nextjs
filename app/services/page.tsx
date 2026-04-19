@@ -30,6 +30,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/services` },
 };
 
 export default function Services() {

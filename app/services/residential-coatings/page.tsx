@@ -31,6 +31,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/services/residential-coatings` },
 };
 export default function ResidentialCoatings() {
   return (

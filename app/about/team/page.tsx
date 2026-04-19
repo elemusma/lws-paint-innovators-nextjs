@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/about/team` },
 };
 export default function OurTeam() {
   return (

@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/about/po-submittal` },
 };
 export default function InternalPOSubmittal() {
   return (

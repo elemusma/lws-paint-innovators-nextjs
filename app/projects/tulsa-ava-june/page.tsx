@@ -14,25 +14,26 @@ import ProjectGallery from "@/app/components/reusable/ProjectGallery";
 
 export const metadata: Metadata = {
   title:
-    "Our Story - How Paint Innovators Began - Quality Painting Services - Paint Innovators",
+    "Ava June - Tulsa Hospitality Project - Paint Innovators",
   description:
-    "Discover the story behind Paint Innovators, founded by Rodney Barnes in 2014. Learn about our dedication to quality, integrity, and customer service in commercial, industrial, and residential painting.",
+    "Explore Paint Innovators' work for Ava June, a hospitality project in Tulsa, Oklahoma.",
   openGraph: {
     title:
-      "Our Story - How Paint Innovators Began - Quality Painting Services - Paint Innovators",
+      "Ava June - Tulsa Hospitality Project - Paint Innovators",
     description:
-      "Discover the story behind Paint Innovators, founded by Rodney Barnes in 2014. Learn about our dedication to quality, integrity, and customer service in commercial, industrial, and residential painting.",
-    url: `${Website}/about`, // Replace with actual URL
+      "Explore Paint Innovators' work for Ava June, a hospitality project in Tulsa, Oklahoma.",
+    url: `${Website}/projects/tulsa-ava-june`,
     type: "website",
     images: [
       {
-        url: `${Website}/team/Our-Story-Rodney-Barnes.jpg`, // Replace with the actual image path
-        width: 1200, // Standard OG image width
-        height: 630, // Standard OG image height
-        alt: "Our Story - How Paint Innovators Began - Quality Painting Services - Paint Innovators",
+        url: `${Website}/projects/Paint-Innovators-Projects-Ava-June-Tulsa-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Ava June project by Paint Innovators",
       },
     ],
   },
+  alternates: { canonical: `${Website}/projects/tulsa-ava-june` },
 };
 export default function AboutPage() {
   return (

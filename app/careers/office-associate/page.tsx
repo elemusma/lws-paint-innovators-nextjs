@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/careers/office-associate` },
 };
 export default function CareersOfficeAssociate() {
   return (

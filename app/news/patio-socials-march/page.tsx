@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/news/patio-socials-march` },
 };
 
 export default function PatioSocialsMarch() {

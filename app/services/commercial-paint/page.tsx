@@ -35,6 +35,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/services/commercial-paint` },
 };
 export default function CommercialPaint() {
   return (

@@ -27,6 +27,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/thank-you/po-submittal` },
 };
 export default function ThankYou() {
   return (

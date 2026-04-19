@@ -31,6 +31,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/locations/kansas-city` },
 };
 
 export default function KansasCityLocation() {

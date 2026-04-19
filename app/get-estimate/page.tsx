@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/get-estimate` },
 };
 export default function GetEstimate() {
   return (

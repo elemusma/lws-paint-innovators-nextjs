@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/projects/industrial` },
 };
 export default function IndustrialProjects() {
   return (

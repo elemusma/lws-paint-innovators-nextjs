@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/news/happy-new-year-2023` },
 };
 
 export default function HappyNewYear() {

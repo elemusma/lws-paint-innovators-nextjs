@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/careers/project-manager` },
 };
 export default function CareersProjectManager() {
   return (

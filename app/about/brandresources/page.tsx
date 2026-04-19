@@ -27,6 +27,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/about/brandresources` },
 };
 export default function BrandResources() {
   return (

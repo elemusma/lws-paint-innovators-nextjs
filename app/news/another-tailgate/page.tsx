@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/news/another-tailgate` },
 };
 
 export default function PatioSocialsMarch() {

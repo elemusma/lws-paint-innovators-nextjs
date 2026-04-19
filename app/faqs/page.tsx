@@ -35,6 +35,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/faqs` },
 };
 export default function FrequentlyAskedQuestions() {
   return (

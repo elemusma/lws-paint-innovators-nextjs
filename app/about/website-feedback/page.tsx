@@ -27,6 +27,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/about/website-feedback` },
 };
 export default function WebsiteFeedback() {
   return (

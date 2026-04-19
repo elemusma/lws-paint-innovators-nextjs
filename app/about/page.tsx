@@ -32,6 +32,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/about` },
 };
 export default function AboutPage() {
   return (

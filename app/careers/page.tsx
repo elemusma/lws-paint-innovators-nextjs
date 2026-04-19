@@ -30,6 +30,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/careers` },
 };
 export default function CareersPage() {
   return (

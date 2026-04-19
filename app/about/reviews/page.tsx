@@ -28,6 +28,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/about/reviews` },
 };
 export default function Reviews() {
   return (

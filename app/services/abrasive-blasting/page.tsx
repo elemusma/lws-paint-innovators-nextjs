@@ -35,6 +35,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: `${Website}/services/abrasive-blasting` },
 };
 export default function AbrasiveBlasting() {
   return (
