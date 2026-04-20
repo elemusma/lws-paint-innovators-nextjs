@@ -118,6 +118,17 @@ const PROJECTS: Project[] = [
     href: "/projects/scheels-tulsa",
     image: "/projects/scheels-tulsa/Paint-Innovators-Projects-Scheels-Tulsa-1.jpg",
   },
+  {
+    id: "9",
+    title: "Philbrook",
+    location: "Tulsa",
+    locationSlug: "tulsa",
+    projectType: "Education",
+    projectTypeSlug: "education",
+    tags: ["museum", "education"],
+    href: "/projects/philbrook",
+    image: "/projects/philbrook/Paint-Innovators-Projects-Philbrook-Tulsa-1.jpg",
+  },
   // {
   //   id: "2",
   //   title: "Confidential Capital Investment Firm",
