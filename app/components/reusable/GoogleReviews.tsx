@@ -77,7 +77,7 @@ const REVIEWS: Review[] = [
   // ... rest of your reviews
 ];
 
-const GOOGLE_REVIEW_LINK = "https://g.page/r/CbF4CHrc1dblEBM/review";
+const GOOGLE_REVIEW_LINK = "https://g.page/r/Ca2thpYy0VYAEBM/review";
 
 function GoogleReviews() {
   const [expandedStates, setExpandedStates] = useState<{ [key: number]: boolean }>({});
